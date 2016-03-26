@@ -38,13 +38,13 @@ class MasterViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     // MARK: - Segues
-
+    
+    //  tell the detail view controller what item was selected
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row]
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
+                let navigationController = segue.destinationViewController as! UINavigationController
+                let controller = navigationController.topViewController as!
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
