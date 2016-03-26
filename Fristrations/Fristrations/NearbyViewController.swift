@@ -1,5 +1,6 @@
 //
-//  FirstViewController.swift
+//  NearbyViewController.swif
+//  initially named FirstViewController.swif
 //  Fristrations
 //
 //  Created by Stephanie Liu on 3/24/16.
@@ -8,7 +9,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class NearbyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

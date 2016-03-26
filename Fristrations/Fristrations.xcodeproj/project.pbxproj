@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		DB51F1881CA48FF8006B3A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F1871CA48FF8006B3A5A /* AppDelegate.swift */; };
-		DB51F18A1CA48FF8006B3A5A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F1891CA48FF8006B3A5A /* FirstViewController.swift */; };
+		DB51F18A1CA48FF8006B3A5A /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F1891CA48FF8006B3A5A /* NearbyViewController.swift */; };
 		DB51F18C1CA48FF8006B3A5A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F18B1CA48FF8006B3A5A /* SecondViewController.swift */; };
 		DB51F18F1CA48FF8006B3A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB51F18D1CA48FF8006B3A5A /* Main.storyboard */; };
 		DB51F1911CA48FF9006B3A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51F1901CA48FF9006B3A5A /* Assets.xcassets */; };
 		DB51F1941CA48FF9006B3A5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB51F1921CA48FF9006B3A5A /* LaunchScreen.storyboard */; };
 		DB51F19F1CA48FF9006B3A5A /* FristrationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F19E1CA48FF9006B3A5A /* FristrationsTests.swift */; };
 		DB51F1AA1CA48FF9006B3A5A /* FristrationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F1A91CA48FF9006B3A5A /* FristrationsUITests.swift */; };
+		DBDB5C931CA751A400B359AA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB5C921CA751A400B359AA /* SettingsViewController.swift */; };
+		DBDB5C951CA751D700B359AA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB5C941CA751D700B359AA /* SearchViewController.swift */; };
+		DBDB5C971CA751FD00B359AA /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB5C961CA751FD00B359AA /* MoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,7 @@
 /* Begin PBXFileReference section */
 		DB51F1841CA48FF8006B3A5A /* Fristrations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fristrations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB51F1871CA48FF8006B3A5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB51F1891CA48FF8006B3A5A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		DB51F1891CA48FF8006B3A5A /* NearbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
 		DB51F18B1CA48FF8006B3A5A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		DB51F18E1CA48FF8006B3A5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB51F1901CA48FF9006B3A5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		DB51F1A51CA48FF9006B3A5A /* FristrationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FristrationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB51F1A91CA48FF9006B3A5A /* FristrationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FristrationsUITests.swift; sourceTree = "<group>"; };
 		DB51F1AB1CA48FF9006B3A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBDB5C921CA751A400B359AA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DBDB5C941CA751D700B359AA /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DBDB5C961CA751FD00B359AA /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				DB51F1871CA48FF8006B3A5A /* AppDelegate.swift */,
-				DB51F1891CA48FF8006B3A5A /* FirstViewController.swift */,
+				DB51F1891CA48FF8006B3A5A /* NearbyViewController.swift */,
+				DBDB5C921CA751A400B359AA /* SettingsViewController.swift */,
+				DBDB5C941CA751D700B359AA /* SearchViewController.swift */,
+				DBDB5C961CA751FD00B359AA /* MoreViewController.swift */,
 				DB51F18B1CA48FF8006B3A5A /* SecondViewController.swift */,
 				DB51F18D1CA48FF8006B3A5A /* Main.storyboard */,
 				DB51F1901CA48FF9006B3A5A /* Assets.xcassets */,
@@ -259,9 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBDB5C951CA751D700B359AA /* SearchViewController.swift in Sources */,
 				DB51F18C1CA48FF8006B3A5A /* SecondViewController.swift in Sources */,
 				DB51F1881CA48FF8006B3A5A /* AppDelegate.swift in Sources */,
-				DB51F18A1CA48FF8006B3A5A /* FirstViewController.swift in Sources */,
+				DBDB5C971CA751FD00B359AA /* MoreViewController.swift in Sources */,
+				DB51F18A1CA48FF8006B3A5A /* NearbyViewController.swift in Sources */,
+				DBDB5C931CA751A400B359AA /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +500,7 @@
 				DB51F1B01CA48FF9006B3A5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB51F1B11CA48FF9006B3A5A /* Build configuration list for PBXNativeTarget "FristrationsTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +509,7 @@
 				DB51F1B31CA48FF9006B3A5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB51F1B41CA48FF9006B3A5A /* Build configuration list for PBXNativeTarget "FristrationsUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +518,7 @@
 				DB51F1B61CA48FF9006B3A5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
