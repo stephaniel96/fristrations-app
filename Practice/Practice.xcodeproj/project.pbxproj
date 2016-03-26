@@ -15,7 +15,10 @@
 		DB51F1D01CA49224006B3A5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB51F1CE1CA49224006B3A5A /* LaunchScreen.storyboard */; };
 		DB51F1DB1CA49224006B3A5A /* PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F1DA1CA49224006B3A5A /* PracticeTests.swift */; };
 		DB51F1E61CA49224006B3A5A /* PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F1E51CA49224006B3A5A /* PracticeUITests.swift */; };
-		DB51F1F41CA493AE006B3A5A /* AUTHOR_Roberto_Bolano.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB51F1F31CA493AE006B3A5A /* AUTHOR_Roberto_Bolano.jpg */; };
+		DBDB5C8E1CA6F4DD00B359AA /* nssl0033.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBDB5C8A1CA6F4DD00B359AA /* nssl0033.jpg */; };
+		DBDB5C8F1CA6F4DD00B359AA /* nssl0034.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBDB5C8B1CA6F4DD00B359AA /* nssl0034.jpg */; };
+		DBDB5C901CA6F4DD00B359AA /* nssl0041.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBDB5C8C1CA6F4DD00B359AA /* nssl0041.jpg */; };
+		DBDB5C911CA6F4DD00B359AA /* nssl0042.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBDB5C8D1CA6F4DD00B359AA /* nssl0042.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +53,10 @@
 		DB51F1E11CA49224006B3A5A /* PracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB51F1E51CA49224006B3A5A /* PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeUITests.swift; sourceTree = "<group>"; };
 		DB51F1E71CA49224006B3A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB51F1F31CA493AE006B3A5A /* AUTHOR_Roberto_Bolano.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AUTHOR_Roberto_Bolano.jpg; sourceTree = "<group>"; };
+		DBDB5C8A1CA6F4DD00B359AA /* nssl0033.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0033.jpg; sourceTree = "<group>"; };
+		DBDB5C8B1CA6F4DD00B359AA /* nssl0034.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0034.jpg; sourceTree = "<group>"; };
+		DBDB5C8C1CA6F4DD00B359AA /* nssl0041.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0041.jpg; sourceTree = "<group>"; };
+		DBDB5C8D1CA6F4DD00B359AA /* nssl0042.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0042.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +114,10 @@
 				DB51F1CC1CA49224006B3A5A /* Assets.xcassets */,
 				DB51F1CE1CA49224006B3A5A /* LaunchScreen.storyboard */,
 				DB51F1D11CA49224006B3A5A /* Info.plist */,
-				DB51F1F31CA493AE006B3A5A /* AUTHOR_Roberto_Bolano.jpg */,
+				DBDB5C8A1CA6F4DD00B359AA /* nssl0033.jpg */,
+				DBDB5C8B1CA6F4DD00B359AA /* nssl0034.jpg */,
+				DBDB5C8C1CA6F4DD00B359AA /* nssl0041.jpg */,
+				DBDB5C8D1CA6F4DD00B359AA /* nssl0042.jpg */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -236,9 +245,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBDB5C901CA6F4DD00B359AA /* nssl0041.jpg in Resources */,
+				DBDB5C911CA6F4DD00B359AA /* nssl0042.jpg in Resources */,
+				DBDB5C8E1CA6F4DD00B359AA /* nssl0033.jpg in Resources */,
 				DB51F1D01CA49224006B3A5A /* LaunchScreen.storyboard in Resources */,
-				DB51F1F41CA493AE006B3A5A /* AUTHOR_Roberto_Bolano.jpg in Resources */,
 				DB51F1CD1CA49224006B3A5A /* Assets.xcassets in Resources */,
+				DBDB5C8F1CA6F4DD00B359AA /* nssl0034.jpg in Resources */,
 				DB51F1CB1CA49224006B3A5A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +511,7 @@
 				DB51F1EC1CA49224006B3A5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB51F1ED1CA49224006B3A5A /* Build configuration list for PBXNativeTarget "PracticeTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +520,7 @@
 				DB51F1EF1CA49224006B3A5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB51F1F01CA49224006B3A5A /* Build configuration list for PBXNativeTarget "PracticeUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +529,7 @@
 				DB51F1F21CA49224006B3A5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
