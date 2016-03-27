@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,20 +18,7 @@
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="Nearby" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="242" y="28" width="117" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="0.55686274509803924" green="0.72156862745098038" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Nearby" image="first" id="acW-dT-cKf"/>
                 </viewController>
@@ -70,8 +58,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="aHu-hT-Irq">
-                                <rect key="frame" x="20" y="33" width="560" height="105"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="aHu-hT-Irq">
+                                <rect key="frame" x="20" y="80" width="560" height="105"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Building" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mc7-VS-vAS">
                                         <rect key="frame" x="0.0" y="0.0" width="62" height="21"/>
@@ -79,7 +67,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search a building" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ef5-km-pjo">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search a building" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ef5-km-pjo">
                                         <rect key="frame" x="0.0" y="33" width="560" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -87,22 +75,32 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atg-4p-3wg">
                                         <rect key="frame" x="0.0" y="75" width="151" height="30"/>
                                         <state key="normal" title="Set Default Label Text"/>
+                                        <connections>
+                                            <action selector="setBuildingLabel:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Kyf-T7-vyK"/>
+                                            <action selector="setBuildingNameLabel:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="4x3-vc-roQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Ef5-km-pjo" secondAttribute="trailing" id="7M4-dj-gLm"/>
-                                    <constraint firstItem="Ef5-km-pjo" firstAttribute="leading" secondItem="aHu-hT-Irq" secondAttribute="leading" id="deS-uz-WMd"/>
-                                </constraints>
                             </stackView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="373" placeholderIntrinsicHeight="270" image="floorPlans" translatesAutoresizingMaskIntoConstraints="NO" id="YNQ-aP-BTt">
+                                <rect key="frame" x="20" y="236" width="373" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YNQ-aP-BTt" secondAttribute="height" multiplier="373:270" id="SaG-ph-oIq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.5568627451" green="0.72156862749999995" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="aHu-hT-Irq" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="60" id="MQk-tH-Hel"/>
-                            <constraint firstItem="aHu-hT-Irq" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="RGr-bS-4tt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="aHu-hT-Irq" secondAttribute="trailing" id="W39-aE-WTm"/>
+                            <constraint firstItem="aHu-hT-Irq" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="Cel-kz-cap"/>
+                            <constraint firstItem="aHu-hT-Irq" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="60" id="ay1-zz-5rz"/>
+                            <constraint firstItem="aHu-hT-Irq" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="nJn-xh-VrB"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="buildingNameLabel" destination="Mc7-VS-vAS" id="rVe-hB-prs"/>
+                        <outlet property="buildingTextField" destination="Ef5-km-pjo" id="gBF-ek-NXo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,6 +150,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="floorPlans" width="373" height="270"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>
