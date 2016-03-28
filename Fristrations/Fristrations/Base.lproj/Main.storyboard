@@ -155,4 +155,5 @@
         <image name="icon_search" width="25" height="25"/>
         <image name="icon_settings" width="26" height="25"/>
     </resources>
+    <color key="tintColor" red="0.19215686274509805" green="0.39215686274509803" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
 </document>
