@@ -10,10 +10,11 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
+    @IBOutlet weak var searchBar: UIButton!
     // MARK: Properties
     @IBOutlet weak var buildingTextField: UITextField!
     @IBOutlet weak var buildingNameLabel: UILabel!
-    
+    @IBOutlet weak var floorPlan: UIImageView!
 
     // Called when the view controller’s content view is created and loaded from a storyboard
     override func viewDidLoad() {
@@ -22,7 +23,38 @@ class SearchViewController: UIViewController {
         // Do any additional setup after loading the view.
 
     }
-
+    override func viewWillLayoutSubviews() {
+        if UIDevice.currentDevice().orientation == UIDeviceOrientation.LandscapeLeft || UIDevice.currentDevice().orientation == UIDeviceOrientation.LandscapeRight {
+            var rect = floorPlan.frame
+            rect.origin.y = 130
+            rect.origin.x = 149
+            rect.size.width = 365
+            rect.size.height = 235
+            floorPlan.frame = rect
+            
+            rect = searchBar.frame
+            rect.origin.y = 10
+            rect.origin.x = 157
+            rect.size.width = 343
+            rect.size.height = 105
+            searchBar.frame = rect
+        }
+        
+        else {
+            var rect = floorPlan.frame
+            rect.origin.y = 310
+            rect.size.width = 375
+            rect.size.height = 304
+            floorPlan.frame = rect
+            
+            rect = searchBar.frame
+            rect.origin.y = 75
+            rect.origin.x = 20
+            rect.size.width = 343
+            rect.size.height = 105
+            searchBar.frame = rect
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
