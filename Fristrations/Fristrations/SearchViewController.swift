@@ -8,10 +8,10 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var searchBar: UIButton!
     // MARK: Properties
+    @IBOutlet weak var searchBar: UIButton!
     @IBOutlet weak var buildingTextField: UITextField!
     @IBOutlet weak var buildingNameLabel: UILabel!
     @IBOutlet weak var floorPlan: UIImageView!
@@ -20,50 +20,25 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Handle the text field’s user input through delegate callbacks.
+        buildingTextField.delegate = self
+    }
 
-    }
-    override func viewWillLayoutSubviews() {
-        if UIDevice.currentDevice().orientation == UIDeviceOrientation.LandscapeLeft || UIDevice.currentDevice().orientation == UIDeviceOrientation.LandscapeRight {
-            var rect = floorPlan.frame
-            rect.origin.y = 130
-            rect.origin.x = 149
-            rect.size.width = 365
-            rect.size.height = 235
-            floorPlan.frame = rect
-            
-            rect = searchBar.frame
-            rect.origin.y = 10
-            rect.origin.x = 157
-            rect.size.width = 343
-            rect.size.height = 105
-            searchBar.frame = rect
-        }
-        
-        else {
-            var rect = floorPlan.frame
-            rect.origin.y = 310
-            rect.size.width = 375
-            rect.size.height = 304
-            floorPlan.frame = rect
-            
-            rect = searchBar.frame
-            rect.origin.y = 75
-            rect.origin.x = 20
-            rect.size.width = 343
-            rect.size.height = 105
-            searchBar.frame = rect
-        }
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
     // MARK: Actions
-
-    @IBAction func setBuildingLabel(sender: UIButton) {
-        buildingNameLabel.text = "Default Text"
+    func textFieldDidEndEditing(textField: UITextField) {
+        buildingNameLabel.text = textField.text
     }
     
     
