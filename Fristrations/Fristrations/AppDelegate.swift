@@ -13,9 +13,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let tabBarController : UITabBarController
+        
+        let vc1 = NearbyViewController.self
+        let vc2 = SettingsViewController.self
+        let vc3 = SearchViewController.self
+        let vc4 = MoreViewController.self
+        
+        let controllers: NSArray = [vc1, vc2, vc3]
+        tabBarController.viewControllers = controllers;
+        
+        window.rootViewController = tabBarController;
         return true
     }
 
