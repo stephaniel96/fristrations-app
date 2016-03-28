@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -73,10 +73,10 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atg-4p-3wg">
-                                        <rect key="frame" x="0.0" y="75" width="151" height="30"/>
-                                        <state key="normal" title="Set Default Label Text"/>
+                                        <rect key="frame" x="0.0" y="75" width="48" height="30"/>
+                                        <state key="normal" title="Search"/>
                                         <connections>
-                                            <action selector="setBuildingLabel:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Kyf-T7-vyK"/>
+                                            <action selector="setBuildingLabel:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="hLf-uB-pAu"/>
                                             <action selector="setBuildingNameLabel:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="4x3-vc-roQ"/>
                                         </connections>
                                     </button>
@@ -98,7 +98,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="second" id="cPa-gy-q4n"/>
                     <connections>
-                        <outlet property="buildingNameLabel" destination="Mc7-VS-vAS" id="rVe-hB-prs"/>
+                        <outlet property="buildingNameLabel" destination="Mc7-VS-vAS" id="QVk-cP-Ths"/>
                         <outlet property="buildingTextField" destination="Ef5-km-pjo" id="gBF-ek-NXo"/>
                     </connections>
                 </viewController>

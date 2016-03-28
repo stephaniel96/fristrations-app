@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Properties
     @IBOutlet weak var buildingTextField: UITextField!
@@ -19,8 +19,8 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-
+        // Handle the text field’s user input through delegate callbacks.
+        buildingTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,12 +28,25 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: Actions
-
-    @IBAction func setBuildingLabel(sender: UIButton) {
-        buildingNameLabel.text = "Default Text"
+    // MARK: UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
     }
     
+    func textFieldDidEndEditing(textField: UITextField) {
+        buildingNameLabel.text = textField.text
+    }
+    
+    
+    
+    
+    
+    // MARK: Actions
+    @IBAction func setBuildingLabel(sender: AnyObject) {
+        buildingNameLabel.text = "Default Text"
+    }
     
     /*
     // MARK: - Navigation
