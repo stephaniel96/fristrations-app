@@ -65,10 +65,9 @@
 		DBDB5C9A1CA8B12700B359AA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DBDB5C9C1CA8B13300B359AA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DBDB5C9E1CA8B14400B359AA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		DBDB5CA01CA8B1CB00B359AA /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
-		DBDB5CA21CA8B23200B359AA /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "../../../Downloads/libc++.dylib"; sourceTree = "<group>"; };
 		DBDB5CA41CA8B26700B359AA /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		DBDB5CA61CA8B26F00B359AA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		DBDB5CA81CA8B5E400B359AA /* Fristrations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fristrations-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +106,6 @@
 			children = (
 				DBDB5CA61CA8B26F00B359AA /* libc++.tbd */,
 				DBDB5CA41CA8B26700B359AA /* libicucore.tbd */,
-				DBDB5CA21CA8B23200B359AA /* libc++.dylib */,
-				DBDB5CA01CA8B1CB00B359AA /* libc++.1.dylib */,
 				DBDB5C9E1CA8B14400B359AA /* CFNetwork.framework */,
 				DBDB5C9C1CA8B13300B359AA /* SystemConfiguration.framework */,
 				DBDB5C9A1CA8B12700B359AA /* Security.framework */,
@@ -143,6 +140,7 @@
 				DB51F1901CA48FF9006B3A5A /* Assets.xcassets */,
 				DB51F1921CA48FF9006B3A5A /* LaunchScreen.storyboard */,
 				DB51F1951CA48FF9006B3A5A /* Info.plist */,
+				DBDB5CA81CA8B5E400B359AA /* Fristrations-Bridging-Header.h */,
 			);
 			path = Fristrations;
 			sourceTree = "<group>";
@@ -443,14 +441,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Fristrations",
 				);
 				INFOPLIST_FILE = Fristrations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Princeton.Fristrations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Fristrations/Fristrations-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -458,14 +460,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Fristrations",
 				);
 				INFOPLIST_FILE = Fristrations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Princeton.Fristrations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Fristrations/Fristrations-Bridging-Header.h";
 			};
 			name = Release;
 		};
