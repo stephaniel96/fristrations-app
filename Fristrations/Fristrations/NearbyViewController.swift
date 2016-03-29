@@ -14,7 +14,8 @@ class NearbyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        view.backgroundColor = .yellowColor()
+        view.backgroundColor = UIColor.yellowColor()
+        self.title = "Nearby"
     }
 
     override func didReceiveMemoryWarning() {

@@ -21,7 +21,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         // Handle the text field’s user input through delegate callbacks.
-        buildingTextField.delegate = self
+        self.title = "Search"
     }
 
     override func didReceiveMemoryWarning() {

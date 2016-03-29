@@ -13,20 +13,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
         // Override point for customization after application launch.
-        let tabBarController : UITabBarController
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let nav1 = UINavigationController()
+        let vc1 = NearbyViewController()
+        nav1.viewControllers = [vc1]
         
-        let vc1 = NearbyViewController.self
-        let vc2 = SettingsViewController.self
-        let vc3 = SearchViewController.self
-        let vc4 = MoreViewController.self
+        let nav2 = UINavigationController()
+        let vc2 = SettingsViewController()
+        nav2.viewControllers = [vc2]
         
-        let controllers: NSArray = [vc1, vc2, vc3]
-        tabBarController.viewControllers = controllers;
+        let nav3 = UINavigationController()
+        let vc3 = SearchViewController()
+        nav3.viewControllers = [vc3]
         
-        window.rootViewController = tabBarController;
+        let nav4 = UINavigationController()
+        let vc4 = MoreViewController()
+        nav4.viewControllers = [vc4]
+        
+        let tabs = UITabBarController()
+        tabs.viewControllers = [nav1, nav2, nav3, nav4]
+        
+        self.window!.rootViewController = tabs;
+        self.window?.makeKeyAndVisible();
+        
         return true
     }
 
