@@ -20,8 +20,9 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Handle the text field’s user input through delegate callbacks.
         self.title = "Search"
+        // Fristrations color in RGB percentages
+        view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {
