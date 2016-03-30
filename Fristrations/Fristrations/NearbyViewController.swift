@@ -10,6 +10,10 @@
 import UIKit
 
 class NearbyViewController: UIViewController {
+    
+    var ref = Firebase(url: "https://fristrations.firebaseio.com/")
+    var carol = ["full_name": "Carol Louie", "date_of_birth": "May 20, 1987"]
+    var brian = ["full_name": "Brian Best", "date_of_birth": "May 17, 1989"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +22,11 @@ class NearbyViewController: UIViewController {
         self.title = "Nearby"
         // Fristrations color in RGB percentages
         view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
+        
+        // Testing firebase
+        let usersRef = ref.childByAppendingPath("users")
+        let users = ["carol": carol, "brian": brian]
+        usersRef.setValue(users)
     }
 
     override func didReceiveMemoryWarning() {
