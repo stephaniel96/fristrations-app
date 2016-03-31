@@ -25,6 +25,7 @@ class NearbyViewController: UIViewController {
         
         // Testing firebase
         let usersRef = ref.childByAppendingPath("users")
+        usersRef.removeValue()
         let users = ["carol": carol, "brian": brian]
         usersRef.setValue(users)
     }
