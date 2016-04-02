@@ -11,7 +11,7 @@ import UIKit
 
 class NearbyViewController: UIViewController {
     
-    var ref = Firebase(url: "https://fristrations.firebaseio.com/")
+    var ref = Firebase(url: "https://fristrations.firebaseio.com/web/data")
     var carol = ["full_name": "Carol Louie", "date_of_birth": "May 20, 1987"]
     var brian = ["full_name": "Brian Best", "date_of_birth": "May 17, 1989"]
 
@@ -25,7 +25,6 @@ class NearbyViewController: UIViewController {
         
         // Testing firebase
         let usersRef = ref.childByAppendingPath("users")
-        usersRef.removeValue()
         let users = ["carol": carol, "brian": brian]
         usersRef.setValue(users)
     }
