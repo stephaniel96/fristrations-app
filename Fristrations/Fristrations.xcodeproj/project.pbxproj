@@ -7,88 +7,89 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB51F1881CA48FF8006B3A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F1871CA48FF8006B3A5A /* AppDelegate.swift */; };
-		DB51F18A1CA48FF8006B3A5A /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F1891CA48FF8006B3A5A /* NearbyViewController.swift */; };
-		DB51F1911CA48FF9006B3A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51F1901CA48FF9006B3A5A /* Assets.xcassets */; };
-		DB51F19F1CA48FF9006B3A5A /* FristrationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F19E1CA48FF9006B3A5A /* FristrationsTests.swift */; };
-		DB51F1AA1CA48FF9006B3A5A /* FristrationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F1A91CA48FF9006B3A5A /* FristrationsUITests.swift */; };
-		DB6A83111CAA482800F4FBD4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB6A83101CAA482800F4FBD4 /* Default-568h@2x.png */; };
-		DBDB5C931CA751A400B359AA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB5C921CA751A400B359AA /* SettingsViewController.swift */; };
-		DBDB5C951CA751D700B359AA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB5C941CA751D700B359AA /* SearchViewController.swift */; };
-		DBDB5C971CA751FD00B359AA /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB5C961CA751FD00B359AA /* MoreViewController.swift */; };
-		DBDB5C991CA8B0AF00B359AA /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDB5C981CA8B0AF00B359AA /* Firebase.framework */; };
-		DBDB5C9B1CA8B12700B359AA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDB5C9A1CA8B12700B359AA /* Security.framework */; };
-		DBDB5C9D1CA8B13300B359AA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDB5C9C1CA8B13300B359AA /* SystemConfiguration.framework */; };
-		DBDB5C9F1CA8B14400B359AA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDB5C9E1CA8B14400B359AA /* CFNetwork.framework */; };
-		DBDB5CA51CA8B26700B359AA /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDB5CA41CA8B26700B359AA /* libicucore.tbd */; };
-		DBDB5CA71CA8B26F00B359AA /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDB5CA61CA8B26F00B359AA /* libc++.tbd */; };
+		DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB324BD71CAF90A800019734 /* AppDelegate.swift */; };
+		DB324BDF1CAF90A800019734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB324BDD1CAF90A800019734 /* Main.storyboard */; };
+		DB324BE11CAF90A800019734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB324BE01CAF90A800019734 /* Assets.xcassets */; };
+		DB324BE41CAF90A800019734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB324BE21CAF90A800019734 /* LaunchScreen.storyboard */; };
+		DB324BEF1CAF90A800019734 /* FristrationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB324BEE1CAF90A800019734 /* FristrationsTests.swift */; };
+		DB324BFA1CAF90A900019734 /* FristrationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB324BF91CAF90A900019734 /* FristrationsUITests.swift */; };
+		DB324C081CAF90E000019734 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C071CAF90E000019734 /* CFNetwork.framework */; };
+		DB324C0A1CAF90E900019734 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C091CAF90E900019734 /* SystemConfiguration.framework */; };
+		DB324C0C1CAF90F600019734 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C0B1CAF90F600019734 /* libc++.tbd */; };
+		DB324C0E1CAF90FD00019734 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C0D1CAF90FD00019734 /* libicucore.tbd */; };
+		DB324C101CAF910700019734 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C0F1CAF910700019734 /* Security.framework */; };
+		DB324C121CAF91A600019734 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C111CAF91A600019734 /* Firebase.framework */; };
+		DBA4C3261CAF97FA00EFCA8F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */; };
+		DBA4C3281CAF982000EFCA8F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C3271CAF982000EFCA8F /* SettingsViewController.swift */; };
+		DBA4C32A1CAF987900EFCA8F /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C3291CAF987900EFCA8F /* MoreViewController.swift */; };
+		DBA4C32C1CAF989A00EFCA8F /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C32B1CAF989A00EFCA8F /* NearbyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DB51F19B1CA48FF9006B3A5A /* PBXContainerItemProxy */ = {
+		DB324BEB1CAF90A800019734 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DB51F17C1CA48FF8006B3A5A /* Project object */;
+			containerPortal = DB324BCC1CAF90A800019734 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DB51F1831CA48FF8006B3A5A;
+			remoteGlobalIDString = DB324BD31CAF90A800019734;
 			remoteInfo = Fristrations;
 		};
-		DB51F1A61CA48FF9006B3A5A /* PBXContainerItemProxy */ = {
+		DB324BF61CAF90A900019734 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DB51F17C1CA48FF8006B3A5A /* Project object */;
+			containerPortal = DB324BCC1CAF90A800019734 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DB51F1831CA48FF8006B3A5A;
+			remoteGlobalIDString = DB324BD31CAF90A800019734;
 			remoteInfo = Fristrations;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DB51F1841CA48FF8006B3A5A /* Fristrations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fristrations.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB51F1871CA48FF8006B3A5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB51F1891CA48FF8006B3A5A /* NearbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
-		DB51F1901CA48FF9006B3A5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DB51F1951CA48FF9006B3A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB51F19A1CA48FF9006B3A5A /* FristrationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FristrationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB51F19E1CA48FF9006B3A5A /* FristrationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FristrationsTests.swift; sourceTree = "<group>"; };
-		DB51F1A01CA48FF9006B3A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB51F1A51CA48FF9006B3A5A /* FristrationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FristrationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB51F1A91CA48FF9006B3A5A /* FristrationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FristrationsUITests.swift; sourceTree = "<group>"; };
-		DB51F1AB1CA48FF9006B3A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB6A830F1CAA482700F4FBD4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		DB6A83101CAA482800F4FBD4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		DBDB5C921CA751A400B359AA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		DBDB5C941CA751D700B359AA /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		DBDB5C961CA751FD00B359AA /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		DBDB5C981CA8B0AF00B359AA /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
-		DBDB5C9A1CA8B12700B359AA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		DBDB5C9C1CA8B13300B359AA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		DBDB5C9E1CA8B14400B359AA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		DBDB5CA41CA8B26700B359AA /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
-		DBDB5CA61CA8B26F00B359AA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		DBDB5CA81CA8B5E400B359AA /* Fristrations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fristrations-Bridging-Header.h"; sourceTree = "<group>"; };
+		DB324BD41CAF90A800019734 /* Fristrations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fristrations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB324BD71CAF90A800019734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB324BDE1CAF90A800019734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB324BE01CAF90A800019734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB324BE31CAF90A800019734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB324BE51CAF90A800019734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB324BEA1CAF90A800019734 /* FristrationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FristrationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB324BEE1CAF90A800019734 /* FristrationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FristrationsTests.swift; sourceTree = "<group>"; };
+		DB324BF01CAF90A800019734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB324BF51CAF90A800019734 /* FristrationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FristrationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB324BF91CAF90A900019734 /* FristrationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FristrationsUITests.swift; sourceTree = "<group>"; };
+		DB324BFB1CAF90A900019734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB324C071CAF90E000019734 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DB324C091CAF90E900019734 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DB324C0B1CAF90F600019734 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		DB324C0D1CAF90FD00019734 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		DB324C0F1CAF910700019734 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DB324C111CAF91A600019734 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		DB9221D41CAF95D9002C7C21 /* Fristrations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fristrations-Bridging-Header.h"; sourceTree = "<group>"; };
+		DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DBA4C3271CAF982000EFCA8F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DBA4C3291CAF987900EFCA8F /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		DBA4C32B1CAF989A00EFCA8F /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DB51F1811CA48FF8006B3A5A /* Frameworks */ = {
+		DB324BD11CAF90A800019734 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBDB5CA71CA8B26F00B359AA /* libc++.tbd in Frameworks */,
-				DBDB5CA51CA8B26700B359AA /* libicucore.tbd in Frameworks */,
-				DBDB5C9F1CA8B14400B359AA /* CFNetwork.framework in Frameworks */,
-				DBDB5C9D1CA8B13300B359AA /* SystemConfiguration.framework in Frameworks */,
-				DBDB5C9B1CA8B12700B359AA /* Security.framework in Frameworks */,
-				DBDB5C991CA8B0AF00B359AA /* Firebase.framework in Frameworks */,
+				DB324C101CAF910700019734 /* Security.framework in Frameworks */,
+				DB324C121CAF91A600019734 /* Firebase.framework in Frameworks */,
+				DB324C0E1CAF90FD00019734 /* libicucore.tbd in Frameworks */,
+				DB324C0C1CAF90F600019734 /* libc++.tbd in Frameworks */,
+				DB324C0A1CAF90E900019734 /* SystemConfiguration.framework in Frameworks */,
+				DB324C081CAF90E000019734 /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB51F1971CA48FF9006B3A5A /* Frameworks */ = {
+		DB324BE71CAF90A800019734 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB51F1A21CA48FF9006B3A5A /* Frameworks */ = {
+		DB324BF21CAF90A800019734 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -98,63 +99,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DB51F17B1CA48FF8006B3A5A = {
+		DB324BCB1CAF90A800019734 = {
 			isa = PBXGroup;
 			children = (
-				DB6A83101CAA482800F4FBD4 /* Default-568h@2x.png */,
-				DB6A830F1CAA482700F4FBD4 /* Default-568h@2x.png */,
-				DBDB5CA61CA8B26F00B359AA /* libc++.tbd */,
-				DBDB5CA41CA8B26700B359AA /* libicucore.tbd */,
-				DBDB5C9E1CA8B14400B359AA /* CFNetwork.framework */,
-				DBDB5C9C1CA8B13300B359AA /* SystemConfiguration.framework */,
-				DBDB5C9A1CA8B12700B359AA /* Security.framework */,
-				DB51F1861CA48FF8006B3A5A /* Fristrations */,
-				DB51F19D1CA48FF9006B3A5A /* FristrationsTests */,
-				DB51F1A81CA48FF9006B3A5A /* FristrationsUITests */,
-				DB51F1851CA48FF8006B3A5A /* Products */,
+				DB324C0F1CAF910700019734 /* Security.framework */,
+				DB324C0D1CAF90FD00019734 /* libicucore.tbd */,
+				DB324C0B1CAF90F600019734 /* libc++.tbd */,
+				DB324C091CAF90E900019734 /* SystemConfiguration.framework */,
+				DB324C071CAF90E000019734 /* CFNetwork.framework */,
+				DB324BD61CAF90A800019734 /* Fristrations */,
+				DB324BED1CAF90A800019734 /* FristrationsTests */,
+				DB324BF81CAF90A900019734 /* FristrationsUITests */,
+				DB324BD51CAF90A800019734 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DB51F1851CA48FF8006B3A5A /* Products */ = {
+		DB324BD51CAF90A800019734 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DB51F1841CA48FF8006B3A5A /* Fristrations.app */,
-				DB51F19A1CA48FF9006B3A5A /* FristrationsTests.xctest */,
-				DB51F1A51CA48FF9006B3A5A /* FristrationsUITests.xctest */,
+				DB324BD41CAF90A800019734 /* Fristrations.app */,
+				DB324BEA1CAF90A800019734 /* FristrationsTests.xctest */,
+				DB324BF51CAF90A800019734 /* FristrationsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DB51F1861CA48FF8006B3A5A /* Fristrations */ = {
+		DB324BD61CAF90A800019734 /* Fristrations */ = {
 			isa = PBXGroup;
 			children = (
-				DB51F1871CA48FF8006B3A5A /* AppDelegate.swift */,
-				DB51F1891CA48FF8006B3A5A /* NearbyViewController.swift */,
-				DBDB5C921CA751A400B359AA /* SettingsViewController.swift */,
-				DBDB5C941CA751D700B359AA /* SearchViewController.swift */,
-				DBDB5C961CA751FD00B359AA /* MoreViewController.swift */,
-				DBDB5C981CA8B0AF00B359AA /* Firebase.framework */,
-				DB51F1901CA48FF9006B3A5A /* Assets.xcassets */,
-				DB51F1951CA48FF9006B3A5A /* Info.plist */,
-				DBDB5CA81CA8B5E400B359AA /* Fristrations-Bridging-Header.h */,
+				DB324BD71CAF90A800019734 /* AppDelegate.swift */,
+				DB324C111CAF91A600019734 /* Firebase.framework */,
+				DB324BDD1CAF90A800019734 /* Main.storyboard */,
+				DB324BE01CAF90A800019734 /* Assets.xcassets */,
+				DB324BE21CAF90A800019734 /* LaunchScreen.storyboard */,
+				DB324BE51CAF90A800019734 /* Info.plist */,
+				DB9221D41CAF95D9002C7C21 /* Fristrations-Bridging-Header.h */,
+				DBA4C32B1CAF989A00EFCA8F /* NearbyViewController.swift */,
+				DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */,
+				DBA4C3271CAF982000EFCA8F /* SettingsViewController.swift */,
+				DBA4C3291CAF987900EFCA8F /* MoreViewController.swift */,
 			);
 			path = Fristrations;
 			sourceTree = "<group>";
 		};
-		DB51F19D1CA48FF9006B3A5A /* FristrationsTests */ = {
+		DB324BED1CAF90A800019734 /* FristrationsTests */ = {
 			isa = PBXGroup;
 			children = (
-				DB51F19E1CA48FF9006B3A5A /* FristrationsTests.swift */,
-				DB51F1A01CA48FF9006B3A5A /* Info.plist */,
+				DB324BEE1CAF90A800019734 /* FristrationsTests.swift */,
+				DB324BF01CAF90A800019734 /* Info.plist */,
 			);
 			path = FristrationsTests;
 			sourceTree = "<group>";
 		};
-		DB51F1A81CA48FF9006B3A5A /* FristrationsUITests */ = {
+		DB324BF81CAF90A900019734 /* FristrationsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				DB51F1A91CA48FF9006B3A5A /* FristrationsUITests.swift */,
-				DB51F1AB1CA48FF9006B3A5A /* Info.plist */,
+				DB324BF91CAF90A900019734 /* FristrationsUITests.swift */,
+				DB324BFB1CAF90A900019734 /* Info.plist */,
 			);
 			path = FristrationsUITests;
 			sourceTree = "<group>";
@@ -162,13 +163,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DB51F1831CA48FF8006B3A5A /* Fristrations */ = {
+		DB324BD31CAF90A800019734 /* Fristrations */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB51F1AE1CA48FF9006B3A5A /* Build configuration list for PBXNativeTarget "Fristrations" */;
+			buildConfigurationList = DB324BFE1CAF90A900019734 /* Build configuration list for PBXNativeTarget "Fristrations" */;
 			buildPhases = (
-				DB51F1801CA48FF8006B3A5A /* Sources */,
-				DB51F1811CA48FF8006B3A5A /* Frameworks */,
-				DB51F1821CA48FF8006B3A5A /* Resources */,
+				DB324BD01CAF90A800019734 /* Sources */,
+				DB324BD11CAF90A800019734 /* Frameworks */,
+				DB324BD21CAF90A800019734 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -176,69 +177,72 @@
 			);
 			name = Fristrations;
 			productName = Fristrations;
-			productReference = DB51F1841CA48FF8006B3A5A /* Fristrations.app */;
+			productReference = DB324BD41CAF90A800019734 /* Fristrations.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DB51F1991CA48FF9006B3A5A /* FristrationsTests */ = {
+		DB324BE91CAF90A800019734 /* FristrationsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB51F1B11CA48FF9006B3A5A /* Build configuration list for PBXNativeTarget "FristrationsTests" */;
+			buildConfigurationList = DB324C011CAF90A900019734 /* Build configuration list for PBXNativeTarget "FristrationsTests" */;
 			buildPhases = (
-				DB51F1961CA48FF9006B3A5A /* Sources */,
-				DB51F1971CA48FF9006B3A5A /* Frameworks */,
-				DB51F1981CA48FF9006B3A5A /* Resources */,
+				DB324BE61CAF90A800019734 /* Sources */,
+				DB324BE71CAF90A800019734 /* Frameworks */,
+				DB324BE81CAF90A800019734 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DB51F19C1CA48FF9006B3A5A /* PBXTargetDependency */,
+				DB324BEC1CAF90A800019734 /* PBXTargetDependency */,
 			);
 			name = FristrationsTests;
 			productName = FristrationsTests;
-			productReference = DB51F19A1CA48FF9006B3A5A /* FristrationsTests.xctest */;
+			productReference = DB324BEA1CAF90A800019734 /* FristrationsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DB51F1A41CA48FF9006B3A5A /* FristrationsUITests */ = {
+		DB324BF41CAF90A800019734 /* FristrationsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB51F1B41CA48FF9006B3A5A /* Build configuration list for PBXNativeTarget "FristrationsUITests" */;
+			buildConfigurationList = DB324C041CAF90A900019734 /* Build configuration list for PBXNativeTarget "FristrationsUITests" */;
 			buildPhases = (
-				DB51F1A11CA48FF9006B3A5A /* Sources */,
-				DB51F1A21CA48FF9006B3A5A /* Frameworks */,
-				DB51F1A31CA48FF9006B3A5A /* Resources */,
+				DB324BF11CAF90A800019734 /* Sources */,
+				DB324BF21CAF90A800019734 /* Frameworks */,
+				DB324BF31CAF90A800019734 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DB51F1A71CA48FF9006B3A5A /* PBXTargetDependency */,
+				DB324BF71CAF90A900019734 /* PBXTargetDependency */,
 			);
 			name = FristrationsUITests;
 			productName = FristrationsUITests;
-			productReference = DB51F1A51CA48FF9006B3A5A /* FristrationsUITests.xctest */;
+			productReference = DB324BF51CAF90A800019734 /* FristrationsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DB51F17C1CA48FF8006B3A5A /* Project object */ = {
+		DB324BCC1CAF90A800019734 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Stephanie Liu";
 				TargetAttributes = {
-					DB51F1831CA48FF8006B3A5A = {
+					DB324BD31CAF90A800019734 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = X7HANK79W5;
 					};
-					DB51F1991CA48FF9006B3A5A = {
+					DB324BE91CAF90A800019734 = {
 						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = DB51F1831CA48FF8006B3A5A;
+						DevelopmentTeam = X7HANK79W5;
+						TestTargetID = DB324BD31CAF90A800019734;
 					};
-					DB51F1A41CA48FF9006B3A5A = {
+					DB324BF41CAF90A800019734 = {
 						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = DB51F1831CA48FF8006B3A5A;
+						DevelopmentTeam = X7HANK79W5;
+						TestTargetID = DB324BD31CAF90A800019734;
 					};
 				};
 			};
-			buildConfigurationList = DB51F17F1CA48FF8006B3A5A /* Build configuration list for PBXProject "Fristrations" */;
+			buildConfigurationList = DB324BCF1CAF90A800019734 /* Build configuration list for PBXProject "Fristrations" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -246,36 +250,37 @@
 				en,
 				Base,
 			);
-			mainGroup = DB51F17B1CA48FF8006B3A5A;
-			productRefGroup = DB51F1851CA48FF8006B3A5A /* Products */;
+			mainGroup = DB324BCB1CAF90A800019734;
+			productRefGroup = DB324BD51CAF90A800019734 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DB51F1831CA48FF8006B3A5A /* Fristrations */,
-				DB51F1991CA48FF9006B3A5A /* FristrationsTests */,
-				DB51F1A41CA48FF9006B3A5A /* FristrationsUITests */,
+				DB324BD31CAF90A800019734 /* Fristrations */,
+				DB324BE91CAF90A800019734 /* FristrationsTests */,
+				DB324BF41CAF90A800019734 /* FristrationsUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DB51F1821CA48FF8006B3A5A /* Resources */ = {
+		DB324BD21CAF90A800019734 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB51F1911CA48FF9006B3A5A /* Assets.xcassets in Resources */,
-				DB6A83111CAA482800F4FBD4 /* Default-568h@2x.png in Resources */,
+				DB324BE41CAF90A800019734 /* LaunchScreen.storyboard in Resources */,
+				DB324BE11CAF90A800019734 /* Assets.xcassets in Resources */,
+				DB324BDF1CAF90A800019734 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB51F1981CA48FF9006B3A5A /* Resources */ = {
+		DB324BE81CAF90A800019734 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB51F1A31CA48FF9006B3A5A /* Resources */ = {
+		DB324BF31CAF90A800019734 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -285,51 +290,70 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DB51F1801CA48FF8006B3A5A /* Sources */ = {
+		DB324BD01CAF90A800019734 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBDB5C951CA751D700B359AA /* SearchViewController.swift in Sources */,
-				DB51F1881CA48FF8006B3A5A /* AppDelegate.swift in Sources */,
-				DBDB5C971CA751FD00B359AA /* MoreViewController.swift in Sources */,
-				DB51F18A1CA48FF8006B3A5A /* NearbyViewController.swift in Sources */,
-				DBDB5C931CA751A400B359AA /* SettingsViewController.swift in Sources */,
+				DBA4C3261CAF97FA00EFCA8F /* SearchViewController.swift in Sources */,
+				DBA4C3281CAF982000EFCA8F /* SettingsViewController.swift in Sources */,
+				DBA4C32C1CAF989A00EFCA8F /* NearbyViewController.swift in Sources */,
+				DBA4C32A1CAF987900EFCA8F /* MoreViewController.swift in Sources */,
+				DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB51F1961CA48FF9006B3A5A /* Sources */ = {
+		DB324BE61CAF90A800019734 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB51F19F1CA48FF9006B3A5A /* FristrationsTests.swift in Sources */,
+				DB324BEF1CAF90A800019734 /* FristrationsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB51F1A11CA48FF9006B3A5A /* Sources */ = {
+		DB324BF11CAF90A800019734 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB51F1AA1CA48FF9006B3A5A /* FristrationsUITests.swift in Sources */,
+				DB324BFA1CAF90A900019734 /* FristrationsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DB51F19C1CA48FF9006B3A5A /* PBXTargetDependency */ = {
+		DB324BEC1CAF90A800019734 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DB51F1831CA48FF8006B3A5A /* Fristrations */;
-			targetProxy = DB51F19B1CA48FF9006B3A5A /* PBXContainerItemProxy */;
+			target = DB324BD31CAF90A800019734 /* Fristrations */;
+			targetProxy = DB324BEB1CAF90A800019734 /* PBXContainerItemProxy */;
 		};
-		DB51F1A71CA48FF9006B3A5A /* PBXTargetDependency */ = {
+		DB324BF71CAF90A900019734 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DB51F1831CA48FF8006B3A5A /* Fristrations */;
-			targetProxy = DB51F1A61CA48FF9006B3A5A /* PBXContainerItemProxy */;
+			target = DB324BD31CAF90A800019734 /* Fristrations */;
+			targetProxy = DB324BF61CAF90A900019734 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		DB324BDD1CAF90A800019734 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB324BDE1CAF90A800019734 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DB324BE21CAF90A800019734 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB324BE31CAF90A800019734 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		DB51F1AC1CA48FF9006B3A5A /* Debug */ = {
+		DB324BFC1CAF90A900019734 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -374,7 +398,7 @@
 			};
 			name = Debug;
 		};
-		DB51F1AD1CA48FF9006B3A5A /* Release */ = {
+		DB324BFD1CAF90A900019734 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -412,7 +436,7 @@
 			};
 			name = Release;
 		};
-		DB51F1AF1CA48FF9006B3A5A /* Debug */ = {
+		DB324BFF1CAF90A900019734 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -431,7 +455,7 @@
 			};
 			name = Debug;
 		};
-		DB51F1B01CA48FF9006B3A5A /* Release */ = {
+		DB324C001CAF90A900019734 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -449,7 +473,7 @@
 			};
 			name = Release;
 		};
-		DB51F1B21CA48FF9006B3A5A /* Debug */ = {
+		DB324C021CAF90A900019734 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -461,7 +485,7 @@
 			};
 			name = Debug;
 		};
-		DB51F1B31CA48FF9006B3A5A /* Release */ = {
+		DB324C031CAF90A900019734 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,7 +497,7 @@
 			};
 			name = Release;
 		};
-		DB51F1B51CA48FF9006B3A5A /* Debug */ = {
+		DB324C051CAF90A900019734 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = FristrationsUITests/Info.plist;
@@ -485,7 +509,7 @@
 			};
 			name = Debug;
 		};
-		DB51F1B61CA48FF9006B3A5A /* Release */ = {
+		DB324C061CAF90A900019734 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = FristrationsUITests/Info.plist;
@@ -500,43 +524,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DB51F17F1CA48FF8006B3A5A /* Build configuration list for PBXProject "Fristrations" */ = {
+		DB324BCF1CAF90A800019734 /* Build configuration list for PBXProject "Fristrations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB51F1AC1CA48FF9006B3A5A /* Debug */,
-				DB51F1AD1CA48FF9006B3A5A /* Release */,
+				DB324BFC1CAF90A900019734 /* Debug */,
+				DB324BFD1CAF90A900019734 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DB51F1AE1CA48FF9006B3A5A /* Build configuration list for PBXNativeTarget "Fristrations" */ = {
+		DB324BFE1CAF90A900019734 /* Build configuration list for PBXNativeTarget "Fristrations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB51F1AF1CA48FF9006B3A5A /* Debug */,
-				DB51F1B01CA48FF9006B3A5A /* Release */,
+				DB324BFF1CAF90A900019734 /* Debug */,
+				DB324C001CAF90A900019734 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DB51F1B11CA48FF9006B3A5A /* Build configuration list for PBXNativeTarget "FristrationsTests" */ = {
+		DB324C011CAF90A900019734 /* Build configuration list for PBXNativeTarget "FristrationsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB51F1B21CA48FF9006B3A5A /* Debug */,
-				DB51F1B31CA48FF9006B3A5A /* Release */,
+				DB324C021CAF90A900019734 /* Debug */,
+				DB324C031CAF90A900019734 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DB51F1B41CA48FF9006B3A5A /* Build configuration list for PBXNativeTarget "FristrationsUITests" */ = {
+		DB324C041CAF90A900019734 /* Build configuration list for PBXNativeTarget "FristrationsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB51F1B51CA48FF9006B3A5A /* Debug */,
-				DB51F1B61CA48FF9006B3A5A /* Release */,
+				DB324C051CAF90A900019734 /* Debug */,
+				DB324C061CAF90A900019734 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DB51F17C1CA48FF8006B3A5A /* Project object */;
+	rootObject = DB324BCC1CAF90A800019734 /* Project object */;
 }

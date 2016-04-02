@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DB51F1831CA48FF8006B3A5A"
+               BlueprintIdentifier = "DB324BD31CAF90A800019734"
                BuildableName = "Fristrations.app"
                BlueprintName = "Fristrations"
                ReferencedContainer = "container:Fristrations.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DB51F1991CA48FF9006B3A5A"
+               BlueprintIdentifier = "DB324BE91CAF90A800019734"
                BuildableName = "FristrationsTests.xctest"
                BlueprintName = "FristrationsTests"
                ReferencedContainer = "container:Fristrations.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DB51F1A41CA48FF9006B3A5A"
+               BlueprintIdentifier = "DB324BF41CAF90A800019734"
                BuildableName = "FristrationsUITests.xctest"
                BlueprintName = "FristrationsUITests"
                ReferencedContainer = "container:Fristrations.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DB51F1831CA48FF8006B3A5A"
+            BlueprintIdentifier = "DB324BD31CAF90A800019734"
             BuildableName = "Fristrations.app"
             BlueprintName = "Fristrations"
             ReferencedContainer = "container:Fristrations.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DB51F1831CA48FF8006B3A5A"
+            BlueprintIdentifier = "DB324BD31CAF90A800019734"
             BuildableName = "Fristrations.app"
             BlueprintName = "Fristrations"
             ReferencedContainer = "container:Fristrations.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DB51F1831CA48FF8006B3A5A"
+            BlueprintIdentifier = "DB324BD31CAF90A800019734"
             BuildableName = "Fristrations.app"
             BlueprintName = "Fristrations"
             ReferencedContainer = "container:Fristrations.xcodeproj">

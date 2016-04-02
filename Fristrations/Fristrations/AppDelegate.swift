@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Fristrations
 //
-//  Created by Stephanie Liu on 3/24/16.
+//  Created by Stephanie Liu on 4/2/16.
 //  Copyright © 2016 Stephanie Liu. All rights reserved.
 //
 
@@ -13,48 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
         // Override point for customization after application launch.
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let nav1 = UINavigationController()
-        let vc1 = NearbyViewController()
-        vc1.tabBarItem = UITabBarItem(
-            title: "Nearby",
-            image: UIImage(named: "icon_nearby"),
-            tag: 1)
-        nav1.viewControllers = [vc1]
-        
-        let nav2 = UINavigationController()
-        let vc2 = SettingsViewController()
-        vc2.tabBarItem = UITabBarItem(
-            title: "Settings",
-            image: UIImage(named: "icon_settings"),
-            tag: 2)
-        nav2.viewControllers = [vc2]
-        
-        let nav3 = UINavigationController()
-        let vc3 = SearchViewController()
-        vc3.tabBarItem = UITabBarItem(
-            title: "Search",
-            image: UIImage(named: "icon_search"),
-            tag: 3)
-        nav3.viewControllers = [vc3]
-        
-        let nav4 = UINavigationController()
-        let vc4 = MoreViewController()
-        vc4.tabBarItem = UITabBarItem(
-            title: "More",
-            image: UIImage(named: "icon_more"),
-            tag: 4)
-        nav4.viewControllers = [vc4]
-        
-        let tabs = UITabBarController()
-        tabs.viewControllers = [nav1, nav2, nav3, nav4]
-        
-        self.window!.rootViewController = tabs;
-        self.window?.makeKeyAndVisible();
-        
         return true
     }
 

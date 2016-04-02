@@ -14,14 +14,14 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     //@IBOutlet weak var searchBar: UIButton!
     //@IBOutlet weak var buildingTextField: UITextField!
     //@IBOutlet weak var buildingNameLabel: UILabel!
-    
+
     @IBOutlet weak var floorPlan: UIImageView!
     
-    
+
     // Called when the view controller’s content view is created and loaded from a storyboard
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         
         self.title = "Search"
         // Fristrations color in RGB percentages
@@ -39,10 +39,10 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         sampleTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
         sampleTextField.delegate = self
         self.view.addSubview(sampleTextField)
-        
+
     }
-    
-    
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -56,19 +56,19 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: Actions
-    //    func textFieldDidEndEditing(textField: UITextField) {
-    //        buildingNameLabel.text = textField.text
-    //    }
+//    func textFieldDidEndEditing(textField: UITextField) {
+//        buildingNameLabel.text = textField.text
+//    }
     
     
     /*
     // MARK: - Navigation
-    
+
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
     */
-    
+
 }
