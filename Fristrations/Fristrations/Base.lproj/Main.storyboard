@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Nearby-->
@@ -16,11 +17,93 @@
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHY-c7-4M9">
+                                <rect key="frame" x="30" y="220" width="540" height="40"/>
+                                <color key="backgroundColor" red="0.41568627450980394" green="0.58823529411764708" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sjb-Gd-oUe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0l-ia-van">
+                                <rect key="frame" x="30" y="280" width="540" height="40"/>
+                                <color key="backgroundColor" red="0.4824321220237594" green="0.76185651665751009" blue="0.91584884444615544" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ISV-uj-tAV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbC-NW-CLs">
+                                <rect key="frame" x="30" y="100" width="540" height="40"/>
+                                <color key="backgroundColor" red="0.55294117647058827" green="0.69019607843137254" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="e4b-pS-T4a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6v-0H-6D8">
+                                <rect key="frame" x="30" y="160" width="540" height="40"/>
+                                <color key="backgroundColor" red="0.38012037027023166" green="0.60028585988388905" blue="0.7216202776922287" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Swf-L1-WST"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30196078431372547" green="0.49411764705882355" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="IHY-c7-4M9" secondAttribute="trailing" constant="10" id="4CI-FE-nc9"/>
+                            <constraint firstItem="l6v-0H-6D8" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="4qJ-8F-IHc"/>
+                            <constraint firstItem="IHY-c7-4M9" firstAttribute="top" secondItem="l6v-0H-6D8" secondAttribute="bottom" constant="20" id="6MD-C2-ha7"/>
+                            <constraint firstItem="IHY-c7-4M9" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="80t-SV-gvY"/>
+                            <constraint firstItem="IHY-c7-4M9" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="8a3-4f-Qdp"/>
+                            <constraint firstItem="nbC-NW-CLs" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="80" id="Cmi-V1-fJ9"/>
+                            <constraint firstItem="l6v-0H-6D8" firstAttribute="top" secondItem="nbC-NW-CLs" secondAttribute="bottom" constant="20" id="LaZ-G0-0UN"/>
+                            <constraint firstItem="B0l-ia-van" firstAttribute="top" secondItem="IHY-c7-4M9" secondAttribute="bottom" constant="20" id="MPG-Jb-lVH"/>
+                            <constraint firstItem="l6v-0H-6D8" firstAttribute="top" secondItem="nbC-NW-CLs" secondAttribute="bottom" constant="20" id="N5w-CA-oD8"/>
+                            <constraint firstItem="nbC-NW-CLs" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="81" id="Nnk-tW-9T5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B0l-ia-van" secondAttribute="trailing" constant="10" id="T7Y-nM-YXP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l6v-0H-6D8" secondAttribute="trailing" constant="10" id="Vuu-q0-IDw"/>
+                            <constraint firstItem="B0l-ia-van" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="b52-CE-dGT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IHY-c7-4M9" secondAttribute="trailing" id="iqk-BW-ryF"/>
+                            <constraint firstItem="l6v-0H-6D8" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="tbA-v5-zwQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nbC-NW-CLs" secondAttribute="trailing" constant="10" id="wfv-ew-X47"/>
+                            <constraint firstItem="nbC-NW-CLs" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="xrg-Zd-7j2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Nnk-tW-9T5"/>
+                                <exclude reference="4qJ-8F-IHc"/>
+                                <exclude reference="N5w-CA-oD8"/>
+                                <exclude reference="80t-SV-gvY"/>
+                                <exclude reference="iqk-BW-ryF"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Nearby" image="icon_nearby" selectedImage="icon_nearby" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="firstFloorButton" destination="l6v-0H-6D8" id="7EY-HL-quU"/>
+                        <outlet property="fristLabel" destination="nbC-NW-CLs" id="AB9-bv-EHk"/>
+                        <outlet property="secondFloorButton" destination="IHY-c7-4M9" id="kHj-0l-ibV"/>
+                        <outlet property="thirdFloorButton" destination="B0l-ia-van" id="79q-7J-qo6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <barButtonItem title="Nearby" id="uQD-M8-NxL"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>

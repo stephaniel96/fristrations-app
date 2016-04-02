@@ -10,13 +10,20 @@ import UIKit
 
 class NearbyViewController: UIViewController {
     
+    @IBOutlet weak var fristLabel: UILabel!
+    @IBOutlet weak var firstFloorButton: UIButton!
+    
+    @IBOutlet weak var secondFloorButton: UIButton!
+    
+    @IBOutlet weak var thirdFloorButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         self.title = "Nearby"
         // Fristrations color in RGB percentages
-        view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
+        //view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
     }
     
     override func didReceiveMemoryWarning() {
