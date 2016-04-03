@@ -1,22 +1,19 @@
 //
-//  SettingsViewController.swift
+//  SecondFloor.swift
 //  Fristrations
 //
-//  Created by Stephanie Liu on 3/26/16.
+//  Created by Stephanie Liu on 4/2/16.
 //  Copyright © 2016 Stephanie Liu. All rights reserved.
 //
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SecondFloor: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = "Settings"
-        // Fristrations color in RGB percentages
-        view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {

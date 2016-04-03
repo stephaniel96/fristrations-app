@@ -19,6 +19,9 @@
 		DB324C0E1CAF90FD00019734 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C0D1CAF90FD00019734 /* libicucore.tbd */; };
 		DB324C101CAF910700019734 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C0F1CAF910700019734 /* Security.framework */; };
 		DB324C121CAF91A600019734 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C111CAF91A600019734 /* Firebase.framework */; };
+		DB9590051CB0726F00055E61 /* FirstFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590041CB0726F00055E61 /* FirstFloor.swift */; };
+		DB9590071CB072F000055E61 /* SecondFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590061CB072F000055E61 /* SecondFloor.swift */; };
+		DB9590091CB0740A00055E61 /* ThirdFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590081CB0740A00055E61 /* ThirdFloor.swift */; };
 		DBA4C3261CAF97FA00EFCA8F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */; };
 		DBA4C3281CAF982000EFCA8F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C3271CAF982000EFCA8F /* SettingsViewController.swift */; };
 		DBA4C32A1CAF987900EFCA8F /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C3291CAF987900EFCA8F /* MoreViewController.swift */; };
@@ -62,6 +65,9 @@
 		DB324C0F1CAF910700019734 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DB324C111CAF91A600019734 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		DB9221D41CAF95D9002C7C21 /* Fristrations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fristrations-Bridging-Header.h"; sourceTree = "<group>"; };
+		DB9590041CB0726F00055E61 /* FirstFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstFloor.swift; sourceTree = "<group>"; };
+		DB9590061CB072F000055E61 /* SecondFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondFloor.swift; sourceTree = "<group>"; };
+		DB9590081CB0740A00055E61 /* ThirdFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdFloor.swift; sourceTree = "<group>"; };
 		DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DBA4C3271CAF982000EFCA8F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DBA4C3291CAF987900EFCA8F /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +144,9 @@
 				DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */,
 				DBA4C3271CAF982000EFCA8F /* SettingsViewController.swift */,
 				DBA4C3291CAF987900EFCA8F /* MoreViewController.swift */,
+				DB9590041CB0726F00055E61 /* FirstFloor.swift */,
+				DB9590061CB072F000055E61 /* SecondFloor.swift */,
+				DB9590081CB0740A00055E61 /* ThirdFloor.swift */,
 			);
 			path = Fristrations;
 			sourceTree = "<group>";
@@ -294,8 +303,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9590091CB0740A00055E61 /* ThirdFloor.swift in Sources */,
 				DBA4C3261CAF97FA00EFCA8F /* SearchViewController.swift in Sources */,
+				DB9590051CB0726F00055E61 /* FirstFloor.swift in Sources */,
 				DBA4C3281CAF982000EFCA8F /* SettingsViewController.swift in Sources */,
+				DB9590071CB072F000055E61 /* SecondFloor.swift in Sources */,
 				DBA4C32C1CAF989A00EFCA8F /* NearbyViewController.swift in Sources */,
 				DBA4C32A1CAF987900EFCA8F /* MoreViewController.swift in Sources */,
 				DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */,

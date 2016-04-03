@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Nearby-->
+        <!--Nearby View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="NearbyViewController" customModule="Fristrations" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,29 +19,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHY-c7-4M9">
-                                <rect key="frame" x="30" y="220" width="540" height="40"/>
+                                <rect key="frame" x="30" y="264" width="540" height="40"/>
                                 <color key="backgroundColor" red="0.41568627450980394" green="0.58823529411764708" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="sjb-Gd-oUe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Second Floor">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="qar-Vk-9Kn" kind="show" identifier="secondFloor" id="uxq-m4-0Vy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0l-ia-van">
-                                <rect key="frame" x="30" y="280" width="540" height="40"/>
+                                <rect key="frame" x="30" y="324" width="540" height="40"/>
                                 <color key="backgroundColor" red="0.4824321220237594" green="0.76185651665751009" blue="0.91584884444615544" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ISV-uj-tAV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Third Floor">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="HMx-lI-a3P" kind="show" id="itE-5g-y8X"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6v-0H-6D8">
+                                <rect key="frame" x="30" y="204" width="540" height="40"/>
+                                <color key="backgroundColor" red="0.38012037027023166" green="0.60028585988388905" blue="0.7216202776922287" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Swf-L1-WST"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="First Floor">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ifx-Ru-8BV" kind="show" id="yzI-vB-Rbj"/>
+                                </connections>
                             </button>
                             <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbC-NW-CLs">
-                                <rect key="frame" x="30" y="100" width="540" height="40"/>
+                                <rect key="frame" x="30" y="144" width="540" height="40"/>
                                 <color key="backgroundColor" red="0.55294117647058827" green="0.69019607843137254" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="e4b-pS-T4a"/>
@@ -50,17 +70,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6v-0H-6D8">
-                                <rect key="frame" x="30" y="160" width="540" height="40"/>
-                                <color key="backgroundColor" red="0.38012037027023166" green="0.60028585988388905" blue="0.7216202776922287" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Swf-L1-WST"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.30196078431372547" green="0.49411764705882355" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -92,8 +101,8 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Nearby" image="icon_nearby" selectedImage="icon_nearby" id="acW-dT-cKf"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="0nG-yU-Uf1"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="firstFloorButton" destination="l6v-0H-6D8" id="7EY-HL-quU"/>
@@ -105,7 +114,131 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <barButtonItem title="Nearby" id="uQD-M8-NxL"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="1562" y="-320"/>
+        </scene>
+        <!--Second Floor-->
+        <scene sceneID="nlN-Gh-kME">
+            <objects>
+                <viewController id="qar-Vk-9Kn" customClass="SecondFloor" customModule="Fristrations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jwB-eW-MD3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Se1-FM-QVX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g6l-PY-9sG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Mh-1x-j8r">
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                                <items>
+                                    <navigationItem title="Frist: Second Floor" id="qeO-J7-Syv"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvI-Ui-jQE">
+                                <rect key="frame" x="30" y="144" width="540" height="40"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.72156862749999995" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lsa-bp-LBY"/>
+                                </constraints>
+                                <state key="normal" title="205">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0G-1W-5af">
+                                <rect key="frame" x="30" y="204" width="540" height="40"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.72156862749999995" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IHi-J1-c4n"/>
+                                </constraints>
+                                <state key="normal" title="206">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZF0-u5-q7Z">
+                                <rect key="frame" x="30" y="264" width="540" height="40"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.72156862749999995" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wbz-3U-cbi"/>
+                                </constraints>
+                                <state key="normal" title="207">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ta-tv-0GJ">
+                                <rect key="frame" x="30" y="324" width="540" height="40"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.72156862749999995" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="3dV-Sv-MdG"/>
+                                    <constraint firstAttribute="height" constant="40" id="46N-te-ENU"/>
+                                    <constraint firstAttribute="height" constant="30" id="8wA-hA-hRB"/>
+                                </constraints>
+                                <state key="normal" title="208">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3dV-Sv-MdG"/>
+                                        <exclude reference="8wA-hA-hRB"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.38790929270000002" green="0.61258612150000002" blue="0.73640676329999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="p0G-1W-5af" secondAttribute="trailing" constant="10" id="DUa-BM-WH0"/>
+                            <constraint firstItem="TvI-Ui-jQE" firstAttribute="top" secondItem="jwB-eW-MD3" secondAttribute="bottom" constant="80" id="LQT-8K-5CM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TvI-Ui-jQE" secondAttribute="trailing" constant="10" id="Mxc-cM-Mwn"/>
+                            <constraint firstItem="ZF0-u5-q7Z" firstAttribute="leading" secondItem="g6l-PY-9sG" secondAttribute="leadingMargin" constant="10" id="PBd-Lg-xsP"/>
+                            <constraint firstItem="5ta-tv-0GJ" firstAttribute="leading" secondItem="g6l-PY-9sG" secondAttribute="leadingMargin" constant="10" id="Re1-YF-Hqw"/>
+                            <constraint firstItem="p0G-1W-5af" firstAttribute="leading" secondItem="g6l-PY-9sG" secondAttribute="leadingMargin" constant="10" id="SGo-bo-t9u"/>
+                            <constraint firstItem="ZF0-u5-q7Z" firstAttribute="top" secondItem="p0G-1W-5af" secondAttribute="bottom" constant="20" id="Skj-Q2-tEO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5ta-tv-0GJ" secondAttribute="trailing" constant="10" id="fX9-n0-xkw"/>
+                            <constraint firstItem="TvI-Ui-jQE" firstAttribute="leading" secondItem="g6l-PY-9sG" secondAttribute="leadingMargin" constant="10" id="pv2-SL-DRN"/>
+                            <constraint firstItem="5ta-tv-0GJ" firstAttribute="top" secondItem="ZF0-u5-q7Z" secondAttribute="bottom" constant="20" id="q9d-g8-b2u"/>
+                            <constraint firstItem="p0G-1W-5af" firstAttribute="top" secondItem="TvI-Ui-jQE" secondAttribute="bottom" constant="20" id="wDk-n4-jDu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZF0-u5-q7Z" secondAttribute="trailing" constant="10" id="wMP-P2-7q8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p60-3B-ukB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2383" y="-461"/>
+        </scene>
+        <!--Third Floor-->
+        <scene sceneID="DYe-gm-KUv">
+            <objects>
+                <viewController id="HMx-lI-a3P" customClass="ThirdFloor" customModule="Fristrations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sio-MN-p9W"/>
+                        <viewControllerLayoutGuide type="bottom" id="puK-Jr-VAs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tao-dK-TYa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.38790929270000002" green="0.61258612150000002" blue="0.73640676329999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSU-iY-JGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2388" y="229"/>
+        </scene>
+        <!--First Floor-->
+        <scene sceneID="T2D-BS-fD2">
+            <objects>
+                <viewController id="Ifx-Ru-8BV" customClass="FirstFloor" customModule="Fristrations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oon-zp-7bR"/>
+                        <viewControllerLayoutGuide type="bottom" id="JBG-ds-Ztq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L3n-rY-SdR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.38012037030000001" green="0.60028585990000005" blue="0.72162027770000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TKL-5e-vrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2383" y="-1156"/>
         </scene>
         <!--Search-->
         <scene sceneID="wg7-f3-ORb">
@@ -124,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="792" y="614"/>
         </scene>
         <!--More-->
         <scene sceneID="aWH-ku-xJp">
@@ -143,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXi-IO-ASq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="552" y="1057"/>
+            <point key="canvasLocation" x="178" y="1415"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -156,7 +289,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="eE3-j1-gnP" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="Vh0-WP-QFn" kind="relationship" relationship="viewControllers" id="abq-V9-KRB"/>
                         <segue destination="azx-ah-5Sp" kind="relationship" relationship="viewControllers" id="TQe-kr-7da"/>
@@ -183,7 +316,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vjn-uh-a2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-148" y="971"/>
+            <point key="canvasLocation" x="-528" y="1057"/>
+        </scene>
+        <!--Nearby-->
+        <scene sceneID="Voy-cM-baj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eE3-j1-gnP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Nearby" image="icon_nearby" selectedImage="icon_nearby" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X4X-Zl-R8g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="ZtO-eg-Uat"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MMy-n1-7fv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
         </scene>
     </scenes>
     <resources>
