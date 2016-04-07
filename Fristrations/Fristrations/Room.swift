@@ -13,15 +13,28 @@ public class Room {
     
     var name: String = ""
     var numPeople: Int = 0
-    var ref = Firebase(url: "https://fristrations.firebaseio.com/rooms/frist204")
     
     init (name: String) {
         self.name = name
+        let address = "https://fristrations.firebaseio.com/rooms/" + name
+        let ref = Firebase(url: address)
         ref.observeEventType(.Value, withBlock: { snapshot in
-            print(snapshot.value)
-            }, withCancelBlock: { error in
-                print("error")
-        })
+            let info =  snapshot
+        
+            let resSnapshot = info.childSnapshotForPath("reservation/reserved");
+            let re = resSnapshot.value;
+            print(resSnapshot)
+            print(re)
+         }, withCancelBlock: { error in
+         print("error")
+         })
+        
+        //ref.once("value", function(snapshot) {
+        
+    
+            //});
+        
+        
     }
     
 }

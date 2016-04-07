@@ -18,8 +18,8 @@ class SettingsViewController: UIViewController {
         // Fristrations color in RGB percentages
         view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
         
-        let testRoom = Room(name: "204")
-        print(testRoom.name)
+        let testRoom = Room(name: "frist206")
+        print("Printing for testing purposes: " + testRoom.name)
     }
     
     override func didReceiveMemoryWarning() {
