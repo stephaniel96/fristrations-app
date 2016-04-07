@@ -13,13 +13,15 @@ public class Room {
     
     var name: String = ""
     var numPeople: Int = 0
-    let ref = Firebase(url: "https://fristrations.firebaseio.com/")
+    var ref = Firebase(url: "https://fristrations.firebaseio.com/rooms/frist204")
     
     init (name: String) {
         self.name = name
+        ref.observeEventType(.Value, withBlock: { snapshot in
+            print(snapshot.value)
+            }, withCancelBlock: { error in
+                print("error")
+        })
     }
-    
-    let roomRef = Firebase(url: "https://fristrations.firebaseio.com/rooms/frist204")
-    println(roomRef)
     
 }
