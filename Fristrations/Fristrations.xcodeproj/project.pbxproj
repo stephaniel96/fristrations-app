@@ -19,6 +19,7 @@
 		DB324C0E1CAF90FD00019734 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C0D1CAF90FD00019734 /* libicucore.tbd */; };
 		DB324C101CAF910700019734 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C0F1CAF910700019734 /* Security.framework */; };
 		DB324C121CAF91A600019734 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C111CAF91A600019734 /* Firebase.framework */; };
+		DB3A69821CB704F700579435 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A69811CB704F700579435 /* Room.swift */; };
 		DB9590051CB0726F00055E61 /* FirstFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590041CB0726F00055E61 /* FirstFloor.swift */; };
 		DB9590071CB072F000055E61 /* SecondFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590061CB072F000055E61 /* SecondFloor.swift */; };
 		DB9590091CB0740A00055E61 /* ThirdFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590081CB0740A00055E61 /* ThirdFloor.swift */; };
@@ -64,6 +65,7 @@
 		DB324C0D1CAF90FD00019734 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		DB324C0F1CAF910700019734 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DB324C111CAF91A600019734 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		DB3A69811CB704F700579435 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		DB9221D41CAF95D9002C7C21 /* Fristrations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fristrations-Bridging-Header.h"; sourceTree = "<group>"; };
 		DB9590041CB0726F00055E61 /* FirstFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstFloor.swift; sourceTree = "<group>"; };
 		DB9590061CB072F000055E61 /* SecondFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondFloor.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				DB324BD71CAF90A800019734 /* AppDelegate.swift */,
 				DB324C111CAF91A600019734 /* Firebase.framework */,
 				DB324BDD1CAF90A800019734 /* Main.storyboard */,
+				DB3A69811CB704F700579435 /* Room.swift */,
 				DB324BE01CAF90A800019734 /* Assets.xcassets */,
 				DB324BE21CAF90A800019734 /* LaunchScreen.storyboard */,
 				DB324BE51CAF90A800019734 /* Info.plist */,
@@ -308,6 +311,7 @@
 				DB9590051CB0726F00055E61 /* FirstFloor.swift in Sources */,
 				DBA4C3281CAF982000EFCA8F /* SettingsViewController.swift in Sources */,
 				DB9590071CB072F000055E61 /* SecondFloor.swift in Sources */,
+				DB3A69821CB704F700579435 /* Room.swift in Sources */,
 				DBA4C32C1CAF989A00EFCA8F /* NearbyViewController.swift in Sources */,
 				DBA4C32A1CAF987900EFCA8F /* MoreViewController.swift in Sources */,
 				DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */,
