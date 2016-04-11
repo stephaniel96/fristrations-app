@@ -26,8 +26,12 @@ class SecondFloor: UIViewController {
         // Read data and react to changes
         rootRef.observeEventType(.Value, withBlock: {
             snapshot in
-            var rooms = snapshot.value as! NSDictionary
-        
+            let rooms = snapshot.value as! NSDictionary
+            for (room_id, room_data) in rooms {
+                print (room_id)
+                let reserve = room_data["reservation"] as! NSDictionary
+                print((reserve["reserved"])!)
+            }
             
         })
     }
