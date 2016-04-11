@@ -7,13 +7,29 @@
 //
 
 import UIKit
+import Firebase
 
 class SecondFloor: UIViewController {
 
+    
+    var rootRef: Firebase!
+    
     override func viewDidLoad() {
+        rootRef = Firebase(url:"https://fristrations.firebaseio.com/rooms")
         super.viewDidLoad()
-        self.title = "Frist: Second Floor"
+        self.title = "200 Level"
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        // Read data and react to changes
+        rootRef.observeEventType(.Value, withBlock: {
+            snapshot in
+            var rooms = snapshot.value as! NSDictionary
+        
+            
+        })
     }
 
     override func didReceiveMemoryWarning() {
