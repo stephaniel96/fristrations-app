@@ -9,8 +9,6 @@
 import UIKit
 
 class ThirdFloor: UIViewController {
-
-    var room:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,35 +23,22 @@ class ThirdFloor: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         let vc = segue.destinationViewController as! RoomInfo
-        vc.roomNumber = room
+        vc.roomNumber = sender as! String
     }
     
     @IBAction func selectRoom303(sender: AnyObject) {
-        room = "frist303"
-        self.performSegueWithIdentifier("goToRoomData", sender: sender)
+        self.performSegueWithIdentifier("goToRoomData", sender: "303")
     }
     
     
     @IBAction func selectRoom307(sender: AnyObject) {
-        room = "frist307"
-        self.performSegueWithIdentifier("goToRoomData", sender: sender)
+        self.performSegueWithIdentifier("goToRoomData", sender: "307")
     }
     
     
     @IBAction func selectRoom309(sender: AnyObject) {
-        room = "frist309"
-        self.performSegueWithIdentifier("goToRoomData", sender: sender)
+        self.performSegueWithIdentifier("goToRoomData", sender: "309")
     }
 
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

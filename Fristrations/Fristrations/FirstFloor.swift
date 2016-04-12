@@ -10,8 +10,6 @@ import UIKit
 
 class FirstFloor: UIViewController {
 
-    
-    var room:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "100 Level"
@@ -25,21 +23,12 @@ class FirstFloor: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         let vc = segue.destinationViewController as! RoomInfo
-        vc.roomNumber = room
+        vc.roomNumber = sender as! String
     }
 
     @IBAction func selectRoom114(sender: AnyObject) {
-        room = "frist114"
-        self.performSegueWithIdentifier("goToRoomData", sender: sender)
+        self.performSegueWithIdentifier("goToRoomData", sender: "114")
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
