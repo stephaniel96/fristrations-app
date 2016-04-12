@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		644A0AD41CBC95CE00846C32 /* RoomInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A0AD31CBC95CE00846C32 /* RoomInfo.swift */; };
 		DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB324BD71CAF90A800019734 /* AppDelegate.swift */; };
 		DB324BDF1CAF90A800019734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB324BDD1CAF90A800019734 /* Main.storyboard */; };
 		DB324BE11CAF90A800019734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB324BE01CAF90A800019734 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		644A0AD31CBC95CE00846C32 /* RoomInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomInfo.swift; sourceTree = "<group>"; };
 		DB324BD41CAF90A800019734 /* Fristrations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fristrations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB324BD71CAF90A800019734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB324BDE1CAF90A800019734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */,
 				DBA4C3271CAF982000EFCA8F /* SettingsViewController.swift */,
 				DBA4C3291CAF987900EFCA8F /* MoreViewController.swift */,
+				644A0AD31CBC95CE00846C32 /* RoomInfo.swift */,
 				DB9590041CB0726F00055E61 /* FirstFloor.swift */,
 				DB9590061CB072F000055E61 /* SecondFloor.swift */,
 				DB9590081CB0740A00055E61 /* ThirdFloor.swift */,
@@ -310,6 +313,7 @@
 				DBA4C3261CAF97FA00EFCA8F /* SearchViewController.swift in Sources */,
 				DB9590051CB0726F00055E61 /* FirstFloor.swift in Sources */,
 				DBA4C3281CAF982000EFCA8F /* SettingsViewController.swift in Sources */,
+				644A0AD41CBC95CE00846C32 /* RoomInfo.swift in Sources */,
 				DB9590071CB072F000055E61 /* SecondFloor.swift in Sources */,
 				DB3A69821CB704F700579435 /* Room.swift in Sources */,
 				DBA4C32C1CAF989A00EFCA8F /* NearbyViewController.swift in Sources */,
