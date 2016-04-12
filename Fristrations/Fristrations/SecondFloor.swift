@@ -11,6 +11,16 @@ import Firebase
 
 class SecondFloor: UIViewController {
 
+    // MARK: Properties
+    @IBOutlet weak var room205: UIButton!
+    @IBOutlet weak var room206: UIButton!
+    @IBOutlet weak var room207: UIButton!
+    @IBOutlet weak var room208: UIButton!
+    @IBOutlet weak var room209: UIButton!
+    @IBOutlet weak var room210: UIButton!
+    @IBOutlet weak var room212: UIButton!
+    @IBOutlet weak var room227: UIButton!
+    
     
     var rootRef: Firebase!
     
@@ -41,7 +51,33 @@ class SecondFloor: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Actions
+    @IBAction func selectRoom205(sender: AnyObject) {
+        
+    }
+        
+    @IBAction func selectRoom206(sender: AnyObject) {
+    }
+    
+    @IBAction func selectRoom207(sender: AnyObject) {
+    }
+    
+    @IBAction func selectRoom208(sender: AnyObject) {
+    }
+    
+    @IBAction func selectRoom209(sender: AnyObject) {
+    }
 
+    @IBAction func selectRoom210(sender: AnyObject) {
+    }
+    
+    @IBAction func selectRoom212(sender: AnyObject) {
+    }
+    
+    @IBAction func selectRoom227(sender: AnyObject) {
+    }
+    
+    
     /*
     // MARK: - Navigation
 
