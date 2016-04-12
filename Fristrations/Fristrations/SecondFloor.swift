@@ -61,42 +61,42 @@ class SecondFloor: UIViewController {
     // MARK: Actions
   
     @IBAction func selectRoom205(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToRoomData", sender: "205")
+        self.performSegueWithIdentifier("goToRoomData", sender: "frist205")
     }
 
     @IBAction func selectRoom206(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToRoomData", sender: "206")
+        self.performSegueWithIdentifier("goToRoomData", sender: "frist206")
     }
     
     @IBAction func selectRoom207(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToRoomData", sender: "207")
+        self.performSegueWithIdentifier("goToRoomData", sender: "frist207")
     }
     @IBAction func selectRoom208(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToRoomData", sender: "208")
+        self.performSegueWithIdentifier("goToRoomData", sender: "frist208")
     }
     
     @IBAction func selectRoom209(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToRoomData", sender: "209")
+        self.performSegueWithIdentifier("goToRoomData", sender: "frist209")
     }
 
     @IBAction func selectRoom210(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToRoomData", sender: "210")
+        self.performSegueWithIdentifier("goToRoomData", sender: "frist210")
     }
     
     @IBAction func selectRoom212(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToRoomData", sender: "212")
+        self.performSegueWithIdentifier("goToRoomData", sender: "frist212")
     }
     
     @IBAction func selectRoom227(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToRoomData", sender: "227")
+        self.performSegueWithIdentifier("goToRoomData", sender: "frist227")
     }
     
     @IBAction func selectRoom228(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToRoomData", sender: "228")
+        self.performSegueWithIdentifier("goToRoomData", sender: "frist228")
     }
     
     @IBAction func selectRoom234(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToRoomData", sender: "234")
+        self.performSegueWithIdentifier("goToRoomData", sender: "frist234")
     }
     
     

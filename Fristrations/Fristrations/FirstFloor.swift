@@ -27,7 +27,7 @@ class FirstFloor: UIViewController {
     }
 
     @IBAction func selectRoom114(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToRoomData", sender: "114")
+        self.performSegueWithIdentifier("goToRoomData", sender: "frist114")
     }
 
 

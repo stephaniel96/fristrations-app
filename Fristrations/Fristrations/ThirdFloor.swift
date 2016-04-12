@@ -27,17 +27,17 @@ class ThirdFloor: UIViewController {
     }
     
     @IBAction func selectRoom303(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToRoomData", sender: "303")
+        self.performSegueWithIdentifier("goToRoomData", sender: "frist303")
     }
     
     
     @IBAction func selectRoom307(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToRoomData", sender: "307")
+        self.performSegueWithIdentifier("goToRoomData", sender: "frist307")
     }
     
     
     @IBAction func selectRoom309(sender: AnyObject) {
-        self.performSegueWithIdentifier("goToRoomData", sender: "309")
+        self.performSegueWithIdentifier("goToRoomData", sender: "frist309")
     }
 
 

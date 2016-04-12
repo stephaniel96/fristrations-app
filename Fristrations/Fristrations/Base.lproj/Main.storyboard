@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -393,30 +393,19 @@
                                     <navigationItem title="Title" id="JNC-IW-CZQ"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbM-oZ-keC">
-                                <rect key="frame" x="90" y="164" width="62" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Availability" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EA8-Yo-M1l">
-                                <rect key="frame" x="90" y="215" width="81" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nv4-T0-amJ">
+                                <rect key="frame" x="78" y="86" width="423" height="245"/>
+                                <accessibility key="accessibilityConfiguration" identifier="mapView" label="Map"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIq-8H-t5W">
+                                <rect key="frame" x="263" y="361" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.32156862749999998" green="0.54117647059999996" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="EA8-Yo-M1l" firstAttribute="leading" secondItem="MTC-8r-fxm" secondAttribute="leadingMargin" constant="70" id="AM3-4Z-9ux"/>
-                            <constraint firstItem="xbM-oZ-keC" firstAttribute="top" secondItem="Adj-qz-skz" secondAttribute="bottom" constant="100" id="MGK-wh-TQQ"/>
-                            <constraint firstItem="xbM-oZ-keC" firstAttribute="leading" secondItem="MTC-8r-fxm" secondAttribute="leadingMargin" constant="70" id="b8B-RD-aUz"/>
-                            <constraint firstItem="EA8-Yo-M1l" firstAttribute="top" secondItem="xbM-oZ-keC" secondAttribute="bottom" constant="30" id="uIm-pw-ZUT"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="roomLabel" destination="xbM-oZ-keC" id="pBx-da-uNs"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQ0-ZI-t3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -687,6 +676,6 @@
         <image name="icon_settings" width="26" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ES3-Lc-ixQ"/>
+        <segue reference="TB9-zm-Wo0"/>
     </inferredMetricsTieBreakers>
 </document>
