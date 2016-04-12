@@ -38,17 +38,14 @@ class SecondFloor: UIViewController {
             snapshot in
             let rooms = snapshot.value as! NSDictionary
             for (room_id, room_data) in rooms {
-                print (room_id)
+                //print (room_id)
                 let reserve = room_data["reservation"] as! NSDictionary
-                print((reserve["reserved"])!)
+                //print((reserve["reserved"])!)
             }
             
         })
     }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        let vc = segue.destinationViewController as! RoomInfo
-        vc.roomNumber = room
-    }
+    
     
 
     override func didReceiveMemoryWarning() {
@@ -56,45 +53,63 @@ class SecondFloor: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        let vc = segue.destinationViewController as! RoomInfo
+        vc.roomNumber = room
+    }
+    
     // MARK: Actions
   
     @IBAction func selectRoom205(sender: AnyObject) {
-        room = "room 205"
+        room = "frist205"
+        self.performSegueWithIdentifier("goToRoomData", sender: sender)
     }
 
     @IBAction func selectRoom206(sender: AnyObject) {
-        room = "Room 206"
+        room = "frist206"
+        self.performSegueWithIdentifier("goToRoomData", sender: sender)
     }
     
     @IBAction func selectRoom207(sender: AnyObject) {
-        room = "207"
+        room = "frist207"
+        self.performSegueWithIdentifier("goToRoomData", sender: sender)
     }
     @IBAction func selectRoom208(sender: AnyObject) {
-        room = "208"
+        room = "frist208"
+        self.performSegueWithIdentifier("goToRoomData", sender: sender)
     }
     
     @IBAction func selectRoom209(sender: AnyObject) {
-        room = "209"
+        room = "frist209"
+        self.performSegueWithIdentifier("goToRoomData", sender: sender)
     }
 
     @IBAction func selectRoom210(sender: AnyObject) {
-        room = "210"
+        room = "frist210"
+        self.performSegueWithIdentifier("goToRoomData", sender: sender)
     }
     
     @IBAction func selectRoom212(sender: AnyObject) {
-        room = "212"
+        room = "frist212"
+        self.performSegueWithIdentifier("goToRoomData", sender: sender)
     }
     
     @IBAction func selectRoom227(sender: AnyObject) {
-        room = "227"
+        room = "frist227"
+        self.performSegueWithIdentifier("goToRoomData", sender: sender)
     }
     
     @IBAction func selectRoom228(sender: AnyObject) {
-        room = "228"
+        room = "frist228"
+        self.performSegueWithIdentifier("goToRoomData", sender: sender)
     }
+    
     @IBAction func selectRoom234(sender: AnyObject) {
-        room = "234"
+        room = "frist234"
+        self.performSegueWithIdentifier("goToRoomData", sender: sender)
     }
+    
+    
     
     
     /*

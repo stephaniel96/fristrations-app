@@ -10,9 +10,11 @@ import UIKit
 
 class ThirdFloor: UIViewController {
 
+    var room:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Frist: Third Floor"
+        self.title = "300 Level"
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +23,29 @@ class ThirdFloor: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        let vc = segue.destinationViewController as! RoomInfo
+        vc.roomNumber = room
+    }
+    
+    @IBAction func selectRoom303(sender: AnyObject) {
+        room = "frist303"
+        self.performSegueWithIdentifier("goToRoomData", sender: sender)
+    }
+    
+    
+    @IBAction func selectRoom307(sender: AnyObject) {
+        room = "frist307"
+        self.performSegueWithIdentifier("goToRoomData", sender: sender)
+    }
+    
+    
+    @IBAction func selectRoom309(sender: AnyObject) {
+        room = "frist309"
+        self.performSegueWithIdentifier("goToRoomData", sender: sender)
+    }
 
+    
     /*
     // MARK: - Navigation
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -151,7 +151,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="selectRoom205:" destination="qar-Vk-9Kn" eventType="touchUpInside" id="sc1-g4-cTc"/>
-                                                    <segue destination="6Qs-yb-i1G" kind="show" id="dIX-0g-wea"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMJ-yR-if5">
@@ -165,7 +164,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="selectRoom206:" destination="qar-Vk-9Kn" eventType="touchUpInside" id="heu-uT-IT3"/>
-                                                    <segue destination="6Qs-yb-i1G" kind="show" id="oXR-RW-00Z"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQg-w9-4fs">
@@ -179,7 +177,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="selectRoom207:" destination="qar-Vk-9Kn" eventType="touchUpInside" id="NQi-xA-MGI"/>
-                                                    <segue destination="6Qs-yb-i1G" kind="show" id="shd-WH-ACN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Buf-vT-LAY">
@@ -193,7 +190,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="selectRoom208:" destination="qar-Vk-9Kn" eventType="touchUpInside" id="Ju6-yn-WC1"/>
-                                                    <segue destination="6Qs-yb-i1G" kind="show" id="u9r-vg-lRD"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uI-Iv-Iet">
@@ -207,7 +203,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="selectRoom209:" destination="qar-Vk-9Kn" eventType="touchUpInside" id="PBC-FY-ZjD"/>
-                                                    <segue destination="6Qs-yb-i1G" kind="show" id="CeW-cP-DXK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggE-fE-aJp">
@@ -221,7 +216,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="selectRoom210:" destination="qar-Vk-9Kn" eventType="touchUpInside" id="g3G-fx-79t"/>
-                                                    <segue destination="6Qs-yb-i1G" kind="show" id="5rH-RW-Gwc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqZ-jd-0Us">
@@ -235,7 +229,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="selectRoom212:" destination="qar-Vk-9Kn" eventType="touchUpInside" id="wWI-pX-N75"/>
-                                                    <segue destination="6Qs-yb-i1G" kind="show" id="rJD-9F-FMb"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPS-sP-0ys">
@@ -249,7 +242,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="selectRoom227:" destination="qar-Vk-9Kn" eventType="touchUpInside" id="wMd-fF-Bnk"/>
-                                                    <segue destination="6Qs-yb-i1G" kind="show" id="0FL-rx-qhJ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJE-J8-bU2">
@@ -263,7 +255,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="selectRoom228:" destination="qar-Vk-9Kn" eventType="touchUpInside" id="IWa-hv-Imw"/>
-                                                    <segue destination="6Qs-yb-i1G" kind="show" id="3hC-Qp-s0O"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5V-YX-1lj">
@@ -277,7 +268,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="selectRoom234:" destination="qar-Vk-9Kn" eventType="touchUpInside" id="3d8-r4-juY"/>
-                                                    <segue destination="6Qs-yb-i1G" kind="show" id="DwL-7K-yGz"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -378,6 +368,7 @@
                         <outlet property="room210" destination="ggE-fE-aJp" id="iHb-0J-sLS"/>
                         <outlet property="room212" destination="OqZ-jd-0Us" id="Tkh-QS-VeC"/>
                         <outlet property="room227" destination="CPS-sP-0ys" id="AG3-Lq-2mF"/>
+                        <segue destination="6Qs-yb-i1G" kind="show" identifier="goToRoomData" id="TB9-zm-Wo0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p60-3B-ukB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -402,13 +393,13 @@
                                     <navigationItem title="Title" id="JNC-IW-CZQ"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbM-oZ-keC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbM-oZ-keC">
                                 <rect key="frame" x="90" y="164" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Availability" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EA8-Yo-M1l">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Availability" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EA8-Yo-M1l">
                                 <rect key="frame" x="90" y="215" width="81" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -429,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQ0-ZI-t3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3056" y="-344"/>
+            <point key="canvasLocation" x="3180" y="-870"/>
         </scene>
         <!--Third Floor-->
         <scene sceneID="DYe-gm-KUv">
@@ -452,6 +443,9 @@
                                 <state key="normal" title="307">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectRoom307:" destination="HMx-lI-a3P" eventType="touchUpInside" id="XwE-Vo-gNE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWL-YS-4jC">
                                 <rect key="frame" x="32" y="283" width="548" height="40"/>
@@ -468,6 +462,9 @@
                                         <exclude reference="cfY-ai-O5J"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="selectRoom309:" destination="HMx-lI-a3P" eventType="touchUpInside" id="lkC-fO-1KZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybC-fs-eLH">
                                 <rect key="frame" x="32" y="157" width="548" height="40"/>
@@ -478,6 +475,9 @@
                                 <state key="normal" title="303">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectRoom303:" destination="HMx-lI-a3P" eventType="touchUpInside" id="ti9-Dc-Ytw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.38790929270000002" green="0.61258612150000002" blue="0.73640676329999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -516,6 +516,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <segue destination="6Qs-yb-i1G" kind="show" identifier="goToRoomData" id="ES3-Lc-ixQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSU-iY-JGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -542,6 +545,9 @@
                                 <state key="normal" title="114">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectRoom114:" destination="Ifx-Ru-8BV" eventType="touchUpInside" id="Qbm-Lo-dwC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.38012037030000001" green="0.60028585990000005" blue="0.72162027770000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -551,6 +557,9 @@
                             <constraint firstItem="r5h-Hm-1nq" firstAttribute="top" secondItem="oon-zp-7bR" secondAttribute="bottom" constant="205" id="igG-Mk-yj1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="6Qs-yb-i1G" kind="show" identifier="goToRoomData" id="cH7-mp-n3A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKL-5e-vrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -678,6 +687,6 @@
         <image name="icon_settings" width="26" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CeW-cP-DXK"/>
+        <segue reference="ES3-Lc-ixQ"/>
     </inferredMetricsTieBreakers>
 </document>

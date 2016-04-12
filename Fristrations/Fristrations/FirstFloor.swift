@@ -10,9 +10,11 @@ import UIKit
 
 class FirstFloor: UIViewController {
 
+    
+    var room:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Frist: First Floor"
+        self.title = "100 Level"
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +23,15 @@ class FirstFloor: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        let vc = segue.destinationViewController as! RoomInfo
+        vc.roomNumber = room
+    }
 
+    @IBAction func selectRoom114(sender: AnyObject) {
+        room = "frist114"
+        self.performSegueWithIdentifier("goToRoomData", sender: sender)
+    }
     /*
     // MARK: - Navigation
 

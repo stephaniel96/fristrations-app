@@ -17,10 +17,15 @@ class RoomInfo: UIViewController{
     
     override func viewDidLoad() {
         
-        self.title = "Room Info"
+        self.title = roomNumber
         // Do any additional setup after loading the view.
         roomLabel.text = roomNumber
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        roomLabel.text = roomNumber
+        print(roomNumber)
     }
     
     override func didReceiveMemoryWarning() {
