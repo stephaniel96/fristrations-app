@@ -23,7 +23,7 @@ class SecondFloor: UIViewController {
     
     
     var rootRef: Firebase!
-    //var room:String = ""
+
     override func viewDidLoad() {
         rootRef = Firebase(url:"https://fristrations.firebaseio.com/rooms")
         super.viewDidLoad()
@@ -61,65 +61,44 @@ class SecondFloor: UIViewController {
     // MARK: Actions
   
     @IBAction func selectRoom205(sender: AnyObject) {
-        //room = "frist205"
         self.performSegueWithIdentifier("goToRoomData", sender: "205")
     }
 
     @IBAction func selectRoom206(sender: AnyObject) {
-        //room = "frist206"
         self.performSegueWithIdentifier("goToRoomData", sender: "206")
     }
     
     @IBAction func selectRoom207(sender: AnyObject) {
-        //room = "frist207"
         self.performSegueWithIdentifier("goToRoomData", sender: "207")
     }
     @IBAction func selectRoom208(sender: AnyObject) {
-        //room = "frist208"
         self.performSegueWithIdentifier("goToRoomData", sender: "208")
     }
     
     @IBAction func selectRoom209(sender: AnyObject) {
-        //room = "frist209"
         self.performSegueWithIdentifier("goToRoomData", sender: "209")
     }
 
     @IBAction func selectRoom210(sender: AnyObject) {
-        //room = "frist210"
         self.performSegueWithIdentifier("goToRoomData", sender: "210")
     }
     
     @IBAction func selectRoom212(sender: AnyObject) {
-        //room = "frist212"
         self.performSegueWithIdentifier("goToRoomData", sender: "212")
     }
     
     @IBAction func selectRoom227(sender: AnyObject) {
-        //room = "frist227"
         self.performSegueWithIdentifier("goToRoomData", sender: "227")
     }
     
     @IBAction func selectRoom228(sender: AnyObject) {
-        //room = "frist228"
         self.performSegueWithIdentifier("goToRoomData", sender: "228")
     }
     
     @IBAction func selectRoom234(sender: AnyObject) {
-        //room = "frist234"
         self.performSegueWithIdentifier("goToRoomData", sender: "234")
     }
     
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
