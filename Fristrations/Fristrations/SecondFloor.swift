@@ -33,17 +33,6 @@ class SecondFloor: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        // Read data and react to changes
-        rootRef.observeEventType(.Value, withBlock: {
-            snapshot in
-            let rooms = snapshot.value as! NSDictionary
-            for (room_id, room_data) in rooms {
-                //print (room_id)
-                let reserve = room_data["reservation"] as! NSDictionary
-                //print((reserve["reserved"])!)
-            }
-            
-        })
     }
     
     

@@ -11,11 +11,13 @@ import UIKit
 
 class RoomInfo: UIViewController{
     var roomNumber:String = ""
+    var room: NSDictionary = [String:String]()
     
     @IBOutlet weak var roomLabel: UILabel!
     @IBOutlet weak var routerLabel: UILabel!
     
     var roomsRef: Firebase!
+  
     
     override func viewDidLoad() {
         roomsRef = Firebase(url:"https://fristrations.firebaseio.com/rooms")
@@ -25,13 +27,12 @@ class RoomInfo: UIViewController{
     }
     
     override func viewWillAppear(animated: Bool) {
-        roomLabel.text = roomNumber
+        
         roomsRef.observeEventType(.Value, withBlock: {
             snapshot in
             let rooms = snapshot.value as! NSDictionary
-            let room = rooms[self.roomNumber] as! NSDictionary
-            self.roomLabel.text = room["room_name"] as? String
-            self.title = room["room_name"] as? String
+            self.room = rooms[self.roomNumber] as! NSDictionary
+            self.title = self.room["room_name"] as? String
         })
     }
     
@@ -40,7 +41,17 @@ class RoomInfo: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func bookElThirty(sender: AnyObject) {
+        let times = room["times"] as! NSDictionary
+        let timeDetails = times["11:30am-12:00pm"] as! String
+        if (timeDetails == "n/a") {
+            print("Empty!")
+        }
+    }
     
+    @IBAction func bookSixPm(sender: AnyObject) {
+    }
+   
     /*
      // MARK: - Navigation
      
