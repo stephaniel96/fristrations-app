@@ -12,6 +12,7 @@ import UIKit
 class RoomInfo: UIViewController{
     var roomNumber:String = ""
     var room: NSDictionary = [String:String]()
+    var roomURL:String = "https://fristrations.firebaseio.com/rooms"
     
     @IBOutlet weak var roomLabel: UILabel!
     @IBOutlet weak var routerLabel: UILabel!
@@ -20,7 +21,7 @@ class RoomInfo: UIViewController{
   
     
     override func viewDidLoad() {
-        roomsRef = Firebase(url:"https://fristrations.firebaseio.com/rooms")
+        roomsRef = Firebase(url:roomURL)
         self.title = roomNumber
         // Do any additional setup after loading the view.
         super.viewDidLoad()
@@ -44,12 +45,22 @@ class RoomInfo: UIViewController{
     @IBAction func bookElThirty(sender: AnyObject) {
         let times = room["times"] as! NSDictionary
         let timeDetails = times["11:30am-12:00pm"] as! String
+        var setTime = ["11:30am-12:00pm":"cjhsu"]
         if (timeDetails == "n/a") {
-            print("Empty!")
+            setTime = ["11:30am-12:00pm":"cjhsu"]
         }
+        else {
+            setTime = ["11:30am-12:00pm":"n/a"]
+        }
+        var singleRoomRef = roomURL + "/" + roomNumber
+        var single = singleRoomRef.childByAppendingPath("times")
+        single.updateChildValues(setTime)
     }
     
     @IBAction func bookSixPm(sender: AnyObject) {
+        
+        
+        
     }
    
     /*

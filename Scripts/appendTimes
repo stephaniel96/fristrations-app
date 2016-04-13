@@ -1,0 +1,4 @@
+let availableTimes = ["8:00-8:30am":"n/a","8:30-9:00am":"n/a","9:00-9:30am":"n/a","9:30-10:00am":"n/a","10:00-10:30am":"n/a","10:30-11:00am":"n/a","11:00-11:30am":"n/a","11:30am-12:00pm":"n/a","12:00-12:30pm":"n/a","12:30-1:00pm":"n/a","1:00-1:30pm":"n/a","1:30-2:00pm":"n/a","2:00-2:30pm":"n/a", "2:30-3:00pm":"n/a","3:00-3:30pm":"n/a","3:30-4:00pm":"n/a","4:00-4:30pm":"n/a","4:30-5:00pm":"n/a","5:00-5:30pm":"n/a","5:30-6:00pm":"n/a","6:00-6:30pm":"n/a","6:30-7:00pm":"n/a","7:00-7:30pm":"n/a","7:30-8:00pm":"n/a","8:00-8:30pm":"n/a","8:30-9:00pm":"n/a","9:00-9:30pm":"n/a","9:30-10:00pm":"n/a","10:00-10:30pm":"n/a","10:30-11:00pm":"n/a","11:00-11:30pm":"n/a","11:30pm-12:00am":"n/a","12:00-12:30am":"n/a","12:30-1:00am":"n/a","1:00-1:30am":"n/a","1:30-2:00am":"n/a"]
+        var roomrl = roomURL + "/" + self.roomNumber
+        var roomRef = Firebase(url:roomrl)
+        roomRef.childByAppendingPath("times").setValue(availableTimes)
