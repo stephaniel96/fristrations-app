@@ -15,8 +15,8 @@ class RoomInfo: UIViewController{
     var roomURL:String = "https://fristrations.firebaseio.com/rooms/"
     var times: NSDictionary = [String:String]()
     var roomRef: Firebase!
+    let displayTime = [800: "8:00-8:30am", 830: "8:30-9:00am", 900: "9:00-9:30am", 930: "9:30-10:00am", 1000: "10:00-10:30am", 1030: "10:30-11:00am", 1100: "11:00-11:30am", 1130: "11:30am-12:00pm", 1200: "12:00-12:30pm"]
     
-
     @IBOutlet weak var button80am: UIButton!
     @IBOutlet weak var button83am: UIButton!
     @IBOutlet weak var button90am: UIButton!
@@ -27,14 +27,54 @@ class RoomInfo: UIViewController{
     @IBOutlet weak var button113am: UIButton!
     @IBOutlet weak var button120pm: UIButton!
     
-   
   
     
     override func viewDidLoad() {
         roomRef = Firebase(url:(roomURL + roomNumber))
         // Do any additional setup after loading the view.
         super.viewDidLoad()
+        button80am.tag = 800
+        button80am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
+        button83am.tag = 830
+        button83am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
+        button90am.tag = 900
+        button90am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
+        button93am.tag = 930
+        button93am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
+        button100am.tag = 1000
+        button100am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
+        button103am.tag = 1030
+        button103am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
+        button110am.tag = 1100
+        button110am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
+        button113am.tag = 1130
+        button113am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
+        button120pm.tag = 1200
+        button120pm.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
+
     }
+    
+    func buttonClicked(sender:UIButton!)
+    {
+        // sender.tag is the military time
+        // timeDetails is the booking
+        // setTime is the dictionary we want to update
+        // time is the display format (8:00 - 8:30)
+        let time = displayTime[sender.tag]
+        let timeDetails = self.times[time!] as! String
+        var setTime = [String:String]()
+        if (timeDetails == "n/a") {
+            setTime = [time!:"cjhsu"]
+        }
+        else {
+            setTime = [time!:"n/a"]
+        }
+        let single = roomRef.childByAppendingPath("times")
+        single.updateChildValues(setTime)
+    }
+    
+    
+    
     
     override func viewWillAppear(animated: Bool) {
         
@@ -142,48 +182,6 @@ class RoomInfo: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-   
-    @IBAction func push80am(sender: AnyObject) {
-        let timeDetails = self.times["8:00-8:30am"] as! String
-        var setTime = ["8:00-8:30am":"cjhsu"]
-        if (timeDetails == "n/a") {
-            setTime = ["8:00-8:30am":"cjhsu"]
-        }
-        else {
-            setTime = ["8:00-8:30am":"n/a"]
-        }
-        let single = roomRef.childByAppendingPath("times")
-        single.updateChildValues(setTime)
-    }
-    
-    @IBAction func push83am(sender: AnyObject) {
-        let timeDetails = self.times["8:30-9:00am"] as! String
-        var setTime = ["8:30-9:00am":"cjhsu"]
-        if (timeDetails == "n/a") {
-            setTime = ["8:30-9:00am":"cjhsu"]
-        }
-        else {
-            setTime = ["8:30-9:00am":"n/a"]
-        }
-        let single = roomRef.childByAppendingPath("times")
-        single.updateChildValues(setTime)
-    }
-    
-    @IBAction func push90am(sender: AnyObject) {
-        let timeDetails = self.times["9:00-9:30am"] as! String
-        var setTime = [String:String]()
-        if (timeDetails == "n/a") {
-            setTime = ["9:00-9:30am":"cjhsu"]
-        }
-        else {
-            setTime = ["9:00-9:30am":"n/a"]
-        }
-        let single = roomRef.childByAppendingPath("times")
-        single.updateChildValues(setTime)
-    }
-    
-    
-        
         
         
 }
