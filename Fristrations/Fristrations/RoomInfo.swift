@@ -147,7 +147,6 @@ class RoomInfo: UIViewController{
     }
     
     
-    
     override func viewWillAppear(animated: Bool) {
         
         roomRef.observeEventType(.Value, withBlock: {
@@ -156,18 +155,18 @@ class RoomInfo: UIViewController{
             self.times = self.room["times"] as! NSDictionary
             self.title = self.room["room_name"] as? String
             
-            for button in self.buttonPressed {
-                let time = self.displayTime[button.tag]
-                let timeDetails = self.times[time!] as! String
-                if (timeDetails == "n/a") {
-                    button.backgroundColor = UIColor.greenColor()
-                    button.setTitle(time!, forState: UIControlState.Normal)
-                }
-                else {
-                    button.setTitle(time! + ": " + timeDetails , forState: UIControlState.Normal)
-                    button.backgroundColor = UIColor.redColor()
-                }
-            }
+//            for button in self.buttonPressed {
+//                let time = self.displayTime[button.tag]
+//                let timeDetails = self.times[time!] as! String
+//                if (timeDetails == "n/a") {
+//                    button.backgroundColor = UIColor.greenColor()
+//                    button.setTitle(time!, forState: UIControlState.Normal)
+//                }
+//                else {
+//                    button.setTitle(time! + ": " + timeDetails , forState: UIControlState.Normal)
+//                    button.backgroundColor = UIColor.redColor()
+//                }
+//            }
             
                     })
     }
