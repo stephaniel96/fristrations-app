@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		644A0AD41CBC95CE00846C32 /* RoomInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A0AD31CBC95CE00846C32 /* RoomInfo.swift */; };
-		77FACFC71CBE2178000D0CA9 /* Frist 200 Level.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77FACFC61CBE2178000D0CA9 /* Frist 200 Level.jpg */; };
 		DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB324BD71CAF90A800019734 /* AppDelegate.swift */; };
 		DB324BDF1CAF90A800019734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB324BDD1CAF90A800019734 /* Main.storyboard */; };
 		DB324BE11CAF90A800019734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB324BE01CAF90A800019734 /* Assets.xcassets */; };
@@ -50,7 +49,6 @@
 
 /* Begin PBXFileReference section */
 		644A0AD31CBC95CE00846C32 /* RoomInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomInfo.swift; sourceTree = "<group>"; };
-		77FACFC61CBE2178000D0CA9 /* Frist 200 Level.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Frist 200 Level.jpg"; path = "../../Frist 200 Level.jpg"; sourceTree = "<group>"; };
 		DB324BD41CAF90A800019734 /* Fristrations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fristrations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB324BD71CAF90A800019734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB324BDE1CAF90A800019734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 		DB324BCB1CAF90A800019734 = {
 			isa = PBXGroup;
 			children = (
-				77FACFC61CBE2178000D0CA9 /* Frist 200 Level.jpg */,
 				DB324C0F1CAF910700019734 /* Security.framework */,
 				DB324C0D1CAF90FD00019734 /* libicucore.tbd */,
 				DB324C0B1CAF90F600019734 /* libc++.tbd */,
@@ -285,7 +282,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77FACFC71CBE2178000D0CA9 /* Frist 200 Level.jpg in Resources */,
 				DB324BE41CAF90A800019734 /* LaunchScreen.storyboard in Resources */,
 				DB324BE11CAF90A800019734 /* Assets.xcassets in Resources */,
 				DB324BDF1CAF90A800019734 /* Main.storyboard in Resources */,

@@ -29,10 +29,6 @@ public class Room {
          print("error")
          })
         
-        //ref.once("value", function(snapshot) {
-        
-    
-            //});
         
         
     }
