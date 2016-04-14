@@ -32,7 +32,6 @@ class RoomInfo: UIViewController{
     
     override func viewDidLoad() {
         roomRef = Firebase(url:(roomURL + roomNumber))
-        self.title = roomNumber
         // Do any additional setup after loading the view.
         super.viewDidLoad()
     }
