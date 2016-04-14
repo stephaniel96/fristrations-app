@@ -12,16 +12,18 @@ import UIKit
 class RoomInfo: UIViewController{
     var roomNumber:String = ""
     var room: NSDictionary = [String:String]()
-    var roomURL:String = "https://fristrations.firebaseio.com/rooms"
+    var roomURL:String = "https://fristrations.firebaseio.com/rooms/"
+    var times: NSDictionary = [String:String]()
+    var roomRef: Firebase!
     
-    @IBOutlet weak var roomLabel: UILabel!
-    @IBOutlet weak var routerLabel: UILabel!
+    @IBOutlet weak var button800am: UIButton!
     
-    var roomsRef: Firebase!
+    
+   
   
     
     override func viewDidLoad() {
-        roomsRef = Firebase(url:roomURL)
+        roomRef = Firebase(url:(roomURL + roomNumber))
         self.title = roomNumber
         // Do any additional setup after loading the view.
         super.viewDidLoad()
@@ -29,11 +31,21 @@ class RoomInfo: UIViewController{
     
     override func viewWillAppear(animated: Bool) {
         
-        roomsRef.observeEventType(.Value, withBlock: {
+        roomRef.observeEventType(.Value, withBlock: {
             snapshot in
-            let rooms = snapshot.value as! NSDictionary
-            self.room = rooms[self.roomNumber] as! NSDictionary
+            self.room = snapshot.value as! NSDictionary
+            self.times = self.room["times"] as! NSDictionary
             self.title = self.room["room_name"] as? String
+            let timeDetails = self.times["8:00-8:30am"] as! String
+            if (timeDetails == "n/a") {
+                self.button800am.backgroundColor = UIColor.greenColor()
+                self.button800am.setTitle("8:00-8:30am", forState: UIControlState.Normal)
+            }
+            else {
+                self.button800am.setTitle("8:00-8:30am: " + timeDetails , forState: UIControlState.Normal)
+                self.button800am.backgroundColor = UIColor.redColor()
+            }
+            
         })
     }
     
@@ -42,35 +54,23 @@ class RoomInfo: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func bookElThirty(sender: AnyObject) {
-        let times = room["times"] as! NSDictionary
-        let timeDetails = times["11:30am-12:00pm"] as! String
-        var setTime = ["11:30am-12:00pm":"cjhsu"]
+   
+    @IBAction func push800am(sender: AnyObject) {
+        let timeDetails = self.times["8:00-8:30am"] as! String
+        var setTime = ["8:00am-8:30am":"cjhsu"]
         if (timeDetails == "n/a") {
-            setTime = ["11:30am-12:00pm":"cjhsu"]
+            setTime = ["8:00am-8:30am":"cjhsu"]
         }
         else {
-            setTime = ["11:30am-12:00pm":"n/a"]
+            setTime = ["8:00am-8:30am":"n/a"]
         }
-        var singleRoomRef = roomURL + "/" + roomNumber
-        var single = singleRoomRef.childByAppendingPath("times")
+        let single = roomRef.childByAppendingPath("times")
         single.updateChildValues(setTime)
     }
     
-    @IBAction func bookSixPm(sender: AnyObject) {
         
         
         
-    }
-   
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
+    
+
