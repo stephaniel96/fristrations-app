@@ -65,8 +65,75 @@ class RoomInfo: UIViewController{
                 self.button83am.backgroundColor = UIColor.redColor()
             }
             
+            timeDetails = self.times["9:00-9:30am"] as! String
+            if (timeDetails == "n/a") {
+                self.button90am.backgroundColor = UIColor.greenColor()
+                self.button90am.setTitle("9:00-9:30am", forState: UIControlState.Normal)
+            }
+            else {
+                self.button90am.setTitle("9:00-9:30am: " + timeDetails , forState: UIControlState.Normal)
+                self.button90am.backgroundColor = UIColor.redColor()
+            }
             
+            timeDetails = self.times["9:30-10:00am"] as! String
+            if (timeDetails == "n/a") {
+                self.button93am.backgroundColor = UIColor.greenColor()
+                self.button93am.setTitle("9:30-10:00am", forState: UIControlState.Normal)
+            }
+            else {
+                self.button93am.setTitle("9:30-10:00am: " + timeDetails , forState: UIControlState.Normal)
+                self.button93am.backgroundColor = UIColor.redColor()
+            }
             
+            timeDetails = self.times["10:00-10:30am"] as! String
+            if (timeDetails == "n/a") {
+                self.button100am.backgroundColor = UIColor.greenColor()
+                self.button100am.setTitle("10:00-10:30am", forState: UIControlState.Normal)
+            }
+            else {
+                self.button100am.setTitle("10:00-10:30am: " + timeDetails , forState: UIControlState.Normal)
+                self.button100am.backgroundColor = UIColor.redColor()
+            }
+            
+            timeDetails = self.times["10:30-11:00am"] as! String
+            if (timeDetails == "n/a") {
+                self.button103am.backgroundColor = UIColor.greenColor()
+                self.button103am.setTitle("10:30-11:00am", forState: UIControlState.Normal)
+            }
+            else {
+                self.button103am.setTitle("10:30-11:00am: " + timeDetails , forState: UIControlState.Normal)
+                self.button103am.backgroundColor = UIColor.redColor()
+            }
+            //11:00am
+            timeDetails = self.times["11:00-11:30am"] as! String
+            if (timeDetails == "n/a") {
+                self.button110am.backgroundColor = UIColor.greenColor()
+                self.button110am.setTitle("11:00-11:30am", forState: UIControlState.Normal)
+            }
+            else {
+                self.button110am.setTitle("11:00-11:30am: " + timeDetails , forState: UIControlState.Normal)
+                self.button110am.backgroundColor = UIColor.redColor()
+            }
+            
+            timeDetails = self.times["11:30am-12:00pm"] as! String
+            if (timeDetails == "n/a") {
+                self.button113am.backgroundColor = UIColor.greenColor()
+                self.button113am.setTitle("11:30am-12:00pm", forState: UIControlState.Normal)
+            }
+            else {
+                self.button113am.setTitle("11:30am-12:00pm: " + timeDetails , forState: UIControlState.Normal)
+                self.button113am.backgroundColor = UIColor.redColor()
+            }
+            
+            timeDetails = self.times["12:00-12:30pm"] as! String
+            if (timeDetails == "n/a") {
+                self.button120pm.backgroundColor = UIColor.greenColor()
+                self.button120pm.setTitle("12:00-12:30pm", forState: UIControlState.Normal)
+            }
+            else {
+                self.button120pm.setTitle("12:00-12:30pm: " + timeDetails , forState: UIControlState.Normal)
+                self.button120pm.backgroundColor = UIColor.redColor()
+            }
         })
     }
     
@@ -101,6 +168,20 @@ class RoomInfo: UIViewController{
         let single = roomRef.childByAppendingPath("times")
         single.updateChildValues(setTime)
     }
+    
+    @IBAction func push90am(sender: AnyObject) {
+        let timeDetails = self.times["9:00-9:30am"] as! String
+        var setTime = [String:String]()
+        if (timeDetails == "n/a") {
+            setTime = ["9:00-9:30am":"cjhsu"]
+        }
+        else {
+            setTime = ["9:00-9:30am":"n/a"]
+        }
+        let single = roomRef.childByAppendingPath("times")
+        single.updateChildValues(setTime)
+    }
+    
     
         
         

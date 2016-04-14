@@ -385,7 +385,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ZFf-Jb-RXG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MTC-8r-fxm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7DJ-7B-sAm">
@@ -395,7 +395,7 @@
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocn-Gj-1HG">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="1500"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYY-na-2qI">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="1500"/>
@@ -435,6 +435,9 @@
                                                 <state key="normal" title="9:00-9:30am">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="push90am:" destination="6Qs-yb-i1G" eventType="touchUpInside" id="I6Y-2z-9ww"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ps-TN-ML0">
                                                 <rect key="frame" x="30" y="270" width="540" height="40"/>
@@ -581,6 +584,8 @@
                             </mask>
                         </variation>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1500"/>
                     <connections>
                         <outlet property="button100am" destination="2Qw-J5-z54" id="FiE-2A-l8L"/>
                         <outlet property="button103am" destination="jqa-ik-rs6" id="YkH-ma-DqM"/>
