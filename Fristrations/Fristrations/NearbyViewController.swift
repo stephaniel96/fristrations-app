@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class NearbyViewController: UIViewController {
     
