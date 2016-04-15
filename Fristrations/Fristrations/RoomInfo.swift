@@ -15,33 +15,43 @@ class RoomInfo: UIViewController{
     var roomURL:String = "https://fristrations.firebaseio.com/rooms/"
     var times: NSDictionary = [String:String]()
     var roomRef: Firebase!
-    let displayTime = [800: "8:00-8:30am", 830: "8:30-9:00am", 900: "9:00-9:30am", 930: "9:30-10:00am", 1000: "10:00-10:30am", 1030: "10:30-11:00am", 1100: "11:00-11:30am", 1130: "11:30am-12:00pm", 1200: "12:00-12:30pm", 1230: "12:30-1:00pm",
-        1300: "1:00-1:30pm",
-        1330: "1:30-2:00pm",
-        1400: "2:00-2:30pm",
-        1430: "2:30-3:00pm",
-        1500: "3:00-3:30pm",
-        1530: "3:30-4:00pm",
-        1600: "4:00-4:30pm",
-        1630: "4:30-5:00pm",
-        1700: "5:00-5:30pm",
-        1730: "5:30-6:00pm",
-        1800: "6:00-6:30pm",
-        1830: "6:30-7:00pm",
-        1900: "7:00-7:30pm",
-        1930: "7:30-8:00pm",
-        2000: "8:00-8:30pm",
-        2030: "8:30-9:00pm",
-        2100: "9:00-9:30pm",
-        2130: "9:30-10:00pm",
-        2200: "10:00-10:30pm",
-        2230: "10:30-11:00pm",
-        2300: "11:00-11:30pm",
-        2330: "11:30pm-12:00am",
-        2400: "12:00-12:30am",
-        2430: "12:30-1:00am",
-        100: "1:00-1:30am",
-        130: "1:30-2:00am"]
+    let displayTime =
+        [800: "8:00-8:30am",
+         830: "8:30-9:00am",
+         900: "9:00-9:30am",
+         930: "9:30-10:00am",
+         1000: "10:00-10:30am",
+         1030: "10:30-11:00am",
+         1100: "11:00-11:30am",
+         1130: "11:30am-12:00pm",
+         1200: "12:00-12:30pm",
+         1230: "12:30-1:00pm",
+         1300: "1:00-1:30pm",
+         1330: "1:30-2:00pm",
+         1400: "2:00-2:30pm",
+         1430: "2:30-3:00pm",
+         1500: "3:00-3:30pm",
+         1530: "3:30-4:00pm",
+         1600: "4:00-4:30pm",
+         1630: "4:30-5:00pm",
+         1700: "5:00-5:30pm",
+         1730: "5:30-6:00pm",
+         1800: "6:00-6:30pm",
+         1830: "6:30-7:00pm",
+         1900: "7:00-7:30pm",
+         1930: "7:30-8:00pm",
+         2000: "8:00-8:30pm",
+         2030: "8:30-9:00pm",
+         2100: "9:00-9:30pm",
+         2130: "9:30-10:00pm",
+         2200: "10:00-10:30pm",
+         2230: "10:30-11:00pm",
+         2300: "11:00-11:30pm",
+         2330: "11:30pm-12:00am",
+         2400: "12:00-12:30am",
+         2430: "12:30-1:00am",
+         100: "1:00-1:30am",
+         130: "1:30-2:00am"]
     
     @IBOutlet weak var button80am: UIButton!
     @IBOutlet weak var button83am: UIButton!
@@ -140,7 +150,7 @@ class RoomInfo: UIViewController{
                 }
                 let single = roomRef.childByAppendingPath("times")
                 single.updateChildValues(setTime)
-
+                break
             }
         }
     }
@@ -158,12 +168,12 @@ class RoomInfo: UIViewController{
                 let time = self.displayTime[timeButton.tag]
                 let timeDetails = self.times[String(timeButton.tag)] as! String
                 if (timeDetails == "n/a") {
-                    timeButton.backgroundColor = UIColor.greenColor()
+                    timeButton.backgroundColor = UIColor(red: 78/255, green: 213/255, blue: 171/255, alpha: 0.5) // 78 213 171
                     timeButton.setTitle(time!, forState: UIControlState.Normal)
                 }
                 else {
+                    timeButton.backgroundColor = UIColor(red: 233/255, green: 90/255, blue: 76/255, alpha: 0.5) //233 90 76
                     timeButton.setTitle(time! + ": " + timeDetails , forState: UIControlState.Normal)
-                    timeButton.backgroundColor = UIColor.redColor()
                 }
             }
             

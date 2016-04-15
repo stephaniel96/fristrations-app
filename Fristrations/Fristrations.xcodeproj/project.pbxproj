@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		644A0AD41CBC95CE00846C32 /* RoomInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A0AD31CBC95CE00846C32 /* RoomInfo.swift */; };
+		77047FEB1CC0C9A40043169F /* fp200.png in Resources */ = {isa = PBXBuildFile; fileRef = 77047FEA1CC0C9A40043169F /* fp200.png */; };
 		DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB324BD71CAF90A800019734 /* AppDelegate.swift */; };
 		DB324BDF1CAF90A800019734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB324BDD1CAF90A800019734 /* Main.storyboard */; };
 		DB324BE11CAF90A800019734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB324BE01CAF90A800019734 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		644A0AD31CBC95CE00846C32 /* RoomInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomInfo.swift; sourceTree = "<group>"; };
+		77047FEA1CC0C9A40043169F /* fp200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fp200.png; path = ../../../../../../../../../Desktop/fp200.png; sourceTree = "<group>"; };
 		DB324BD41CAF90A800019734 /* Fristrations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fristrations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB324BD71CAF90A800019734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB324BDE1CAF90A800019734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				DB324BD71CAF90A800019734 /* AppDelegate.swift */,
 				DB324C111CAF91A600019734 /* Firebase.framework */,
 				DB324BDD1CAF90A800019734 /* Main.storyboard */,
+				77047FEA1CC0C9A40043169F /* fp200.png */,
 				DB324BE01CAF90A800019734 /* Assets.xcassets */,
 				DB324BE21CAF90A800019734 /* LaunchScreen.storyboard */,
 				DB324BE51CAF90A800019734 /* Info.plist */,
@@ -282,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77047FEB1CC0C9A40043169F /* fp200.png in Resources */,
 				DB324BE41CAF90A800019734 /* LaunchScreen.storyboard in Resources */,
 				DB324BE11CAF90A800019734 /* Assets.xcassets in Resources */,
 				DB324BDF1CAF90A800019734 /* Main.storyboard in Resources */,
