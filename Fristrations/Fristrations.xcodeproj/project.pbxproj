@@ -267,6 +267,48 @@
 			knownRegions = (
 				en,
 				Base,
+				af,
+				ar,
+				bn,
+				cs,
+				da,
+				de,
+				el,
+				"es-ES",
+				es,
+				fi,
+				fr,
+				gu,
+				he,
+				hi,
+				hr,
+				hu,
+				id,
+				it,
+				ja,
+				ko,
+				ml,
+				mr,
+				ms,
+				nb,
+				nl,
+				pa,
+				pl,
+				"pt-PT",
+				pt,
+				ro,
+				ru,
+				sk,
+				sv,
+				ta,
+				te,
+				th,
+				tl,
+				tr,
+				vi,
+				"zh-Hant-HK",
+				"zh-Hant-TW",
+				zh,
 			);
 			mainGroup = DB324BCB1CAF90A800019734;
 			productRefGroup = DB324BD51CAF90A800019734 /* Products */;
@@ -468,6 +510,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Fristrations",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FacebookSDKs-iOS-20160412",
 				);
 				INFOPLIST_FILE = Fristrations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -487,6 +531,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Fristrations",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FacebookSDKs-iOS-20160412",
 				);
 				INFOPLIST_FILE = Fristrations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -22,6 +22,7 @@ class NearbyViewController: UIViewController {
         self.title = "Nearby"
         // Fristrations color in RGB percentages
         //view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -133,8 +133,6 @@ class RoomInfo: UIViewController{
         button30.tag = 2430
         button100.tag = 100
         button130.tag = 130
-        
-
     }
     
     @IBAction func buttonClicked(sender: UIButton!) {
