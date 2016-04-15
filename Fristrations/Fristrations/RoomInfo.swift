@@ -38,8 +38,8 @@ class RoomInfo: UIViewController{
         2230: "10:30-11:00pm",
         2300: "11:00-11:30pm",
         2330: "11:30pm-12:00am",
-        0: "12:00-12:30am",
-        30: "12:30-1:00am",
+        2400: "12:00-12:30am",
+        2430: "12:30-1:00am",
         100: "1:00-1:30am",
         130: "1:30-2:00am"]
     
@@ -119,8 +119,8 @@ class RoomInfo: UIViewController{
         button2230.tag = 2230
         button2300.tag = 2300
         button2330.tag = 2330
-        button00.tag = 0
-        button30.tag = 30
+        button00.tag = 2400
+        button30.tag = 2430
         button100.tag = 100
         button130.tag = 130
         
@@ -128,16 +128,15 @@ class RoomInfo: UIViewController{
     }
     
     @IBAction func buttonClicked(sender: UIButton!) {
-        for button in buttonPressed {
-            if (sender == button) {
-                let time = displayTime[sender.tag]
-                let timeDetails = self.times[time!] as! String
+        for timeButton in buttonPressed {
+            if (sender == timeButton) {
+                let timeDetails = self.times[String(timeButton.tag)] as! String
                 var setTime = [String:String]()
                 if (timeDetails == "n/a") {
-                    setTime = [time!:"cjhsu"]
+                    setTime = [String(timeButton.tag):"cjhsu"]
                 }
                 else {
-                    setTime = [time!:"n/a"]
+                    setTime = [String(timeButton.tag):"n/a"]
                 }
                 let single = roomRef.childByAppendingPath("times")
                 single.updateChildValues(setTime)
@@ -155,18 +154,18 @@ class RoomInfo: UIViewController{
             self.times = self.room["times"] as! NSDictionary
             self.title = self.room["room_name"] as? String
             
-//            for button in self.buttonPressed {
-//                let time = self.displayTime[button.tag]
-//                let timeDetails = self.times[time!] as! String
-//                if (timeDetails == "n/a") {
-//                    button.backgroundColor = UIColor.greenColor()
-//                    button.setTitle(time!, forState: UIControlState.Normal)
-//                }
-//                else {
-//                    button.setTitle(time! + ": " + timeDetails , forState: UIControlState.Normal)
-//                    button.backgroundColor = UIColor.redColor()
-//                }
-//            }
+            for timeButton in self.buttonPressed {
+                let time = self.displayTime[timeButton.tag]
+                let timeDetails = self.times[String(timeButton.tag)] as! String
+                if (timeDetails == "n/a") {
+                    timeButton.backgroundColor = UIColor.greenColor()
+                    timeButton.setTitle(time!, forState: UIControlState.Normal)
+                }
+                else {
+                    timeButton.setTitle(time! + ": " + timeDetails , forState: UIControlState.Normal)
+                    timeButton.backgroundColor = UIColor.redColor()
+                }
+            }
             
                     })
     }
