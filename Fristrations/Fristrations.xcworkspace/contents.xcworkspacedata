@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Fristrations/Images/fp200.png">
+   </FileRef>
+   <FileRef
       location = "group:Fristrations.xcodeproj">
    </FileRef>
    <FileRef

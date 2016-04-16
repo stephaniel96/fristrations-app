@@ -1,3 +1,4 @@
+
 //
 //  NearbyViewController.swift
 //  Fristrations
@@ -25,6 +26,8 @@ class NearbyViewController: UIViewController, FBSDKLoginButtonDelegate{
         self.title = "Nearby"
         // Fristrations color in RGB percentages
         //view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
+        
+        //Checks if there is an instance of a logged in user
         if (FBSDKAccessToken.currentAccessToken() != nil)
         {
             // User is already logged in, do work such as go to next view controller.
@@ -32,10 +35,14 @@ class NearbyViewController: UIViewController, FBSDKLoginButtonDelegate{
         }
         else
         {
+            //Creates a login button that opens a new view if not the case
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
             self.view.addSubview(loginView)
-            
+//            let topconstraint = NSLayoutConstraint(item: loginView, attribute: NSLayoutAttribute.TopMargin, relatedBy: .Equal, toItem: thirdFloorButton, attribute:NSLayoutAttribute.BottomMargin, multiplier: 1.0, constant: 20)
+//            
+//            self.view.addConstraint(topconstraint)
             loginView.center = self.view.center
+            
             loginView.readPermissions = ["public_profile", "email"]
             loginView.delegate = self
         }
