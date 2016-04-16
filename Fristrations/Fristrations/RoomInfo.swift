@@ -8,6 +8,7 @@
 
 
 import UIKit
+import Firebase
 
 class RoomInfo: UIViewController{
     var roomNumber:String = ""
@@ -136,19 +137,22 @@ class RoomInfo: UIViewController{
     }
     
     @IBAction func buttonClicked(sender: UIButton!) {
-        for timeButton in buttonPressed {
-            if (sender == timeButton) {
-                let timeDetails = self.times[String(timeButton.tag)] as! String
-                var setTime = [String:String]()
-                if (timeDetails == "n/a") {
-                    setTime = [String(timeButton.tag):"cjhsu"]
+        if (uName != "n/a")
+        {
+            for timeButton in buttonPressed {
+                if (sender == timeButton) {
+                    let timeDetails = self.times[String(timeButton.tag)] as! String
+                    var setTime = [String:String]()
+                    if (timeDetails == "n/a") {
+                        setTime = [String(timeButton.tag):uName]
+                    }
+                    else if (timeDetails == uName){
+                        setTime = [String(timeButton.tag):"n/a"]
+                    }
+                    let single = roomRef.childByAppendingPath("times")
+                    single.updateChildValues(setTime)
+                    break
                 }
-                else {
-                    setTime = [String(timeButton.tag):"n/a"]
-                }
-                let single = roomRef.childByAppendingPath("times")
-                single.updateChildValues(setTime)
-                break
             }
         }
     }

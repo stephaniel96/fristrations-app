@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3AB46B52EE8363AB08F7C874 /* libPods-Fristrations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6222953769AD04917FC9CA /* libPods-Fristrations.a */; };
+		5BB0DFC16C2AD448C2B0A53C /* Pods_FristrationsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFB679EB040A37911C38187 /* Pods_FristrationsUITests.framework */; };
 		644A0AD41CBC95CE00846C32 /* RoomInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A0AD31CBC95CE00846C32 /* RoomInfo.swift */; };
-		657DABA947652E384A2BF1D9 /* libPods-FristrationsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D14EA346B74330D354D817 /* libPods-FristrationsUITests.a */; };
+		72B8AA07506A4B50B6C41925 /* Pods_FristrationsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F3E2BC479C82D10F582FBE /* Pods_FristrationsTests.framework */; };
 		77047FEB1CC0C9A40043169F /* fp200.png in Resources */ = {isa = PBXBuildFile; fileRef = 77047FEA1CC0C9A40043169F /* fp200.png */; };
-		770481F51CC196F10043169F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770481F41CC196F10043169F /* FBSDKCoreKit.framework */; };
-		770481F71CC196FC0043169F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770481F61CC196FC0043169F /* FBSDKLoginKit.framework */; };
-		9158B3641BAED4934618F20A /* libPods-FristrationsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E366ADE21BFDF7BF5F91FA2F /* libPods-FristrationsTests.a */; };
+		C8C0B20EF44D88968D22FB35 /* Pods_Fristrations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A9B446A4A0277B68621385 /* Pods_Fristrations.framework */; };
 		DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB324BD71CAF90A800019734 /* AppDelegate.swift */; };
 		DB324BDF1CAF90A800019734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB324BDD1CAF90A800019734 /* Main.storyboard */; };
 		DB324BE11CAF90A800019734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB324BE01CAF90A800019734 /* Assets.xcassets */; };
@@ -25,7 +23,6 @@
 		DB324C0C1CAF90F600019734 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C0B1CAF90F600019734 /* libc++.tbd */; };
 		DB324C0E1CAF90FD00019734 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C0D1CAF90FD00019734 /* libicucore.tbd */; };
 		DB324C101CAF910700019734 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C0F1CAF910700019734 /* Security.framework */; };
-		DB324C121CAF91A600019734 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C111CAF91A600019734 /* Firebase.framework */; };
 		DB3A69821CB704F700579435 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A69811CB704F700579435 /* Room.swift */; };
 		DB9590051CB0726F00055E61 /* FirstFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590041CB0726F00055E61 /* FirstFloor.swift */; };
 		DB9590071CB072F000055E61 /* SecondFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590061CB072F000055E61 /* SecondFloor.swift */; };
@@ -54,18 +51,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13A9B446A4A0277B68621385 /* Pods_Fristrations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fristrations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FE6A123EC652EB9846B2CC2 /* Pods-Fristrations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fristrations.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fristrations/Pods-Fristrations.release.xcconfig"; sourceTree = "<group>"; };
-		2E6222953769AD04917FC9CA /* libPods-Fristrations.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Fristrations.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F3E2BC479C82D10F582FBE /* Pods_FristrationsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FristrationsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4305DA62ABC611B624CC0861 /* Pods-Fristrations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fristrations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fristrations/Pods-Fristrations.debug.xcconfig"; sourceTree = "<group>"; };
 		644A0AD31CBC95CE00846C32 /* RoomInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomInfo.swift; sourceTree = "<group>"; };
 		77047FEA1CC0C9A40043169F /* fp200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fp200.png; path = ../../../../../../../../../Desktop/fp200.png; sourceTree = "<group>"; };
-		770481F41CC196F10043169F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		770481F61CC196FC0043169F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		844EE05C10B20AED382DEA3C /* Pods-FristrationsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FristrationsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FristrationsTests/Pods-FristrationsTests.release.xcconfig"; sourceTree = "<group>"; };
 		AD7C198244EA0B3E55C0B2D7 /* Pods-FristrationsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FristrationsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FristrationsUITests/Pods-FristrationsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B8E8382BD5B39C5FF0B53867 /* Pods-FristrationsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FristrationsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FristrationsTests/Pods-FristrationsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C2D14EA346B74330D354D817 /* libPods-FristrationsUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FristrationsUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB79C1663D848FBC2E103EB4 /* Pods-FristrationsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FristrationsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FristrationsUITests/Pods-FristrationsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CFFB679EB040A37911C38187 /* Pods_FristrationsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FristrationsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB324BD41CAF90A800019734 /* Fristrations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fristrations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB324BD71CAF90A800019734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB324BDE1CAF90A800019734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,7 +79,6 @@
 		DB324C0B1CAF90F600019734 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		DB324C0D1CAF90FD00019734 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		DB324C0F1CAF910700019734 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		DB324C111CAF91A600019734 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		DB3A69811CB704F700579435 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		DB9221D41CAF95D9002C7C21 /* Fristrations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fristrations-Bridging-Header.h"; sourceTree = "<group>"; };
 		DB9590041CB0726F00055E61 /* FirstFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstFloor.swift; sourceTree = "<group>"; };
@@ -93,7 +88,6 @@
 		DBA4C3271CAF982000EFCA8F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DBA4C3291CAF987900EFCA8F /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		DBA4C32B1CAF989A00EFCA8F /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
-		E366ADE21BFDF7BF5F91FA2F /* libPods-FristrationsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FristrationsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,14 +96,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB324C101CAF910700019734 /* Security.framework in Frameworks */,
-				DB324C121CAF91A600019734 /* Firebase.framework in Frameworks */,
 				DB324C0E1CAF90FD00019734 /* libicucore.tbd in Frameworks */,
 				DB324C0C1CAF90F600019734 /* libc++.tbd in Frameworks */,
-				770481F51CC196F10043169F /* FBSDKCoreKit.framework in Frameworks */,
 				DB324C0A1CAF90E900019734 /* SystemConfiguration.framework in Frameworks */,
-				770481F71CC196FC0043169F /* FBSDKLoginKit.framework in Frameworks */,
 				DB324C081CAF90E000019734 /* CFNetwork.framework in Frameworks */,
-				3AB46B52EE8363AB08F7C874 /* libPods-Fristrations.a in Frameworks */,
+				C8C0B20EF44D88968D22FB35 /* Pods_Fristrations.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9158B3641BAED4934618F20A /* libPods-FristrationsTests.a in Frameworks */,
+				72B8AA07506A4B50B6C41925 /* Pods_FristrationsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				657DABA947652E384A2BF1D9 /* libPods-FristrationsUITests.a in Frameworks */,
+				5BB0DFC16C2AD448C2B0A53C /* Pods_FristrationsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,9 +126,9 @@
 		B4AE5C80FA404A25ED6CF04D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2E6222953769AD04917FC9CA /* libPods-Fristrations.a */,
-				E366ADE21BFDF7BF5F91FA2F /* libPods-FristrationsTests.a */,
-				C2D14EA346B74330D354D817 /* libPods-FristrationsUITests.a */,
+				13A9B446A4A0277B68621385 /* Pods_Fristrations.framework */,
+				33F3E2BC479C82D10F582FBE /* Pods_FristrationsTests.framework */,
+				CFFB679EB040A37911C38187 /* Pods_FristrationsUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -172,10 +163,7 @@
 		DB324BD61CAF90A800019734 /* Fristrations */ = {
 			isa = PBXGroup;
 			children = (
-				770481F61CC196FC0043169F /* FBSDKLoginKit.framework */,
-				770481F41CC196F10043169F /* FBSDKCoreKit.framework */,
 				DB324BD71CAF90A800019734 /* AppDelegate.swift */,
-				DB324C111CAF91A600019734 /* Firebase.framework */,
 				DB324BDD1CAF90A800019734 /* Main.storyboard */,
 				77047FEA1CC0C9A40043169F /* fp200.png */,
 				DB324BE01CAF90A800019734 /* Assets.xcassets */,
