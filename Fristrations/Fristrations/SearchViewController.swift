@@ -14,7 +14,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     // MARK: Properties
     
     var rootRef: Firebase!
-    var currentTime:String
+    var currentTime:String!
     var roomURL:String = "https://fristrations.firebaseio.com/rooms"
     let rooms = [114, 205, 206, 207, 208, 209, 210, 212, 227, 228, 234, 303, 307, 309]
     var availableRooms:[String] = []

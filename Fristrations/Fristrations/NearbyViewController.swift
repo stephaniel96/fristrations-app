@@ -12,12 +12,14 @@ import FBSDKLoginKit
 
 var uName:String = "n/a"
 
-class NearbyViewController: UIViewController, FBSDKLoginButtonDelegate{
+class NearbyViewController: UIViewController, UIWebViewDelegate, FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var fristLabel: UILabel!
     @IBOutlet weak var firstFloorButton: UIButton!
     @IBOutlet weak var secondFloorButton: UIButton!
     @IBOutlet weak var thirdFloorButton: UIButton!
+    @IBOutlet weak var casButton: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,24 +30,24 @@ class NearbyViewController: UIViewController, FBSDKLoginButtonDelegate{
         //view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
         
         //Checks if there is an instance of a logged in user
-        if (FBSDKAccessToken.currentAccessToken() != nil)
-        {
-            // User is already logged in, do work such as go to next view controller.
-            returnUserData()
-        }
-        else
-        {
-            //Creates a login button that opens a new view if not the case
-            let loginView : FBSDKLoginButton = FBSDKLoginButton()
-            self.view.addSubview(loginView)
+//        if (FBSDKAccessToken.currentAccessToken() != nil)
+//        {
+//            // User is already logged in, do work such as go to next view controller.
+//            returnUserData()
+//        }
+//        else
+//        {
+//            //Creates a login button that opens a new view if not the case
+//            let loginView : FBSDKLoginButton = FBSDKLoginButton()
+//            self.view.addSubview(loginView)
 //            let topconstraint = NSLayoutConstraint(item: loginView, attribute: NSLayoutAttribute.TopMargin, relatedBy: .Equal, toItem: thirdFloorButton, attribute:NSLayoutAttribute.BottomMargin, multiplier: 1.0, constant: 20)
 //            
 //            self.view.addConstraint(topconstraint)
-            loginView.center = self.view.center
-            
-            loginView.readPermissions = ["public_profile", "email"]
-            loginView.delegate = self
-        }
+//            loginView.center = self.view.center
+//            
+//            loginView.readPermissions = ["public_profile", "email"]
+//            loginView.delegate = self
+//        }
     
         
     }
@@ -101,6 +103,17 @@ class NearbyViewController: UIViewController, FBSDKLoginButtonDelegate{
         })
     }
     
+    
+    @IBAction func casPressed(sender: AnyObject) {
+        let casV:UIWebView = UIWebView(frame: CGRectMake(0, self.topLayoutGuide.length, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+        casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://fed.princeton.edu/cas/v1/tickets")!))
+        casV.delegate = self;
+        self.view.addSubview(casV)
+        
+   
+    }
+    
+
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
