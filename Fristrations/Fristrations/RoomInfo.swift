@@ -8,6 +8,7 @@
 
 
 import UIKit
+import Firebase
 
 class RoomInfo: UIViewController{
     var roomNumber:String = ""
@@ -15,7 +16,43 @@ class RoomInfo: UIViewController{
     var roomURL:String = "https://fristrations.firebaseio.com/rooms/"
     var times: NSDictionary = [String:String]()
     var roomRef: Firebase!
-    let displayTime = [800: "8:00-8:30am", 830: "8:30-9:00am", 900: "9:00-9:30am", 930: "9:30-10:00am", 1000: "10:00-10:30am", 1030: "10:30-11:00am", 1100: "11:00-11:30am", 1130: "11:30am-12:00pm", 1200: "12:00-12:30pm"]
+    let displayTime =
+        [800: "8:00-8:30am",
+         830: "8:30-9:00am",
+         900: "9:00-9:30am",
+         930: "9:30-10:00am",
+         1000: "10:00-10:30am",
+         1030: "10:30-11:00am",
+         1100: "11:00-11:30am",
+         1130: "11:30am-12:00pm",
+         1200: "12:00-12:30pm",
+         1230: "12:30-1:00pm",
+         1300: "1:00-1:30pm",
+         1330: "1:30-2:00pm",
+         1400: "2:00-2:30pm",
+         1430: "2:30-3:00pm",
+         1500: "3:00-3:30pm",
+         1530: "3:30-4:00pm",
+         1600: "4:00-4:30pm",
+         1630: "4:30-5:00pm",
+         1700: "5:00-5:30pm",
+         1730: "5:30-6:00pm",
+         1800: "6:00-6:30pm",
+         1830: "6:30-7:00pm",
+         1900: "7:00-7:30pm",
+         1930: "7:30-8:00pm",
+         2000: "8:00-8:30pm",
+         2030: "8:30-9:00pm",
+         2100: "9:00-9:30pm",
+         2130: "9:30-10:00pm",
+         2200: "10:00-10:30pm",
+         2230: "10:30-11:00pm",
+         2300: "11:00-11:30pm",
+         2330: "11:30pm-12:00am",
+         2400: "12:00-12:30am",
+         2430: "12:30-1:00am",
+         100: "1:00-1:30am",
+         130: "1:30-2:00am"]
     
     @IBOutlet weak var button80am: UIButton!
     @IBOutlet weak var button83am: UIButton!
@@ -26,7 +63,35 @@ class RoomInfo: UIViewController{
     @IBOutlet weak var button110am: UIButton!
     @IBOutlet weak var button113am: UIButton!
     @IBOutlet weak var button120pm: UIButton!
+    @IBOutlet weak var button1230: UIButton!
+    @IBOutlet weak var button1300: UIButton!
+    @IBOutlet weak var button1330: UIButton!
+    @IBOutlet weak var button1400: UIButton!
+    @IBOutlet weak var button1430: UIButton!
+    @IBOutlet weak var button1500: UIButton!
+    @IBOutlet weak var button1530: UIButton!
+    @IBOutlet weak var button1600: UIButton!
+    @IBOutlet weak var button1630: UIButton!
+    @IBOutlet weak var button1700: UIButton!
+    @IBOutlet weak var button1730: UIButton!
+    @IBOutlet weak var button1800: UIButton!
+    @IBOutlet weak var button1830: UIButton!
+    @IBOutlet weak var button1900: UIButton!
+    @IBOutlet weak var button1930: UIButton!
+    @IBOutlet weak var button2000: UIButton!
+    @IBOutlet weak var button2030: UIButton!
+    @IBOutlet weak var button2100: UIButton!
+    @IBOutlet weak var button2130: UIButton!
+    @IBOutlet weak var button2200: UIButton!
+    @IBOutlet weak var button2230: UIButton!
+    @IBOutlet weak var button2300: UIButton!
+    @IBOutlet weak var button2330: UIButton!
+    @IBOutlet weak var button00: UIButton!
+    @IBOutlet weak var button30: UIButton!
+    @IBOutlet weak var button100: UIButton!
+    @IBOutlet weak var button130: UIButton!
     
+    @IBOutlet var buttonPressed: [UIButton]!
   
     
     override func viewDidLoad() {
@@ -34,46 +99,63 @@ class RoomInfo: UIViewController{
         // Do any additional setup after loading the view.
         super.viewDidLoad()
         button80am.tag = 800
-        button80am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
         button83am.tag = 830
-        button83am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
         button90am.tag = 900
-        button90am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
         button93am.tag = 930
-        button93am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
         button100am.tag = 1000
-        button100am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
         button103am.tag = 1030
-        button103am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
         button110am.tag = 1100
-        button110am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
         button113am.tag = 1130
-        button113am.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
         button120pm.tag = 1200
-        button120pm.addTarget(self, action: #selector(self.buttonClicked(_:)), forControlEvents: .TouchUpInside)
-
+        button1230.tag = 1230
+        button1300.tag = 1300
+        button1330.tag = 1330
+        button1400.tag = 1400
+        button1430.tag = 1430
+        button1500.tag = 1500
+        button1530.tag = 1530
+        button1600.tag = 1600
+        button1630.tag = 1630
+        button1700.tag = 1700
+        button1730.tag = 1730
+        button1800.tag = 1800
+        button1830.tag = 1830
+        button1900.tag = 1900
+        button1930.tag = 1930
+        button2000.tag = 2000
+        button2030.tag = 2030
+        button2100.tag = 2100
+        button2130.tag = 2130
+        button2200.tag = 2200
+        button2230.tag = 2230
+        button2300.tag = 2300
+        button2330.tag = 2330
+        button00.tag = 2400
+        button30.tag = 2430
+        button100.tag = 100
+        button130.tag = 130
     }
     
-    func buttonClicked(sender:UIButton!)
-    {
-        // sender.tag is the military time
-        // timeDetails is the booking
-        // setTime is the dictionary we want to update
-        // time is the display format (8:00 - 8:30)
-        let time = displayTime[sender.tag]
-        let timeDetails = self.times[time!] as! String
-        var setTime = [String:String]()
-        if (timeDetails == "n/a") {
-            setTime = [time!:"cjhsu"]
+    @IBAction func buttonClicked(sender: UIButton!) {
+        if (uName != "n/a")
+        {
+            for timeButton in buttonPressed {
+                if (sender == timeButton) {
+                    let timeDetails = self.times[String(timeButton.tag)] as! String
+                    var setTime = [String:String]()
+                    if (timeDetails == "n/a") {
+                        setTime = [String(timeButton.tag):uName]
+                    }
+                    else if (timeDetails == uName){
+                        setTime = [String(timeButton.tag):"n/a"]
+                    }
+                    let single = roomRef.childByAppendingPath("times")
+                    single.updateChildValues(setTime)
+                    break
+                }
+            }
         }
-        else {
-            setTime = [time!:"n/a"]
-        }
-        let single = roomRef.childByAppendingPath("times")
-        single.updateChildValues(setTime)
     }
-    
-    
     
     
     override func viewWillAppear(animated: Bool) {
@@ -84,97 +166,20 @@ class RoomInfo: UIViewController{
             self.times = self.room["times"] as! NSDictionary
             self.title = self.room["room_name"] as? String
             
-            
-            var timeDetails = self.times["8:00-8:30am"] as! String
-            if (timeDetails == "n/a") {
-                self.button80am.backgroundColor = UIColor.greenColor()
-                self.button80am.setTitle("8:00-8:30am", forState: UIControlState.Normal)
-            }
-            else {
-                self.button80am.setTitle("8:00-8:30am: " + timeDetails , forState: UIControlState.Normal)
-                self.button80am.backgroundColor = UIColor.redColor()
-            }
-            
-            timeDetails = self.times["8:30-9:00am"] as! String
-            if (timeDetails == "n/a") {
-                self.button83am.backgroundColor = UIColor.greenColor()
-                self.button83am.setTitle("8:30-9:00am", forState: UIControlState.Normal)
-            }
-            else {
-                self.button83am.setTitle("8:30-9:00am: " + timeDetails , forState: UIControlState.Normal)
-                self.button83am.backgroundColor = UIColor.redColor()
+            for timeButton in self.buttonPressed {
+                let time = self.displayTime[timeButton.tag]
+                let timeDetails = self.times[String(timeButton.tag)] as! String
+                if (timeDetails == "n/a") {
+                    timeButton.backgroundColor = UIColor(red: 78/255, green: 213/255, blue: 171/255, alpha: 0.5) // 78 213 171
+                    timeButton.setTitle(time!, forState: UIControlState.Normal)
+                }
+                else {
+                    timeButton.backgroundColor = UIColor(red: 233/255, green: 90/255, blue: 76/255, alpha: 0.5) //233 90 76
+                    timeButton.setTitle(time! + ": " + timeDetails , forState: UIControlState.Normal)
+                }
             }
             
-            timeDetails = self.times["9:00-9:30am"] as! String
-            if (timeDetails == "n/a") {
-                self.button90am.backgroundColor = UIColor.greenColor()
-                self.button90am.setTitle("9:00-9:30am", forState: UIControlState.Normal)
-            }
-            else {
-                self.button90am.setTitle("9:00-9:30am: " + timeDetails , forState: UIControlState.Normal)
-                self.button90am.backgroundColor = UIColor.redColor()
-            }
-            
-            timeDetails = self.times["9:30-10:00am"] as! String
-            if (timeDetails == "n/a") {
-                self.button93am.backgroundColor = UIColor.greenColor()
-                self.button93am.setTitle("9:30-10:00am", forState: UIControlState.Normal)
-            }
-            else {
-                self.button93am.setTitle("9:30-10:00am: " + timeDetails , forState: UIControlState.Normal)
-                self.button93am.backgroundColor = UIColor.redColor()
-            }
-            
-            timeDetails = self.times["10:00-10:30am"] as! String
-            if (timeDetails == "n/a") {
-                self.button100am.backgroundColor = UIColor.greenColor()
-                self.button100am.setTitle("10:00-10:30am", forState: UIControlState.Normal)
-            }
-            else {
-                self.button100am.setTitle("10:00-10:30am: " + timeDetails , forState: UIControlState.Normal)
-                self.button100am.backgroundColor = UIColor.redColor()
-            }
-            
-            timeDetails = self.times["10:30-11:00am"] as! String
-            if (timeDetails == "n/a") {
-                self.button103am.backgroundColor = UIColor.greenColor()
-                self.button103am.setTitle("10:30-11:00am", forState: UIControlState.Normal)
-            }
-            else {
-                self.button103am.setTitle("10:30-11:00am: " + timeDetails , forState: UIControlState.Normal)
-                self.button103am.backgroundColor = UIColor.redColor()
-            }
-            //11:00am
-            timeDetails = self.times["11:00-11:30am"] as! String
-            if (timeDetails == "n/a") {
-                self.button110am.backgroundColor = UIColor.greenColor()
-                self.button110am.setTitle("11:00-11:30am", forState: UIControlState.Normal)
-            }
-            else {
-                self.button110am.setTitle("11:00-11:30am: " + timeDetails , forState: UIControlState.Normal)
-                self.button110am.backgroundColor = UIColor.redColor()
-            }
-            
-            timeDetails = self.times["11:30am-12:00pm"] as! String
-            if (timeDetails == "n/a") {
-                self.button113am.backgroundColor = UIColor.greenColor()
-                self.button113am.setTitle("11:30am-12:00pm", forState: UIControlState.Normal)
-            }
-            else {
-                self.button113am.setTitle("11:30am-12:00pm: " + timeDetails , forState: UIControlState.Normal)
-                self.button113am.backgroundColor = UIColor.redColor()
-            }
-            
-            timeDetails = self.times["12:00-12:30pm"] as! String
-            if (timeDetails == "n/a") {
-                self.button120pm.backgroundColor = UIColor.greenColor()
-                self.button120pm.setTitle("12:00-12:30pm", forState: UIControlState.Normal)
-            }
-            else {
-                self.button120pm.setTitle("12:00-12:30pm: " + timeDetails , forState: UIControlState.Normal)
-                self.button120pm.backgroundColor = UIColor.redColor()
-            }
-        })
+                    })
     }
     
     override func didReceiveMemoryWarning() {
