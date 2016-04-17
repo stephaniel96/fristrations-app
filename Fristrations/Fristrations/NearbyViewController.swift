@@ -9,16 +9,20 @@
 
 import UIKit
 import FBSDKLoginKit
+import SafariServices
 
 var uName:String = "n/a"
+let kSafariViewControllerCloseNotification = "kSafariViewControllerCloseNotification"
 
-class NearbyViewController: UIViewController, UIWebViewDelegate, FBSDKLoginButtonDelegate {
+class NearbyViewController: UIViewController, UIWebViewDelegate,SFSafariViewControllerDelegate,FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var fristLabel: UILabel!
     @IBOutlet weak var firstFloorButton: UIButton!
     @IBOutlet weak var secondFloorButton: UIButton!
     @IBOutlet weak var thirdFloorButton: UIButton!
     @IBOutlet weak var casButton: UIButton!
+    
+    var casV: SFSafariViewController?
 
     
     override func viewDidLoad() {
@@ -48,8 +52,21 @@ class NearbyViewController: UIViewController, UIWebViewDelegate, FBSDKLoginButto
 //            loginView.readPermissions = ["public_profile", "email"]
 //            loginView.delegate = self
 //        }
-    
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NearbyViewController.casLogin(_:)), name: kSafariViewControllerCloseNotification, object: nil)
+
         
+    }
+    
+    func casLogin(notification: NSNotification) {
+        // get the url form the auth callback
+        let url = notification.object as! NSURL
+        print(String(url))
+        print("logged in")
+        // then do whatever you like, for example :
+        // get the code (token) from the URL
+        // and do a request to get the information you need (id, name, ...)
+        // Finally dismiss the Safari View Controller with:
+        self.casV!.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // Facebook Delegate Methods
@@ -98,19 +115,26 @@ class NearbyViewController: UIViewController, UIWebViewDelegate, FBSDKLoginButto
                 print("fetched user: \(result)")
                 let userName : NSString = result.valueForKey("name") as! NSString
                 print("User Name is: \(userName)")
-                uName = userName as! String
+                uName = userName as String
             }
         })
     }
     
     
     @IBAction func casPressed(sender: AnyObject) {
-        let casV:UIWebView = UIWebView(frame: CGRectMake(0, self.topLayoutGuide.length, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
-        casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://fed.princeton.edu/cas/v1/tickets")!))
-        casV.delegate = self;
-        self.view.addSubview(casV)
-        
+        casV = SFSafariViewController(URL: NSURL(string: "https://fed.princeton.edu/cas/v1/tickets")!)
+        casV?.delegate = self
+        self.presentViewController(casV!, animated: true, completion: nil)
    
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView!) {
+        
+    }
+    
+    func safariViewControllerDidFinish(controller: SFSafariViewController)
+    {
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
     
 
