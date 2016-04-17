@@ -21,23 +21,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Firebase.defaultConfig().persistenceEnabled = true
     }
 
-    func application(application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        return FBSDKApplicationDelegate.sharedInstance()
-            .application(application, didFinishLaunchingWithOptions: launchOptions)
-    }
-    func applicationDidBecomeActive(application: UIApplication) {
-        FBSDKAppEvents.activateApp()
-    }
-    func application(application: UIApplication, openURL url: NSURL,
-                     sourceApplication: String?, annotation: AnyObject?) -> Bool {
-        if (sourceApplication == "com.apple.SafariViewService") {
-            NSNotificationCenter.defaultCenter().postNotificationName(kSafariViewControllerCloseNotification, object: url)
-            return true
+//    func application(application: UIApplication,
+//                     didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+//        return FBSDKApplicationDelegate.sharedInstance()
+//            .application(application, didFinishLaunchingWithOptions: launchOptions)
+//    }
+//    
+//    func applicationDidBecomeActive(application: UIApplication) {
+//        FBSDKAppEvents.activateApp()
+//    }
+    
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool  {
+        print("open")
+        if let sourceApplication = options["UIApplicationOpenURLOptionsSourceApplicationKey"] {
+            print (String(sourceApplication))
+            if (String(sourceApplication) == "com.apple.SafariViewService") {
+                NSNotificationCenter.defaultCenter().postNotificationName(kSafariViewControllerCloseNotification, object: url)
+                return true
+            }
         }
         return true
     }
-
+    
 
 
 }
