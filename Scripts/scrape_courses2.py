@@ -159,6 +159,14 @@ def get_course_classes(soup):
   # This next bit tends to cause problems because the registrar includes precepts and canceled
   # classes. Having text in both 1st and 4th columns (class number and day of the week)
   # currently indicates a valid class.
+
+  listings = soup('strong')[1].string
+  class1 = match.group('dept')+" "+match.group('num') for match in LISTING_REGEX.finditer(listings)]
+
+
+  if row('td')[0].strong and row('td')[3].strong.string
+    for row in class_rows
+
   
   return [get_single_class(row) for row in class_rows if row('td')[0].strong and row('td')[3].strong.string]
 
