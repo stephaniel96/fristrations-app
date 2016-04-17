@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5BB0DFC16C2AD448C2B0A53C /* Pods_FristrationsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFB679EB040A37911C38187 /* Pods_FristrationsUITests.framework */; };
 		644A0AD41CBC95CE00846C32 /* RoomInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A0AD31CBC95CE00846C32 /* RoomInfo.swift */; };
+		64E6BF881CC3131F00CD69B8 /* fp200.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E6BF871CC3131F00CD69B8 /* fp200.png */; };
 		72B8AA07506A4B50B6C41925 /* Pods_FristrationsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F3E2BC479C82D10F582FBE /* Pods_FristrationsTests.framework */; };
 		C8C0B20EF44D88968D22FB35 /* Pods_Fristrations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A9B446A4A0277B68621385 /* Pods_Fristrations.framework */; };
 		DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB324BD71CAF90A800019734 /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 		33F3E2BC479C82D10F582FBE /* Pods_FristrationsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FristrationsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4305DA62ABC611B624CC0861 /* Pods-Fristrations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fristrations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fristrations/Pods-Fristrations.debug.xcconfig"; sourceTree = "<group>"; };
 		644A0AD31CBC95CE00846C32 /* RoomInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomInfo.swift; sourceTree = "<group>"; };
+		64E6BF871CC3131F00CD69B8 /* fp200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fp200.png; path = Images/fp200.png; sourceTree = "<group>"; };
 		844EE05C10B20AED382DEA3C /* Pods-FristrationsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FristrationsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FristrationsTests/Pods-FristrationsTests.release.xcconfig"; sourceTree = "<group>"; };
 		AD7C198244EA0B3E55C0B2D7 /* Pods-FristrationsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FristrationsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FristrationsUITests/Pods-FristrationsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B8E8382BD5B39C5FF0B53867 /* Pods-FristrationsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FristrationsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FristrationsTests/Pods-FristrationsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				DB324BDD1CAF90A800019734 /* Main.storyboard */,
 				DB324BE01CAF90A800019734 /* Assets.xcassets */,
 				DB324BE21CAF90A800019734 /* LaunchScreen.storyboard */,
+				64E6BF871CC3131F00CD69B8 /* fp200.png */,
 				DB324BE51CAF90A800019734 /* Info.plist */,
 				DB3A69811CB704F700579435 /* Room.swift */,
 				DB9221D41CAF95D9002C7C21 /* Fristrations-Bridging-Header.h */,
@@ -368,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E6BF881CC3131F00CD69B8 /* fp200.png in Resources */,
 				DB324BE41CAF90A800019734 /* LaunchScreen.storyboard in Resources */,
 				DB324BE11CAF90A800019734 /* Assets.xcassets in Resources */,
 				DB324BDF1CAF90A800019734 /* Main.storyboard in Resources */,

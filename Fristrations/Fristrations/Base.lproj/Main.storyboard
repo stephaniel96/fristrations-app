@@ -1545,15 +1545,36 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gFb-AU-Bb4">
+                                <rect key="frame" x="50" y="146" width="500" height="371"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vxN-pS-fFy">
+                                        <rect key="frame" x="0.0" y="28" width="500" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vxN-pS-fFy" id="8Dk-XG-otq">
+                                            <rect key="frame" x="0.0" y="0.0" width="500" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="XAJ-GJ-KJc" secondAttribute="trailing" constant="30" id="6aT-Ya-3ja"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="gFb-AU-Bb4" secondAttribute="bottom" constant="20" id="8Dc-mG-fpl"/>
                             <constraint firstItem="XAJ-GJ-KJc" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="30" id="Bqn-ac-ZpL"/>
                             <constraint firstItem="XAJ-GJ-KJc" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="75" id="Jq5-kz-f0w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gFb-AU-Bb4" secondAttribute="trailing" constant="30" id="NdT-dB-7c7"/>
+                            <constraint firstItem="gFb-AU-Bb4" firstAttribute="top" secondItem="XAJ-GJ-KJc" secondAttribute="bottom" constant="21" id="VHT-BE-9fU"/>
+                            <constraint firstItem="gFb-AU-Bb4" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="30" id="yke-EH-E4q"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="icon_search" selectedImage="icon_search" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tableView" destination="gFb-AU-Bb4" id="gd6-0n-zFU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
