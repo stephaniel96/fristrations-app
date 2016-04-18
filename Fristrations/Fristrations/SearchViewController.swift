@@ -13,10 +13,12 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Properties
     
-    var rootRef: Firebase!
+    var roomRef: Firebase!
     var currentTime:String!
-    var roomURL:String = "https://fristrations.firebaseio.com/rooms"
-    let rooms = [114, 205, 206, 207, 208, 209, 210, 212, 227, 228, 234, 303, 307, 309]
+    var times: NSDictionary = [String:String]()
+    var room: NSDictionary = [String:String]()
+    var roomURL:String = "https://fristrations.firebaseio.com/rooms/"
+    let rooms = ["frist114", "frist205", "frist206", "frist207", "frist208", "frist209", "frist210", "frist212", "frist227", "frist228", "frist234", "frist303", "frist307", "frist309"]
     var availableRooms:[String] = []
     // Called when the view controller’s content view is created and loaded from a storyboard
     
@@ -27,26 +29,47 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         self.title = "Available Rooms"
         // Fristrations color in RGB percentages
         view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
+        
+        
 
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         let date = NSDate()
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components([.Minute , .Hour], fromDate: date)
         let minute =  components.minute
         let hour = components.hour
+        var currentMinute = ""
+        if (minute >= 30) {
+            currentMinute = "30"
+        }
+        else {
+            currentMinute = "00"
+        }
+        currentTime = String(hour) + currentMinute
+        print(self.currentTime)
         
-        currentTime = String(hour) + String(minute)
         
-        
-        
-        
-        //for number in rooms {
-       //     roomRef = Firebase(url:(roomURL + roomNumber))
-       //     if
-       // }
-        
+        self.availableRooms.removeAll()
+        for roomNumber in rooms {
+            roomRef = Firebase(url:(roomURL + roomNumber))
+            
+            roomRef.observeEventType(.Value, withBlock: {
+                snapshot in
+                
+                self.room = snapshot.value as! NSDictionary
+                self.times = self.room["times"] as! NSDictionary
+                let timeDetails = self.times[self.currentTime] as! String
+                if (timeDetails == "n/a") {
+                    self.availableRooms.append(roomNumber)
+                    print(self.availableRooms)
+                }
+                
+            })
+        }
     }
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
