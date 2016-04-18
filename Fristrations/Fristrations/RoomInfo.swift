@@ -138,7 +138,6 @@ class RoomInfo: UIViewController{
     
     @IBAction func buttonClicked(sender: UIButton!) {
         print(uName)
-        uName = "cah7"
         if (uName != "n/a")
         {
             for timeButton in buttonPressed {
