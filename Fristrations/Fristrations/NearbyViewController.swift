@@ -8,26 +8,27 @@
 //
 
 import UIKit
+import WebKit
 import FBSDKLoginKit
 import SafariServices
 
 var uName:String = "n/a"
 let kSafariViewControllerCloseNotification = "kSafariViewControllerCloseNotification"
 
-class NearbyViewController: UIViewController, UIWebViewDelegate,SFSafariViewControllerDelegate,FBSDKLoginButtonDelegate {
+class NearbyViewController: UIViewController, UIWebViewDelegate,FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var fristLabel: UILabel!
     @IBOutlet weak var firstFloorButton: UIButton!
     @IBOutlet weak var secondFloorButton: UIButton!
     @IBOutlet weak var thirdFloorButton: UIButton!
     @IBOutlet weak var casButton: UIButton!
+
     
-    var casV: SFSafariViewController?
+    var casV: UIWebView!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
         self.title = "Nearby"
         // Fristrations color in RGB percentages
@@ -66,7 +67,7 @@ class NearbyViewController: UIViewController, UIWebViewDelegate,SFSafariViewCont
         // get the code (token) from the URL
         // and do a request to get the information you need (id, name, ...)
         // Finally dismiss the Safari View Controller with:
-        self.casV!.dismissViewControllerAnimated(true, completion: nil)
+        // self.casV!.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // Facebook Delegate Methods
@@ -122,19 +123,40 @@ class NearbyViewController: UIViewController, UIWebViewDelegate,SFSafariViewCont
     
     
     @IBAction func casPressed(sender: AnyObject) {
-        casV = SFSafariViewController(URL: NSURL(string: "https://fed.princeton.edu/cas/v1/tickets")!)
-        casV?.delegate = self
-        self.presentViewController(casV!, animated: true, completion: nil)
-   
-    }
-    
-    func webViewDidFinishLoad(webView: UIWebView!) {
+        casV = UIWebView(frame: CGRectMake(0, 65, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+//        let topconstraint = NSLayoutConstraint(item: casV, attribute: NSLayoutAttribute.TopMargin, relatedBy: .Equal, toItem: self.topLayoutGuide, attribute:NSLayoutAttribute.BottomMargin, multiplier: 1.0, constant: 0)
+//        self.view.addConstraint(topconstraint)
+        casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
+        casV.delegate = self;
+        self.view.addSubview(casV)
+//        casV?.delegate = self
+//        self.presentViewController(casV!, animated: true, completion: nil)
+        
         
     }
+    
+    
     
     func safariViewControllerDidFinish(controller: SFSafariViewController)
     {
         controller.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func webView(webView: UIWebView!, didFailLoadWithError error: NSError!) {
+        print("Webview fail with error \(error)");
+    }
+    
+    
+    func webViewDidStartLoad(webView: UIWebView!) {
+        print("Webview started Loading")
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView!) {
+        
+        
+        let doc = webView.stringByEvaluatingJavaScriptFromString("document.documentElement.outerHTML")!
+        
+        print("document = \(doc)")
     }
     
 

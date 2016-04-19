@@ -21,15 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Firebase.defaultConfig().persistenceEnabled = true
     }
 
-//    func application(application: UIApplication,
-//                     didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-//        return FBSDKApplicationDelegate.sharedInstance()
-//            .application(application, didFinishLaunchingWithOptions: launchOptions)
-//    }
-//    
-//    func applicationDidBecomeActive(application: UIApplication) {
-//        FBSDKAppEvents.activateApp()
-//    }
+    func application(application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance()
+            .application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+    
+    func applicationDidBecomeActive(application: UIApplication) {
+        FBSDKAppEvents.activateApp()
+    }
     
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool  {
         print("open")
@@ -42,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
+    
     
 
 
