@@ -71,17 +71,26 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="R4a-cp-Vaz">
-                                <rect key="frame" x="279" y="507" width="41" height="21"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="netID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8I-bR-22X">
-                                        <rect key="frame" x="0.0" y="0.0" width="41" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="netID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8I-bR-22X">
+                                <rect key="frame" x="280" y="442" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xJ-v1-J4O">
+                                <rect key="frame" x="223" y="487" width="155" height="30"/>
+                                <color key="backgroundColor" red="0.3803921569" green="0.62745098040000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2xH-5g-Vxq"/>
+                                    <constraint firstAttribute="height" constant="40" id="uzs-Dl-Mao"/>
+                                </constraints>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="casSignOutPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="FSb-Bh-9zC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.30196078431372547" green="0.49411764705882355" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -91,17 +100,19 @@
                             <constraint firstItem="IHY-c7-4M9" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="80t-SV-gvY"/>
                             <constraint firstItem="IHY-c7-4M9" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="8a3-4f-Qdp"/>
                             <constraint firstItem="nbC-NW-CLs" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="80" id="Cmi-V1-fJ9"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="R4a-cp-Vaz" secondAttribute="bottom" constant="70" id="Ico-Fb-ofg"/>
+                            <constraint firstItem="j8I-bR-22X" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Hl9-A6-aOd"/>
                             <constraint firstItem="l6v-0H-6D8" firstAttribute="top" secondItem="nbC-NW-CLs" secondAttribute="bottom" constant="20" id="LaZ-G0-0UN"/>
                             <constraint firstItem="B0l-ia-van" firstAttribute="top" secondItem="IHY-c7-4M9" secondAttribute="bottom" constant="20" id="MPG-Jb-lVH"/>
                             <constraint firstItem="l6v-0H-6D8" firstAttribute="top" secondItem="nbC-NW-CLs" secondAttribute="bottom" constant="20" id="N5w-CA-oD8"/>
                             <constraint firstItem="nbC-NW-CLs" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="81" id="Nnk-tW-9T5"/>
+                            <constraint firstItem="6xJ-v1-J4O" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="QS1-jX-lMf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="B0l-ia-van" secondAttribute="trailing" constant="10" id="T7Y-nM-YXP"/>
+                            <constraint firstItem="6xJ-v1-J4O" firstAttribute="top" secondItem="j8I-bR-22X" secondAttribute="bottom" constant="30" id="UQj-gS-tZ0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="l6v-0H-6D8" secondAttribute="trailing" constant="10" id="Vuu-q0-IDw"/>
                             <constraint firstItem="B0l-ia-van" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="b52-CE-dGT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IHY-c7-4M9" secondAttribute="trailing" id="iqk-BW-ryF"/>
-                            <constraint firstItem="R4a-cp-Vaz" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="piB-7j-Rph"/>
                             <constraint firstItem="l6v-0H-6D8" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="tbA-v5-zwQ"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="6xJ-v1-J4O" secondAttribute="bottom" constant="50" id="uS7-5H-zGG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nbC-NW-CLs" secondAttribute="trailing" constant="10" id="wfv-ew-X47"/>
                             <constraint firstItem="nbC-NW-CLs" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="xrg-Zd-7j2"/>
                         </constraints>
@@ -123,6 +134,7 @@
                         <outlet property="fristLabel" destination="nbC-NW-CLs" id="AB9-bv-EHk"/>
                         <outlet property="netIdLabel" destination="j8I-bR-22X" id="6dZ-FQ-gyd"/>
                         <outlet property="secondFloorButton" destination="IHY-c7-4M9" id="kHj-0l-ibV"/>
+                        <outlet property="signInButton" destination="6xJ-v1-J4O" id="M7M-UM-8bZ"/>
                         <outlet property="thirdFloorButton" destination="B0l-ia-van" id="79q-7J-qo6"/>
                     </connections>
                 </viewController>

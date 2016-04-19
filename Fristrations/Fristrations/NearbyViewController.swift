@@ -25,6 +25,7 @@ class NearbyViewController: UIViewController, UIWebViewDelegate,FBSDKLoginButton
     @IBOutlet weak var thirdFloorButton: UIButton!
     @IBOutlet weak var casButton: UIButton!
     @IBOutlet weak var netIdLabel: UILabel!
+    @IBOutlet weak var signInButton: UIButton!
 
     
     var casV: UIWebView!
@@ -35,11 +36,20 @@ class NearbyViewController: UIViewController, UIWebViewDelegate,FBSDKLoginButton
         // Do any additional setup after loading the view.
         self.title = "Nearby"
         
+        var netID: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("netid")
         
-        casV = UIWebView(frame: CGRectMake(0, 65, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
-        casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
-        casV.delegate = self;
-        self.view.addSubview(casV)
+        if (netID == nil) {
+            casV = UIWebView(frame: CGRectMake(0, 65, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+            casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
+            casV.delegate = self;
+            self.view.addSubview(casV)
+            signInButton.setTitle("Sign In", forState: .Normal)
+        }
+        else {
+            uName = netID as! String
+            netIdLabel.text = "Logged in as: " + uName
+            signInButton.setTitle("Sign Out", forState: .Normal)
+        }
         
         // Fristrations color in RGB percentages
         //view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
@@ -66,6 +76,23 @@ class NearbyViewController: UIViewController, UIWebViewDelegate,FBSDKLoginButton
 //        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NearbyViewController.casLogin(_:)), name: kSafariViewControllerCloseNotification, object: nil)
 
         
+    }
+    
+    @IBAction func casSignOutPressed(sender: AnyObject) {
+        var netID: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("netid")
+        if (netID == nil) {
+            casV = UIWebView(frame: CGRectMake(0, 65, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+            casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
+            casV.delegate = self;
+            self.view.addSubview(casV)
+            signInButton.setTitle("Sign In", forState: .Normal)
+        }
+        else {
+            NSUserDefaults.standardUserDefaults().removeObjectForKey("netid")
+            netIdLabel.text = "Not Signed In"
+            uName = "n/a"
+            signInButton.setTitle("Sign In", forState: .Normal)
+        }
     }
     
     func casLogin(notification: NSNotification) {
@@ -164,6 +191,8 @@ class NearbyViewController: UIViewController, UIWebViewDelegate,FBSDKLoginButton
                 print("login successful!")
                 uName = netID
                 netIdLabel.text = "Logged in as: " + uName
+                NSUserDefaults.standardUserDefaults().setObject(netID, forKey: "netid")
+                signInButton.setTitle("Sign Out", forState: .Normal)
                 casV.removeFromSuperview()
             }
         }
