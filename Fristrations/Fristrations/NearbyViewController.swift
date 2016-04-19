@@ -11,6 +11,8 @@ import UIKit
 import WebKit
 import FBSDKLoginKit
 import SafariServices
+import Kanna
+import Foundation
 
 var uName:String = "n/a"
 let kSafariViewControllerCloseNotification = "kSafariViewControllerCloseNotification"
@@ -22,6 +24,7 @@ class NearbyViewController: UIViewController, UIWebViewDelegate,FBSDKLoginButton
     @IBOutlet weak var secondFloorButton: UIButton!
     @IBOutlet weak var thirdFloorButton: UIButton!
     @IBOutlet weak var casButton: UIButton!
+    @IBOutlet weak var netIdLabel: UILabel!
 
     
     var casV: UIWebView!
@@ -31,6 +34,13 @@ class NearbyViewController: UIViewController, UIWebViewDelegate,FBSDKLoginButton
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = "Nearby"
+        
+        
+        casV = UIWebView(frame: CGRectMake(0, 65, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+        casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
+        casV.delegate = self;
+        self.view.addSubview(casV)
+        
         // Fristrations color in RGB percentages
         //view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
         
@@ -53,7 +63,7 @@ class NearbyViewController: UIViewController, UIWebViewDelegate,FBSDKLoginButton
 //            loginView.readPermissions = ["public_profile", "email"]
 //            loginView.delegate = self
 //        }
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NearbyViewController.casLogin(_:)), name: kSafariViewControllerCloseNotification, object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NearbyViewController.casLogin(_:)), name: kSafariViewControllerCloseNotification, object: nil)
 
         
     }
@@ -122,18 +132,6 @@ class NearbyViewController: UIViewController, UIWebViewDelegate,FBSDKLoginButton
     }
     
     
-    @IBAction func casPressed(sender: AnyObject) {
-        casV = UIWebView(frame: CGRectMake(0, 65, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
-//        let topconstraint = NSLayoutConstraint(item: casV, attribute: NSLayoutAttribute.TopMargin, relatedBy: .Equal, toItem: self.topLayoutGuide, attribute:NSLayoutAttribute.BottomMargin, multiplier: 1.0, constant: 0)
-//        self.view.addConstraint(topconstraint)
-        casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
-        casV.delegate = self;
-        self.view.addSubview(casV)
-//        casV?.delegate = self
-//        self.presentViewController(casV!, animated: true, completion: nil)
-        
-        
-    }
     
     
     
@@ -150,15 +148,29 @@ class NearbyViewController: UIViewController, UIWebViewDelegate,FBSDKLoginButton
     func webViewDidStartLoad(webView: UIWebView!) {
         print("Webview started Loading")
     }
+   
     
     func webViewDidFinishLoad(webView: UIWebView!) {
+        let docPage = webView.stringByEvaluatingJavaScriptFromString("document.documentElement.outerHTML")!
         
+        if let doc = Kanna.HTML(html: docPage, encoding: NSUTF8StringEncoding) {
+            // Search for nodes by CSS
+            var bods = doc.css("body")
+            var bod = bods[0].text
+            if (bod!.characters.count < 50) {
+                var netID = bod!.stringByTrimmingCharactersInSet(
+                    NSCharacterSet.whitespaceAndNewlineCharacterSet()
+                )
+                print("login successful!")
+                uName = netID
+                netIdLabel.text = "Logged in as: " + uName
+                casV.removeFromSuperview()
+            }
+        }
         
-        let doc = webView.stringByEvaluatingJavaScriptFromString("document.documentElement.outerHTML")!
-        
-        print("document = \(doc)")
     }
     
+   
 
     // MARK: - Navigation
     

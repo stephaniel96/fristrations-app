@@ -71,31 +71,27 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKg-pV-v8b">
-                                <rect key="frame" x="30" y="486" width="540" height="40"/>
-                                <color key="backgroundColor" red="0.48243212200000002" green="0.76185651669999999" blue="0.91584884440000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="b3f-gw-JbF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Sign In/Sign Out">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="casPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ptg-iL-SgI"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="R4a-cp-Vaz">
+                                <rect key="frame" x="279" y="507" width="41" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="netID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8I-bR-22X">
+                                        <rect key="frame" x="0.0" y="0.0" width="41" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.30196078431372547" green="0.49411764705882355" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="eKg-pV-v8b" secondAttribute="trailing" constant="20" id="0a7-m2-7Wo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IHY-c7-4M9" secondAttribute="trailing" constant="10" id="4CI-FE-nc9"/>
                             <constraint firstItem="l6v-0H-6D8" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="4qJ-8F-IHc"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="eKg-pV-v8b" secondAttribute="bottom" constant="40" id="4vb-vL-slQ"/>
                             <constraint firstItem="IHY-c7-4M9" firstAttribute="top" secondItem="l6v-0H-6D8" secondAttribute="bottom" constant="20" id="6MD-C2-ha7"/>
                             <constraint firstItem="IHY-c7-4M9" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="80t-SV-gvY"/>
                             <constraint firstItem="IHY-c7-4M9" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="8a3-4f-Qdp"/>
                             <constraint firstItem="nbC-NW-CLs" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="80" id="Cmi-V1-fJ9"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="R4a-cp-Vaz" secondAttribute="bottom" constant="70" id="Ico-Fb-ofg"/>
                             <constraint firstItem="l6v-0H-6D8" firstAttribute="top" secondItem="nbC-NW-CLs" secondAttribute="bottom" constant="20" id="LaZ-G0-0UN"/>
                             <constraint firstItem="B0l-ia-van" firstAttribute="top" secondItem="IHY-c7-4M9" secondAttribute="bottom" constant="20" id="MPG-Jb-lVH"/>
                             <constraint firstItem="l6v-0H-6D8" firstAttribute="top" secondItem="nbC-NW-CLs" secondAttribute="bottom" constant="20" id="N5w-CA-oD8"/>
@@ -104,7 +100,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="l6v-0H-6D8" secondAttribute="trailing" constant="10" id="Vuu-q0-IDw"/>
                             <constraint firstItem="B0l-ia-van" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="b52-CE-dGT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IHY-c7-4M9" secondAttribute="trailing" id="iqk-BW-ryF"/>
-                            <constraint firstItem="eKg-pV-v8b" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="20" id="sTw-d0-KDE"/>
+                            <constraint firstItem="R4a-cp-Vaz" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="piB-7j-Rph"/>
                             <constraint firstItem="l6v-0H-6D8" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="tbA-v5-zwQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nbC-NW-CLs" secondAttribute="trailing" constant="10" id="wfv-ew-X47"/>
                             <constraint firstItem="nbC-NW-CLs" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="xrg-Zd-7j2"/>
@@ -123,9 +119,9 @@
                     <navigationItem key="navigationItem" id="0nG-yU-Uf1"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="casButton" destination="eKg-pV-v8b" id="UC1-Jz-bfD"/>
                         <outlet property="firstFloorButton" destination="l6v-0H-6D8" id="7EY-HL-quU"/>
                         <outlet property="fristLabel" destination="nbC-NW-CLs" id="AB9-bv-EHk"/>
+                        <outlet property="netIdLabel" destination="j8I-bR-22X" id="6dZ-FQ-gyd"/>
                         <outlet property="secondFloorButton" destination="IHY-c7-4M9" id="kHj-0l-ibV"/>
                         <outlet property="thirdFloorButton" destination="B0l-ia-van" id="79q-7J-qo6"/>
                     </connections>

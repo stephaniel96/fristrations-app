@@ -137,7 +137,6 @@ class RoomInfo: UIViewController{
     }
     
     @IBAction func buttonClicked(sender: UIButton!) {
-        print(uName)
         if (uName != "n/a")
         {
             for timeButton in buttonPressed {
@@ -176,7 +175,13 @@ class RoomInfo: UIViewController{
                 }
                 else {
                     timeButton.backgroundColor = UIColor(red: 233/255, green: 90/255, blue: 76/255, alpha: 0.5) //233 90 76
-                    timeButton.setTitle(time! + ": " + timeDetails , forState: UIControlState.Normal)
+                    //checks if reservation is the user's or another users
+                    if (timeDetails == uName) {
+                        timeButton.setTitle(time! + ": " + timeDetails , forState: UIControlState.Normal)
+                    }
+                    else {
+                        timeButton.setTitle(time! + ": Reserved", forState: UIControlState.Normal)
+                    }
                 }
             }
             

@@ -5,6 +5,10 @@ target 'Fristrations' do
 	pod 'Firebase', '>= 2.5.1'
 	pod 'FBSDKLoginKit', '>= 4.11'
 	pod 'FBSDKCoreKit', '>= 4.11'
+	pod 'HTMLReader'
+	pod 'Alamofire'
+	pod 'SwiftyJSON'
+	pod 'Kanna'
 end
 
 target 'FristrationsTests' do
