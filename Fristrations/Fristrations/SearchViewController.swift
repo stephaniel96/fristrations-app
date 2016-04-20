@@ -26,7 +26,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Available Rooms"
+        self.title = "Available"
         tableView.delegate = self
         tableView.dataSource = self
         // Fristrations color in RGB percentages
@@ -47,6 +47,13 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
             currentMinute = "00"
         }
         currentTime = String(hour) + currentMinute
+        if (currentTime == "000")
+        {
+            currentTime = "2400"
+        }
+        if (currentTime == "030") {
+            currentTime = "2430"
+        }
         print(self.currentTime)
         
         
@@ -68,6 +75,11 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
             })
         }
     }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = UIColor.clearColor()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -76,12 +88,30 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return availableRooms.count
     }
+
+    // Use if we want the whole table cell to be the button
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        self.performSegueWithIdentifier("goToRoomData", sender: "frist205")
+//    }
+    
+    func roomButtonPressed(sender: UIButton) {
+        self.performSegueWithIdentifier("goToRoomData", sender: "frist205")
+    }
+    
+    override func prepareForSegue(segue:UIStoryboardSegue, sender: AnyObject!) {
+        let vc = segue.destinationViewController as! RoomInfo
+        vc.roomNumber = sender as! String
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Customcell", forIndexPath: indexPath) as! CustomCell
         cell.roomLabel.text = availableRooms[indexPath.item]
+        cell.roomButton.addTarget(self, action: #selector(SearchViewController.roomButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         return cell
     }
+
+    
+
 
     
 }
