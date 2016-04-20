@@ -1566,17 +1566,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="500" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-1J-iRJ">
-                                                    <rect key="frame" x="234" y="7" width="46" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-1J-iRJ">
+                                                    <rect key="frame" x="18" y="18" width="412" height="30"/>
                                                     <state key="normal" title="Button"/>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ko9-W4-Iok">
-                                                    <rect key="frame" x="302" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ko9-W4-Iok">
+                                                    <rect key="frame" x="440" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Tx8-1J-iRJ" firstAttribute="top" secondItem="8Dk-XG-otq" secondAttribute="topMargin" constant="10" id="2JC-PC-CbI"/>
+                                                <constraint firstItem="ko9-W4-Iok" firstAttribute="leading" secondItem="Tx8-1J-iRJ" secondAttribute="trailing" constant="10" id="Bn7-AX-YTc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ko9-W4-Iok" secondAttribute="trailing" constant="10" id="Wg6-6h-ADD"/>
+                                                <constraint firstItem="ko9-W4-Iok" firstAttribute="top" secondItem="8Dk-XG-otq" secondAttribute="topMargin" constant="10" id="Wga-06-cqt"/>
+                                                <constraint firstItem="Tx8-1J-iRJ" firstAttribute="leading" secondItem="8Dk-XG-otq" secondAttribute="leadingMargin" constant="10" id="bI9-74-oqb"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="roomButton" destination="Tx8-1J-iRJ" id="OEk-2E-m51"/>
