@@ -12,7 +12,7 @@ import Firebase
 class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
     
     // MARK: Properties
-    
+    // testing comment
     var roomRef: Firebase!
     var currentTime:String!
     var times: NSDictionary = [String:String]()
