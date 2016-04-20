@@ -10,7 +10,6 @@ import UIKit
 
 class CustomCell: UITableViewCell {
 
-    @IBOutlet weak var roomLabel: UILabel!
     @IBOutlet weak var roomButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()

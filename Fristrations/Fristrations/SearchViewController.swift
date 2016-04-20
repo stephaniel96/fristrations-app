@@ -105,7 +105,8 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Customcell", forIndexPath: indexPath) as! CustomCell
-        cell.roomLabel.text = availableRooms[indexPath.item]
+        
+        cell.roomButton.setTitle(availableRooms[indexPath.item], forState: .Normal)
         cell.roomButton.addTarget(self, action: #selector(SearchViewController.roomButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         return cell
     }

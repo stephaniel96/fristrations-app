@@ -1555,9 +1555,10 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gFb-AU-Bb4">
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gFb-AU-Bb4">
                                 <rect key="frame" x="50" y="190" width="500" height="341"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Customcell" id="vxN-pS-fFy" customClass="CustomCell" customModule="Fristrations" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="500" height="44"/>
@@ -1566,28 +1567,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="500" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-1J-iRJ">
-                                                    <rect key="frame" x="18" y="18" width="412" height="30"/>
-                                                    <state key="normal" title="Button"/>
+                                                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-1J-iRJ">
+                                                    <rect key="frame" x="18" y="7" width="464" height="30"/>
+                                                    <color key="backgroundColor" red="0.37254901960784315" green="0.58039215686274515" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ko9-W4-Iok">
-                                                    <rect key="frame" x="440" y="11" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Tx8-1J-iRJ" firstAttribute="top" secondItem="8Dk-XG-otq" secondAttribute="topMargin" constant="10" id="2JC-PC-CbI"/>
-                                                <constraint firstItem="ko9-W4-Iok" firstAttribute="leading" secondItem="Tx8-1J-iRJ" secondAttribute="trailing" constant="10" id="Bn7-AX-YTc"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ko9-W4-Iok" secondAttribute="trailing" constant="10" id="Wg6-6h-ADD"/>
-                                                <constraint firstItem="ko9-W4-Iok" firstAttribute="top" secondItem="8Dk-XG-otq" secondAttribute="topMargin" constant="10" id="Wga-06-cqt"/>
-                                                <constraint firstItem="Tx8-1J-iRJ" firstAttribute="leading" secondItem="8Dk-XG-otq" secondAttribute="leadingMargin" constant="10" id="bI9-74-oqb"/>
+                                                <constraint firstItem="Tx8-1J-iRJ" firstAttribute="leading" secondItem="8Dk-XG-otq" secondAttribute="leadingMargin" constant="10" id="Rqw-LU-nGM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Tx8-1J-iRJ" secondAttribute="trailing" constant="10" id="VSV-fr-ZA7"/>
+                                                <constraint firstItem="Tx8-1J-iRJ" firstAttribute="centerX" secondItem="8Dk-XG-otq" secondAttribute="centerX" id="fWE-Py-yMp"/>
+                                                <constraint firstItem="Tx8-1J-iRJ" firstAttribute="centerY" secondItem="8Dk-XG-otq" secondAttribute="centerY" id="ryD-go-0Jk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="roomButton" destination="Tx8-1J-iRJ" id="OEk-2E-m51"/>
-                                            <outlet property="roomLabel" destination="ko9-W4-Iok" id="UVL-yr-0UR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
