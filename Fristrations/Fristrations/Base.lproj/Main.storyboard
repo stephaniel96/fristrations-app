@@ -1545,8 +1545,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Available Rooms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAJ-GJ-KJc">
-                                <rect key="frame" x="50" y="95" width="500" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Rooms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAJ-GJ-KJc">
+                                <rect key="frame" x="50" y="139" width="500" height="30"/>
                                 <color key="backgroundColor" red="0.45630120042212263" green="0.8281798417827585" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8dW-Y4-vNb"/>
@@ -1555,8 +1555,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gFb-AU-Bb4">
-                                <rect key="frame" x="50" y="146" width="500" height="385"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gFb-AU-Bb4">
+                                <rect key="frame" x="50" y="190" width="500" height="341"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Customcell" id="vxN-pS-fFy" customClass="CustomCell" customModule="Fristrations" customModuleProvider="target">
@@ -1692,11 +1692,11 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Search-->
+        <!--Available-->
         <scene sceneID="atW-Zb-HFL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="si8-TS-7Bv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="icon_search" selectedImage="icon_search" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Available" image="icon_search" selectedImage="icon_search" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4zq-xl-Cgz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

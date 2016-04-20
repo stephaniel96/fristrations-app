@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5BB0DFC16C2AD448C2B0A53C /* Pods_FristrationsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFB679EB040A37911C38187 /* Pods_FristrationsUITests.framework */; };
 		644A0AD41CBC95CE00846C32 /* RoomInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A0AD31CBC95CE00846C32 /* RoomInfo.swift */; };
 		64E6BF881CC3131F00CD69B8 /* fp200.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E6BF871CC3131F00CD69B8 /* fp200.png */; };
-		72B8AA07506A4B50B6C41925 /* Pods_FristrationsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F3E2BC479C82D10F582FBE /* Pods_FristrationsTests.framework */; };
-		C8C0B20EF44D88968D22FB35 /* Pods_Fristrations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A9B446A4A0277B68621385 /* Pods_Fristrations.framework */; };
+		DB0968EA1CC714B0008F5D10 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0968E91CC714B0008F5D10 /* CustomCell.swift */; };
 		DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB324BD71CAF90A800019734 /* AppDelegate.swift */; };
 		DB324BDF1CAF90A800019734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB324BDD1CAF90A800019734 /* Main.storyboard */; };
 		DB324BE11CAF90A800019734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB324BE01CAF90A800019734 /* Assets.xcassets */; };
@@ -23,7 +21,6 @@
 		DB324C0C1CAF90F600019734 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C0B1CAF90F600019734 /* libc++.tbd */; };
 		DB324C0E1CAF90FD00019734 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C0D1CAF90FD00019734 /* libicucore.tbd */; };
 		DB324C101CAF910700019734 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB324C0F1CAF910700019734 /* Security.framework */; };
-		DB3A69821CB704F700579435 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A69811CB704F700579435 /* Room.swift */; };
 		DB9590051CB0726F00055E61 /* FirstFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590041CB0726F00055E61 /* FirstFloor.swift */; };
 		DB9590071CB072F000055E61 /* SecondFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590061CB072F000055E61 /* SecondFloor.swift */; };
 		DB9590091CB0740A00055E61 /* ThirdFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590081CB0740A00055E61 /* ThirdFloor.swift */; };
@@ -51,9 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13A9B446A4A0277B68621385 /* Pods_Fristrations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fristrations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FE6A123EC652EB9846B2CC2 /* Pods-Fristrations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fristrations.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fristrations/Pods-Fristrations.release.xcconfig"; sourceTree = "<group>"; };
-		33F3E2BC479C82D10F582FBE /* Pods_FristrationsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FristrationsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4305DA62ABC611B624CC0861 /* Pods-Fristrations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fristrations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fristrations/Pods-Fristrations.debug.xcconfig"; sourceTree = "<group>"; };
 		644A0AD31CBC95CE00846C32 /* RoomInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomInfo.swift; sourceTree = "<group>"; };
 		64E6BF871CC3131F00CD69B8 /* fp200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fp200.png; path = Images/fp200.png; sourceTree = "<group>"; };
@@ -61,17 +56,17 @@
 		AD7C198244EA0B3E55C0B2D7 /* Pods-FristrationsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FristrationsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FristrationsUITests/Pods-FristrationsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B8E8382BD5B39C5FF0B53867 /* Pods-FristrationsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FristrationsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FristrationsTests/Pods-FristrationsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB79C1663D848FBC2E103EB4 /* Pods-FristrationsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FristrationsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FristrationsUITests/Pods-FristrationsUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		CFFB679EB040A37911C38187 /* Pods_FristrationsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FristrationsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB324BD41CAF90A800019734 /* Fristrations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fristrations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0968E91CC714B0008F5D10 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		DB324BD41CAF90A800019734 /* Fristrations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Fristrations.app; path = "/Users/stephanieliu/COS333/fristrations-app/Fristrations/build/Debug-iphoneos/Fristrations.app"; sourceTree = "<absolute>"; };
 		DB324BD71CAF90A800019734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB324BDE1CAF90A800019734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB324BE01CAF90A800019734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB324BE31CAF90A800019734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB324BE51CAF90A800019734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB324BEA1CAF90A800019734 /* FristrationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FristrationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB324BEA1CAF90A800019734 /* FristrationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FristrationsTests.xctest; path = "/Users/stephanieliu/COS333/fristrations-app/Fristrations/build/Debug-iphoneos/FristrationsTests.xctest"; sourceTree = "<absolute>"; };
 		DB324BEE1CAF90A800019734 /* FristrationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FristrationsTests.swift; sourceTree = "<group>"; };
 		DB324BF01CAF90A800019734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB324BF51CAF90A800019734 /* FristrationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FristrationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB324BF51CAF90A800019734 /* FristrationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FristrationsUITests.xctest; path = "/Users/stephanieliu/COS333/fristrations-app/Fristrations/build/Debug-iphoneos/FristrationsUITests.xctest"; sourceTree = "<absolute>"; };
 		DB324BF91CAF90A900019734 /* FristrationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FristrationsUITests.swift; sourceTree = "<group>"; };
 		DB324BFB1CAF90A900019734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB324C071CAF90E000019734 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -79,7 +74,6 @@
 		DB324C0B1CAF90F600019734 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		DB324C0D1CAF90FD00019734 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		DB324C0F1CAF910700019734 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		DB3A69811CB704F700579435 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		DB9221D41CAF95D9002C7C21 /* Fristrations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fristrations-Bridging-Header.h"; sourceTree = "<group>"; };
 		DB9590041CB0726F00055E61 /* FirstFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstFloor.swift; sourceTree = "<group>"; };
 		DB9590061CB072F000055E61 /* SecondFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondFloor.swift; sourceTree = "<group>"; };
@@ -100,7 +94,6 @@
 				DB324C0C1CAF90F600019734 /* libc++.tbd in Frameworks */,
 				DB324C0A1CAF90E900019734 /* SystemConfiguration.framework in Frameworks */,
 				DB324C081CAF90E000019734 /* CFNetwork.framework in Frameworks */,
-				C8C0B20EF44D88968D22FB35 /* Pods_Fristrations.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72B8AA07506A4B50B6C41925 /* Pods_FristrationsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,23 +108,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BB0DFC16C2AD448C2B0A53C /* Pods_FristrationsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B4AE5C80FA404A25ED6CF04D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				13A9B446A4A0277B68621385 /* Pods_Fristrations.framework */,
-				33F3E2BC479C82D10F582FBE /* Pods_FristrationsTests.framework */,
-				CFFB679EB040A37911C38187 /* Pods_FristrationsUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		DB324BCB1CAF90A800019734 = {
 			isa = PBXGroup;
 			children = (
@@ -144,20 +125,8 @@
 				DB324BD61CAF90A800019734 /* Fristrations */,
 				DB324BED1CAF90A800019734 /* FristrationsTests */,
 				DB324BF81CAF90A900019734 /* FristrationsUITests */,
-				DB324BD51CAF90A800019734 /* Products */,
 				E864C1AEC6B6C6B5A8D3FC0B /* Pods */,
-				B4AE5C80FA404A25ED6CF04D /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		DB324BD51CAF90A800019734 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DB324BD41CAF90A800019734 /* Fristrations.app */,
-				DB324BEA1CAF90A800019734 /* FristrationsTests.xctest */,
-				DB324BF51CAF90A800019734 /* FristrationsUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		DB324BD61CAF90A800019734 /* Fristrations */ = {
@@ -169,7 +138,6 @@
 				DB324BE21CAF90A800019734 /* LaunchScreen.storyboard */,
 				64E6BF871CC3131F00CD69B8 /* fp200.png */,
 				DB324BE51CAF90A800019734 /* Info.plist */,
-				DB3A69811CB704F700579435 /* Room.swift */,
 				DB9221D41CAF95D9002C7C21 /* Fristrations-Bridging-Header.h */,
 				DBA4C32B1CAF989A00EFCA8F /* NearbyViewController.swift */,
 				DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */,
@@ -179,6 +147,7 @@
 				DB9590041CB0726F00055E61 /* FirstFloor.swift */,
 				DB9590061CB072F000055E61 /* SecondFloor.swift */,
 				DB9590081CB0740A00055E61 /* ThirdFloor.swift */,
+				DB0968E91CC714B0008F5D10 /* CustomCell.swift */,
 			);
 			path = Fristrations;
 			sourceTree = "<group>";
@@ -355,7 +324,7 @@
 				zh,
 			);
 			mainGroup = DB324BCB1CAF90A800019734;
-			productRefGroup = DB324BD51CAF90A800019734 /* Products */;
+			productRefGroup = DB324BCB1CAF90A800019734;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -524,11 +493,11 @@
 			files = (
 				DB9590091CB0740A00055E61 /* ThirdFloor.swift in Sources */,
 				DBA4C3261CAF97FA00EFCA8F /* SearchViewController.swift in Sources */,
+				DB0968EA1CC714B0008F5D10 /* CustomCell.swift in Sources */,
 				DB9590051CB0726F00055E61 /* FirstFloor.swift in Sources */,
 				DBA4C3281CAF982000EFCA8F /* SettingsViewController.swift in Sources */,
 				644A0AD41CBC95CE00846C32 /* RoomInfo.swift in Sources */,
 				DB9590071CB072F000055E61 /* SecondFloor.swift in Sources */,
-				DB3A69821CB704F700579435 /* Room.swift in Sources */,
 				DBA4C32C1CAF989A00EFCA8F /* NearbyViewController.swift in Sources */,
 				DBA4C32A1CAF987900EFCA8F /* MoreViewController.swift in Sources */,
 				DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */,
