@@ -19,6 +19,21 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     var room: NSDictionary = [String:String]()
     var roomURL:String = "https://fristrations.firebaseio.com/rooms/"
     let rooms = ["frist114", "frist205", "frist206", "frist207", "frist208", "frist209", "frist210", "frist212", "frist227", "frist228", "frist234", "frist303", "frist307", "frist309"]
+    let displayRoom =
+        ["frist114" : "Frist 114",
+         "frist205" : "Frist 205",
+         "frist206" : "Frist 206",
+         "frist207" : "Frist 207",
+         "frist208" : "Frist 208",
+         "frist209" : "Frist 209",
+         "frist210" : "Frist 210",
+         "frist212" : "Frist 212",
+         "frist227" : "Frist 227",
+         "frist228" : "Frist 228",
+         "frist234" : "Frist 234",
+         "frist303" : "Frist 303",
+         "frist307" : "Frist 307",
+         "frist309" : "Frist 309"]
     var availableRooms:[String] = []
     // Called when the view controller’s content view is created and loaded from a storyboard
     
@@ -29,6 +44,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         self.title = "Available"
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.allowsSelection = false 
         // Fristrations color in RGB percentages
         view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
     }
@@ -106,7 +122,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Customcell", forIndexPath: indexPath) as! CustomCell
         cell.roomButton.tag = indexPath.row
-        cell.roomButton.setTitle(availableRooms[indexPath.row], forState: .Normal)
+        cell.roomButton.setTitle(displayRoom[availableRooms[indexPath.row]], forState: .Normal)
         cell.roomButton.addTarget(self, action: #selector(SearchViewController.roomButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         return cell
     }

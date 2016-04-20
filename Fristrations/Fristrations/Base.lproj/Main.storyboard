@@ -1568,7 +1568,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-1J-iRJ">
-                                                    <rect key="frame" x="18" y="7" width="464" height="30"/>
+                                                    <rect key="frame" x="8" y="8" width="484" height="27"/>
                                                     <color key="backgroundColor" red="0.37254901960784315" green="0.58039215686274515" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Button">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1576,10 +1576,10 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Tx8-1J-iRJ" firstAttribute="leading" secondItem="8Dk-XG-otq" secondAttribute="leadingMargin" constant="10" id="Rqw-LU-nGM"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Tx8-1J-iRJ" secondAttribute="trailing" constant="10" id="VSV-fr-ZA7"/>
-                                                <constraint firstItem="Tx8-1J-iRJ" firstAttribute="centerX" secondItem="8Dk-XG-otq" secondAttribute="centerX" id="fWE-Py-yMp"/>
-                                                <constraint firstItem="Tx8-1J-iRJ" firstAttribute="centerY" secondItem="8Dk-XG-otq" secondAttribute="centerY" id="ryD-go-0Jk"/>
+                                                <constraint firstItem="Tx8-1J-iRJ" firstAttribute="leading" secondItem="8Dk-XG-otq" secondAttribute="leadingMargin" id="5QO-ro-ZiA"/>
+                                                <constraint firstItem="Tx8-1J-iRJ" firstAttribute="top" secondItem="8Dk-XG-otq" secondAttribute="topMargin" id="7ZG-GB-fWY"/>
+                                                <constraint firstItem="Tx8-1J-iRJ" firstAttribute="bottom" secondItem="8Dk-XG-otq" secondAttribute="bottomMargin" id="J55-mt-YO8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Tx8-1J-iRJ" secondAttribute="trailing" id="z14-z3-vhJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
