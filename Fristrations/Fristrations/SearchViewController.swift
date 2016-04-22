@@ -34,7 +34,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
          "frist303" : "Frist 303",
          "frist307" : "Frist 307",
          "frist309" : "Frist 309"]
-    var availableRooms:[String] = []
+    var availableRooms = [String]()
     // Called when the view controller’s content view is created and loaded from a storyboard
     
     @IBOutlet weak var tableView: UITableView!
@@ -72,7 +72,13 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         }
         print(self.currentTime)
         
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        getDataSource()
+    }
+    
+    func getDataSource() {
         self.availableRooms.removeAll()
         for roomNumber in rooms {
             roomRef = Firebase(url:(roomURL + roomNumber))
@@ -86,15 +92,15 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
                 if (timeDetails == "n/a") {
                     self.availableRooms.append(roomNumber)
                     self.tableView.reloadData()
+                    
                 }
-                
             })
         }
     }
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        cell.backgroundColor = UIColor.clearColor()
-    }
+//    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+//        cell.backgroundColor = UIColor.clearColor()
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -121,8 +127,9 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Customcell", forIndexPath: indexPath) as! CustomCell
+        cell.backgroundColor = UIColor.clearColor()
         cell.roomButton.tag = indexPath.row
-        cell.roomButton.setTitle(displayRoom[availableRooms[indexPath.row]], forState: .Normal)
+        cell.roomButton.setTitle(availableRooms[indexPath.row], forState: .Normal)
         cell.roomButton.addTarget(self, action: #selector(SearchViewController.roomButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         return cell
     }
