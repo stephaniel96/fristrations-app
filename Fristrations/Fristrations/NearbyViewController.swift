@@ -107,7 +107,7 @@ class NearbyViewController: UIViewController, UIWebViewDelegate{
             // Search for nodes by CSS
             var bods = doc.css("body")
             var bod = bods[0].text
-            if (bod!.characters.count < 50) {
+            if (bod!.characters.count < 100) {
                 let netID = bod!.stringByTrimmingCharactersInSet(
                     NSCharacterSet.whitespaceAndNewlineCharacterSet()
                 )

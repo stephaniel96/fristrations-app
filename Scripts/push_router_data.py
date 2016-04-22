@@ -1,7 +1,8 @@
+import sys
 from firebase import firebase
 
 firebase = firebase.FirebaseApplication('https://fristrations.firebaseio.com', None)
 
-result = firebase.post('/dillon_gym', '10', {'print': 'pretty'}, {'X_FANCY_HEADER': 'VERY FANCY'})
-
-print result
+for router in sys.stdin:
+	info = router.split()
+	result = firebase.put("router_data", info[1], info[2])
