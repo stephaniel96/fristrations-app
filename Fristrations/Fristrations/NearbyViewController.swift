@@ -8,112 +8,118 @@
 //
 
 import UIKit
-import FBSDKLoginKit
+import Kanna
+import Foundation
 
 var uName:String = "n/a"
 
-class NearbyViewController: UIViewController, FBSDKLoginButtonDelegate{
+class NearbyViewController: UIViewController, UIWebViewDelegate{
     
     @IBOutlet weak var fristLabel: UILabel!
     @IBOutlet weak var firstFloorButton: UIButton!
     @IBOutlet weak var secondFloorButton: UIButton!
     @IBOutlet weak var thirdFloorButton: UIButton!
+    @IBOutlet weak var casButton: UIButton!
+    @IBOutlet weak var netIdLabel: UILabel!
+    @IBOutlet weak var signInButton: UIButton!
+
+    
+    var casV: UIWebView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
         self.title = "Nearby"
+        
+        var netID: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("netid")
+        
+        if (netID == nil) {
+            casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+            casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
+            casV.delegate = self;
+            casV.layer.zPosition = 1
+            self.view.addSubview(casV)
+            signInButton.setTitle("Sign In", forState: .Normal)
+        }
+        else {
+            uName = netID as! String
+            netIdLabel.text = "Logged in as: " + uName
+            signInButton.setTitle("Sign Out", forState: .Normal)
+        }
+        
         // Fristrations color in RGB percentages
         //view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
         
-        //Checks if there is an instance of a logged in user
-        if (FBSDKAccessToken.currentAccessToken() != nil)
-        {
-            // User is already logged in, do work such as go to next view controller.
-            returnUserData()
-        }
-        else
-        {
-            //Creates a login button that opens a new view if not the case
-            let loginView : FBSDKLoginButton = FBSDKLoginButton()
-            self.view.addSubview(loginView)
-//            let topconstraint = NSLayoutConstraint(item: loginView, attribute: NSLayoutAttribute.TopMargin, relatedBy: .Equal, toItem: thirdFloorButton, attribute:NSLayoutAttribute.BottomMargin, multiplier: 1.0, constant: 20)
-//            
-//            self.view.addConstraint(topconstraint)
-            loginView.center = self.view.center
-            
-            loginView.readPermissions = ["public_profile", "email"]
-            loginView.delegate = self
-        }
-    
-        
     }
     
-    // Facebook Delegate Methods
     
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        print("User Logged In")
-        
-        if ((error) != nil)
-        {
-            // Process error
-        }
-        else if result.isCancelled {
-            // Handle cancellations
+    @IBAction func casSignOutPressed(sender: AnyObject) {
+        var netID: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("netid")
+        if (netID == nil) {
+            casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+            casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
+            casV.delegate = self
+            casV.layer.zPosition = 1
+            self.view.addSubview(casV)
+            signInButton.setTitle("Sign In", forState: .Normal)
         }
         else {
-            // If you ask for multiple permissions at once, you
-            // should check if specific permissions missing
-            if result.grantedPermissions.contains("email")
-            {
-
-            }
+            NSUserDefaults.standardUserDefaults().removeObjectForKey("netid")
+            casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+            casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://fed.princeton.edu/cas/logout")!))
+            casV.delegate = self;
+            netIdLabel.text = "Not Signed In"
+            uName = "n/a"
+            signInButton.setTitle("Sign In", forState: .Normal)
         }
     }
-    
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        print("User Logged Out")
-    }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func returnUserData()
+    func deleteAnimationComplete(value: Bool)
     {
-        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
-        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
-            
-            if ((error) != nil)
-            {
-                // Process error
-                print("Error: \(error)")
-            }
-            else
-            {
-                print("fetched user: \(result)")
-                let userName : NSString = result.valueForKey("name") as! NSString
-                print("User Name is: \(userName)")
-                uName = userName as! String
-            }
-        })
+        if (value && casV != nil)
+        {
+            casV.removeFromSuperview()
+            casV = nil
+        }
+        
     }
     
-    // MARK: - Navigation
+    func webView(webView: UIWebView!, didFailLoadWithError error: NSError!) {
+        print("Webview fail with error \(error)");
+    }
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        // pass data to next controller
-//        if segue == "secondFloor"
-//        {
-//            let destVC = segue.destinationViewController as! SecondFloor
-//            destVC.
-//        }
-//    
-//    }
-
     
+    func webViewDidStartLoad(webView: UIWebView!) {
+        print("Webview started Loading")
+    }
+   
+    
+    func webViewDidFinishLoad(webView: UIWebView!) {
+        let docPage = webView.stringByEvaluatingJavaScriptFromString("document.documentElement.outerHTML")!
+        
+        if let doc = Kanna.HTML(html: docPage, encoding: NSUTF8StringEncoding) {
+            // Search for nodes by CSS
+            var bods = doc.css("body")
+            var bod = bods[0].text
+            if (bod!.characters.count < 100) {
+                let netID = bod!.stringByTrimmingCharactersInSet(
+                    NSCharacterSet.whitespaceAndNewlineCharacterSet()
+                )
+                print("login successful!")
+                uName = netID
+                netIdLabel.text = "Logged in as: " + uName
+                signInButton.setTitle("Sign Out", forState: .Normal)
+                UIView.animateWithDuration(0.5, animations: {self.casV!.alpha = 0}, completion: deleteAnimationComplete)
+                NSUserDefaults.standardUserDefaults().setObject(netID, forKey: "netid")
+            }
+        }
+        
+    }
 }
 
