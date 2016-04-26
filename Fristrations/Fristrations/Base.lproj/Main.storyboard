@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -141,7 +141,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <barButtonItem title="Nearby" id="uQD-M8-NxL"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="-320"/>
+            <point key="canvasLocation" x="1594" y="-360"/>
         </scene>
         <!--Second Floor-->
         <scene sceneID="nlN-Gh-kME">
@@ -1564,7 +1564,7 @@
                                         <rect key="frame" x="0.0" y="28" width="500" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vxN-pS-fFy" id="8Dk-XG-otq">
-                                            <rect key="frame" x="0.0" y="0.0" width="500" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="500" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-1J-iRJ">
@@ -1621,9 +1621,35 @@
                     <view key="view" contentMode="scaleToFill" id="UEo-IQ-Ima">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhH-vB-scR">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="facebookButtonPressed:" destination="azx-ah-5Sp" eventType="touchUpInside" id="nBV-Y1-2L7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qE-aM-2a7">
+                                <rect key="frame" x="0.0" y="28" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="azx-ah-5Sp" eventType="touchUpInside" id="QrF-Cd-QwR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9qE-aM-2a7" firstAttribute="top" secondItem="cyy-3m-n3f" secondAttribute="bottom" constant="8" id="HD1-r0-kUI"/>
+                            <constraint firstItem="BFA-aB-eCv" firstAttribute="top" secondItem="9qE-aM-2a7" secondAttribute="bottom" constant="493" id="LUh-6F-9mE"/>
+                            <constraint firstItem="9qE-aM-2a7" firstAttribute="leading" secondItem="UEo-IQ-Ima" secondAttribute="leadingMargin" constant="-20" id="gSU-uq-VHT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9qE-aM-2a7" secondAttribute="trailing" constant="534" id="vlf-5J-O7M"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="More" image="icon_more" selectedImage="icon_more" id="r7Q-lv-QkX"/>
+                    <connections>
+                        <outlet property="backButton" destination="9qE-aM-2a7" id="Sel-Si-Doh"/>
+                        <outlet property="facebookButton" destination="AhH-vB-scR" id="2UL-F2-Oyw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXi-IO-ASq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1716,6 +1742,6 @@
         <image name="icon_settings" width="26" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eS8-no-uZB"/>
+        <segue reference="cH7-mp-n3A"/>
     </inferredMetricsTieBreakers>
 </document>
