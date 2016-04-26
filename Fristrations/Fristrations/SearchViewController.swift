@@ -39,6 +39,13 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
+        
+        return refreshControl
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Available"
@@ -46,6 +53,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         tableView.dataSource = self
         tableView.allowsSelection = false 
         // Fristrations color in RGB percentages
+        self.tableView.addSubview(self.refreshControl)
         view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
     }
     
@@ -73,7 +81,27 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         print(self.currentTime)
         
     }
-    
+    func handleRefresh(refreshControl: UIRefreshControl) {
+        // Do some reloading of data and update the table view's data source
+        self.availableRooms.removeAll()
+        for roomNumber in rooms {
+            roomRef = Firebase(url:(roomURL + roomNumber))
+            
+            roomRef.observeEventType(.Value, withBlock: {
+                snapshot in
+                
+                self.room = snapshot.value as! NSDictionary
+                self.times = self.room["times"] as! NSDictionary
+                let timeDetails = self.times[self.currentTime] as! String
+                if (timeDetails == "n/a") {
+                    self.availableRooms.append((self.displayRoom[roomNumber])!)
+                    self.tableView.reloadData()
+                    
+                }
+            })
+        }
+        refreshControl.endRefreshing()
+    }
     override func viewDidAppear(animated: Bool) {
         getDataSource()
     }
