@@ -7,8 +7,6 @@ target 'Fristrations' do
 	pod 'FBSDKLoginKit', '>= 4.11'
 	pod 'FBSDKCoreKit', '>= 4.11'
 	pod 'HTMLReader'
-	pod 'Alamofire'
-	pod 'SwiftyJSON'
 	pod 'Kanna'
 end
 

@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (3.3.1)
   - Bolts (1.7.0):
     - Bolts/AppLinks (= 1.7.0)
     - Bolts/Tasks (= 1.7.0)
@@ -13,25 +12,20 @@ PODS:
   - Firebase (2.5.1)
   - HTMLReader (0.9.6)
   - Kanna (1.0.6)
-  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - Alamofire
   - FBSDKCoreKit (>= 4.11)
   - FBSDKLoginKit (>= 4.11)
   - Firebase (>= 2.5.1)
   - HTMLReader
   - Kanna
-  - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
   FBSDKCoreKit: 686ac982723a14ec9ddb85e2f81235d7706c891b
   FBSDKLoginKit: bade9fc78277764149ccc5bfaadbf13c83175c6a
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
   HTMLReader: 7e21488ee378afc56ccade8af35840c4e03e434c
   Kanna: 9f30945bbd293a609f698ea164687ccc0990ff60
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0
