@@ -176,7 +176,8 @@ class RoomInfo: UIViewController{
                 else {
                     timeButton.backgroundColor = UIColor(red: 233/255, green: 90/255, blue: 76/255, alpha: 0.5) //233 90 76
                     //checks if reservation is the user's or another users
-                    if (timeDetails == uName) {
+                    let spaceCount = timeDetails!.characters.filter{$0 == " "}.count
+                    if ((timeDetails == uName) || (spaceCount == 1)){
                         timeButton.setTitle(time! + ": " + timeDetails! , forState: UIControlState.Normal)
                     }
                     else {
