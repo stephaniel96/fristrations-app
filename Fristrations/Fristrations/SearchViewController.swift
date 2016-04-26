@@ -98,22 +98,8 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     func handleRefresh(refreshControl: UIRefreshControl) {
         // Do some reloading of data and update the table view's data source
         self.availableRooms.removeAll()
-        for roomNumber in rooms {
-            roomRef = Firebase(url:(roomURL + roomNumber))
-            
-            roomRef.observeEventType(.Value, withBlock: {
-                snapshot in
-                
-                self.room = snapshot.value as! NSDictionary
-                self.times = self.room["times"] as! NSDictionary
-                let timeDetails = self.times[self.currentTime] as! String
-                if (timeDetails == "n/a") {
-                    self.availableRooms.append((self.displayRoom[roomNumber])!)
-                    self.tableView.reloadData()
-                    
-                }
-            })
-        }
+        getDataSource()
+        
         refreshControl.endRefreshing()
     }
     override func viewDidAppear(animated: Bool) {
