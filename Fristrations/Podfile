@@ -3,9 +3,6 @@ use_frameworks!
 
 target 'Fristrations' do
     pod 'Firebase', '>= 2.5.1'
-	pod 'Firebase', '>= 2.5.1'
-	pod 'FBSDKLoginKit', '>= 4.11'
-	pod 'FBSDKCoreKit', '>= 4.11'
 	pod 'HTMLReader'
 	pod 'Kanna'
 end

@@ -84,17 +84,11 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-Fristrations/Bolts.framework"
-  install_framework "Pods-Fristrations/FBSDKCoreKit.framework"
-  install_framework "Pods-Fristrations/FBSDKLoginKit.framework"
   install_framework "Pods-Fristrations/Firebase.framework"
   install_framework "Pods-Fristrations/HTMLReader.framework"
   install_framework "Pods-Fristrations/Kanna.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-Fristrations/Bolts.framework"
-  install_framework "Pods-Fristrations/FBSDKCoreKit.framework"
-  install_framework "Pods-Fristrations/FBSDKLoginKit.framework"
   install_framework "Pods-Fristrations/Firebase.framework"
   install_framework "Pods-Fristrations/HTMLReader.framework"
   install_framework "Pods-Fristrations/Kanna.framework"
