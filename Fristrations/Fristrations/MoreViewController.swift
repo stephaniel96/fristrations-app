@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import AppKit
 import Kanna
 import Foundation
 
@@ -15,6 +14,7 @@ class MoreViewController: UIViewController, UIWebViewDelegate {
     
     // MARK: Properties
     @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var websiteButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     
     var facebookV: UIWebView!
@@ -25,6 +25,8 @@ class MoreViewController: UIViewController, UIWebViewDelegate {
         // button image
         let facebookIcon = UIImage.init(named: "facebook-icon")
         facebookButton.setBackgroundImage(facebookIcon, forState: .Normal)
+        facebookButton.setTitle(nil, forState: .Normal)
+        facebookButton.contentMode = UIViewContentMode.ScaleAspectFill
         
         // Do any additional setup after loading the view.
         self.title = "More"
@@ -34,28 +36,19 @@ class MoreViewController: UIViewController, UIWebViewDelegate {
     
     
     @IBAction func facebookButtonPressed(sender: UIButton) {
-        
-        facebookV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
-        facebookV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.facebook.com/1607764632876387")!))
-        facebookV.delegate = self;
-        facebookV.layer.zPosition = 1
-        self.view.addSubview(facebookV)
+
+        // code to try to handle case where person has facebook app installed
+        let facebookURL = NSURL(string: "https://www.facebook.com/1607764632876387")
+        if (UIApplication.sharedApplication().canOpenURL(facebookURL!)) {
+            UIApplication.sharedApplication().openURL(facebookURL!)
+        }
+        else {
+            UIApplication.sharedApplication().openURL(NSURL(string: "https://www.facebook.com/1607764632876387")!)
+        }
     }
     
-        
-        // code to try to handle case where person has facebook app installed
-//        let facebookURL = NSURL(string: "fb://profile/113810631976867")
-//        if NSWorkspace.sharedWorkspace().canOpenURL(facebookURL) {
-//            NSWorkspace.sharedWorkspace().openURL(facebookURL)
-//        }
-//        else {
-//            facebookV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
-//            facebookV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.facebook.com/1607764632876387")!))
-//            facebookV.delegate = self;
-//            facebookV.layer.zPosition = 1
-//            self.view.addSubview(facebookV)
-//        }
-    
+//    @IBAction func websiteButtonPressed(sender: UIButton) {
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

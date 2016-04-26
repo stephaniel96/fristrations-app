@@ -1636,6 +1636,13 @@
                                     <action selector="backButtonPressed:" destination="azx-ah-5Sp" eventType="touchUpInside" id="QrF-Cd-QwR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aa-4o-MtX">
+                                <rect key="frame" x="145" y="190" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="websiteButtonPressed:" destination="azx-ah-5Sp" eventType="touchUpInside" id="ZoB-Qn-C4w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1649,6 +1656,7 @@
                     <connections>
                         <outlet property="backButton" destination="9qE-aM-2a7" id="Sel-Si-Doh"/>
                         <outlet property="facebookButton" destination="AhH-vB-scR" id="2UL-F2-Oyw"/>
+                        <outlet property="websiteButton" destination="3aa-4o-MtX" id="yc9-pD-PGA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXi-IO-ASq" userLabel="First Responder" sceneMemberID="firstResponder"/>
