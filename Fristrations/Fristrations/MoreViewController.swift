@@ -17,8 +17,6 @@ class MoreViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var websiteButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     
-    var facebookV: UIWebView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
