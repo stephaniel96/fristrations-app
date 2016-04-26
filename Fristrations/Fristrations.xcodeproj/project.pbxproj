@@ -10,7 +10,6 @@
 		644A0AD41CBC95CE00846C32 /* RoomInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A0AD31CBC95CE00846C32 /* RoomInfo.swift */; };
 		64E6BF881CC3131F00CD69B8 /* fp200.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E6BF871CC3131F00CD69B8 /* fp200.png */; };
 		6CE1D4311CCF16A9009F48B5 /* customButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE1D4301CCF16A9009F48B5 /* customButton.swift */; };
-		6CE1D4351CCF3024009F48B5 /* facebook-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE1D4341CCF3024009F48B5 /* facebook-icon.png */; };
 		CB0F76EEC462F1E55212D194 /* Pods_Fristrations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B6ED8609D6AC4A2CCC2274 /* Pods_Fristrations.framework */; };
 		DB0968EA1CC714B0008F5D10 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0968E91CC714B0008F5D10 /* CustomCell.swift */; };
 		DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB324BD71CAF90A800019734 /* AppDelegate.swift */; };
@@ -57,9 +56,8 @@
 		64E6BF871CC3131F00CD69B8 /* fp200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fp200.png; path = Images/fp200.png; sourceTree = "<group>"; };
 		6CE1D42D1CCF0A3D009F48B5 /* Fristrations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fristrations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE1D4301CCF16A9009F48B5 /* customButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customButton.swift; sourceTree = "<group>"; };
-		6CE1D4321CCF2F7B009F48B5 /* FristrationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FristrationsTests.xctest; path = "/Users/KevinBradicich/Desktop/2 COS 333/Project/fristrations-app/Fristrations/build/Debug-iphoneos/FristrationsTests.xctest"; sourceTree = "<absolute>"; };
-		6CE1D4331CCF2F7B009F48B5 /* FristrationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FristrationsUITests.xctest; path = "/Users/KevinBradicich/Desktop/2 COS 333/Project/fristrations-app/Fristrations/build/Debug-iphoneos/FristrationsUITests.xctest"; sourceTree = "<absolute>"; };
-		6CE1D4341CCF3024009F48B5 /* facebook-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "facebook-icon.png"; path = "../../../facebook-icon.png"; sourceTree = "<group>"; };
+		7702A4051CCFCD900034CD2B /* FristrationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FristrationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7702A4061CCFCD900034CD2B /* FristrationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FristrationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844EE05C10B20AED382DEA3C /* Pods-FristrationsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FristrationsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FristrationsTests/Pods-FristrationsTests.release.xcconfig"; sourceTree = "<group>"; };
 		AD7C198244EA0B3E55C0B2D7 /* Pods-FristrationsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FristrationsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FristrationsUITests/Pods-FristrationsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B3B6ED8609D6AC4A2CCC2274 /* Pods_Fristrations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fristrations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +141,8 @@
 				E864C1AEC6B6C6B5A8D3FC0B /* Pods */,
 				1ED76EF97F2616E338216462 /* Frameworks */,
 				6CE1D42D1CCF0A3D009F48B5 /* Fristrations.app */,
+				7702A4051CCFCD900034CD2B /* FristrationsTests.xctest */,
+				7702A4061CCFCD900034CD2B /* FristrationsUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,7 +154,6 @@
 				DB324BE01CAF90A800019734 /* Assets.xcassets */,
 				DB324BE21CAF90A800019734 /* LaunchScreen.storyboard */,
 				64E6BF871CC3131F00CD69B8 /* fp200.png */,
-				6CE1D4341CCF3024009F48B5 /* facebook-icon.png */,
 				DB324BE51CAF90A800019734 /* Info.plist */,
 				DB9221D41CAF95D9002C7C21 /* Fristrations-Bridging-Header.h */,
 				DBA4C32B1CAF989A00EFCA8F /* NearbyViewController.swift */,
@@ -246,7 +245,7 @@
 			);
 			name = FristrationsTests;
 			productName = FristrationsTests;
-			productReference = 6CE1D4321CCF2F7B009F48B5 /* FristrationsTests.xctest */;
+			productReference = 7702A4051CCFCD900034CD2B /* FristrationsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		DB324BF41CAF90A800019734 /* FristrationsUITests */ = {
@@ -266,7 +265,7 @@
 			);
 			name = FristrationsUITests;
 			productName = FristrationsUITests;
-			productReference = 6CE1D4331CCF2F7B009F48B5 /* FristrationsUITests.xctest */;
+			productReference = 7702A4061CCFCD900034CD2B /* FristrationsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -365,7 +364,6 @@
 				64E6BF881CC3131F00CD69B8 /* fp200.png in Resources */,
 				DB324BE41CAF90A800019734 /* LaunchScreen.storyboard in Resources */,
 				DB324BE11CAF90A800019734 /* Assets.xcassets in Resources */,
-				6CE1D4351CCF3024009F48B5 /* facebook-icon.png in Resources */,
 				DB324BDF1CAF90A800019734 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

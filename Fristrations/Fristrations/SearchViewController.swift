@@ -90,7 +90,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
                 self.times = self.room["times"] as! NSDictionary
                 let timeDetails = self.times[self.currentTime] as! String
                 if (timeDetails == "n/a") {
-                    self.availableRooms.append(roomNumber)
+                    self.availableRooms.append((self.displayRoom[roomNumber])!)
                     self.tableView.reloadData()
                     
                 }
