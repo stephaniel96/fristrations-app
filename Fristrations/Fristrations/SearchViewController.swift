@@ -92,7 +92,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         if (currentTime == "030") {
             currentTime = "2430"
         }
-        print(self.currentTime)
         
     }
     func handleRefresh(refreshControl: UIRefreshControl) {
