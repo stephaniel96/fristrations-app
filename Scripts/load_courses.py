@@ -3,7 +3,7 @@ import datetime
 from firebase import firebase
 
 def main():
-    with open('hello') as data_file:    
+    with open('hello2') as data_file:    
         input_courses = json.load(data_file)
 
 

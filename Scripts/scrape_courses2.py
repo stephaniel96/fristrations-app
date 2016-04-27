@@ -131,7 +131,7 @@ def get_single_class(row):
     Slabeltime = ""+s1+a[1]
 
   EamORpm = time[1].strip()[-2:]
-  EnumberTime = time[0].strip()[:-3]
+  EnumberTime = time[1].strip()[:-3]
   b = EnumberTime.split(':')
   if EamORpm == "am":
     Elabeltime = ""+b[0]+b[1]
