@@ -1,0 +1,4 @@
+./dillonAwk < current_stats > dillon_num
+python push_dillon_data.py < dillon_num
+python push_router_data.py < current_stats
+rm dillon_num

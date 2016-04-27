@@ -1,4 +1,0 @@
-./dillonAwk < aos_ap_stats.23-55 > dillon_num
-python push_dillon_data.py < dillon_num
-python push_router_data.py < aos_ap_stats.23-55
-rm dillon_num

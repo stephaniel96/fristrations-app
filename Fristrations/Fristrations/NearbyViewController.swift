@@ -35,11 +35,12 @@ class NearbyViewController: UIViewController, UIWebViewDelegate{
         var netID: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("netid")
         
         if (netID == nil) {
-            casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
-            casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
-            casV.delegate = self;
-            casV.layer.zPosition = 1
-            self.view.addSubview(casV)
+//            casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+//            casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
+//            casV.delegate = self;
+//            casV.layer.zPosition = 1
+//            self.view.addSubview(casV)
+            netIdLabel.text = "Not Signed In"
             signInButton.setTitle("Sign In", forState: .Normal)
         }
         else {
@@ -65,13 +66,13 @@ class NearbyViewController: UIViewController, UIWebViewDelegate{
             signInButton.setTitle("Sign In", forState: .Normal)
         }
         else {
+            signInButton.setTitle("Sign In", forState: .Normal)
             NSUserDefaults.standardUserDefaults().removeObjectForKey("netid")
             casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
             casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://fed.princeton.edu/cas/logout")!))
             casV.delegate = self;
             netIdLabel.text = "Not Signed In"
             uName = "n/a"
-            signInButton.setTitle("Sign In", forState: .Normal)
         }
     }
 

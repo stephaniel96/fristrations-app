@@ -34,11 +34,33 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
          "frist303" : "Frist 303",
          "frist307" : "Frist 307",
          "frist309" : "Frist 309"]
+    let revDisplayRoom =
+        ["Frist 114" : "frist114",
+         "Frist 205" : "frist205",
+         "Frist 206" : "frist206",
+         "Frist 207" : "frist207",
+         "Frist 208" : "frist208",
+         "Frist 209" : "frist209",
+         "Frist 210" : "frist210",
+         "Frist 212" : "frist212",
+         "Frist 227" : "frist227",
+         "Frist 228" : "frist228",
+         "Frist 234" : "frist234",
+         "Frist 303" : "frist303",
+         "Frist 307" : "frist307",
+         "Frist 309" : "frist309"]
     var availableRooms = [String]()
     // Called when the view controller’s content view is created and loaded from a storyboard
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
+        
+        return refreshControl
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Available"
@@ -46,7 +68,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         tableView.dataSource = self
         tableView.allowsSelection = false 
         // Fristrations color in RGB percentages
-        view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
+        self.tableView.addSubview(self.refreshControl)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -73,7 +95,13 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         print(self.currentTime)
         
     }
-    
+    func handleRefresh(refreshControl: UIRefreshControl) {
+        // Do some reloading of data and update the table view's data source
+        self.availableRooms.removeAll()
+        getDataSource()
+        
+        refreshControl.endRefreshing()
+    }
     override func viewDidAppear(animated: Bool) {
         getDataSource()
     }
@@ -90,7 +118,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
                 self.times = self.room["times"] as! NSDictionary
                 let timeDetails = self.times[self.currentTime] as! String
                 if (timeDetails == "n/a") {
-                    self.availableRooms.append(roomNumber)
+                    self.availableRooms.append((self.displayRoom[roomNumber])!)
                     self.tableView.reloadData()
                     
                 }
@@ -122,7 +150,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     
     override func prepareForSegue(segue:UIStoryboardSegue, sender: AnyObject!) {
         let vc = segue.destinationViewController as! RoomInfo
-        vc.roomNumber = availableRooms[sender.tag]
+        vc.roomNumber = revDisplayRoom[availableRooms[sender.tag]]!
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

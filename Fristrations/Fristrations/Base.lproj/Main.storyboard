@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -141,7 +141,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <barButtonItem title="Nearby" id="uQD-M8-NxL"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="-320"/>
+            <point key="canvasLocation" x="1594" y="-360"/>
         </scene>
         <!--Second Floor-->
         <scene sceneID="nlN-Gh-kME">
@@ -1547,18 +1547,19 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Rooms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAJ-GJ-KJc">
                                 <rect key="frame" x="50" y="139" width="500" height="30"/>
-                                <color key="backgroundColor" red="0.45630120042212263" green="0.8281798417827585" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.44957173690000002" green="0.6880570775" blue="0.77281023829999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8dW-Y4-vNb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gFb-AU-Bb4">
                                 <rect key="frame" x="50" y="190" width="500" height="341"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.30196078430000001" green="0.4941176471" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Customcell" id="vxN-pS-fFy" customClass="CustomCell" customModule="Fristrations" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="500" height="44"/>
@@ -1569,12 +1570,13 @@
                                             <subviews>
                                                 <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-1J-iRJ">
                                                     <rect key="frame" x="8" y="8" width="484" height="27"/>
-                                                    <color key="backgroundColor" red="0.37254901960784315" green="0.58039215686274515" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.44957173690000002" green="0.6880570775" blue="0.77281023829999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Button">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.30196078430000001" green="0.4941176471" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="Tx8-1J-iRJ" firstAttribute="leading" secondItem="8Dk-XG-otq" secondAttribute="leadingMargin" id="5QO-ro-ZiA"/>
                                                 <constraint firstItem="Tx8-1J-iRJ" firstAttribute="top" secondItem="8Dk-XG-otq" secondAttribute="topMargin" id="7ZG-GB-fWY"/>
@@ -1582,6 +1584,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="Tx8-1J-iRJ" secondAttribute="trailing" id="z14-z3-vhJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.30196078430000001" green="0.4941176471" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="roomButton" destination="Tx8-1J-iRJ" id="OEk-2E-m51"/>
                                         </connections>
@@ -1589,7 +1592,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.30196078430000001" green="0.4941176471" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="XAJ-GJ-KJc" secondAttribute="trailing" constant="30" id="6aT-Ya-3ja"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="gFb-AU-Bb4" secondAttribute="bottom" constant="20" id="8Dc-mG-fpl"/>
@@ -1621,9 +1624,43 @@
                     <view key="view" contentMode="scaleToFill" id="UEo-IQ-Ima">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhH-vB-scR">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="facebookButtonPressed:" destination="azx-ah-5Sp" eventType="touchUpInside" id="nBV-Y1-2L7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qE-aM-2a7">
+                                <rect key="frame" x="0.0" y="28" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="azx-ah-5Sp" eventType="touchUpInside" id="QrF-Cd-QwR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aa-4o-MtX">
+                                <rect key="frame" x="145" y="190" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="websiteButtonPressed:" destination="azx-ah-5Sp" eventType="touchUpInside" id="ZoB-Qn-C4w"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9qE-aM-2a7" firstAttribute="top" secondItem="cyy-3m-n3f" secondAttribute="bottom" constant="8" id="HD1-r0-kUI"/>
+                            <constraint firstItem="BFA-aB-eCv" firstAttribute="top" secondItem="9qE-aM-2a7" secondAttribute="bottom" constant="493" id="LUh-6F-9mE"/>
+                            <constraint firstItem="9qE-aM-2a7" firstAttribute="leading" secondItem="UEo-IQ-Ima" secondAttribute="leadingMargin" constant="-20" id="gSU-uq-VHT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9qE-aM-2a7" secondAttribute="trailing" constant="534" id="vlf-5J-O7M"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="More" image="icon_more" selectedImage="icon_more" id="r7Q-lv-QkX"/>
+                    <connections>
+                        <outlet property="backButton" destination="9qE-aM-2a7" id="Sel-Si-Doh"/>
+                        <outlet property="facebookButton" destination="AhH-vB-scR" id="2UL-F2-Oyw"/>
+                        <outlet property="websiteButton" destination="3aa-4o-MtX" id="yc9-pD-PGA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXi-IO-ASq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
