@@ -32,7 +32,7 @@ class NearbyViewController: UIViewController, UIWebViewDelegate{
         // Do any additional setup after loading the view.
         self.title = "Nearby"
         
-        var netID: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("netid")
+        let netID: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("netid")
         
         if (netID == nil) {
 //            casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
@@ -56,7 +56,7 @@ class NearbyViewController: UIViewController, UIWebViewDelegate{
     
     
     @IBAction func casSignOutPressed(sender: AnyObject) {
-        var netID: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("netid")
+        let netID: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("netid")
         if (netID == nil) {
             casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
             casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
@@ -91,23 +91,23 @@ class NearbyViewController: UIViewController, UIWebViewDelegate{
         
     }
     
-    func webView(webView: UIWebView!, didFailLoadWithError error: NSError!) {
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
         print("Webview fail with error \(error)");
     }
     
     
-    func webViewDidStartLoad(webView: UIWebView!) {
+    func webViewDidStartLoad(webView: UIWebView) {
         print("Webview started Loading")
     }
    
     
-    func webViewDidFinishLoad(webView: UIWebView!) {
+    func webViewDidFinishLoad(webView: UIWebView) {
         let docPage = webView.stringByEvaluatingJavaScriptFromString("document.documentElement.outerHTML")!
         
         if let doc = Kanna.HTML(html: docPage, encoding: NSUTF8StringEncoding) {
             // Search for nodes by CSS
-            var bods = doc.css("body")
-            var bod = bods[0].text
+            let bods = doc.css("body")
+            let bod = bods[0].text
             if (bod!.characters.count < 100) {
                 let netID = bod!.stringByTrimmingCharactersInSet(
                     NSCharacterSet.whitespaceAndNewlineCharacterSet()
