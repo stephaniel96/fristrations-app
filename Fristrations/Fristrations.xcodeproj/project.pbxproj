@@ -10,6 +10,7 @@
 		644A0AD41CBC95CE00846C32 /* RoomInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A0AD31CBC95CE00846C32 /* RoomInfo.swift */; };
 		64E6BF881CC3131F00CD69B8 /* fp200.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E6BF871CC3131F00CD69B8 /* fp200.png */; };
 		6CE1D4311CCF16A9009F48B5 /* customButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE1D4301CCF16A9009F48B5 /* customButton.swift */; };
+		7702A4081CD1550C0034CD2B /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 7702A4071CD1550C0034CD2B /* splash.png */; };
 		CB0F76EEC462F1E55212D194 /* Pods_Fristrations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B6ED8609D6AC4A2CCC2274 /* Pods_Fristrations.framework */; };
 		DB0968EA1CC714B0008F5D10 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0968E91CC714B0008F5D10 /* CustomCell.swift */; };
 		DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB324BD71CAF90A800019734 /* AppDelegate.swift */; };
@@ -58,6 +59,7 @@
 		6CE1D4301CCF16A9009F48B5 /* customButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customButton.swift; sourceTree = "<group>"; };
 		7702A4051CCFCD900034CD2B /* FristrationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FristrationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7702A4061CCFCD900034CD2B /* FristrationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FristrationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7702A4071CD1550C0034CD2B /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = Fristrations/Images/splash.png; sourceTree = "<group>"; };
 		844EE05C10B20AED382DEA3C /* Pods-FristrationsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FristrationsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FristrationsTests/Pods-FristrationsTests.release.xcconfig"; sourceTree = "<group>"; };
 		AD7C198244EA0B3E55C0B2D7 /* Pods-FristrationsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FristrationsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FristrationsUITests/Pods-FristrationsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B3B6ED8609D6AC4A2CCC2274 /* Pods_Fristrations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fristrations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 		DB324BCB1CAF90A800019734 = {
 			isa = PBXGroup;
 			children = (
+				7702A4071CD1550C0034CD2B /* splash.png */,
 				DB324C0F1CAF910700019734 /* Security.framework */,
 				DB324C0D1CAF90FD00019734 /* libicucore.tbd */,
 				DB324C0B1CAF90F600019734 /* libc++.tbd */,
@@ -365,6 +368,7 @@
 				DB324BE41CAF90A800019734 /* LaunchScreen.storyboard in Resources */,
 				DB324BE11CAF90A800019734 /* Assets.xcassets in Resources */,
 				DB324BDF1CAF90A800019734 /* Main.storyboard in Resources */,
+				7702A4081CD1550C0034CD2B /* splash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
