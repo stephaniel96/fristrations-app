@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -154,7 +154,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Se1-FM-QVX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="g6l-PY-9sG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Mh-1x-j8r">
@@ -164,7 +164,7 @@
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqL-4j-Slk">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCF-sz-slC">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="750"/>
@@ -296,7 +296,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJE-J8-bU2" userLabel="Room228">
-                                                <rect key="frame" x="52" y="498" width="540" height="40"/>
+                                                <rect key="frame" x="30" y="568" width="540" height="40"/>
                                                 <color key="backgroundColor" red="0.44957173690000002" green="0.6880570775" blue="0.77281023829999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Wn7-5Q-Zfb"/>
@@ -371,6 +371,7 @@
                                         </variation>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="hCF-sz-slC" firstAttribute="width" secondItem="uqL-4j-Slk" secondAttribute="width" id="21S-h1-IvJ"/>
                                     <constraint firstItem="hCF-sz-slC" firstAttribute="height" secondItem="uqL-4j-Slk" secondAttribute="height" id="Ee3-3b-ppe"/>
@@ -386,7 +387,7 @@
                                 </variation>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.30196078430000001" green="0.4941176471" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="uqL-4j-Slk" firstAttribute="leading" secondItem="6Mh-1x-j8r" secondAttribute="leading" id="Hoa-io-iHo"/>
                             <constraint firstItem="uqL-4j-Slk" firstAttribute="top" secondItem="g6l-PY-9sG" secondAttribute="topMargin" id="O4q-q5-lBE"/>
@@ -398,7 +399,7 @@
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="600"/>
+                    <size key="freeformSize" width="600" height="800"/>
                     <connections>
                         <outlet property="room205" destination="7ja-hb-7gd" id="QIy-n5-R7S"/>
                         <outlet property="room206" destination="UMJ-yR-if5" id="d9D-vv-eP7"/>
@@ -1248,6 +1249,7 @@
                                         </variation>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="gYY-na-2qI" firstAttribute="leading" secondItem="ocn-Gj-1HG" secondAttribute="leading" id="364-pi-fKg"/>
                                     <constraint firstAttribute="bottom" secondItem="gYY-na-2qI" secondAttribute="bottom" id="3Wz-D5-wfd"/>
@@ -1284,7 +1286,7 @@
                                 </variation>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.30196078430000001" green="0.4941176471" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ocn-Gj-1HG" firstAttribute="top" secondItem="MTC-8r-fxm" secondAttribute="top" id="063-X8-C5h"/>
                             <constraint firstItem="ocn-Gj-1HG" firstAttribute="leading" secondItem="MTC-8r-fxm" secondAttribute="leading" id="Hmv-su-MQD"/>
@@ -1628,7 +1630,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="500" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-1J-iRJ">
+                                                <button contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-1J-iRJ">
                                                     <rect key="frame" x="8" y="8" width="484" height="27"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -1818,7 +1820,7 @@
         <image name="icon_settings" width="26" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eS8-no-uZB"/>
+        <segue reference="TB9-zm-Wo0"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>
