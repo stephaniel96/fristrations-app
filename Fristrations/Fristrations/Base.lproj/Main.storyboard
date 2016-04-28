@@ -281,21 +281,7 @@
                                                     <action selector="selectRoom227:" destination="qar-Vk-9Kn" eventType="touchUpInside" id="wMd-fF-Bnk"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJE-J8-bU2">
-                                                <rect key="frame" x="30" y="570" width="540" height="40"/>
-                                                <color key="backgroundColor" red="0.44957173690000002" green="0.6880570775" blue="0.77281023829999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="Wn7-5Q-Zfb"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                                <state key="normal" title="228">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="selectRoom228:" destination="qar-Vk-9Kn" eventType="touchUpInside" id="IWa-hv-Imw"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5V-YX-1lj">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5V-YX-1lj" userLabel="Room234">
                                                 <rect key="frame" x="30" y="630" width="540" height="40"/>
                                                 <color key="backgroundColor" red="0.44957173690000002" green="0.6880570775" blue="0.77281023829999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -307,6 +293,20 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="selectRoom234:" destination="qar-Vk-9Kn" eventType="touchUpInside" id="3d8-r4-juY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJE-J8-bU2" userLabel="Room228">
+                                                <rect key="frame" x="52" y="498" width="540" height="40"/>
+                                                <color key="backgroundColor" red="0.44957173690000002" green="0.6880570775" blue="0.77281023829999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Wn7-5Q-Zfb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                <state key="normal" title="228">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="selectRoom228:" destination="qar-Vk-9Kn" eventType="touchUpInside" id="IWa-hv-Imw"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -408,6 +408,8 @@
                         <outlet property="room210" destination="ggE-fE-aJp" id="iHb-0J-sLS"/>
                         <outlet property="room212" destination="OqZ-jd-0Us" id="Tkh-QS-VeC"/>
                         <outlet property="room227" destination="CPS-sP-0ys" id="AG3-Lq-2mF"/>
+                        <outlet property="room228" destination="hJE-J8-bU2" id="pce-aw-Sad"/>
+                        <outlet property="room234" destination="A5V-YX-1lj" id="MRt-ti-xLd"/>
                         <segue destination="6Qs-yb-i1G" kind="show" identifier="goToRoomData" id="TB9-zm-Wo0"/>
                     </connections>
                 </viewController>
@@ -1391,7 +1393,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfk-tc-Y0r">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfk-tc-Y0r" userLabel="Room307">
                                 <rect key="frame" x="30" y="214" width="540" height="40"/>
                                 <color key="backgroundColor" red="0.44957173690000002" green="0.6880570775" blue="0.77281023829999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1419,7 +1421,7 @@
                                     <action selector="selectRoom307:" destination="HMx-lI-a3P" eventType="touchUpInside" id="XwE-Vo-gNE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybC-fs-eLH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybC-fs-eLH" userLabel="Room303">
                                 <rect key="frame" x="30" y="154" width="540" height="40"/>
                                 <color key="backgroundColor" red="0.44957173690000002" green="0.6880570775" blue="0.77281023829999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1445,7 +1447,7 @@
                                     <action selector="selectRoom303:" destination="HMx-lI-a3P" eventType="touchUpInside" id="ti9-Dc-Ytw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWL-YS-4jC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWL-YS-4jC" userLabel="Room309">
                                 <rect key="frame" x="30" y="274" width="540" height="40"/>
                                 <color key="backgroundColor" red="0.44957173690000002" green="0.6880570775" blue="0.77281023829999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1530,6 +1532,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="room303" destination="ybC-fs-eLH" id="x4r-P3-Xv4"/>
+                        <outlet property="room307" destination="zfk-tc-Y0r" id="yxs-me-aZB"/>
+                        <outlet property="room309" destination="CWL-YS-4jC" id="G4g-zQ-xaJ"/>
                         <segue destination="6Qs-yb-i1G" kind="show" identifier="goToRoomData" id="ES3-Lc-ixQ"/>
                     </connections>
                 </viewController>
@@ -1549,7 +1554,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5h-Hm-1nq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5h-Hm-1nq" userLabel="Room114">
                                 <rect key="frame" x="30" y="174" width="540" height="40"/>
                                 <color key="backgroundColor" red="0.44957173690000002" green="0.6880570775" blue="0.77281023829999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1579,6 +1584,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="room114" destination="r5h-Hm-1nq" id="3sc-Zd-Ul3"/>
                         <segue destination="6Qs-yb-i1G" kind="show" identifier="goToRoomData" id="cH7-mp-n3A"/>
                     </connections>
                 </viewController>
@@ -1613,33 +1619,37 @@
                                 <rect key="frame" x="50" y="190" width="500" height="341"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" red="0.30196078430000001" green="0.4941176471" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Customcell" id="vxN-pS-fFy" customClass="CustomCell" customModule="Fristrations" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="500" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vxN-pS-fFy" id="8Dk-XG-otq">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="vxN-pS-fFy" id="8Dk-XG-otq">
                                             <rect key="frame" x="0.0" y="0.0" width="500" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-1J-iRJ">
                                                     <rect key="frame" x="8" y="8" width="484" height="27"/>
-                                                    <color key="backgroundColor" red="0.44957173690000002" green="0.6880570775" blue="0.77281023829999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="o9V-br-i1l"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <state key="normal" title="Button">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.30196078430000001" green="0.4941176471" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="Tx8-1J-iRJ" firstAttribute="leading" secondItem="8Dk-XG-otq" secondAttribute="leadingMargin" id="5QO-ro-ZiA"/>
                                                 <constraint firstItem="Tx8-1J-iRJ" firstAttribute="top" secondItem="8Dk-XG-otq" secondAttribute="topMargin" id="7ZG-GB-fWY"/>
                                                 <constraint firstItem="Tx8-1J-iRJ" firstAttribute="bottom" secondItem="8Dk-XG-otq" secondAttribute="bottomMargin" id="J55-mt-YO8"/>
+                                                <constraint firstItem="Tx8-1J-iRJ" firstAttribute="centerY" secondItem="8Dk-XG-otq" secondAttribute="centerY" id="obW-NC-wxe"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Tx8-1J-iRJ" secondAttribute="trailing" id="z14-z3-vhJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.30196078430000001" green="0.4941176471" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="roomButton" destination="Tx8-1J-iRJ" id="OEk-2E-m51"/>
                                         </connections>
@@ -1808,7 +1818,7 @@
         <image name="icon_settings" width="26" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ES3-Lc-ixQ"/>
+        <segue reference="eS8-no-uZB"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>

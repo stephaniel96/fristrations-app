@@ -247,10 +247,24 @@ class RoomInfo: UIViewController{
             self.room = snapshot.value as! NSDictionary
             self.times = self.room["times"] as! NSDictionary
             self.title = self.room["room_name"] as? String
+//            self.getCurrentTime()
             
             for timeButton in self.buttonPressed {
                 let time = self.displayTime[timeButton.tag]
                 let timeDetails = self.times[String(timeButton.tag)] as? String
+//                let spaceCount = timeDetails!.characters.filter{$0 == " "}.count
+//                if (self.currentTime < time!) {
+//                    timeButton.backgroundColor = UIColor(red: 0.79, green: 0.873, blue: 0.943, alpha: 1) // 78 213 171
+//                    if ((timeDetails == uName) || (spaceCount == 1)){
+//                        timeButton.setTitle(time! + ": " + timeDetails! , forState: UIControlState.Normal)
+//                    }
+//                    else if (timeDetails == "n/a") {
+//                        timeButton.setTitle(time!, forState: UIControlState.Normal)
+//                    }
+//                    else {
+//                        timeButton.setTitle(time! + ": Reserved", forState: UIControlState.Normal)
+//                    }
+//                }
                 if (timeDetails == "n/a") {
                     timeButton.backgroundColor = UIColor(red: 68/255, green: 255/255, blue: 155/255, alpha: 0.5) // 78 213 171
                     timeButton.setTitle(time!, forState: UIControlState.Normal)

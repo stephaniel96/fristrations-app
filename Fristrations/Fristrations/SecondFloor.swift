@@ -20,9 +20,8 @@ class SecondFloor: UIViewController {
     @IBOutlet weak var room210: UIButton!
     @IBOutlet weak var room212: UIButton!
     @IBOutlet weak var room227: UIButton!
-//    @IBOutlet weak var room228: UIButton!
-//    @IBOutlet weak var room234: UIButton!
-    
+    @IBOutlet weak var room228: UIButton!
+    @IBOutlet weak var room234: UIButton!
     
     var rootRef: Firebase!
 
@@ -73,15 +72,15 @@ class SecondFloor: UIViewController {
         room227.layer.borderWidth = 1
         room227.layer.borderColor = UIColor.whiteColor().CGColor
         
-//        room228.backgroundColor = UIColor.clearColor()
-//        room228.layer.cornerRadius = 5
-//        room228.layer.borderWidth = 1
-//        room228.layer.borderColor = UIColor.whiteColor().CGColor
-//        
-//        room234.backgroundColor = UIColor.clearColor()
-//        room234.layer.cornerRadius = 5
-//        room234.layer.borderWidth = 1
-//        room234.layer.borderColor = UIColor.whiteColor().CGColor
+        room228.backgroundColor = UIColor.clearColor()
+        room228.layer.cornerRadius = 5
+        room228.layer.borderWidth = 1
+        room228.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        room234.backgroundColor = UIColor.clearColor()
+        room234.layer.cornerRadius = 5
+        room234.layer.borderWidth = 1
+        room234.layer.borderColor = UIColor.whiteColor().CGColor
 
     }
     
