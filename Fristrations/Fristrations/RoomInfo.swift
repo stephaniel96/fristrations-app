@@ -12,6 +12,7 @@ import Firebase
 
 class RoomInfo: UIViewController{
     var roomNumber:String = ""
+    var roomPopulation:String = ""
     var room: NSDictionary = [String:String]()
     var roomURL:String = "https://fristrations.firebaseio.com/rooms/"
     var times: NSDictionary = [String:String]()
@@ -200,22 +201,32 @@ class RoomInfo: UIViewController{
         button130.layer.cornerRadius = 5
 
         
-        
         let thisRoom = Firebase(url:(roomURL + roomNumber))
         getCurrentTime()
         thisRoom.observeEventType(.Value, withBlock: {
             snapshot in
-            
             self.room = snapshot.value as! NSDictionary
+            let routerName = self.room["router"] as! String
+            self.getNumberFromRouter(routerName)
             self.times = self.room["times"] as! NSDictionary
             let timeDetails = self.times[self.currentTime] as! String
             if (timeDetails == "n/a") {
-                self.roomText.text = "This room is currently available."
+                self.roomText.text = "This room is currently available. "
                 
             }
             else {
-                self.roomText.text = "This room is currently unavailable."
+                self.roomText.text = "This room is currently unavailable. "
             }
+        })
+    }
+    func getNumberFromRouter(routerName: String) {
+        let thisRouter = Firebase(url:("https://fristrations.firebaseio.com/router_data/"))
+        thisRouter.observeEventType(.Value, withBlock: {
+            snapshot in
+            let router = snapshot.value as! NSDictionary
+            self.roomPopulation = router[routerName] as! String
+            self.roomText.text = self.roomText.text! + self.roomPopulation + " people are nearby."
+
         })
     }
     @IBAction func buttonClicked(sender: UIButton!) {
