@@ -49,11 +49,11 @@ class RoomInfo: UIViewController{
          2200: "10:00 - 10:30PM",
          2230: "10:30 - 11:00PM",
          2300: "11:00 - 11:30PM",
-         2330: "11:30 - 12:00PM",
-         2400: "12:00 - 12:30PM",
-         2430: "12:30 - 1:00PM",
-         100: "1:00 - 1:30PM",
-         130: "1:30 - 2:00PM"]
+         2330: "11:30 - 12:00AM",
+         2400: "12:00 - 12:30AM",
+         2430: "12:30 - 1:00AM",
+         100: "1:00 - 1:30AM",
+         130: "1:30 - 2:00AM"]
     
     @IBOutlet weak var button80am: UIButton!
     @IBOutlet weak var button83am: UIButton!
@@ -214,7 +214,7 @@ class RoomInfo: UIViewController{
                 
             }
             else {
-                self.roomText.text = "This room is busier than usual right now. Check the recommendations page for available rooms."
+                self.roomText.text = "This room is currently unavailable."
             }
         })
     }
@@ -283,7 +283,7 @@ class RoomInfo: UIViewController{
                     }
                 }
                 if (Int(timeButton.tag) < Int(self.currentTime)) {
-                    timeButton.backgroundColor = UIColor.lightGrayColor()
+                    timeButton.backgroundColor = UIColor(red: 0.49, green: 0.573, blue: 0.643, alpha: 1)
                 }
             }
             

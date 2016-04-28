@@ -686,7 +686,7 @@
 				INFOPLIST_FILE = Fristrations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = Princeton.Fristrations;
+				PRODUCT_BUNDLE_IDENTIFIER = Princeton.COS333.Fristrations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Fristrations/Fristrations-Bridging-Header.h";
@@ -711,7 +711,7 @@
 				INFOPLIST_FILE = Fristrations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = Princeton.Fristrations;
+				PRODUCT_BUNDLE_IDENTIFIER = Princeton.COS333.Fristrations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Fristrations/Fristrations-Bridging-Header.h";
