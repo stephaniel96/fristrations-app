@@ -82,14 +82,3 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Firebase/Firebase.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/HTMLReader/HTMLReader.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Kanna/Kanna.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Firebase/Firebase.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/HTMLReader/HTMLReader.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Kanna/Kanna.framework"
-fi

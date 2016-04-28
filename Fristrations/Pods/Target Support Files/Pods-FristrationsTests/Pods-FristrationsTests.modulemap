@@ -1,0 +1,6 @@
+framework module Pods_FristrationsTests {
+  umbrella header "Pods-FristrationsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

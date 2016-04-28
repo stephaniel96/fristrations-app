@@ -4,7 +4,7 @@ PODS:
   - Kanna (1.0.6)
 
 DEPENDENCIES:
-  - Firebase (>= 2.5.1)
+  - Firebase
   - HTMLReader
   - Kanna
 
@@ -13,4 +13,6 @@ SPEC CHECKSUMS:
   HTMLReader: 7e21488ee378afc56ccade8af35840c4e03e434c
   Kanna: 9f30945bbd293a609f698ea164687ccc0990ff60
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 3b937ba99c3e03ddd70b42e350f1e1981d8c3670
+
+COCOAPODS: 1.0.0.beta.8
