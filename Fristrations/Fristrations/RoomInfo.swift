@@ -282,7 +282,7 @@ class RoomInfo: UIViewController{
                         timeButton.setTitle(time! + ": Reserved", forState: UIControlState.Normal)
                     }
                 }
-                if (Int(timeButton.tag) < Int(self.currentTime)) {
+                if ((Int(timeButton.tag) < Int(self.currentTime)) && (Int(timeButton.tag) > 130)) {
                     timeButton.backgroundColor = UIColor(red: 0.49, green: 0.573, blue: 0.643, alpha: 1)
                 }
             }
