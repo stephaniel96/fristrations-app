@@ -30,7 +30,7 @@
 		DBA4C3261CAF97FA00EFCA8F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */; };
 		DBA4C3281CAF982000EFCA8F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C3271CAF982000EFCA8F /* SettingsViewController.swift */; };
 		DBA4C32A1CAF987900EFCA8F /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C3291CAF987900EFCA8F /* MoreViewController.swift */; };
-		DBA4C32C1CAF989A00EFCA8F /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C32B1CAF989A00EFCA8F /* NearbyViewController.swift */; };
+		DBA4C32C1CAF989A00EFCA8F /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C32B1CAF989A00EFCA8F /* BrowseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +87,7 @@
 		DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DBA4C3271CAF982000EFCA8F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DBA4C3291CAF987900EFCA8F /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		DBA4C32B1CAF989A00EFCA8F /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
+		DBA4C32B1CAF989A00EFCA8F /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +159,7 @@
 				64E6BF871CC3131F00CD69B8 /* fp200.png */,
 				DB324BE51CAF90A800019734 /* Info.plist */,
 				DB9221D41CAF95D9002C7C21 /* Fristrations-Bridging-Header.h */,
-				DBA4C32B1CAF989A00EFCA8F /* NearbyViewController.swift */,
+				DBA4C32B1CAF989A00EFCA8F /* BrowseViewController.swift */,
 				DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */,
 				DBA4C3271CAF982000EFCA8F /* SettingsViewController.swift */,
 				DBA4C3291CAF987900EFCA8F /* MoreViewController.swift */,
@@ -568,7 +568,7 @@
 				DBA4C3281CAF982000EFCA8F /* SettingsViewController.swift in Sources */,
 				644A0AD41CBC95CE00846C32 /* RoomInfo.swift in Sources */,
 				DB9590071CB072F000055E61 /* SecondFloor.swift in Sources */,
-				DBA4C32C1CAF989A00EFCA8F /* NearbyViewController.swift in Sources */,
+				DBA4C32C1CAF989A00EFCA8F /* BrowseViewController.swift in Sources */,
 				6CE1D4311CCF16A9009F48B5 /* customButton.swift in Sources */,
 				DBA4C32A1CAF987900EFCA8F /* MoreViewController.swift in Sources */,
 				DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */,

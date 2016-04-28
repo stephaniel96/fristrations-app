@@ -13,7 +13,7 @@ import Foundation
 
 var uName:String = "n/a"
 
-class NearbyViewController: UIViewController, UIWebViewDelegate{
+class BrowseViewController: UIViewController, UIWebViewDelegate{
     
     @IBOutlet weak var fristLabel: UILabel!
     @IBOutlet weak var firstFloorButton: UIButton!
