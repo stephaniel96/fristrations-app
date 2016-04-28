@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -25,7 +25,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="sjb-Gd-oUe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                 <state key="normal" title="200 Level">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -39,7 +39,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ISV-uj-tAV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="300 Level">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -49,11 +49,11 @@
                             </button>
                             <button contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6v-0H-6D8">
                                 <rect key="frame" x="30" y="204" width="540" height="40"/>
-                                <color key="backgroundColor" red="0.38012037027023166" green="0.60028585988388905" blue="0.7216202776922287" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.69021678389999996" green="0.89231429640000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Swf-L1-WST"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                 <state key="normal" title="100 Level">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -61,19 +61,19 @@
                                     <segue destination="Ifx-Ru-8BV" kind="show" id="yzI-vB-Rbj"/>
                                 </connections>
                             </button>
-                            <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbC-NW-CLs">
+                            <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F R I S T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbC-NW-CLs">
                                 <rect key="frame" x="30" y="144" width="540" height="40"/>
-                                <color key="backgroundColor" red="0.55294117647058827" green="0.69019607843137254" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="e4b-pS-T4a"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="netID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8I-bR-22X">
-                                <rect key="frame" x="280" y="415" width="41" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="netID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8I-bR-22X">
+                                <rect key="frame" x="276" y="419" width="47" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -84,6 +84,7 @@
                                     <constraint firstAttribute="width" constant="150" id="2xH-5g-Vxq"/>
                                     <constraint firstAttribute="height" constant="40" id="uzs-Dl-Mao"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="Sign Out">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -92,7 +93,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.30196078431372547" green="0.49411764705882355" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="IHY-c7-4M9" secondAttribute="trailing" constant="10" id="4CI-FE-nc9"/>
                             <constraint firstItem="l6v-0H-6D8" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="4qJ-8F-IHc"/>
@@ -128,6 +129,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="0nG-yU-Uf1"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="firstFloorButton" destination="l6v-0H-6D8" id="7EY-HL-quU"/>
@@ -173,6 +175,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="qYh-FV-fRc"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="205">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -186,6 +189,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="JtP-yZ-FYt"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="206">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -199,6 +203,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="iux-8J-AZj"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="207">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -212,6 +217,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="cfs-rL-xQY"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="208">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -225,6 +231,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="D6H-Ua-8fW"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="209">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -238,6 +245,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="XO6-xE-3mX"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="210">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -251,6 +259,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="e5f-ba-Kos"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="212">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -264,6 +273,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="vaJ-F7-7wP"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="227">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -277,6 +287,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Wn7-5Q-Zfb"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="228">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -290,6 +301,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="wjo-se-6Wg"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="234">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -298,7 +310,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.30196078430000001" green="0.4941176471" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="CPS-sP-0ys" firstAttribute="top" secondItem="OqZ-jd-0Us" secondAttribute="bottom" constant="20" id="1N7-0p-Qdm"/>
                                             <constraint firstItem="CPS-sP-0ys" firstAttribute="leading" secondItem="hCF-sz-slC" secondAttribute="leading" constant="30" id="1QF-Io-jtw"/>
@@ -401,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p60-3B-ukB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2344" y="-344"/>
+            <point key="canvasLocation" x="2344" y="-382"/>
         </scene>
         <!--Room Data-->
         <scene sceneID="ClU-tc-KCv">
@@ -433,6 +445,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="nu6-dP-dQE"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="8:00-8:30am">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -446,6 +459,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="fwU-S7-52c"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="8:30-9:00am">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -459,6 +473,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="bjR-sG-JgT"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="9:00-9:30am">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -472,6 +487,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="UhZ-cj-W7c"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="9:30-10:00am">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -485,6 +501,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="mek-MI-grg"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="10:00-10:30am">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -498,6 +515,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="sy3-t5-6K5"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="10:30-11:00am">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -511,6 +529,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="qea-V9-Ty7"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="11:00-11:30am">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -524,6 +543,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="BCf-A1-w2U"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="11:30am-12:00pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -537,6 +557,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="wDM-hy-RfN"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="12:00-12:30pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -551,6 +572,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="2Zv-V9-78d"/>
                                                     <constraint firstAttribute="height" constant="40" id="JaB-FM-G6p"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="12:30-1:00pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -570,6 +592,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="7ri-zL-b3c"/>
                                                     <constraint firstAttribute="height" constant="40" id="Jtc-XP-pMf"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="1:00-1:30pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -589,6 +612,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="IhV-Mc-eZl"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="RYr-jd-lRy"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="1:30-2:00pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -608,6 +632,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="9ZQ-xD-Fdz"/>
                                                     <constraint firstAttribute="height" constant="40" id="rg3-6D-wB5"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="2:00-2:30pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -627,6 +652,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="IiW-sq-yvo"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="T1a-kx-cgZ"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="2:30-3:00pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -646,6 +672,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="Hub-jn-dkR"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="aaK-RA-uqH"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="3:00-3:30pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -665,6 +692,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="aA2-f3-hch"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="eqC-Dk-EQ7"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="3:30-4:00pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -684,6 +712,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="7yf-WI-Fro"/>
                                                     <constraint firstAttribute="height" constant="40" id="Arz-eq-8Qi"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="4:00-4:30pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -703,6 +732,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="R5m-Q3-hQd"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="d4B-vN-Jba"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="4:30-5:00pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -722,6 +752,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="02v-jc-uSH"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="AiK-eI-btS"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="5:00-5:30pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -741,6 +772,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="2Rr-CT-dMz"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="3Gl-Fl-hLy"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="5:30-6:00pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -760,6 +792,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="9Kr-Id-emk"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="PNP-3i-bRg"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="6:30-7:00pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -779,6 +812,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="khm-n1-05H"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="z8h-Lw-oWc"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="7:00-7:30pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -798,6 +832,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="BYf-2i-Mw3"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="TF7-Fz-GkL"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="7:30-8:00pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -817,6 +852,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ScA-hL-dPK"/>
                                                     <constraint firstAttribute="height" constant="40" id="ahk-0t-sNg"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="8:00-8:30pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -836,6 +872,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="HMd-qf-axK"/>
                                                     <constraint firstAttribute="height" constant="40" id="V1j-da-fNl"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="8:30-9:00pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -855,6 +892,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="AOn-Ff-gZk"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ctl-Wc-QZ5"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="9:00-9:30pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -874,6 +912,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Qaj-OT-r8s"/>
                                                     <constraint firstAttribute="height" constant="40" id="bQv-m4-278"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="9:30-10:00pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -893,6 +932,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="FkV-ZP-eX3"/>
                                                     <constraint firstAttribute="height" constant="40" id="ddR-SC-0Fu"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="10:00-10:30pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -912,6 +952,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="a2r-Ll-CAQ"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="cAu-DF-o1S"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="10:30-11:00pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -931,6 +972,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="Fzy-8l-euv"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="fEz-ie-DV5"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="11:30pm-12:00am">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -950,6 +992,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="1G5-ee-3SP"/>
                                                     <constraint firstAttribute="height" constant="40" id="QwS-tW-7TR"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="12:00-12:30am">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -969,6 +1012,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="ISq-K2-rVP"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="XAm-Od-rVn"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="12:30-1:00am">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -988,6 +1032,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="Ahi-PS-xch"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="UQR-ep-PGP"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="1:00-1:30am">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -1007,6 +1052,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="Mvz-AM-Ma7"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="j90-Gt-45B"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="6:00-6:30pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -1045,6 +1091,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="8A2-pH-9uW"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="hLF-Es-1oh"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <state key="normal" title="11:00-11:30pm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -1057,7 +1104,7 @@
                                                     <action selector="buttonClicked:" destination="6Qs-yb-i1G" eventType="touchUpInside" id="6hF-hU-eQV"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fp200.png" translatesAutoresizingMaskIntoConstraints="NO" id="idl-zX-QHR">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floorplan" translatesAutoresizingMaskIntoConstraints="NO" id="idl-zX-QHR">
                                                 <rect key="frame" x="30" y="90" width="540" height="409"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="idl-zX-QHR" secondAttribute="height" multiplier="707:536" id="l0y-hh-mf7"/>
@@ -1065,12 +1112,12 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gives Info" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sn-fy-WFi">
                                                 <rect key="frame" x="30" y="519" width="540" height="41"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.30196078430000001" green="0.4941176471" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="X40-Vo-WJT" firstAttribute="top" secondItem="bU5-Zl-YP4" secondAttribute="bottom" constant="20" id="1fe-zR-a6F"/>
                                             <constraint firstItem="6bx-sf-iaF" firstAttribute="top" secondItem="5Sn-fy-WFi" secondAttribute="bottom" constant="20" id="23U-KK-y4A"/>
@@ -1355,6 +1402,7 @@
                                     <constraint firstAttribute="height" constant="40" id="gHx-aR-orb"/>
                                     <constraint firstAttribute="height" constant="40" id="k0A-iu-THZ"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="307">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1381,6 +1429,7 @@
                                     <constraint firstAttribute="height" constant="40" id="QEa-MC-mjN"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="iWN-r8-m3O"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="303">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1406,6 +1455,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="gAZ-uq-pzt"/>
                                     <constraint firstAttribute="height" constant="40" id="zOG-1r-uhh"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="309">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1422,7 +1472,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.30196078430000001" green="0.4941176471" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.25098039215686274" green="0.39215686274509803" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="zfk-tc-Y0r" secondAttribute="trailing" constant="30" id="477-ue-czG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zfk-tc-Y0r" secondAttribute="trailing" constant="30" id="4Fa-Jb-Leb"/>
@@ -1505,6 +1555,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="KqE-aN-3RG"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="114">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1513,7 +1564,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.30196078430000001" green="0.4941176471" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="r5h-Hm-1nq" firstAttribute="top" secondItem="oon-zp-7bR" secondAttribute="bottom" constant="110" id="3E6-fM-rRq"/>
                             <constraint firstAttribute="trailing" secondItem="r5h-Hm-1nq" secondAttribute="trailing" constant="30" id="QUU-r8-roX"/>
@@ -1546,13 +1598,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Rooms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAJ-GJ-KJc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A V A I L A B L E   R O O M S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAJ-GJ-KJc">
                                 <rect key="frame" x="50" y="139" width="500" height="30"/>
-                                <color key="backgroundColor" red="0.44957173690000002" green="0.6880570775" blue="0.77281023829999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8dW-Y4-vNb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1572,6 +1625,7 @@
                                                 <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-1J-iRJ">
                                                     <rect key="frame" x="8" y="8" width="484" height="27"/>
                                                     <color key="backgroundColor" red="0.44957173690000002" green="0.6880570775" blue="0.77281023829999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <state key="normal" title="Button">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
@@ -1593,7 +1647,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.30196078430000001" green="0.4941176471" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="XAJ-GJ-KJc" secondAttribute="trailing" constant="30" id="6aT-Ya-3ja"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="gFb-AU-Bb4" secondAttribute="bottom" constant="20" id="8Dc-mG-fpl"/>
@@ -1747,13 +1801,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fp200.png" width="707" height="536"/>
+        <image name="floorplan" width="749" height="571"/>
         <image name="icon_more" width="25" height="25"/>
         <image name="icon_nearby" width="25" height="25"/>
         <image name="icon_search" width="25" height="25"/>
         <image name="icon_settings" width="26" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eS8-no-uZB"/>
+        <segue reference="ES3-Lc-ixQ"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>

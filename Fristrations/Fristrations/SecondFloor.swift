@@ -20,6 +20,8 @@ class SecondFloor: UIViewController {
     @IBOutlet weak var room210: UIButton!
     @IBOutlet weak var room212: UIButton!
     @IBOutlet weak var room227: UIButton!
+//    @IBOutlet weak var room228: UIButton!
+//    @IBOutlet weak var room234: UIButton!
     
     
     var rootRef: Firebase!
@@ -29,6 +31,58 @@ class SecondFloor: UIViewController {
         super.viewDidLoad()
         self.title = "200 Level"
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(red: 0.32, green: 0.473, blue: 0.643, alpha: 1)
+        
+        room205.backgroundColor = UIColor.clearColor()
+        room205.layer.cornerRadius = 5
+        room205.layer.borderWidth = 1
+        room205.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        room206.backgroundColor = UIColor.clearColor()
+        room206.layer.cornerRadius = 5
+        room206.layer.borderWidth = 1
+        room206.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        room207.backgroundColor = UIColor.clearColor()
+        room207.layer.cornerRadius = 5
+        room207.layer.borderWidth = 1
+        room207.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        room208.backgroundColor = UIColor.clearColor()
+        room208.layer.cornerRadius = 5
+        room208.layer.borderWidth = 1
+        room208.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        room209.backgroundColor = UIColor.clearColor()
+        room209.layer.cornerRadius = 5
+        room209.layer.borderWidth = 1
+        room209.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        room210.backgroundColor = UIColor.clearColor()
+        room210.layer.cornerRadius = 5
+        room210.layer.borderWidth = 1
+        room210.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        room212.backgroundColor = UIColor.clearColor()
+        room212.layer.cornerRadius = 5
+        room212.layer.borderWidth = 1
+        room212.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        room227.backgroundColor = UIColor.clearColor()
+        room227.layer.cornerRadius = 5
+        room227.layer.borderWidth = 1
+        room227.layer.borderColor = UIColor.whiteColor().CGColor
+        
+//        room228.backgroundColor = UIColor.clearColor()
+//        room228.layer.cornerRadius = 5
+//        room228.layer.borderWidth = 1
+//        room228.layer.borderColor = UIColor.whiteColor().CGColor
+//        
+//        room234.backgroundColor = UIColor.clearColor()
+//        room234.layer.cornerRadius = 5
+//        room234.layer.borderWidth = 1
+//        room234.layer.borderColor = UIColor.whiteColor().CGColor
+
     }
     
     override func viewWillAppear(animated: Bool) {

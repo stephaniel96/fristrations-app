@@ -32,6 +32,11 @@ class NearbyViewController: UIViewController, UIWebViewDelegate{
         // Do any additional setup after loading the view.
         self.title = "Nearby"
         
+        
+        // BACKGROUND
+//        self.view.backgroundColor = UIColor(red: 180/250.0, green: 4/250.0, blue: 78/250.0, alpha: 1)
+        self.view.backgroundColor = UIColor(red: 0.32, green: 0.473, blue: 0.643, alpha: 1)
+        
         let netID: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("netid")
         
         if (netID == nil) {
@@ -49,6 +54,25 @@ class NearbyViewController: UIViewController, UIWebViewDelegate{
             signInButton.setTitle("Sign Out", forState: .Normal)
         }
         
+        signInButton.backgroundColor = UIColor.clearColor()
+        signInButton.layer.cornerRadius = 5
+        signInButton.layer.borderWidth = 1
+        signInButton.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        firstFloorButton.backgroundColor = UIColor.clearColor()
+        firstFloorButton.layer.cornerRadius = 5
+        firstFloorButton.layer.borderWidth = 1
+        firstFloorButton.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        secondFloorButton.backgroundColor = UIColor.clearColor()
+        secondFloorButton.layer.cornerRadius = 5
+        secondFloorButton.layer.borderWidth = 1
+        secondFloorButton.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        thirdFloorButton.backgroundColor = UIColor.clearColor()
+        thirdFloorButton.layer.cornerRadius = 5
+        thirdFloorButton.layer.borderWidth = 1
+        thirdFloorButton.layer.borderColor = UIColor.whiteColor().CGColor
         // Fristrations color in RGB percentages
         //view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
         

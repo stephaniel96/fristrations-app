@@ -13,6 +13,7 @@ class FirstFloor: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "100 Level"
+        self.view.backgroundColor = UIColor(red: 0.32, green: 0.473, blue: 0.643, alpha: 1)
         // Do any additional setup after loading the view.
     }
 

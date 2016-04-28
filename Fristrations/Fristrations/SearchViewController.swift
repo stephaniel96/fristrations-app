@@ -158,6 +158,10 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         cell.roomButton.tag = indexPath.row
         cell.roomButton.setTitle(availableRooms[indexPath.row], forState: .Normal)
         cell.roomButton.addTarget(self, action: #selector(SearchViewController.roomButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        cell.roomButton.backgroundColor = UIColor.clearColor()
+        cell.roomButton.layer.cornerRadius = 5
+        cell.roomButton.layer.borderWidth = 1
+        cell.roomButton.layer.borderColor = UIColor.whiteColor().CGColor
         return cell
     }
 
