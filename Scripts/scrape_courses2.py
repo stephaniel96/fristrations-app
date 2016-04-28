@@ -123,7 +123,9 @@ def get_single_class(row):
   SamORpm = time[0].strip()[-2:]
   SnumberTime = time[0].strip()[:-3]
   a = SnumberTime.split(':')
-  if SamORpm == "am":
+  if SamORpm == "am" and a[0] != "12":
+    Slabeltime = ""+a[0]+a[1]
+  elif SamORpm == "pm" and a[0] == "12":
     Slabeltime = ""+a[0]+a[1]
   else:
     t1 = int(a[0])+12
@@ -134,6 +136,8 @@ def get_single_class(row):
   EnumberTime = time[1].strip()[:-3]
   b = EnumberTime.split(':')
   if EamORpm == "am":
+    Elabeltime = ""+b[0]+b[1]
+  elif EamORpm == "pm" and b[0] == "12":
     Elabeltime = ""+b[0]+b[1]
   else:
     t2 = int(b[0])+12
