@@ -16,6 +16,7 @@ class RoomInfo: UIViewController{
     var roomURL:String = "https://fristrations.firebaseio.com/rooms/"
     var times: NSDictionary = [String:String]()
     var roomRef: Firebase!
+    var currentTime:String!
     let displayTime =
         [800: "8:00-8:30am",
          830: "8:30-9:00am",
@@ -93,7 +94,30 @@ class RoomInfo: UIViewController{
     
     @IBOutlet var buttonPressed: [UIButton]!
   
+    @IBOutlet weak var roomText: UILabel!
     
+    func getCurrentTime() {
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Minute , .Hour], fromDate: date)
+        let minute =  components.minute
+        let hour = components.hour
+        var currentMinute = ""
+        if (minute >= 30) {
+            currentMinute = "30"
+        }
+        else {
+            currentMinute = "00"
+        }
+        currentTime = String(hour) + currentMinute
+        if (currentTime == "000")
+        {
+            currentTime = "2400"
+        }
+        if (currentTime == "030") {
+            currentTime = "2430"
+        }
+    }
     override func viewDidLoad() {
         roomRef = Firebase(url:(roomURL + roomNumber))
         // Do any additional setup after loading the view.
@@ -134,8 +158,23 @@ class RoomInfo: UIViewController{
         button30.tag = 2430
         button100.tag = 100
         button130.tag = 130
+        let thisRoom = Firebase(url:(roomURL + roomNumber))
+        getCurrentTime()
+        thisRoom.observeEventType(.Value, withBlock: {
+            snapshot in
+            
+            self.room = snapshot.value as! NSDictionary
+            self.times = self.room["times"] as! NSDictionary
+            let timeDetails = self.times[self.currentTime] as! String
+            if (timeDetails == "n/a") {
+                self.roomText.text = "This room is currently available."
+                
+            }
+            else {
+                self.roomText.text = "This room is busier than usual right now. Check the recommendations page for available rooms."
+            }
+        })
     }
-    
     @IBAction func buttonClicked(sender: UIButton!) {
         if (uName != "n/a")
         {
