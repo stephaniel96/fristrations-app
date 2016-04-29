@@ -684,6 +684,7 @@
 					"$(PROJECT_DIR)/FacebookSDKs-iOS-20160412",
 				);
 				INFOPLIST_FILE = Fristrations/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Princeton.COS333.Fristrations;
@@ -709,6 +710,7 @@
 					"$(PROJECT_DIR)/FacebookSDKs-iOS-20160412",
 				);
 				INFOPLIST_FILE = Fristrations/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Princeton.COS333.Fristrations;

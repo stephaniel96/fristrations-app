@@ -201,39 +201,25 @@ class RoomInfo: UIViewController{
         button130.layer.cornerRadius = 5
 
         
-        let thisRoom = Firebase(url:(roomURL + roomNumber))
-        getCurrentTime()
-        thisRoom.observeEventType(.Value, withBlock: {
-            snapshot in
-            self.room = snapshot.value as! NSDictionary
-            let routerName = self.room["router"] as! String
-            self.getNumberFromRouter(routerName)
-            self.times = self.room["times"] as! NSDictionary
-            let timeDetails = self.times[self.currentTime] as! String
-            if (timeDetails == "n/a") {
-                self.roomText.text = "This room is currently available. "
-                
-            }
-            else {
-                self.roomText.text = "This room is currently unavailable. "
-            }
-        })
+        
     }
-    func getNumberFromRouter(routerName: String) {
-        let thisRouter = Firebase(url:("https://fristrations.firebaseio.com/router_data/"))
-        thisRouter.observeEventType(.Value, withBlock: {
-            snapshot in
-            let router = snapshot.value as! NSDictionary
-            self.roomPopulation = router[routerName] as! String
-            self.roomText.text = self.roomText.text! + self.roomPopulation + " people are nearby."
-
-        })
-    }
+    
+//    func getNumberFromRouter(routerName: String) {
+//        let thisRouter = Firebase(url:("https://fristrations.firebaseio.com/router_data/"))
+//        thisRouter.observeEventType(.Value, withBlock: {
+//            snapshot in
+//            let router = snapshot.value as! NSDictionary
+//            self.roomPopulation = router[routerName] as! String
+//            self.roomText.text = self.roomText.text! + self.roomPopulation + " people are nearby."
+//
+//        })
+//    }
+    
     @IBAction func buttonClicked(sender: UIButton!) {
         if (uName != "n/a")
         {
             for timeButton in buttonPressed {
-                if (sender == timeButton) {
+                if (sender == timeButton && ((Int(timeButton.tag) >= Int(self.currentTime)) || (Int(timeButton.tag) <= 130))) {
                     let timeDetails = self.times[String(timeButton.tag)] as! String
                     var setTime = [String:String]()
                     if (timeDetails == "n/a") {
@@ -258,7 +244,7 @@ class RoomInfo: UIViewController{
             self.room = snapshot.value as! NSDictionary
             self.times = self.room["times"] as! NSDictionary
             self.title = self.room["room_name"] as? String
-//            self.getCurrentTime()
+            self.getCurrentTime()
             
             for timeButton in self.buttonPressed {
                 let time = self.displayTime[timeButton.tag]
@@ -293,12 +279,56 @@ class RoomInfo: UIViewController{
                         timeButton.setTitle(time! + ": Reserved", forState: UIControlState.Normal)
                     }
                 }
+                
                 if ((Int(timeButton.tag) < Int(self.currentTime)) && (Int(timeButton.tag) > 130)) {
-                    timeButton.backgroundColor = UIColor(red: 0.49, green: 0.573, blue: 0.643, alpha: 1)
+                    timeButton.backgroundColor = UIColor(red: 0.49, green: 0.573, blue: 0.643, alpha: 0.3)
+                    timeButton.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 0.3), forState: UIControlState.Normal)
                 }
+                
             }
             
-                    })
+            //available or not
+            let routerName = self.room["router"] as! String
+            
+            
+            let thisRouter = Firebase(url:("https://fristrations.firebaseio.com/router_data/" + routerName))
+            thisRouter.observeSingleEventOfType(.Value, withBlock: {
+                snapshot in
+                
+                self.roomPopulation = snapshot.value as! String
+                self.times = self.room["times"] as! NSDictionary
+                let currentTimeDetails = self.times[self.currentTime] as! String
+                if (currentTimeDetails == "n/a") {
+                    self.roomText.text = "This room is currently available. " + self.roomPopulation + " people are nearby."
+                    
+                }
+                else {
+                    self.roomText.text = "This room is currently unavailable. " + self.roomPopulation + " people are nearby."
+                }
+                
+            })
+            
+            
+        })
+        
+        
+//        let thisRoom = Firebase(url:(roomURL + roomNumber))
+//        getCurrentTime()
+//        thisRoom.observeEventType(.Value, withBlock: {
+//            snapshot in
+//            self.room = snapshot.value as! NSDictionary
+//            let routerName = self.room["router"] as! String
+//            self.getNumberFromRouter(routerName)
+//            self.times = self.room["times"] as! NSDictionary
+//            let timeDetails = self.times[self.currentTime] as! String
+//            if (timeDetails == "n/a") {
+//                self.roomText.text = "This room is currently available. "
+//                
+//            }
+//            else {
+//                self.roomText.text = "This room is currently unavailable. "
+//            }
+//        })
     }
     
     override func didReceiveMemoryWarning() {
