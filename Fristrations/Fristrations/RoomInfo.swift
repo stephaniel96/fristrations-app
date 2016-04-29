@@ -53,8 +53,8 @@ class RoomInfo: UIViewController{
          2330: "11:30 - 12:00AM",
          2400: "12:00 - 12:30AM",
          2430: "12:30 - 1:00AM",
-         100: "1:00 - 1:30AM",
-         130: "1:30 - 2:00AM"]
+         2500: "1:00 - 1:30AM",
+         2530: "1:30 - 2:00AM"]
     
     @IBOutlet weak var button80am: UIButton!
     @IBOutlet weak var button83am: UIButton!
@@ -118,6 +118,12 @@ class RoomInfo: UIViewController{
         if (currentTime == "030") {
             currentTime = "2430"
         }
+        if (currentTime == "100") {
+            currentTime = "2500"
+        }
+        if (currentTime == "130") {
+            currentTime = "2530"
+        }
     }
     override func viewDidLoad() {
         roomRef = Firebase(url:(roomURL + roomNumber))
@@ -159,8 +165,8 @@ class RoomInfo: UIViewController{
         button2330.tag = 2330
         button00.tag = 2400
         button30.tag = 2430
-        button100.tag = 100
-        button130.tag = 130
+        button100.tag = 2500
+        button130.tag = 2530
         
         
         button80am.layer.cornerRadius = 5
@@ -219,7 +225,7 @@ class RoomInfo: UIViewController{
         if (uName != "n/a")
         {
             for timeButton in buttonPressed {
-                if (sender == timeButton && ((Int(timeButton.tag) >= Int(self.currentTime)) || (Int(timeButton.tag) <= 130))) {
+                if (sender == timeButton && (Int(timeButton.tag) >= Int(self.currentTime))) {
                     let timeDetails = self.times[String(timeButton.tag)] as! String
                     var setTime = [String:String]()
                     if (timeDetails == "n/a") {
@@ -280,7 +286,7 @@ class RoomInfo: UIViewController{
                     }
                 }
                 
-                if ((Int(timeButton.tag) < Int(self.currentTime)) && (Int(timeButton.tag) > 130)) {
+                if (Int(timeButton.tag) < Int(self.currentTime)) {
                     timeButton.backgroundColor = UIColor(red: 0.49, green: 0.573, blue: 0.643, alpha: 0.3)
                     timeButton.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 0.3), forState: UIControlState.Normal)
                 }
@@ -298,12 +304,19 @@ class RoomInfo: UIViewController{
                 self.roomPopulation = snapshot.value as! String
                 self.times = self.room["times"] as! NSDictionary
                 let currentTimeDetails = self.times[self.currentTime] as! String
+                var num_people = String()
+                if (self.roomPopulation == "1") {
+                    num_people = self.roomPopulation + " person is nearby."
+                }
+                else {
+                    num_people = self.roomPopulation + " people are nearby."
+                }
                 if (currentTimeDetails == "n/a") {
-                    self.roomText.text = "This room is currently available. " + self.roomPopulation + " people are nearby."
+                    self.roomText.text = "This room is currently available. " + num_people
                     
                 }
                 else {
-                    self.roomText.text = "This room is currently unavailable. " + self.roomPopulation + " people are nearby."
+                    self.roomText.text = "This room is currently unavailable. " + num_people
                 }
                 
             })

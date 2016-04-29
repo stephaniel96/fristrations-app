@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -1285,7 +1286,7 @@
                                 </variation>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.19215686274509805" green="0.31372549019607843" blue="0.51764705882352946" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ocn-Gj-1HG" firstAttribute="top" secondItem="MTC-8r-fxm" secondAttribute="top" id="063-X8-C5h"/>
                             <constraint firstItem="ocn-Gj-1HG" firstAttribute="leading" secondItem="MTC-8r-fxm" secondAttribute="leading" id="Hmv-su-MQD"/>
@@ -1606,7 +1607,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A V A I L A B L E   R O O M S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAJ-GJ-KJc">
-                                <rect key="frame" x="50" y="139" width="500" height="30"/>
+                                <rect key="frame" x="20" y="139" width="560" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1617,7 +1618,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gFb-AU-Bb4">
-                                <rect key="frame" x="50" y="190" width="500" height="341"/>
+                                <rect key="frame" x="50" y="183" width="500" height="348"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1660,12 +1661,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="XAJ-GJ-KJc" secondAttribute="trailing" constant="30" id="6aT-Ya-3ja"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XAJ-GJ-KJc" secondAttribute="trailing" id="6aT-Ya-3ja"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="gFb-AU-Bb4" secondAttribute="bottom" constant="20" id="8Dc-mG-fpl"/>
-                            <constraint firstItem="XAJ-GJ-KJc" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="30" id="Bqn-ac-ZpL"/>
+                            <constraint firstItem="XAJ-GJ-KJc" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="Bqn-ac-ZpL"/>
                             <constraint firstItem="XAJ-GJ-KJc" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="75" id="Jq5-kz-f0w"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gFb-AU-Bb4" secondAttribute="trailing" constant="30" id="NdT-dB-7c7"/>
-                            <constraint firstItem="gFb-AU-Bb4" firstAttribute="top" secondItem="XAJ-GJ-KJc" secondAttribute="bottom" constant="21" id="VHT-BE-9fU"/>
+                            <constraint firstItem="gFb-AU-Bb4" firstAttribute="top" secondItem="XAJ-GJ-KJc" secondAttribute="bottom" constant="14" id="VHT-BE-9fU"/>
                             <constraint firstItem="gFb-AU-Bb4" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="30" id="yke-EH-E4q"/>
                         </constraints>
                     </view>
@@ -1713,7 +1714,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="9qE-aM-2a7" firstAttribute="top" secondItem="cyy-3m-n3f" secondAttribute="bottom" constant="8" id="HD1-r0-kUI"/>
                             <constraint firstItem="BFA-aB-eCv" firstAttribute="top" secondItem="9qE-aM-2a7" secondAttribute="bottom" constant="493" id="LUh-6F-9mE"/>
@@ -1764,7 +1765,7 @@
                     <view key="view" contentMode="scaleToFill" id="Kze-U9-fYG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="icon_settings" selectedImage="icon_settings" id="kJ7-Qe-d5e"/>
                 </viewController>
