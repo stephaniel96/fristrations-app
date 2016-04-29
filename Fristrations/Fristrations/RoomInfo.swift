@@ -93,8 +93,10 @@ class RoomInfo: UIViewController{
     @IBOutlet weak var button100: UIButton!
     @IBOutlet weak var button130: UIButton!
     
+    @IBOutlet weak var router208: UIImageView!
     @IBOutlet var buttonPressed: [UIButton]!
   
+    @IBOutlet weak var floorplan: UIImageView!
     @IBOutlet weak var roomText: UILabel!
     
     func getCurrentTime() {
@@ -255,19 +257,7 @@ class RoomInfo: UIViewController{
             for timeButton in self.buttonPressed {
                 let time = self.displayTime[timeButton.tag]
                 let timeDetails = self.times[String(timeButton.tag)] as? String
-//                let spaceCount = timeDetails!.characters.filter{$0 == " "}.count
-//                if (self.currentTime < time!) {
-//                    timeButton.backgroundColor = UIColor(red: 0.79, green: 0.873, blue: 0.943, alpha: 1) // 78 213 171
-//                    if ((timeDetails == uName) || (spaceCount == 1)){
-//                        timeButton.setTitle(time! + ": " + timeDetails! , forState: UIControlState.Normal)
-//                    }
-//                    else if (timeDetails == "n/a") {
-//                        timeButton.setTitle(time!, forState: UIControlState.Normal)
-//                    }
-//                    else {
-//                        timeButton.setTitle(time! + ": Reserved", forState: UIControlState.Normal)
-//                    }
-//                }
+
                 if (timeDetails == "n/a") {
                     timeButton.backgroundColor = UIColor(red: 68/255, green: 255/255, blue: 155/255, alpha: 0.5) // 78 213 171
                     timeButton.setTitle(time!, forState: UIControlState.Normal)
@@ -312,14 +302,28 @@ class RoomInfo: UIViewController{
                     num_people = self.roomPopulation + " people are nearby."
                 }
                 if (currentTimeDetails == "n/a") {
-                    self.roomText.text = "This room is currently available. " + num_people
+                    self.roomText.text = "This room is not currently reserved. " + num_people
                     
                 }
                 else {
-                    self.roomText.text = "This room is currently unavailable. " + num_people
+                    self.roomText.text = "This room is currently reserved. " + num_people
+                }
+                
+                if (routerName == "arun-2863") {
+                    var frm: CGRect = self.floorplan.frame
+                    var radius: Int! = Int(self.roomPopulation)
+                    let CGradius = CGFloat(3*radius)
+                    var xVal: CGFloat = frm.origin.x+210-(CGradius/2)
+                    var yVal: CGFloat = frm.origin.y+51-(CGradius/2)
+                    var imageView1 = UIImageView(frame: CGRectMake(xVal, yVal, CGradius, CGradius)); // set as you want
+                    var image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.view.addSubview(imageView1);
                 }
                 
             })
+            
+
             
             
         })
