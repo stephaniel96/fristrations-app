@@ -12,6 +12,7 @@ import Kanna
 import Foundation
 
 var uName:String = "n/a"
+var numberOfRoomsBooked = 0
 
 class BrowseViewController: UIViewController, UIWebViewDelegate{
     

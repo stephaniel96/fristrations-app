@@ -12,8 +12,6 @@ import Foundation
 
 class MoreViewController: UITableViewController,  UIWebViewDelegate{
     
-    
-    
     @IBOutlet weak var signInStatus: UILabel!
     @IBOutlet weak var signInButton: UILabel!
     
@@ -46,7 +44,6 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    // testing push
     
     /*
      // MARK: - Navigation
@@ -61,6 +58,7 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        // CAS Sign-In
         if (indexPath.section == 0 && indexPath.row == 1) {
             
             let netID: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("netid")
@@ -87,6 +85,34 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
                 }))
                 self.presentViewController(alertController, animated: true, completion: nil)
             }
+        }
+        // Share Fristrations
+        if (indexPath.section == 1 && indexPath.row == 0) {
+            let textToShare = "Fristrations is awesome!  Check out this website about it!"
+            
+            if let myWebsite = NSURL(string: "http://fristrations.xyz/") {
+                let objectsToShare = [textToShare, myWebsite]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                
+                // Excluded Activities for sharing
+                activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
+                
+                self.presentViewController(activityVC, animated: true, completion: nil)
+            }
+        }
+        // Check out our website
+        else if (indexPath.section == 1 && indexPath.row == 1) {
+            UIApplication.sharedApplication().openURL(NSURL(string: "http://fristrations.xyz/")!)
+        }
+        // Contact us by email
+        else if (indexPath.section == 1 && indexPath.row == 2) {
+            UIApplication.sharedApplication().openURL(NSURL(string: "https://www.facebook.com/1607764632876387")!)
+        }
+        // Share Fristrations
+        else if (indexPath.section == 1 && indexPath.row == 3) {
+            let email = "kjb3@princeton.edu"
+            let url = NSURL(string: "mailto:\(email)")
+            UIApplication.sharedApplication().openURL(url!)
         }
     }
     
