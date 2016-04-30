@@ -93,7 +93,7 @@ class RoomInfo: UIViewController{
     @IBOutlet weak var button100: UIButton!
     @IBOutlet weak var button130: UIButton!
     
-    @IBOutlet weak var router208: UIImageView!
+//    @IBOutlet weak var router208: UIImageView!
     @IBOutlet var buttonPressed: [UIButton]!
   
     @IBOutlet weak var floorplan: UIImageView!
@@ -302,23 +302,24 @@ class RoomInfo: UIViewController{
                     num_people = self.roomPopulation + " people are nearby."
                 }
                 if (currentTimeDetails == "n/a") {
-                    self.roomText.text = "This room is not currently reserved. " + num_people
+                    self.roomText.text = "This room is not currently reserved.\n" + num_people
                     
                 }
                 else {
-                    self.roomText.text = "This room is currently reserved. " + num_people
+                    self.roomText.text = "This room is currently reserved.\n" + num_people
                 }
                 
                 if (routerName == "arun-2863") {
                     var frm: CGRect = self.floorplan.frame
                     var radius: Int! = Int(self.roomPopulation)
                     let CGradius = CGFloat(3*radius)
-                    var xVal: CGFloat = frm.origin.x+210-(CGradius/2)
-                    var yVal: CGFloat = frm.origin.y+51-(CGradius/2)
+                    var xVal: CGFloat = frm.origin.x+180-(CGradius/2)
+                    var yVal: CGFloat = frm.origin.y-40-(CGradius/2)
                     var imageView1 = UIImageView(frame: CGRectMake(xVal, yVal, CGradius, CGradius)); // set as you want
                     var image1 = UIImage(named: "routers");
                     imageView1.image = image1;
-                    self.view.addSubview(imageView1);
+//                    self.view.addSubview(imageView1);
+                    self.floorplan.addSubview(imageView1);
                 }
                 
             })
