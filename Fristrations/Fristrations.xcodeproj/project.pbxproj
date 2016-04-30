@@ -33,7 +33,7 @@
 		DB9590051CB0726F00055E61 /* FirstFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590041CB0726F00055E61 /* FirstFloor.swift */; };
 		DB9590071CB072F000055E61 /* SecondFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590061CB072F000055E61 /* SecondFloor.swift */; };
 		DB9590091CB0740A00055E61 /* ThirdFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590081CB0740A00055E61 /* ThirdFloor.swift */; };
-		DBA4C3261CAF97FA00EFCA8F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */; };
+		DBA4C3261CAF97FA00EFCA8F /* AvailableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C3251CAF97FA00EFCA8F /* AvailableViewController.swift */; };
 		DBA4C3281CAF982000EFCA8F /* DillonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C3271CAF982000EFCA8F /* DillonViewController.swift */; };
 		DBA4C32C1CAF989A00EFCA8F /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C32B1CAF989A00EFCA8F /* BrowseViewController.swift */; };
 /* End PBXBuildFile section */
@@ -92,7 +92,7 @@
 		DB9590041CB0726F00055E61 /* FirstFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstFloor.swift; sourceTree = "<group>"; };
 		DB9590061CB072F000055E61 /* SecondFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondFloor.swift; sourceTree = "<group>"; };
 		DB9590081CB0740A00055E61 /* ThirdFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdFloor.swift; sourceTree = "<group>"; };
-		DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DBA4C3251CAF97FA00EFCA8F /* AvailableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableViewController.swift; sourceTree = "<group>"; };
 		DBA4C3271CAF982000EFCA8F /* DillonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DillonViewController.swift; sourceTree = "<group>"; };
 		DBA4C32B1CAF989A00EFCA8F /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		F3A8ECBC61DC113CD377DDBB /* Pods_Fristrations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fristrations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,7 +185,7 @@
 				DB324BE51CAF90A800019734 /* Info.plist */,
 				DB9221D41CAF95D9002C7C21 /* Fristrations-Bridging-Header.h */,
 				DBA4C32B1CAF989A00EFCA8F /* BrowseViewController.swift */,
-				DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */,
+				DBA4C3251CAF97FA00EFCA8F /* AvailableViewController.swift */,
 				7709C6591CD3D9150048D8F5 /* MoreViewController.swift */,
 				DBA4C3271CAF982000EFCA8F /* DillonViewController.swift */,
 				6CE1D4301CCF16A9009F48B5 /* customButton.swift */,
@@ -542,7 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB9590091CB0740A00055E61 /* ThirdFloor.swift in Sources */,
-				DBA4C3261CAF97FA00EFCA8F /* SearchViewController.swift in Sources */,
+				DBA4C3261CAF97FA00EFCA8F /* AvailableViewController.swift in Sources */,
 				DB0968EA1CC714B0008F5D10 /* CustomCell.swift in Sources */,
 				DB9590051CB0726F00055E61 /* FirstFloor.swift in Sources */,
 				7709C65A1CD3D9150048D8F5 /* MoreViewController.swift in Sources */,
