@@ -34,7 +34,7 @@
 		DB9590071CB072F000055E61 /* SecondFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590061CB072F000055E61 /* SecondFloor.swift */; };
 		DB9590091CB0740A00055E61 /* ThirdFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9590081CB0740A00055E61 /* ThirdFloor.swift */; };
 		DBA4C3261CAF97FA00EFCA8F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */; };
-		DBA4C3281CAF982000EFCA8F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C3271CAF982000EFCA8F /* SettingsViewController.swift */; };
+		DBA4C3281CAF982000EFCA8F /* DillonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C3271CAF982000EFCA8F /* DillonViewController.swift */; };
 		DBA4C32C1CAF989A00EFCA8F /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4C32B1CAF989A00EFCA8F /* BrowseViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,7 +93,7 @@
 		DB9590061CB072F000055E61 /* SecondFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondFloor.swift; sourceTree = "<group>"; };
 		DB9590081CB0740A00055E61 /* ThirdFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdFloor.swift; sourceTree = "<group>"; };
 		DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		DBA4C3271CAF982000EFCA8F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DBA4C3271CAF982000EFCA8F /* DillonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DillonViewController.swift; sourceTree = "<group>"; };
 		DBA4C32B1CAF989A00EFCA8F /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		F3A8ECBC61DC113CD377DDBB /* Pods_Fristrations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fristrations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67EE7E8B06BD1C7AC950056 /* Pods-FristrationsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FristrationsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FristrationsUITests/Pods-FristrationsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 				DBA4C32B1CAF989A00EFCA8F /* BrowseViewController.swift */,
 				DBA4C3251CAF97FA00EFCA8F /* SearchViewController.swift */,
 				7709C6591CD3D9150048D8F5 /* MoreViewController.swift */,
-				DBA4C3271CAF982000EFCA8F /* SettingsViewController.swift */,
+				DBA4C3271CAF982000EFCA8F /* DillonViewController.swift */,
 				6CE1D4301CCF16A9009F48B5 /* customButton.swift */,
 				644A0AD31CBC95CE00846C32 /* RoomInfo.swift */,
 				DB9590041CB0726F00055E61 /* FirstFloor.swift */,
@@ -546,7 +546,7 @@
 				DB0968EA1CC714B0008F5D10 /* CustomCell.swift in Sources */,
 				DB9590051CB0726F00055E61 /* FirstFloor.swift in Sources */,
 				7709C65A1CD3D9150048D8F5 /* MoreViewController.swift in Sources */,
-				DBA4C3281CAF982000EFCA8F /* SettingsViewController.swift in Sources */,
+				DBA4C3281CAF982000EFCA8F /* DillonViewController.swift in Sources */,
 				644A0AD41CBC95CE00846C32 /* RoomInfo.swift in Sources */,
 				DB9590071CB072F000055E61 /* SecondFloor.swift in Sources */,
 				DBA4C32C1CAF989A00EFCA8F /* BrowseViewController.swift in Sources */,

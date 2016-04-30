@@ -12,6 +12,7 @@ import Kanna
 import Foundation
 
 var uName:String = "n/a"
+var numberOfRoomsBooked = 0
 
 class BrowseViewController: UIViewController, UIWebViewDelegate{
     
@@ -19,9 +20,8 @@ class BrowseViewController: UIViewController, UIWebViewDelegate{
     @IBOutlet weak var firstFloorButton: UIButton!
     @IBOutlet weak var secondFloorButton: UIButton!
     @IBOutlet weak var thirdFloorButton: UIButton!
-    @IBOutlet weak var casButton: UIButton!
     @IBOutlet weak var netIdLabel: UILabel!
-    @IBOutlet weak var signInButton: UIButton!
+
 
     
     var casV: UIWebView!
@@ -46,18 +46,12 @@ class BrowseViewController: UIViewController, UIWebViewDelegate{
             casV.layer.zPosition = 1
             self.view.addSubview(casV)
             netIdLabel.text = "Not Signed In"
-            signInButton.setTitle("Sign In", forState: .Normal)
         }
         else {
             uName = netID as! String
-            netIdLabel.text = "Logged in as: " + uName
-            signInButton.setTitle("Sign Out", forState: .Normal)
+            netIdLabel.text = uName
         }
         
-        signInButton.backgroundColor = UIColor.clearColor()
-        signInButton.layer.cornerRadius = 5
-        signInButton.layer.borderWidth = 1
-        signInButton.layer.borderColor = UIColor.whiteColor().CGColor
         
         firstFloorButton.backgroundColor = UIColor.clearColor()
         firstFloorButton.layer.cornerRadius = 5
@@ -78,27 +72,36 @@ class BrowseViewController: UIViewController, UIWebViewDelegate{
         
     }
     
-    
-    @IBAction func casSignOutPressed(sender: AnyObject) {
-        let netID: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("netid")
-        if (netID == nil) {
-            casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
-            casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
-            casV.delegate = self
-            casV.layer.zPosition = 1
-            self.view.addSubview(casV)
-            signInButton.setTitle("Sign In", forState: .Normal)
+    override func viewWillAppear(animated: Bool) {
+        if (uName == "n/a") {
+            netIdLabel.text = "Not Signed In"
         }
         else {
-            signInButton.setTitle("Sign In", forState: .Normal)
-            NSUserDefaults.standardUserDefaults().removeObjectForKey("netid")
-            casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
-            casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://fed.princeton.edu/cas/logout")!))
-            casV.delegate = self;
-            netIdLabel.text = "Not Signed In"
-            uName = "n/a"
+            netIdLabel.text = uName
         }
     }
+    
+    
+//    @IBAction func casSignOutPressed(sender: AnyObject) {
+//        let netID: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("netid")
+//        if (netID == nil) {
+//            casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+//            casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
+//            casV.delegate = self
+//            casV.layer.zPosition = 1
+//            self.view.addSubview(casV)
+//            signInButton.setTitle("Sign In", forState: .Normal)
+//        }
+//        else {
+//            signInButton.setTitle("Sign In", forState: .Normal)
+//            NSUserDefaults.standardUserDefaults().removeObjectForKey("netid")
+//            casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+//            casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://fed.princeton.edu/cas/logout")!))
+//            casV.delegate = self;
+//            netIdLabel.text = "Not Signed In"
+//            uName = "n/a"
+//        }
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -138,8 +141,7 @@ class BrowseViewController: UIViewController, UIWebViewDelegate{
                 )
                 print("login successful!")
                 uName = netID
-                netIdLabel.text = "Logged in as: " + uName
-                signInButton.setTitle("Sign Out", forState: .Normal)
+                netIdLabel.text = uName
                 UIView.animateWithDuration(0.5, animations: {self.casV!.alpha = 0}, completion: deleteAnimationComplete)
                 NSUserDefaults.standardUserDefaults().setObject(netID, forKey: "netid")
             }

@@ -230,11 +230,13 @@ class RoomInfo: UIViewController{
                 if (sender == timeButton && (Int(timeButton.tag) >= Int(self.currentTime))) {
                     let timeDetails = self.times[String(timeButton.tag)] as! String
                     var setTime = [String:String]()
-                    if (timeDetails == "n/a") {
+                    if (timeDetails == "n/a" && numberOfRoomsBooked < 4) {
                         setTime = [String(timeButton.tag):uName]
+                        numberOfRoomsBooked = numberOfRoomsBooked + 1
                     }
                     else if (timeDetails == uName){
                         setTime = [String(timeButton.tag):"n/a"]
+                        numberOfRoomsBooked = numberOfRoomsBooked - 1
                     }
                     let single = roomRef.childByAppendingPath("times")
                     single.updateChildValues(setTime)
