@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoreViewController: UIViewController, UITableViewDelegate {
+class MoreViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +24,6 @@ class MoreViewController: UIViewController, UITableViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//         let indexPath = tableView.indexPathForSelectedRow()
-//    }
-    
     // testing push
     
     /*
@@ -39,5 +35,14 @@ class MoreViewController: UIViewController, UITableViewDelegate {
      // Pass the selected object to the new view controller.
      }
      */
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var alert = UIAlertView()
+        alert.delegate = self
+        alert.title = "Selected Row"
+        alert.message = "You selected row \(indexPath.row)"
+        alert.addButtonWithTitle("OK")
+        alert.show()
+    }
     
 }
