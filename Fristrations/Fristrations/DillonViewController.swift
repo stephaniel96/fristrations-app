@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.swift
+//  DillonViewController.swift
 //  Fristrations
 //
 //  Created by Stephanie Liu on 3/26/16.
@@ -7,32 +7,32 @@
 //
 
 import UIKit
+import Firebase
 
-class SettingsViewController: UIViewController {
+class DillonViewController: UIViewController {
+    
+    var dillonURL:String = "https://fristrations.firebaseio.com/dillon_gym/num_devices"
+    var dillonRef: Firebase!
+    var population:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
         self.title = "Settings"
         // Fristrations color in RGB percentages
         view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
+        
+        let dillonRouter = Firebase(url:dillonURL)
+        dillonRouter.observeEventType(.Value, withBlock: {
+            snapshot in
+            self.population = Int(snapshot.value as! String)!
+        
+        })
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }
