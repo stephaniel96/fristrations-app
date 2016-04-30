@@ -73,13 +73,19 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
                 signInButton.text = "Sign In"
             }
             else {
-                signInButton.text = "Sign In"
-                NSUserDefaults.standardUserDefaults().removeObjectForKey("netid")
-                casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
-                casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://fed.princeton.edu/cas/logout")!))
-                casV.delegate = self;
-                signInStatus.text = "Not Signed In"
-                uName = "n/a"
+                let alertController = UIAlertController(title: "Sign Out", message:
+                    "Are you sure you want to sign out? You will not be able to reserve rooms until you sign back in with a valid netID.", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                alertController.addAction(UIAlertAction(title: "Sign Out", style: UIAlertActionStyle.Default,handler: {action in
+                    self.signInButton.text = "Sign In"
+                    NSUserDefaults.standardUserDefaults().removeObjectForKey("netid")
+                    self.casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+                    self.casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://fed.princeton.edu/cas/logout")!))
+                    self.casV.delegate = self;
+                    self.signInStatus.text = "Not Signed In"
+                    uName = "n/a"
+                }))
+                self.presentViewController(alertController, animated: true, completion: nil)
             }
         }
     }
