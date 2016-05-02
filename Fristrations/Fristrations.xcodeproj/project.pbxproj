@@ -305,7 +305,7 @@
 				TargetAttributes = {
 					DB324BD31CAF90A800019734 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 4KYMQN88YM;
+						DevelopmentTeam = LJ2BWEX7B9;
 					};
 					DB324BE91CAF90A800019734 = {
 						CreatedOnToolsVersion = 7.2.1;
