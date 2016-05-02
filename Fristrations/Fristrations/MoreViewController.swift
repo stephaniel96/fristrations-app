@@ -34,6 +34,9 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
             signInButton.text = "Sign In"
         }
         else {
+            if (casV != nil) {
+                casV.removeFromSuperview()
+            }
             signInStatus.text = "Signed in as: \(uName)"
             signInButton.text = "Sign Out"
         }

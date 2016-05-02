@@ -39,17 +39,24 @@ class BrowseViewController: UIViewController, UIWebViewDelegate{
         
         let netID: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("netid")
         
+//        if (netID == nil) {
+//            casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+//            casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
+//            casV.delegate = self;
+//            casV.layer.zPosition = 1
+//            self.view.addSubview(casV)
+//            netIdLabel.text = "Not Signed In"
+//        }
+//        else {
+//            uName = netID as! String
+//            netIdLabel.text = uName
+//        }
+        
         if (netID == nil) {
-            casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
-            casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
-            casV.delegate = self;
-            casV.layer.zPosition = 1
-            self.view.addSubview(casV)
-            netIdLabel.text = "Not Signed In"
+            uName = "n/a"
         }
         else {
             uName = netID as! String
-            netIdLabel.text = uName
         }
         
         
@@ -78,6 +85,9 @@ class BrowseViewController: UIViewController, UIWebViewDelegate{
         }
         else {
             netIdLabel.text = uName
+            if (casV != nil) {
+                casV.removeFromSuperview()
+            }
         }
     }
     
@@ -103,6 +113,48 @@ class BrowseViewController: UIViewController, UIWebViewDelegate{
 //        }
 //    }
 
+    
+    func loginWarning() {
+        let alertController = UIAlertController(title: "Sign In", message:
+            "You must have an active Princeton University netID to use Fristrations.", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        alertController.addAction(UIAlertAction(title: "Sign In Now", style: UIAlertActionStyle.Default,handler: {action in
+            self.casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+            self.casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
+            self.casV.delegate = self;
+            self.casV.layer.zPosition = 1
+            self.view.addSubview(self.casV)
+        }))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func select100Level(sender: AnyObject) {
+        if (uName == "n/a") {
+            loginWarning()
+        }
+        else {
+            performSegueWithIdentifier("firstFloor", sender: sender)
+        }
+    }
+    
+    @IBAction func select200Level(sender: AnyObject) {
+        if (uName == "n/a") {
+            loginWarning()
+        }
+        else {
+            performSegueWithIdentifier("secondFloor", sender: sender)
+        }
+    }
+    
+    @IBAction func select300Level(sender: AnyObject) {
+        if (uName == "n/a") {
+            loginWarning()
+        }
+        else {
+            performSegueWithIdentifier("thirdFloor", sender: sender)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
