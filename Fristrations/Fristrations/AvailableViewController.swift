@@ -1,5 +1,5 @@
 //
-//  SearchViewController.swift
+//  AvailableViewController.swift
 //  Fristrations
 //
 //  Created by Stephanie Liu on 3/26/16.
@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
+class AvailableViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
     
     // MARK: Properties
     // testing comment
@@ -57,7 +57,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(SearchViewController.handleRefresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl.addTarget(self, action: #selector(AvailableViewController.handleRefresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         
         return refreshControl
     }()
@@ -157,7 +157,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         cell.backgroundColor = UIColor.clearColor()
         cell.roomButton.tag = indexPath.row
         cell.roomButton.setTitle(availableRooms[indexPath.row], forState: .Normal)
-        cell.roomButton.addTarget(self, action: #selector(SearchViewController.roomButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        cell.roomButton.addTarget(self, action: #selector(AvailableViewController.roomButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         cell.roomButton.backgroundColor = UIColor.clearColor()
         cell.roomButton.layer.cornerRadius = 5
         cell.roomButton.layer.borderWidth = 1
