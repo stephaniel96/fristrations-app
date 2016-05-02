@@ -136,13 +136,11 @@ class RoomInfo: UIViewController{
         
         
         if (self.favoriteImage == "unfavorite") {
-            print("first")
             let favRef = Firebase(url: userURL + "favorites" + "/")
             favRef.childByAppendingPath(self.roomNumber).setValue("yes")
             self.favoriteImage = "favorite"
         }
         else {
-            print("second")
             let favRef = Firebase(url: userURL + "favorites/" + roomNumber)
             favRef.removeValue()
             self.favoriteImage = "unfavorite"
@@ -694,7 +692,6 @@ class RoomInfo: UIViewController{
                             if (self.roomsReserved < 4) {
                                 userRef.childByAppendingPath(self.roomNumber + String(timeButton.tag)).setValue("yes")
                                 setTime = [String(timeButton.tag):uName]
-                                print("added")
                                 let single = self.roomRef.childByAppendingPath("times")
                                 single.updateChildValues(setTime)
                             }
@@ -704,7 +701,6 @@ class RoomInfo: UIViewController{
                         let userRef = Firebase(url: userURL + "reservations/" + roomNumber + String(timeButton.tag))
                         userRef.removeValue()
                         setTime = [String(timeButton.tag):"n/a"]
-                        print("removed")
                     }
                     let single = roomRef.childByAppendingPath("times")
                     single.updateChildValues(setTime)
