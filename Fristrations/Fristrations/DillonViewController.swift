@@ -20,7 +20,7 @@ class DillonViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Dillon Gym"
         // Fristrations color in RGB percentages
-        view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
+//        view.backgroundColor = UIColor(red: 0.62, green: 0.773, blue: 0.843, alpha: 1.0)
         
         let dillonRouter = Firebase(url:dillonURL)
         dillonRouter.observeEventType(.Value, withBlock: {

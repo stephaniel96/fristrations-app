@@ -35,7 +35,7 @@ class BrowseViewController: UIViewController, UIWebViewDelegate{
         
         // BACKGROUND
 //        self.view.backgroundColor = UIColor(red: 180/250.0, green: 4/250.0, blue: 78/250.0, alpha: 1)
-        self.view.backgroundColor = UIColor(red: 0.32, green: 0.473, blue: 0.643, alpha: 1)
+//        self.view.backgroundColor = UIColor(red: 0.32, green: 0.473, blue: 0.643, alpha: 1)
         
         let netID: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("netid")
         

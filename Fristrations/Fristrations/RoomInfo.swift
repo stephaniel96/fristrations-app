@@ -207,8 +207,266 @@ class RoomInfo: UIViewController{
         button30.layer.cornerRadius = 5
         button100.layer.cornerRadius = 5
         button130.layer.cornerRadius = 5
-
         
+//        if () {
+//            floorplan.image = UIImage(named: "routers")
+//        }
+
+        let arrayOfRouters2 = ["arun-2845", "arun-2846", "arun-2847", "arun-2848", "arun-2849", "arun-2850",
+                               "arun-2851", "arun-2852", "arun-2853", "arun-2854", "arun-2855", "arun-2856", "arun-2857", "arun-2858", "arun-2859", "arun-2860", "arun-2861", "arun-2862", "arun-2863", "arun-2864", "arun-2865", "arun-2866", "arun-2867", "arun-2868", "arun-2869", "arun-2870", "arun-2871", "arun-2872", "arun-2873", "arun-2874", "arun-2875"]
+        var xVal: CGFloat = 0
+        var yVal: CGFloat = 0
+        
+        for router in arrayOfRouters2 {
+            let thisRouter = Firebase(url:("https://fristrations.firebaseio.com/router_data/" + router))
+            thisRouter.observeSingleEventOfType(.Value, withBlock: {
+                snapshot in
+                
+                self.roomPopulation = snapshot.value as! String
+                let frm: CGRect = self.floorplan.frame
+                let ratio = frm.height/239.0
+                let radius: Int! = Int(self.roomPopulation)
+                let CGradius = CGFloat(3*radius)
+                
+                
+                if (router == "arun-2845") {
+                    xVal = frm.origin.x+8-(CGradius/2)
+                    yVal = frm.origin.y+94*ratio-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2846") {
+                    xVal = frm.origin.x+8-(CGradius/2)
+                    yVal = frm.origin.y+51-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2847") {
+                    xVal = frm.origin.x+15-(CGradius/2)
+                    yVal = frm.origin.y-12-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2848") {
+                    xVal = frm.origin.x+9-(CGradius/2)
+                    yVal = frm.origin.y-55-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2849") {
+                    xVal = frm.origin.x+30-(CGradius/2)
+                    yVal = frm.origin.y+120-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2850") {
+                    xVal = frm.origin.x+45-(CGradius/2)
+                    yVal = frm.origin.y+99-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2851") {
+                    xVal = frm.origin.x+47-(CGradius/2)
+                    yVal = frm.origin.y+55-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2852") {
+                    xVal = frm.origin.x+45-(CGradius/2)
+                    yVal = frm.origin.y+11-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2853") {
+                    xVal = frm.origin.x+42-(CGradius/2)
+                    yVal = frm.origin.y-50-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2854") {
+                    xVal = frm.origin.x+76-(CGradius/2)
+                    yVal = frm.origin.y+85-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2855") {
+                    xVal = frm.origin.x+87-(CGradius/2)
+                    yVal = frm.origin.y-34-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2856") {
+                    xVal = frm.origin.x+102-(CGradius/2)
+                    yVal = frm.origin.y+121-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2857") {
+                    xVal = frm.origin.x+109-(CGradius/2)
+                    yVal = frm.origin.y+3-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2858") {
+                    xVal = frm.origin.x+127-(CGradius/2)
+                    yVal = frm.origin.y+85-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2859") {
+                    xVal = frm.origin.x+127-(CGradius/2)
+                    yVal = frm.origin.y-27-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2860") {
+                    xVal = frm.origin.x+172-(CGradius/2)
+                    yVal = frm.origin.y+121-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2861") {
+                    xVal = frm.origin.x+184-(CGradius/2)
+                    yVal = frm.origin.y+89-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2862") {
+                    xVal = frm.origin.x+182-(CGradius/2)
+                    yVal = frm.origin.y-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2863") {
+                    xVal = frm.origin.x+180-(CGradius/2)
+                    yVal = frm.origin.y-40-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2864") {
+                    xVal = frm.origin.x+227-(CGradius/2)
+                    yVal = frm.origin.y+116-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2865") {
+                    xVal = frm.origin.x+234-(CGradius/2)
+                    yVal = frm.origin.y-54-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2866") {
+                    xVal = frm.origin.x+242-(CGradius/2)
+                    yVal = frm.origin.y+76-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2867") {
+                    xVal = frm.origin.x+247-(CGradius/2)
+                    yVal = frm.origin.y+45-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2868") {
+                    xVal = frm.origin.x+252-(CGradius/2)
+                    yVal = frm.origin.y+2-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2869") {
+                    xVal = frm.origin.x+260-(CGradius/2)
+                    yVal = frm.origin.y-33-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2870") {
+                    xVal = frm.origin.x+262-(CGradius/2)
+                    yVal = frm.origin.y+93-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    let image1 = UIImage(named: "routers");
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                
+                
+            })
+        }
+
         
     }
     
@@ -316,261 +574,8 @@ class RoomInfo: UIViewController{
                 }
             })
         
-            let arrayOfRouters2 = ["arun-2845", "arun-2846", "arun-2847", "arun-2848", "arun-2849", "arun-2850",
-            "arun-2851", "arun-2852", "arun-2853", "arun-2854", "arun-2855", "arun-2856", "arun-2857", "arun-2858", "arun-2859", "arun-2860", "arun-2861", "arun-2862", "arun-2863", "arun-2864", "arun-2865", "arun-2866", "arun-2867", "arun-2868", "arun-2869", "arun-2870", "arun-2871", "arun-2872", "arun-2873", "arun-2874", "arun-2875"]
-            var xVal: CGFloat = 0
-            var yVal: CGFloat = 0
             
-            for router in arrayOfRouters2 {
-                let thisRouter = Firebase(url:("https://fristrations.firebaseio.com/router_data/" + router))
-                thisRouter.observeSingleEventOfType(.Value, withBlock: {
-                    snapshot in
-                    
-                    self.roomPopulation = snapshot.value as! String
-                    let frm: CGRect = self.floorplan.frame
-                    let ratio = frm.height/239.0
-                    let radius: Int! = Int(self.roomPopulation)
-                    let CGradius = CGFloat(3*radius)
-
-                    
-                    if (router == "arun-2845") {
-                        xVal = frm.origin.x+8-(CGradius/2)
-                        yVal = frm.origin.y+94*ratio-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                    
-                    else if (router == "arun-2846") {
-                        xVal = frm.origin.x+8-(CGradius/2)
-                        yVal = frm.origin.y+51-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                        
-                    else if (router == "arun-2847") {
-                        xVal = frm.origin.x+15-(CGradius/2)
-                        yVal = frm.origin.y-12-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                        
-                    else if (router == "arun-2848") {
-                        xVal = frm.origin.x+9-(CGradius/2)
-                        yVal = frm.origin.y-55-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                        
-                    else if (router == "arun-2849") {
-                        xVal = frm.origin.x+30-(CGradius/2)
-                        yVal = frm.origin.y+120-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                        
-                    else if (router == "arun-2850") {
-                        xVal = frm.origin.x+45-(CGradius/2)
-                        yVal = frm.origin.y+99-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                    
-                    else if (router == "arun-2851") {
-                        xVal = frm.origin.x+47-(CGradius/2)
-                        yVal = frm.origin.y+55-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                    
-                    else if (router == "arun-2852") {
-                        xVal = frm.origin.x+45-(CGradius/2)
-                        yVal = frm.origin.y+11-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                        
-                    else if (router == "arun-2853") {
-                        xVal = frm.origin.x+42-(CGradius/2)
-                        yVal = frm.origin.y-50-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                        
-                    else if (router == "arun-2854") {
-                        xVal = frm.origin.x+76-(CGradius/2)
-                        yVal = frm.origin.y+85-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                        
-                    else if (router == "arun-2855") {
-                        xVal = frm.origin.x+87-(CGradius/2)
-                        yVal = frm.origin.y-34-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                        
-                    else if (router == "arun-2856") {
-                        xVal = frm.origin.x+102-(CGradius/2)
-                        yVal = frm.origin.y+121-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                        
-                    else if (router == "arun-2857") {
-                        xVal = frm.origin.x+109-(CGradius/2)
-                        yVal = frm.origin.y+3-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                        
-                    else if (router == "arun-2858") {
-                        xVal = frm.origin.x+127-(CGradius/2)
-                        yVal = frm.origin.y+85-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                    
-                    else if (router == "arun-2859") {
-                        xVal = frm.origin.x+127-(CGradius/2)
-                        yVal = frm.origin.y-27-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                        
-                    else if (router == "arun-2860") {
-                        xVal = frm.origin.x+172-(CGradius/2)
-                        yVal = frm.origin.y+121-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                        
-                    else if (router == "arun-2861") {
-                        xVal = frm.origin.x+184-(CGradius/2)
-                        yVal = frm.origin.y+89-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                        
-                    else if (router == "arun-2862") {
-                        xVal = frm.origin.x+182-(CGradius/2)
-                        yVal = frm.origin.y-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                    
-                    else if (router == "arun-2863") {
-                        xVal = frm.origin.x+180-(CGradius/2)
-                        yVal = frm.origin.y-40-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                    
-                    else if (router == "arun-2864") {
-                        xVal = frm.origin.x+227-(CGradius/2)
-                        yVal = frm.origin.y+116-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                    
-                    else if (router == "arun-2865") {
-                        xVal = frm.origin.x+234-(CGradius/2)
-                        yVal = frm.origin.y-54-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                    
-                    else if (router == "arun-2866") {
-                        xVal = frm.origin.x+242-(CGradius/2)
-                        yVal = frm.origin.y+76-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                    
-                    else if (router == "arun-2867") {
-                        xVal = frm.origin.x+247-(CGradius/2)
-                        yVal = frm.origin.y+45-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                    
-                    else if (router == "arun-2868") {
-                        xVal = frm.origin.x+252-(CGradius/2)
-                        yVal = frm.origin.y+2-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                    
-                    else if (router == "arun-2869") {
-                        xVal = frm.origin.x+260-(CGradius/2)
-                        yVal = frm.origin.y-33-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                    
-                    else if (router == "arun-2870") {
-                        xVal = frm.origin.x+262-(CGradius/2)
-                        yVal = frm.origin.y+93-(CGradius/2)
-                        let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
-                        let image1 = UIImage(named: "routers");
-                        imageView1.image = image1;
-                        self.floorplan.addSubview(imageView1);
-                    }
-                    
-                    
-                })
-            
-            }
+//            }
 
             
             
