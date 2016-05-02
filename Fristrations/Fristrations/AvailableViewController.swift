@@ -168,7 +168,7 @@ class AvailableViewController: UIViewController, UITextFieldDelegate, UITableVie
             loginWarning()
         }
         else {
-            gself.performSegueWithIdentifier("goToRoomData", sender: sender)
+            self.performSegueWithIdentifier("goToRoomData", sender: sender)
         }
     }
     
