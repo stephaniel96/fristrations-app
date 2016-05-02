@@ -8,11 +8,13 @@
 
 import UIKit
 import Firebase
+import Kanna
 
-class AvailableViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
+class AvailableViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, UIWebViewDelegate{
     
     // MARK: Properties
     // testing comment
+    var casV: UIWebView!
     var roomRef: Firebase!
     var currentTime:String!
     var times: NSDictionary = [String:String]()
@@ -72,6 +74,10 @@ class AvailableViewController: UIViewController, UITextFieldDelegate, UITableVie
     }
     
     override func viewWillAppear(animated: Bool) {
+        if (casV != nil && uName != "n/a") {
+            casV.removeFromSuperview()
+        }
+        
         let date = NSDate()
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components([.Minute , .Hour], fromDate: date)
@@ -137,6 +143,20 @@ class AvailableViewController: UIViewController, UITextFieldDelegate, UITableVie
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return availableRooms.count
     }
+    
+    func loginWarning() {
+        let alertController = UIAlertController(title: "Sign In", message:
+            "You must have an active Princeton University netID to use Fristrations.", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        alertController.addAction(UIAlertAction(title: "Sign In Now", style: UIAlertActionStyle.Default,handler: {action in
+            self.casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+            self.casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
+            self.casV.delegate = self;
+            self.casV.layer.zPosition = 1
+            self.view.addSubview(self.casV)
+        }))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
 
     // Use if we want the whole table cell to be the button
 //    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -144,7 +164,12 @@ class AvailableViewController: UIViewController, UITextFieldDelegate, UITableVie
 //    }
     
     func roomButtonPressed(sender: UIButton) {
-        self.performSegueWithIdentifier("goToRoomData", sender: sender)
+        if (uName == "n/a") {
+            loginWarning()
+        }
+        else {
+            gself.performSegueWithIdentifier("goToRoomData", sender: sender)
+        }
     }
     
     override func prepareForSegue(segue:UIStoryboardSegue, sender: AnyObject!) {
@@ -166,6 +191,45 @@ class AvailableViewController: UIViewController, UITextFieldDelegate, UITableVie
     }
 
     
+    func deleteAnimationComplete(value: Bool)
+    {
+        if (value && casV != nil)
+        {
+            casV.removeFromSuperview()
+            casV = nil
+        }
+        
+    }
+    
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+        print("Webview fail with error \(error)");
+    }
+    
+    
+    func webViewDidStartLoad(webView: UIWebView) {
+        print("Webview started Loading")
+    }
+    
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        let docPage = webView.stringByEvaluatingJavaScriptFromString("document.documentElement.outerHTML")!
+        
+        if let doc = Kanna.HTML(html: docPage, encoding: NSUTF8StringEncoding) {
+            // Search for nodes by CSS
+            let bods = doc.css("body")
+            let bod = bods[0].text
+            if (bod!.characters.count < 100) {
+                let netID = bod!.stringByTrimmingCharactersInSet(
+                    NSCharacterSet.whitespaceAndNewlineCharacterSet()
+                )
+                print("login successful!")
+                uName = netID
+                UIView.animateWithDuration(0.5, animations: {self.casV!.alpha = 0}, completion: deleteAnimationComplete)
+                NSUserDefaults.standardUserDefaults().setObject(netID, forKey: "netid")
+            }
+        }
+        
+    }
 
 
     
