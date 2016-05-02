@@ -212,12 +212,26 @@ class RoomInfo: UIViewController{
 //            floorplan.image = UIImage(named: "routers")
 //        }
 
-        let arrayOfRouters2 = ["arun-2845", "arun-2846", "arun-2847", "arun-2848", "arun-2849", "arun-2850",
-                               "arun-2851", "arun-2852", "arun-2853", "arun-2854", "arun-2855", "arun-2856", "arun-2857", "arun-2858", "arun-2859", "arun-2860", "arun-2861", "arun-2862", "arun-2863", "arun-2864", "arun-2865", "arun-2866", "arun-2867", "arun-2868", "arun-2869", "arun-2870", "arun-2871", "arun-2872", "arun-2873", "arun-2874", "arun-2875"]
+        var arrayOfRouters = ["arun-2845", "arun-2846", "arun-2847", "arun-2848", "arun-2849", "arun-2850",
+                            "arun-2851", "arun-2852", "arun-2853", "arun-2854", "arun-2855", "arun-2856", "arun-2857", "arun-2858", "arun-2859", "arun-2860", "arun-2861", "arun-2862", "arun-2863", "arun-2864", "arun-2865", "arun-2866", "arun-2867", "arun-2868", "arun-2869", "arun-2870", "arun-2871", "arun-2872", "arun-2873", "arun-2874", "arun-2875"]
+        let str = self.roomNumber
+        let index1 = str.startIndex.advancedBy(5)
+        let substring1 = str.substringFromIndex(index1)
+        let index2 = substring1.startIndex.advancedBy(1)
+        let substring2 = substring1.substringToIndex(index2)
+        
+        if (substring2 == "1") {
+            floorplan.image = UIImage(named: "floorplan1");
+            arrayOfRouters = ["arun-2824", "arun-2825", "arun-2826", "arun-2827", "arun-2828", "arun-2829", "arun-2830", ]
+        }
+
+        else if (substring2 == "3") {
+            floorplan.image = UIImage(named: "floorplan3");
+        }
         var xVal: CGFloat = 0
         var yVal: CGFloat = 0
         
-        for router in arrayOfRouters2 {
+        for router in arrayOfRouters {
             let thisRouter = Firebase(url:("https://fristrations.firebaseio.com/router_data/" + router))
             thisRouter.observeSingleEventOfType(.Value, withBlock: {
                 snapshot in
@@ -555,9 +569,7 @@ class RoomInfo: UIViewController{
                 self.times = self.room["times"] as! NSDictionary
                 let currentTimeDetails = self.times[self.currentTime] as! String
                 var num_people = String()
-                
-                let frm: CGRect = self.floorplan.frame
-                let xx: String = String(frm.origin.x)
+
                 
                 if (self.roomPopulation == "1") {
                     num_people = self.roomPopulation + " person is nearby."
