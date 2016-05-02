@@ -132,12 +132,28 @@ class RoomInfo: UIViewController{
     }
     
     func favoritePressed(sender: UIButton) {
-        sender.setImage(UIImage(named: "favorite"), forState: .Normal)
+        
+        
+        
+        if (self.favoriteImage == "unfavorite") {
+            print("first")
+            let favRef = Firebase(url: userURL + "favorites" + "/")
+            favRef.childByAppendingPath(self.roomNumber).setValue("yes")
+            self.favoriteImage = "favorite"
+        }
+        else {
+            print("second")
+            let favRef = Firebase(url: userURL + "favorites/" + roomNumber)
+            favRef.removeValue()
+            self.favoriteImage = "unfavorite"
+        }
+        
+        sender.setImage(UIImage(named: self.favoriteImage), forState: .Normal)
         sender.frame = CGRectMake(0, 0, 30, 30)
         let rightBarButton = UIBarButtonItem()
         rightBarButton.customView = sender
         self.navigationItem.rightBarButtonItem = rightBarButton
-        
+
     }
     override func viewDidLoad() {
         roomRef = Firebase(url:(roomURL + roomNumber))
@@ -627,8 +643,8 @@ class RoomInfo: UIViewController{
             })
         }
         
-        let userRef = Firebase(url: userURL + "favorites/")
-        userRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+        let favRef = Firebase(url: userURL + "favorites" + "/" + roomNumber)
+        favRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
             if (snapshot.exists()) {
                 self.favoriteImage = "favorite"
             }
@@ -644,14 +660,7 @@ class RoomInfo: UIViewController{
             let rightBarButton = UIBarButtonItem()
             rightBarButton.customView = btnName
             self.navigationItem.rightBarButtonItem = rightBarButton
-//            print(self.roomsReserved)
-//            if (self.roomsReserved < 4) {
-//                userRef.childByAppendingPath(self.roomNumber + String(timeButton.tag)).setValue("yes")
-//                setTime = [String(timeButton.tag):uName]
-//                print("added")
-//                let single = self.roomRef.childByAppendingPath("times")
-//                single.updateChildValues(setTime)
-//            }
+
         })
 
     
