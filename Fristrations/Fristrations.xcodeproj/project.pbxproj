@@ -10,7 +10,6 @@
 		46CDAEC47D6813184D25A360 /* Pods_Fristrations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A8ECBC61DC113CD377DDBB /* Pods_Fristrations.framework */; };
 		644A0AD41CBC95CE00846C32 /* RoomInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A0AD31CBC95CE00846C32 /* RoomInfo.swift */; };
 		64E6BF881CC3131F00CD69B8 /* fp200.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E6BF871CC3131F00CD69B8 /* fp200.png */; };
-		6CE1D4311CCF16A9009F48B5 /* customButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE1D4301CCF16A9009F48B5 /* customButton.swift */; };
 		7702A4081CD1550C0034CD2B /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 7702A4071CD1550C0034CD2B /* splash.png */; };
 		7709C6561CD3CE4F0048D8F5 /* facebook-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7709C6531CD3CE4F0048D8F5 /* facebook-icon.png */; };
 		7709C6571CD3CE4F0048D8F5 /* fp200.png in Resources */ = {isa = PBXBuildFile; fileRef = 7709C6541CD3CE4F0048D8F5 /* fp200.png */; };
@@ -60,7 +59,6 @@
 		644A0AD31CBC95CE00846C32 /* RoomInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomInfo.swift; sourceTree = "<group>"; };
 		64E6BF871CC3131F00CD69B8 /* fp200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fp200.png; path = Images/fp200.png; sourceTree = "<group>"; };
 		6CE1D42D1CCF0A3D009F48B5 /* Fristrations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fristrations.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6CE1D4301CCF16A9009F48B5 /* customButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customButton.swift; sourceTree = "<group>"; };
 		7702A4051CCFCD900034CD2B /* FristrationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FristrationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7702A4061CCFCD900034CD2B /* FristrationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FristrationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7702A4071CD1550C0034CD2B /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = Fristrations/Images/splash.png; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 				DBA4C3251CAF97FA00EFCA8F /* AvailableViewController.swift */,
 				7709C6591CD3D9150048D8F5 /* MoreViewController.swift */,
 				DBA4C3271CAF982000EFCA8F /* DillonViewController.swift */,
-				6CE1D4301CCF16A9009F48B5 /* customButton.swift */,
 				644A0AD31CBC95CE00846C32 /* RoomInfo.swift */,
 				DB9590041CB0726F00055E61 /* FirstFloor.swift */,
 				DB9590061CB072F000055E61 /* SecondFloor.swift */,
@@ -550,7 +547,6 @@
 				644A0AD41CBC95CE00846C32 /* RoomInfo.swift in Sources */,
 				DB9590071CB072F000055E61 /* SecondFloor.swift in Sources */,
 				DBA4C32C1CAF989A00EFCA8F /* BrowseViewController.swift in Sources */,
-				6CE1D4311CCF16A9009F48B5 /* customButton.swift in Sources */,
 				DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

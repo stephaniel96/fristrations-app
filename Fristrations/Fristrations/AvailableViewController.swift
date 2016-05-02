@@ -68,8 +68,8 @@ class AvailableViewController: UIViewController, UITextFieldDelegate, UITableVie
         self.title = "Available"
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.allowsSelection = false 
-        // Fristrations color in RGB percentages
+        tableView.allowsSelection = false
+        tableView.rowHeight = 60.0
         self.tableView.addSubview(self.refreshControl)
     }
     
@@ -131,9 +131,6 @@ class AvailableViewController: UIViewController, UITextFieldDelegate, UITableVie
         }
     }
     
-//    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-//        cell.backgroundColor = UIColor.clearColor()
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -158,10 +155,6 @@ class AvailableViewController: UIViewController, UITextFieldDelegate, UITableVie
         self.presentViewController(alertController, animated: true, completion: nil)
     }
 
-    // Use if we want the whole table cell to be the button
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        self.performSegueWithIdentifier("goToRoomData", sender: "frist205")
-//    }
     
     func roomButtonPressed(sender: UIButton) {
         if (uName == "n/a") {
