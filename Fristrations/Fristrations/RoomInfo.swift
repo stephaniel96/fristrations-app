@@ -15,9 +15,11 @@ class RoomInfo: UIViewController{
     var roomPopulation:String = ""
     var room: NSDictionary = [String:String]()
     var roomURL:String = "https://fristrations.firebaseio.com/rooms/"
+    var userURL:String = "https://fristrations.firebaseio.com/user/" + uName + "/"
     var times: NSDictionary = [String:String]()
     var roomRef: Firebase!
     var currentTime:String!
+    var roomsReserved:Int!
     let displayTime =
         [800: "8:00 - 8:30AM",
          830: "8:30 - 9:00AM",
@@ -634,13 +636,25 @@ class RoomInfo: UIViewController{
                 if (sender == timeButton && (Int(timeButton.tag) >= Int(self.currentTime))) {
                     let timeDetails = self.times[String(timeButton.tag)] as! String
                     var setTime = [String:String]()
-                    if (timeDetails == "n/a" && numberOfRoomsBooked < 4) {
-                        setTime = [String(timeButton.tag):uName]
-                        numberOfRoomsBooked = numberOfRoomsBooked + 1
+                    if (timeDetails == "n/a") {
+                        let userRef = Firebase(url: userURL + "reservations/")
+                        userRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+                            self.roomsReserved = Int(snapshot.childrenCount)
+                            print(self.roomsReserved)
+                            if (self.roomsReserved < 4) {
+                                userRef.childByAppendingPath(self.roomNumber + String(timeButton.tag)).setValue("yes")
+                                setTime = [String(timeButton.tag):uName]
+                                print("added")
+                                let single = self.roomRef.childByAppendingPath("times")
+                                single.updateChildValues(setTime)
+                            }
+                        })
                     }
                     else if (timeDetails == uName){
+                        let userRef = Firebase(url: userURL + "reservations/" + roomNumber + String(timeButton.tag))
+                        userRef.removeValue()
                         setTime = [String(timeButton.tag):"n/a"]
-                        numberOfRoomsBooked = numberOfRoomsBooked - 1
+                        print("removed")
                     }
                     let single = roomRef.childByAppendingPath("times")
                     single.updateChildValues(setTime)
