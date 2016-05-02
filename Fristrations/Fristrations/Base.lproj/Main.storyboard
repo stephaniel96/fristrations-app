@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -30,7 +30,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qar-Vk-9Kn" kind="show" identifier="secondFloor" id="uxq-m4-0Vy"/>
+                                    <action selector="select200Level:" destination="9pv-A4-QxB" eventType="touchUpInside" id="MxK-dU-7Ep"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0l-ia-van">
@@ -44,7 +44,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HMx-lI-a3P" kind="show" id="itE-5g-y8X"/>
+                                    <action selector="select300Level:" destination="9pv-A4-QxB" eventType="touchUpInside" id="0kd-S5-xyy"/>
                                 </connections>
                             </button>
                             <button contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6v-0H-6D8">
@@ -58,7 +58,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ifx-Ru-8BV" kind="show" id="yzI-vB-Rbj"/>
+                                    <action selector="select100Level:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ScS-tP-Sz2"/>
                                 </connections>
                             </button>
                             <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F R I S T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbC-NW-CLs">
@@ -120,6 +120,9 @@
                         <outlet property="netIdLabel" destination="j8I-bR-22X" id="6dZ-FQ-gyd"/>
                         <outlet property="secondFloorButton" destination="IHY-c7-4M9" id="kHj-0l-ibV"/>
                         <outlet property="thirdFloorButton" destination="B0l-ia-van" id="79q-7J-qo6"/>
+                        <segue destination="HMx-lI-a3P" kind="show" identifier="thirdFloor" id="ReN-vn-jpY"/>
+                        <segue destination="qar-Vk-9Kn" kind="show" identifier="secondFloor" id="LZx-cv-zDA"/>
+                        <segue destination="Ifx-Ru-8BV" kind="show" identifier="firstFloor" id="Rqb-Db-im8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -1936,7 +1939,7 @@
         <image name="icon_settings" width="26" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eS8-no-uZB"/>
+        <segue reference="TB9-zm-Wo0"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>

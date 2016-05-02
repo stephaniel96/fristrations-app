@@ -18,7 +18,7 @@ class ThirdFloor: UIViewController {
         super.viewDidLoad()
         self.title = "300 Level"
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor(red: 0.32, green: 0.473, blue: 0.643, alpha: 1)
+//        self.view.backgroundColor = UIColor(red: 0.32, green: 0.473, blue: 0.643, alpha: 1)
         
         room303.backgroundColor = UIColor.clearColor()
         room303.layer.cornerRadius = 5
