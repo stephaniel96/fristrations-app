@@ -102,13 +102,15 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
     
     func getDataSource() {
         self.personalReservation.removeAll()
+        self.formattedReservation.removeAll()
         
         
         var userRef = Firebase(url: (userURL + "/reservations"))
         
         userRef.observeEventType(.Value, withBlock: {
             snapshot in
-            print(uName)
+            self.personalReservation.removeAll()
+            self.formattedReservation.removeAll()
             if (snapshot.exists()) {
                 self.reservations = snapshot.value as! NSDictionary
                 for eachReservation in self.reservations {
@@ -116,6 +118,8 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
                     self.formattedReservation.append((eachReservation.value) as! String)
                     self.personalReservation.sortInPlace()
                     self.formattedReservation.sortInPlace()
+                    print(self.formattedReservation)
+                    print(self.personalReservation)
                     self.tableView.reloadData()
                 }
             }
@@ -123,16 +127,6 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
         
     }
     
-//    func getFormattedTime(reservation: String) -> String {
-//        let index = reservation.startIndex.advancedBy(8)
-//        let room = reservation.substringToIndex(index)
-//        let time = reservation.substringFromIndex(index)
-////        let index2 = time.endIndex.advancedBy(-2)
-////        let minutes1 = time.substringFromIndex(index2)
-////        let hour1 = time.substringToIndex(index2)
-//        
-//        let displayString = displayRoom[room] + " " + displayTime[time]
-//    }
     
     
     override func didReceiveMemoryWarning() {
@@ -155,10 +149,12 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
         let cell = tableView.dequeueReusableCellWithIdentifier("Customcell2", forIndexPath: indexPath) as! ReservedCustomCell
         cell.backgroundColor = UIColor.clearColor()
         cell.roomButton.tag = indexPath.row
-        
+        if (personalReservation.count != 0)
+        {
         let index = personalReservation[indexPath.row].startIndex.advancedBy(8)
         let time = personalReservation[indexPath.row].substringFromIndex(index)
         let displayString = displayRoom[formattedReservation[indexPath.row]]! + "   |   " + displayTime[Int(time)!]!
@@ -168,6 +164,7 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
         cell.roomButton.layer.cornerRadius = 5
         cell.roomButton.layer.borderWidth = 1
         cell.roomButton.layer.borderColor = UIColor.whiteColor().CGColor
+        }
         return cell
     }
     

@@ -75,6 +75,7 @@ class FavoritesViewController: UIViewController, UITextFieldDelegate, UITableVie
             snapshot in
             print(uName)
             if (snapshot.exists()) {
+                self.favoriteList.removeAll()
                 self.favorites = snapshot.value as! NSDictionary
                 for eachFavorite in self.favorites {
                     self.favoriteList.append((eachFavorite.key) as! String)
