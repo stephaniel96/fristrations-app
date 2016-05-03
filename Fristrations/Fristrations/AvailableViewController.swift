@@ -134,7 +134,7 @@ class AvailableViewController: UIViewController, UITextFieldDelegate, UITableVie
                 self.times = self.room["times"] as! NSDictionary
                 let timeDetails = self.times[self.currentTime] as! String
                 if (timeDetails == "n/a") {
-                    self.availableRooms.append((self.displayRoom[roomNumber])!)
+                    self.availableRooms.append(roomNumber)
                     self.tableView.reloadData()
                     
                 }
@@ -178,14 +178,14 @@ class AvailableViewController: UIViewController, UITextFieldDelegate, UITableVie
     
     override func prepareForSegue(segue:UIStoryboardSegue, sender: AnyObject!) {
         let vc = segue.destinationViewController as! RoomInfo
-        vc.roomNumber = revDisplayRoom[availableRooms[sender.tag]]!
+        vc.roomNumber = availableRooms[sender.tag]
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Customcell", forIndexPath: indexPath) as! CustomCell
         cell.backgroundColor = UIColor.clearColor()
         cell.roomButton.tag = indexPath.row
-        cell.roomButton.setTitle(availableRooms[indexPath.row], forState: .Normal)
+        cell.roomButton.setTitle(displayRoom[availableRooms[indexPath.row]], forState: .Normal)
         cell.roomButton.addTarget(self, action: #selector(AvailableViewController.roomButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         cell.roomButton.backgroundColor = UIColor.clearColor()
         cell.roomButton.layer.cornerRadius = 5
