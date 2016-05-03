@@ -125,7 +125,8 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
         cell.roomButton.tag = indexPath.row
         let index = personalReservation[indexPath.row].startIndex.advancedBy(8)
         let substring = personalReservation[indexPath.row].substringFromIndex(index)
-        let displayString = displayRoom[formattedReservation[indexPath.row]]! + substring
+        print(substring)
+        let displayString = displayRoom[formattedReservation[indexPath.row]]! + " at " + substring
         cell.roomButton.setTitle(displayString, forState: .Normal)
         cell.roomButton.addTarget(self, action: #selector(AvailableViewController.roomButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         cell.roomButton.backgroundColor = UIColor.clearColor()
