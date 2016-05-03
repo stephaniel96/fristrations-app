@@ -78,6 +78,7 @@ class FavoritesViewController: UIViewController, UITextFieldDelegate, UITableVie
                 self.favorites = snapshot.value as! NSDictionary
                 for eachFavorite in self.favorites {
                     self.favoriteList.append((eachFavorite.key) as! String)
+                    self.favoriteList.sortInPlace()
                     self.tableView.reloadData()
                 }
             }

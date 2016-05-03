@@ -114,6 +114,8 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
                 for eachReservation in self.reservations {
                     self.personalReservation.append((eachReservation.key) as! String)
                     self.formattedReservation.append((eachReservation.value) as! String)
+                    self.personalReservation.sortInPlace()
+                    self.formattedReservation.sortInPlace()
                     self.tableView.reloadData()
                 }
             }
