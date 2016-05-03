@@ -2082,9 +2082,9 @@
                     <connections>
                         <segue destination="eE3-j1-gnP" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="si8-TS-7Bv" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="j3z-JF-3CC" kind="relationship" relationship="viewControllers" id="e4A-zH-B0u"/>
                         <segue destination="Vh0-WP-QFn" kind="relationship" relationship="viewControllers" id="abq-V9-KRB"/>
                         <segue destination="93V-rN-tQz" kind="relationship" relationship="viewControllers" id="ZPb-qb-MOi"/>
-                        <segue destination="j3z-JF-3CC" kind="relationship" relationship="viewControllers" id="e4A-zH-B0u"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
