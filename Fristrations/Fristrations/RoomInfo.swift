@@ -9,6 +9,7 @@
 
 import UIKit
 import Firebase
+import Foundation
 
 class RoomInfo: UIViewController{
     var roomNumber:String = ""
@@ -1045,10 +1046,16 @@ class RoomInfo: UIViewController{
                 snapshot in
                 
                 self.roomPopulation = snapshot.value as! String
+                let roomInfo = String(ceil(Double(self.roomPopulation)!/2))
+                
+                let indexEndOfText = roomInfo.endIndex.advancedBy(-2)
+                self.roomPopulation = roomInfo.substringToIndex(indexEndOfText)
+
+                print(self.roomPopulation)
                 self.times = self.room["times"] as! NSDictionary
                 let currentTimeDetails = self.times[self.currentTime] as! String
                 var num_people = String()
-
+                
                 
                 if (self.roomPopulation == "1") {
                     num_people = self.roomPopulation + " person is nearby."
