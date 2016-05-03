@@ -36,23 +36,23 @@ class DillonViewController: UIViewController {
         
         
         
-        var userRef = Firebase(url: (userURL + uName))
-        
-        userRef.observeEventType(.Value, withBlock: {
-            snapshot in
-            print(uName)
-            self.user = snapshot.value as! NSDictionary
-            self.favorites = self.user["favorites"] as! NSDictionary
-            self.reservations = self.user["reservations"] as! NSDictionary
-            
-            for eachFavorite in self.favorites {
-                print("favorite: " + String(eachFavorite))
-            }
-            
-            for eachReservation in self.reservations {
-                print("reservation: " + String(eachReservation))
-            }
-        })
+//        var userRef = Firebase(url: (userURL + uName))
+//        
+//        userRef.observeEventType(.Value, withBlock: {
+//            snapshot in
+//            print(uName)
+//            self.user = snapshot.value as! NSDictionary
+//            self.favorites = self.user["favorites"] as! NSDictionary
+//            self.reservations = self.user["reservations"] as! NSDictionary
+//            
+//            for eachFavorite in self.favorites {
+//                print("favorite: " + String(eachFavorite))
+//            }
+//            
+//            for eachReservation in self.reservations {
+//                print("reservation: " + String(eachReservation))
+//            }
+//        })
         
     }
     

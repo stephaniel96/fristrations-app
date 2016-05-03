@@ -973,6 +973,11 @@ class RoomInfo: UIViewController{
                                 let single = self.roomRef.childByAppendingPath("times")
                                 single.updateChildValues(setTime)
                             }
+                            else {
+                                let alert = UIAlertController(title: "Reservation Maximum", message: "You can reserve a maximum of four time slots. Unreserve a current booking to reserve this time slot.", preferredStyle: UIAlertControllerStyle.Alert)
+                                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
+                                self.presentViewController(alert, animated: true, completion: nil)
+                            }
                         })
                     }
                     else if (timeDetails == uName){
