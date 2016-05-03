@@ -11,6 +11,7 @@ import UIKit
 class CustomCell: UITableViewCell {
 
     @IBOutlet weak var roomButton: UIButton!
+    @IBOutlet weak var reservedButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
