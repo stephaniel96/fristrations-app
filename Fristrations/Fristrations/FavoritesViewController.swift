@@ -24,20 +24,20 @@ class FavoritesViewController: UIViewController, UITextFieldDelegate, UITableVie
     var favorites: NSDictionary = [String:String]()
     var userURL:String = "https://fristrations.firebaseio.com/user/" + uName
     let displayRoom =
-        ["frist114" : "Frist 114",
-         "frist205" : "Frist 205",
-         "frist206" : "Frist 206",
-         "frist207" : "Frist 207",
-         "frist208" : "Frist 208",
-         "frist209" : "Frist 209",
-         "frist210" : "Frist 210",
-         "frist212" : "Frist 212",
-         "frist227" : "Frist 227",
-         "frist228" : "Frist 228",
-         "frist234" : "Frist 234",
-         "frist303" : "Frist 303",
-         "frist307" : "Frist 307",
-         "frist309" : "Frist 309"]
+        ["frist114" : "114",
+         "frist205" : "205",
+         "frist206" : "206",
+         "frist207" : "207",
+         "frist208" : "208",
+         "frist209" : "209",
+         "frist210" : "210",
+         "frist212" : "212",
+         "frist227" : "227",
+         "frist228" : "228",
+         "frist234" : "234",
+         "frist303" : "303",
+         "frist307" : "307",
+         "frist309" : "309"]
     
     var favoriteList = [String]()
     

@@ -1254,6 +1254,7 @@
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="kxD-DC-brG"/>
                                                 <exclude reference="Ibi-fH-iIM"/>
                                                 <exclude reference="N9Z-Fg-Jk6"/>
                                             </mask>
