@@ -95,9 +95,20 @@ class AvailableViewController: UIViewController, UITextFieldDelegate, UITableVie
         {
             currentTime = "2400"
         }
-        if (currentTime == "030") {
+        else if (currentTime == "030") {
             currentTime = "2430"
         }
+        else if (currentTime == "100")
+        {
+            currentTime = "2500"
+        }
+        else if (currentTime == "130") {
+            currentTime = "2530"
+        }
+        else if (Int(currentTime) < 800) {
+            currentTime = "800"
+        }
+        
         
     }
     func handleRefresh(refreshControl: UIRefreshControl) {

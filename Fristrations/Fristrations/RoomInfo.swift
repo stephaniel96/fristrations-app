@@ -121,14 +121,18 @@ class RoomInfo: UIViewController{
         {
             currentTime = "2400"
         }
-        if (currentTime == "030") {
+        else if (currentTime == "030") {
             currentTime = "2430"
         }
-        if (currentTime == "100") {
+        else if (currentTime == "100")
+        {
             currentTime = "2500"
         }
-        if (currentTime == "130") {
+        else if (currentTime == "130") {
             currentTime = "2530"
+        }
+        else if (Int(currentTime) < 800) {
+            currentTime = "800"
         }
     }
     
