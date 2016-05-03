@@ -203,6 +203,7 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
                 signInButton.text = "Sign Out"
                 UIView.animateWithDuration(0.5, animations: {self.casV!.alpha = 0}, completion: deleteAnimationComplete)
                 NSUserDefaults.standardUserDefaults().setObject(netID, forKey: "netid")
+                viewWillAppear(true)
             }
         }
         
