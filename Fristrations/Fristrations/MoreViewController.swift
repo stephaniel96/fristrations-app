@@ -22,7 +22,7 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.title = "Settings"
+        self.title = "More"
         // Fristrations color in RGB percentages
         self.view.backgroundColor = UIColor(red: 0.91, green: 0.913, blue: 0.943, alpha: 1)
     }
