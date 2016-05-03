@@ -1093,7 +1093,6 @@ class RoomInfo: UIViewController{
                 let indexEndOfText = roomInfo.endIndex.advancedBy(-2)
                 self.roomPopulation = roomInfo.substringToIndex(indexEndOfText)
 
-                print(self.roomPopulation)
                 self.times = self.room["times"] as! NSDictionary
                 let currentTimeDetails = self.times[self.currentTime] as! String
                 var num_people = String()
