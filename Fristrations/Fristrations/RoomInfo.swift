@@ -236,6 +236,27 @@ class RoomInfo: UIViewController{
         button100.layer.cornerRadius = 5
         button130.layer.cornerRadius = 5
         
+        let favRef = Firebase(url: userURL + "favorites" + "/" + roomNumber)
+        favRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            if (snapshot.exists()) {
+                self.favoriteImage = "favorite"
+            }
+            else {
+                self.favoriteImage = "unfavorite"
+            }
+            let btnName = UIButton()
+            btnName.setImage(UIImage(named: self.favoriteImage), forState: .Normal)
+            btnName.frame = CGRectMake(0, 0, 30, 30)
+            btnName.addTarget(self, action: #selector(RoomInfo.favoritePressed(_:)), forControlEvents: .TouchUpInside)
+            
+            //.... Set Right/Left Bar Button item
+            let rightBarButton = UIBarButtonItem()
+            rightBarButton.customView = btnName
+            self.navigationItem.rightBarButtonItem = rightBarButton
+            
+        })
+        
+        
 //        if () {
 //            floorplan.image = UIImage(named: "routers")
 //        }
@@ -640,26 +661,6 @@ class RoomInfo: UIViewController{
                 
             })
         }
-        
-        let favRef = Firebase(url: userURL + "favorites" + "/" + roomNumber)
-        favRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
-            if (snapshot.exists()) {
-                self.favoriteImage = "favorite"
-            }
-            else {
-                self.favoriteImage = "unfavorite"
-            }
-            let btnName = UIButton()
-            btnName.setImage(UIImage(named: self.favoriteImage), forState: .Normal)
-            btnName.frame = CGRectMake(0, 0, 30, 30)
-            btnName.addTarget(self, action: #selector(RoomInfo.favoritePressed(_:)), forControlEvents: .TouchUpInside)
-            
-            //.... Set Right/Left Bar Button item
-            let rightBarButton = UIBarButtonItem()
-            rightBarButton.customView = btnName
-            self.navigationItem.rightBarButtonItem = rightBarButton
-
-        })
 
     
 
