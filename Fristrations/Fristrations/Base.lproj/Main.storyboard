@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1690,6 +1690,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="LK7-GE-rrK" kind="show" id="mjl-Ql-3j8"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="uSw-Dq-8wn">
                                         <rect key="frame" x="0.0" y="295.5" width="600" height="44"/>
@@ -1957,7 +1960,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCx-t7-3Hq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCx-t7-3Hq">
                                 <rect key="frame" x="20" y="79" width="102" height="24"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Fristrations">
@@ -1982,40 +1985,29 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UfV-19-uMF">
-                                <rect key="frame" x="20" y="111" width="560" height="190"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmx-us-nvB">
+                                <rect key="frame" x="-2464" y="111" width="2526" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Fristrations is the most efficient, user-friendly, well-designed and smart way to alleviate your fristrated emotions (i.e. finding empty classrooms near you in Frist). Synthesizing data routinely from the registar and from  wifi routers, it allows users to find empty classrooms near them in Frist, as well as search for their favorites. Users can book available rooms day-of within the app, and others will see that the room is reserved.</string>
+                                        <string key="content">Fristrations is the most efficient way to alleviate the search for available study spaces near you.  Synthesizing data daily from the registrar and Frist's wireless internet routers, Fristrations helps you find empty classrooms in Frist easily. You can also book rooms in real time in just a couple clicks, and keep track of your favorite rooms.</string>
                                         <attributes>
-                                            <font key="NSFont" size="18" name="Avenir-Book"/>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="16" name="Avenir-Book"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" secureTextEntry="YES"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFE-x3-FoQ">
-                                <rect key="frame" x="20" y="338" width="600" height="151"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Fristrations scrapes the registrar's site to see when classes are going on in Frist and in which rooms. It also updates in real-time how many devices are connected to the routers in Frist, so you can get accurate information on how many people are where - and provides the same service for Dillon gymnasium so you can identify the best times to get your gym on.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="18" name="Avenir-Book"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eCx-t7-3Hq" firstAttribute="leading" secondItem="IAE-4m-xcY" secondAttribute="leadingMargin" constant="10" id="lZW-Kd-rDr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIo-5A-7qO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1250" y="2975"/>
+            <point key="canvasLocation" x="1243" y="2708"/>
         </scene>
         <!--The Team-->
         <scene sceneID="ge2-8C-GUf">
