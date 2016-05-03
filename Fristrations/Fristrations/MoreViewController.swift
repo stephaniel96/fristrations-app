@@ -122,7 +122,7 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
             }
         }
         // Share Fristrations
-        if (indexPath.section == 2 && indexPath.row == 0) {
+        if (indexPath.section == 3 && indexPath.row == 0) {
             let textToShare = "Fristrations is awesome!  Check out this website about it!"
             
             if let myWebsite = NSURL(string: "http://fristrations.xyz/") {
@@ -136,26 +136,23 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
             }
         }
         // Check out our website
-        else if (indexPath.section == 2 && indexPath.row == 1) {
+        else if (indexPath.section == 3 && indexPath.row == 1) {
             UIApplication.sharedApplication().openURL(NSURL(string: "http://fristrations.xyz/")!)
         }
         // Like us on facebook
-        else if (indexPath.section == 2 && indexPath.row == 2) {
+        else if (indexPath.section == 3 && indexPath.row == 2) {
             UIApplication.sharedApplication().openURL(NSURL(string: "https://www.facebook.com/1607764632876387")!)
         }
         // Contact Us
-        else if (indexPath.section == 2 && indexPath.row == 3) {
+        else if (indexPath.section == 3 && indexPath.row == 3) {
             // mailto only allows one mail recipient so it's just Chris
             let email = "cjhsu@princeton.edu"
             let url = NSURL(string: "mailto:\(email)")
             UIApplication.sharedApplication().openURL(url!)
         }
-        else if (indexPath.section == 3 && indexPath.row == 0) {
-            
-        }
         
         // COS 333
-        else if (indexPath.section == 3 && indexPath.row == 0) {
+        else if (indexPath.section == 4 && indexPath.row == 0) {
             UIApplication.sharedApplication().openURL(NSURL(string: "https://www.cs.princeton.edu/courses/archive/spring16/cos333/index.html")!)
         }
 
