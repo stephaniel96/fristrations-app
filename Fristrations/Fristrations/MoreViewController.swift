@@ -53,7 +53,7 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
                 self.dillonGymStatus.attributedText = colored_status
             }
             else if (num_devices < 180) {
-                let colored_status = NSMutableAttributedString(string: "Medium Density - Think about going later")
+                let colored_status = NSMutableAttributedString(string: "Medium Density - Go soon!")
                 colored_status.addAttribute(NSForegroundColorAttributeName, value: UIColor.orangeColor(), range: NSRange(location:0,length:14))
                 self.dillonGymStatus.attributedText = colored_status
             }
