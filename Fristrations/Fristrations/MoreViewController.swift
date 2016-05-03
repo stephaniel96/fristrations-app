@@ -9,11 +9,13 @@
 import UIKit
 import Kanna
 import Foundation
+import Firebase
 
 class MoreViewController: UITableViewController,  UIWebViewDelegate{
     
     @IBOutlet weak var signInStatus: UILabel!
     @IBOutlet weak var signInButton: UILabel!
+    @IBOutlet weak var dillonGymStatus: UILabel!
     
     var casV: UIWebView!
     
@@ -40,6 +42,27 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
             signInStatus.text = "Signed in as: \(uName)"
             signInButton.text = "Sign Out"
         }
+        
+        let dillonGym = Firebase(url:("https://fristrations.firebaseio.com/dillon_gym/num_devices"))
+        dillonGym.observeEventType(.Value, withBlock: {
+            snapshot in
+            let num_devices = Int(snapshot.value as! String)
+            if (num_devices < 130) {
+                let colored_status = NSMutableAttributedString(string: "Low Density - Go now!")
+                colored_status.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSRange(location:0,length:11))
+                self.dillonGymStatus.attributedText = colored_status
+            }
+            else if (num_devices < 180) {
+                let colored_status = NSMutableAttributedString(string: "Medium Density - Think about going later")
+                colored_status.addAttribute(NSForegroundColorAttributeName, value: UIColor.orangeColor(), range: NSRange(location:0,length:14))
+                self.dillonGymStatus.attributedText = colored_status
+            }
+            else {
+                let colored_status = NSMutableAttributedString(string: "High Density - Go later!")
+                colored_status.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSRange(location:0,length:12))
+                self.dillonGymStatus.attributedText = colored_status            }
+        })
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,6 +80,15 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
      // Pass the selected object to the new view controller.
      }
      */
+    
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -90,7 +122,7 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
             }
         }
         // Share Fristrations
-        if (indexPath.section == 1 && indexPath.row == 0) {
+        if (indexPath.section == 2 && indexPath.row == 0) {
             let textToShare = "Fristrations is awesome!  Check out this website about it!"
             
             if let myWebsite = NSURL(string: "http://fristrations.xyz/") {
@@ -104,26 +136,26 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
             }
         }
         // Check out our website
-        else if (indexPath.section == 1 && indexPath.row == 1) {
+        else if (indexPath.section == 2 && indexPath.row == 1) {
             UIApplication.sharedApplication().openURL(NSURL(string: "http://fristrations.xyz/")!)
         }
         // Like us on facebook
-        else if (indexPath.section == 1 && indexPath.row == 2) {
+        else if (indexPath.section == 2 && indexPath.row == 2) {
             UIApplication.sharedApplication().openURL(NSURL(string: "https://www.facebook.com/1607764632876387")!)
         }
         // Contact Us
-        else if (indexPath.section == 1 && indexPath.row == 3) {
+        else if (indexPath.section == 2 && indexPath.row == 3) {
             // mailto only allows one mail recipient so it's just Chris
             let email = "cjhsu@princeton.edu"
             let url = NSURL(string: "mailto:\(email)")
             UIApplication.sharedApplication().openURL(url!)
         }
-        else if (indexPath.section == 2 && indexPath.row == 0) {
+        else if (indexPath.section == 3 && indexPath.row == 0) {
             
         }
         
         // COS 333
-        else if (indexPath.section == 2 && indexPath.row == 0) {
+        else if (indexPath.section == 3 && indexPath.row == 0) {
             UIApplication.sharedApplication().openURL(NSURL(string: "https://www.cs.princeton.edu/courses/archive/spring16/cos333/index.html")!)
         }
 
