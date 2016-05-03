@@ -93,7 +93,7 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
         if (indexPath.section == 1 && indexPath.row == 0) {
             let textToShare = "Fristrations is awesome!  Check out this website about it!"
             
-            if let myWebsite = NSURL(string: "https://fristrations.xyz/") {
+            if let myWebsite = NSURL(string: "http://fristrations.xyz/") {
                 let objectsToShare = [textToShare, myWebsite]
                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
                 
@@ -105,17 +105,20 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
         }
         // Check out our website
         else if (indexPath.section == 1 && indexPath.row == 1) {
-            UIApplication.sharedApplication().openURL(NSURL(string: "https://fristrations.xyz/")!)
+            UIApplication.sharedApplication().openURL(NSURL(string: "http://fristrations.xyz/")!)
         }
-        // Contact us by email
+        // Like us on facebook
         else if (indexPath.section == 1 && indexPath.row == 2) {
             UIApplication.sharedApplication().openURL(NSURL(string: "https://www.facebook.com/1607764632876387")!)
         }
-        // Share Fristrations
+        // Contact Us
         else if (indexPath.section == 1 && indexPath.row == 3) {
             let email = "kjb3@princeton.edu"
             let url = NSURL(string: "mailto:\(email)")
             UIApplication.sharedApplication().openURL(url!)
+        }
+        else if (indexPath.section == 2 && indexPath.row == 0) {
+            
         }
         
         // COS 333
