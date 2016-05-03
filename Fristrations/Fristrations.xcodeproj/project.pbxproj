@@ -18,6 +18,7 @@
 		9A0F0E0CED0B07E11D7511E6 /* Pods_FristrationsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E2074BD0096D5228F47BF5 /* Pods_FristrationsTests.framework */; };
 		C03DFA2AA0025C2312294815 /* Pods_FristrationsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6688A3CAA796C9279248C3B /* Pods_FristrationsUITests.framework */; };
 		DB0968EA1CC714B0008F5D10 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0968E91CC714B0008F5D10 /* CustomCell.swift */; };
+		DB11046C1CD8273E004448FB /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB11046B1CD8273E004448FB /* UserViewController.swift */; };
 		DB324BD81CAF90A800019734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB324BD71CAF90A800019734 /* AppDelegate.swift */; };
 		DB324BDF1CAF90A800019734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB324BDD1CAF90A800019734 /* Main.storyboard */; };
 		DB324BE11CAF90A800019734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB324BE01CAF90A800019734 /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		C6688A3CAA796C9279248C3B /* Pods_FristrationsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FristrationsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E2074BD0096D5228F47BF5 /* Pods_FristrationsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FristrationsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0968E91CC714B0008F5D10 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		DB11046B1CD8273E004448FB /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		DB324BD71CAF90A800019734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB324BDE1CAF90A800019734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB324BE01CAF90A800019734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				DBA4C3271CAF982000EFCA8F /* DillonViewController.swift */,
 				644A0AD31CBC95CE00846C32 /* RoomInfo.swift */,
 				DB9590041CB0726F00055E61 /* FirstFloor.swift */,
+				DB11046B1CD8273E004448FB /* UserViewController.swift */,
 				DB9590061CB072F000055E61 /* SecondFloor.swift */,
 				DB9590081CB0740A00055E61 /* ThirdFloor.swift */,
 				DB0968E91CC714B0008F5D10 /* CustomCell.swift */,
@@ -541,6 +544,7 @@
 				DB9590091CB0740A00055E61 /* ThirdFloor.swift in Sources */,
 				DBA4C3261CAF97FA00EFCA8F /* AvailableViewController.swift in Sources */,
 				DB0968EA1CC714B0008F5D10 /* CustomCell.swift in Sources */,
+				DB11046C1CD8273E004448FB /* UserViewController.swift in Sources */,
 				DB9590051CB0726F00055E61 /* FirstFloor.swift in Sources */,
 				7709C65A1CD3D9150048D8F5 /* MoreViewController.swift in Sources */,
 				DBA4C3281CAF982000EFCA8F /* DillonViewController.swift in Sources */,
