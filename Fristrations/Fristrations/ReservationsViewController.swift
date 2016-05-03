@@ -120,9 +120,10 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
                     self.formattedReservation.sortInPlace()
                     print(self.formattedReservation)
                     print(self.personalReservation)
-                    self.tableView.reloadData()
                 }
             }
+            self.tableView.reloadData()
+            
         })
         
     }
@@ -153,8 +154,7 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
         let cell = tableView.dequeueReusableCellWithIdentifier("Customcell2", forIndexPath: indexPath) as! ReservedCustomCell
         cell.backgroundColor = UIColor.clearColor()
         cell.roomButton.tag = indexPath.row
-        if (personalReservation.count != 0)
-        {
+    
         let index = personalReservation[indexPath.row].startIndex.advancedBy(8)
         let time = personalReservation[indexPath.row].substringFromIndex(index)
         let displayString = displayRoom[formattedReservation[indexPath.row]]! + "   |   " + displayTime[Int(time)!]!
@@ -164,7 +164,7 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
         cell.roomButton.layer.cornerRadius = 5
         cell.roomButton.layer.borderWidth = 1
         cell.roomButton.layer.borderColor = UIColor.whiteColor().CGColor
-        }
+        
         return cell
     }
     

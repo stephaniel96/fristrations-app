@@ -83,7 +83,7 @@ class FavoritesViewController: UIViewController, UITextFieldDelegate, UITableVie
                     self.tableView.reloadData()
                 }
             }
-            
+            self.tableView.reloadData()
         })
     }
     
