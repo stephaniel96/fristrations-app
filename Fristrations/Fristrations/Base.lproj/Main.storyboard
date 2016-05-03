@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1991,7 +1991,7 @@
                                     <fragment>
                                         <string key="content">Fristrations is the most efficient way to alleviate the search for available study spaces near you.  Synthesizing data daily from the registrar and Frist's wireless internet routers, Fristrations helps you find empty classrooms in Frist easily. You can also book rooms in real time in just a couple clicks, and keep track of your favorite rooms.</string>
                                         <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Avenir-Book"/>
                                         </attributes>
                                     </fragment>
@@ -2183,14 +2183,14 @@
                                     <segue destination="y4G-FT-5hn" kind="embed" id="R77-hy-oNN"/>
                                 </connections>
                             </containerView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znQ-bR-KEz">
-                                <rect key="frame" x="20" y="106" width="560" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znQ-bR-KEz">
+                                <rect key="frame" x="20" y="106" width="560" height="102.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Kxq-V5-HDw"/>
                                     <barButtonItem style="plain" id="G9A-9h-6us">
                                         <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="hZB-cK-jVa">
-                                            <rect key="frame" x="187" y="6.5" width="185" height="31"/>
+                                            <rect key="frame" x="187" y="36" width="185" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <segments>
@@ -2209,11 +2209,20 @@
                                 <color key="tintColor" red="0.98364441140000003" green="1" blue="0.9713885672" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </toolbar>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tby-h2-Tpk">
+                                <rect key="frame" x="9" y="43" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="QLX-gf-WHV"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="znQ-bR-KEz" firstAttribute="trailing" secondItem="9ps-6s-xzI" secondAttribute="trailing" id="3fN-iX-fAw"/>
+                            <constraint firstItem="Tby-h2-Tpk" firstAttribute="width" secondItem="znQ-bR-KEz" secondAttribute="width" id="3tK-dd-0yT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9ps-6s-xzI" secondAttribute="trailing" id="5ts-LL-K3a"/>
+                            <constraint firstItem="Tby-h2-Tpk" firstAttribute="width" secondItem="znQ-bR-KEz" secondAttribute="height" multiplier="60:11" id="Aim-6r-6Bd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yjL-oQ-j4E" secondAttribute="trailing" id="Erw-CZ-uAT"/>
                             <constraint firstItem="9ps-6s-xzI" firstAttribute="top" secondItem="znQ-bR-KEz" secondAttribute="bottom" id="HGl-4M-ddX"/>
                             <constraint firstItem="yjL-oQ-j4E" firstAttribute="leading" secondItem="nxx-Kn-ZF0" secondAttribute="leadingMargin" id="IRr-3J-rUN"/>
@@ -2222,9 +2231,15 @@
                             <constraint firstItem="9ps-6s-xzI" firstAttribute="leading" secondItem="nxx-Kn-ZF0" secondAttribute="leadingMargin" id="h8K-fV-qwx"/>
                             <constraint firstItem="9ps-6s-xzI" firstAttribute="top" secondItem="znQ-bR-KEz" secondAttribute="bottom" id="irf-Gu-i76"/>
                             <constraint firstItem="znQ-bR-KEz" firstAttribute="leading" secondItem="yjL-oQ-j4E" secondAttribute="leading" id="kBd-Wr-2rE"/>
+                            <constraint firstItem="znQ-bR-KEz" firstAttribute="top" secondItem="Tby-h2-Tpk" secondAttribute="bottom" id="mKR-n8-Kwe"/>
                             <constraint firstItem="PiR-tJ-96g" firstAttribute="top" secondItem="9ps-6s-xzI" secondAttribute="bottom" id="nEe-pf-gOu"/>
                             <constraint firstItem="PiR-tJ-96g" firstAttribute="top" secondItem="yjL-oQ-j4E" secondAttribute="bottom" id="yut-Xd-0JP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Aim-6r-6Bd"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="aSs-ag-oeO"/>
                     <connections>
