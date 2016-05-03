@@ -15,7 +15,7 @@ class UserViewController: UIViewController {
     @IBOutlet weak var favoritesView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "My Rooms"
         // Do any additional setup after loading the view.
     }
 

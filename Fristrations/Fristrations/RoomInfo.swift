@@ -9,6 +9,7 @@
 
 import UIKit
 import Firebase
+import Foundation
 
 class RoomInfo: UIViewController{
     var roomNumber:String = ""
@@ -279,8 +280,41 @@ class RoomInfo: UIViewController{
         var xVal: CGFloat = 0
         var yVal: CGFloat = 0
         
+        if (substring2 == "2") {
+            if (substring1 == "205") {
+                floorplan.image = UIImage(named: "fp205");
+            }
+            else if (substring1 == "206") {
+                floorplan.image = UIImage(named: "fp206");
+            }
+            else if (substring1 == "207") {
+                floorplan.image = UIImage(named: "fp207");
+            }
+            else if (substring1 == "208") {
+                floorplan.image = UIImage(named: "fp208");
+            }
+            else if (substring1 == "209") {
+                floorplan.image = UIImage(named: "fp209");
+            }
+            else if (substring1 == "210") {
+                floorplan.image = UIImage(named: "fp210");
+            }
+            else if (substring1 == "212") {
+                floorplan.image = UIImage(named: "fp212");
+            }
+            else if (substring1 == "227") {
+                floorplan.image = UIImage(named: "fp227");
+            }
+            else if (substring1 == "228") {
+                floorplan.image = UIImage(named: "fp228");
+            }
+            else {
+                floorplan.image = UIImage(named: "fp234");
+            }
+        }
+        
         if (substring2 == "1") {
-            floorplan.image = UIImage(named: "floorplan1");
+            floorplan.image = UIImage(named: "fp114");
             arrayOfRouters = ["arun-2824", "arun-2825", "arun-2826", "arun-2827", "arun-2828", "arun-2829", "arun-2830", "arun-2832", "arun-2833", "arun-2834", "arun-2835", "arun-2836", "arun-2837", "arun-2839", "arun-2840", "arun-2841", "arun-2842", "arun-2843", "arun-2844"]
             image1 = UIImage(named: "routers_red");
             self.population_text.textColor = UIColor.redColor()
@@ -453,7 +487,16 @@ class RoomInfo: UIViewController{
         }
 
         else if (substring2 == "3") {
-            floorplan.image = UIImage(named: "floorplan3");
+            if (substring1 == "303") {
+                floorplan.image = UIImage(named: "fp303");
+            }
+            else if (substring1 == "307") {
+                floorplan.image = UIImage(named: "fp307");
+            }
+            else {
+                floorplan.image = UIImage(named: "fp309");
+            }
+            
             arrayOfRouters = ["arun-2871", "arun-2872", "arun-2873", "arun-2874", "arun-2875", "arun-2876", "arun-2877", "arun-2878", "arun-2879", "arun-2880", "arun-2881", "arun-2882", "arun-2883", "arun-2884", "arun-2885", "arun-2886", "arun-2887", "arun-2888", "arun-2889", "arun-2890", "arun-2892", "arun-2893", "arun-2894", "arun-2895", "arun-2896", "arun-2897", "arun-2898", "arun-2899", "arun-2900", "arun-2914"]
             image1 = UIImage(named: "routers_yellow");
             self.population_text.textColor = UIColor(red: 0.835, green: 0.9294, blue: 0.231, alpha: 1)
@@ -1045,10 +1088,15 @@ class RoomInfo: UIViewController{
                 snapshot in
                 
                 self.roomPopulation = snapshot.value as! String
+                let roomInfo = String(ceil(Double(self.roomPopulation)!/2))
+                
+                let indexEndOfText = roomInfo.endIndex.advancedBy(-2)
+                self.roomPopulation = roomInfo.substringToIndex(indexEndOfText)
+
                 self.times = self.room["times"] as! NSDictionary
                 let currentTimeDetails = self.times[self.currentTime] as! String
                 var num_people = String()
-
+                
                 
                 if (self.roomPopulation == "1") {
                     num_people = self.roomPopulation + " person is nearby."
