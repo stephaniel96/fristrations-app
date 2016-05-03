@@ -38,23 +38,9 @@ class FavoritesViewController: UIViewController, UITextFieldDelegate, UITableVie
          "frist303" : "Frist 303",
          "frist307" : "Frist 307",
          "frist309" : "Frist 309"]
-    let revDisplayRoom =
-        ["Frist 114" : "frist114",
-         "Frist 205" : "frist205",
-         "Frist 206" : "frist206",
-         "Frist 207" : "frist207",
-         "Frist 208" : "frist208",
-         "Frist 209" : "frist209",
-         "Frist 210" : "frist210",
-         "Frist 212" : "frist212",
-         "Frist 227" : "frist227",
-         "Frist 228" : "frist228",
-         "Frist 234" : "frist234",
-         "Frist 303" : "frist303",
-         "Frist 307" : "frist307",
-         "Frist 309" : "frist309"]
     
     var favoriteList = [String]()
+    
     
     // Called when the view controller’s content view is created and loaded from a storyboard
     
