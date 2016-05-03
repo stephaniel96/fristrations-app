@@ -21,36 +21,59 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
     var reservations: NSDictionary = [String:String]()
     var userURL:String = "https://fristrations.firebaseio.com/user/" + uName
     let displayRoom =
-        ["frist114" : "Frist 114",
-         "frist205" : "Frist 205",
-         "frist206" : "Frist 206",
-         "frist207" : "Frist 207",
-         "frist208" : "Frist 208",
-         "frist209" : "Frist 209",
-         "frist210" : "Frist 210",
-         "frist212" : "Frist 212",
-         "frist227" : "Frist 227",
-         "frist228" : "Frist 228",
-         "frist234" : "Frist 234",
-         "frist303" : "Frist 303",
-         "frist307" : "Frist 307",
-         "frist309" : "Frist 309"]
-    let revDisplayRoom =
-        ["Frist 114" : "frist114",
-         "Frist 205" : "frist205",
-         "Frist 206" : "frist206",
-         "Frist 207" : "frist207",
-         "Frist 208" : "frist208",
-         "Frist 209" : "frist209",
-         "Frist 210" : "frist210",
-         "Frist 212" : "frist212",
-         "Frist 227" : "frist227",
-         "Frist 228" : "frist228",
-         "Frist 234" : "frist234",
-         "Frist 303" : "frist303",
-         "Frist 307" : "frist307",
-         "Frist 309" : "frist309"]
+        ["frist114" : "114",
+         "frist205" : "205",
+         "frist206" : "206",
+         "frist207" : "207",
+         "frist208" : "208",
+         "frist209" : "209",
+         "frist210" : "210",
+         "frist212" : "212",
+         "frist227" : "227",
+         "frist228" : "228",
+         "frist234" : "234",
+         "frist303" : "303",
+         "frist307" : "307",
+         "frist309" : "309"]
     
+    let displayTime =
+        [800: "8:00 - 8:30AM",
+         830: "8:30 - 9:00AM",
+         900: "9:00 - 9:30AM",
+         930: "9:30 - 10:00AM",
+         1000: "10:00 - 10:30AM",
+         1030: "10:30 - 11:00AM",
+         1100: "11:00 - 11:30AM",
+         1130: "11:30 - 12:00AM",
+         1200: "12:00 - 12:30PM",
+         1230: "12:30 - 1:00PM",
+         1300: "1:00 - 1:30PM",
+         1330: "1:30 - 2:00PM",
+         1400: "2:00 - 2:30PM",
+         1430: "2:30 - 3:00PM",
+         1500: "3:00 - 3:30PM",
+         1530: "3:30 - 4:00PM",
+         1600: "4:00 - 4:30PM",
+         1630: "4:30 - 5:00PM",
+         1700: "5:00 - 5:30PM",
+         1730: "5:30 - 6:00PM",
+         1800: "6:00 - 6:30PM",
+         1830: "6:30 - 7:00PM",
+         1900: "7:00 - 7:30PM",
+         1930: "7:30 - 8:00PM",
+         2000: "8:00 - 8:30PM",
+         2030: "8:30 - 9:00PM",
+         2100: "9:00 - 9:30PM",
+         2130: "9:30 - 10:00PM",
+         2200: "10:00 - 10:30PM",
+         2230: "10:30 - 11:00PM",
+         2300: "11:00 - 11:30PM",
+         2330: "11:30 - 12:00AM",
+         2400: "12:00 - 12:30AM",
+         2430: "12:30 - 1:00AM",
+         2500: "1:00 - 1:30AM",
+         2530: "1:30 - 2:00AM"]
+
     var personalReservation = [String]()
     var formattedReservation = [String]()
     
@@ -98,6 +121,16 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
         
     }
     
+//    func getFormattedTime(reservation: String) -> String {
+//        let index = reservation.startIndex.advancedBy(8)
+//        let room = reservation.substringToIndex(index)
+//        let time = reservation.substringFromIndex(index)
+////        let index2 = time.endIndex.advancedBy(-2)
+////        let minutes1 = time.substringFromIndex(index2)
+////        let hour1 = time.substringToIndex(index2)
+//        
+//        let displayString = displayRoom[room] + " " + displayTime[time]
+//    }
     
     
     override func didReceiveMemoryWarning() {
@@ -123,10 +156,10 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
         let cell = tableView.dequeueReusableCellWithIdentifier("Customcell2", forIndexPath: indexPath) as! ReservedCustomCell
         cell.backgroundColor = UIColor.clearColor()
         cell.roomButton.tag = indexPath.row
+        
         let index = personalReservation[indexPath.row].startIndex.advancedBy(8)
-        let substring = personalReservation[indexPath.row].substringFromIndex(index)
-        print(substring)
-        let displayString = displayRoom[formattedReservation[indexPath.row]]! + " at " + substring
+        let time = personalReservation[indexPath.row].substringFromIndex(index)
+        let displayString = displayRoom[formattedReservation[indexPath.row]]! + "   |   " + displayTime[Int(time)!]!
         cell.roomButton.setTitle(displayString, forState: .Normal)
         cell.roomButton.addTarget(self, action: #selector(AvailableViewController.roomButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         cell.roomButton.backgroundColor = UIColor.clearColor()
