@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -2175,12 +2175,15 @@
                                 <items>
                                     <barButtonItem style="plain" id="G9A-9h-6us">
                                         <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="hZB-cK-jVa">
-                                            <rect key="frame" x="20" y="8" width="121" height="29"/>
+                                            <rect key="frame" x="20" y="7" width="185" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
-                                                <segment title="First"/>
-                                                <segment title="Second"/>
+                                                <segment title="Favorites"/>
+                                                <segment title="Reservations"/>
                                             </segments>
+                                            <connections>
+                                                <action selector="switchViews:" destination="a2t-S1-FTr" eventType="valueChanged" id="eDF-mk-h5E"/>
+                                            </connections>
                                         </segmentedControl>
                                     </barButtonItem>
                                 </items>
@@ -2211,15 +2214,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aSs-ag-oeO"/>
+                    <connections>
+                        <outlet property="favoritesView" destination="yjL-oQ-j4E" id="kSt-Cs-bhN"/>
+                        <outlet property="reservationsView" destination="9ps-6s-xzI" id="UHX-df-hkR"/>
+                        <outlet property="segmentedControl" destination="hZB-cK-jVa" id="Qdj-1E-zxY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3k-F4-HuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1558" y="1623"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorites-->
         <scene sceneID="KvR-Xd-Mag">
             <objects>
-                <viewController id="y4G-FT-5hn" sceneMemberID="viewController">
+                <viewController title="Favorites" id="y4G-FT-5hn" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MOu-RA-fj3"/>
                         <viewControllerLayoutGuide type="bottom" id="uyN-eK-Wgs"/>
@@ -2227,17 +2235,25 @@
                     <view key="view" contentMode="scaleToFill" id="M8w-tr-R7I">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="443"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTF-hG-SMp">
+                                <rect key="frame" x="264" y="135" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRq-vF-Tf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2311" y="1817"/>
+            <point key="canvasLocation" x="2311" y="1816.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Reservations-->
         <scene sceneID="RVL-X1-hnU">
             <objects>
-                <viewController id="SnL-yW-ZCd" sceneMemberID="viewController">
+                <viewController title="Reservations" id="SnL-yW-ZCd" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EuK-wD-Dvm"/>
                         <viewControllerLayoutGuide type="bottom" id="CdP-60-yne"/>
@@ -2245,6 +2261,14 @@
                     <view key="view" contentMode="scaleToFill" id="1wE-Md-qAI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="443"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reservations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45N-Gn-fie">
+                                <rect key="frame" x="139" y="174" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>

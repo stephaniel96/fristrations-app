@@ -10,12 +10,31 @@ import UIKit
 
 class UserViewController: UIViewController {
 
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var reservationsView: UIView!
+    @IBOutlet weak var favoritesView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    
+    @IBAction func switchViews(sender: AnyObject) {
+        if sender.selectedSegmentIndex == 0 {
+            UIView.animateWithDuration(0.5, animations: {
+                self.reservationsView.alpha = 1
+                self.favoritesView.alpha = 0
+            })
+        } else {
+            UIView.animateWithDuration(0.5, animations: {
+                self.reservationsView.alpha = 0
+                self.favoritesView.alpha = 1
+            })
+        }
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
