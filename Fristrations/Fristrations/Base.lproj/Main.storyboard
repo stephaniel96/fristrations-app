@@ -2227,7 +2227,7 @@
         <!--Favorites-->
         <scene sceneID="KvR-Xd-Mag">
             <objects>
-                <viewController title="Favorites" id="y4G-FT-5hn" sceneMemberID="viewController">
+                <viewController title="Favorites" id="y4G-FT-5hn" customClass="FavoritesViewController" customModule="Fristrations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MOu-RA-fj3"/>
                         <viewControllerLayoutGuide type="bottom" id="uyN-eK-Wgs"/>
@@ -2253,7 +2253,7 @@
         <!--Reservations-->
         <scene sceneID="RVL-X1-hnU">
             <objects>
-                <viewController title="Reservations" id="SnL-yW-ZCd" sceneMemberID="viewController">
+                <viewController title="Reservations" id="SnL-yW-ZCd" customClass="ReservationsViewController" customModule="Fristrations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EuK-wD-Dvm"/>
                         <viewControllerLayoutGuide type="bottom" id="CdP-60-yne"/>
