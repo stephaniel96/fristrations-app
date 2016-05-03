@@ -15,9 +15,12 @@ class RoomInfo: UIViewController{
     var roomPopulation:String = ""
     var room: NSDictionary = [String:String]()
     var roomURL:String = "https://fristrations.firebaseio.com/rooms/"
+    var userURL:String = "https://fristrations.firebaseio.com/user/" + uName + "/"
     var times: NSDictionary = [String:String]()
     var roomRef: Firebase!
     var currentTime:String!
+    var roomsReserved:Int!
+    var favoriteImage:String!
     let displayTime =
         [800: "8:00 - 8:30AM",
          830: "8:30 - 9:00AM",
@@ -127,12 +130,37 @@ class RoomInfo: UIViewController{
             currentTime = "2530"
         }
     }
+    
+    func favoritePressed(sender: UIButton) {
+        
+        
+        
+        if (self.favoriteImage == "unfavorite") {
+            let favRef = Firebase(url: userURL + "favorites" + "/")
+            favRef.childByAppendingPath(self.roomNumber).setValue("yes")
+            self.favoriteImage = "favorite"
+        }
+        else {
+            let favRef = Firebase(url: userURL + "favorites/" + roomNumber)
+            favRef.removeValue()
+            self.favoriteImage = "unfavorite"
+        }
+        
+        sender.setImage(UIImage(named: self.favoriteImage), forState: .Normal)
+        sender.frame = CGRectMake(0, 0, 30, 30)
+        let rightBarButton = UIBarButtonItem()
+        rightBarButton.customView = sender
+        self.navigationItem.rightBarButtonItem = rightBarButton
+
+    }
     override func viewDidLoad() {
         roomRef = Firebase(url:(roomURL + roomNumber))
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor(red: 0.32, green: 0.473, blue: 0.643, alpha: 1)
         
         super.viewDidLoad()
+    
+        
         button80am.tag = 800
         button83am.tag = 830
         button90am.tag = 900
@@ -247,10 +275,163 @@ class RoomInfo: UIViewController{
                 let radius: Int! = Int(self.roomPopulation)
                 let CGradius = CGFloat(3*radius)
                 
-                
-                if (router == "arun-2845") {
+                if (router == "arun-2824") {
                     xVal = frm.origin.x+8-(CGradius/2)
-                    yVal = frm.origin.y+94*ratio-(CGradius/2)
+                    yVal = frm.origin.y+91-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2825") {
+                    xVal = frm.origin.x+18-(CGradius/2)
+                    yVal = frm.origin.y+51-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2826") {
+                    xVal = frm.origin.x+13-(CGradius/2)
+                    yVal = frm.origin.y-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2827") {
+                    xVal = frm.origin.x+33-(CGradius/2)
+                    yVal = frm.origin.y-47-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+
+                else if (router == "arun-2828") {
+                    xVal = frm.origin.x+44-(CGradius/2)
+                    yVal = frm.origin.y+77-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2829") {
+                    xVal = frm.origin.x+50-(CGradius/2)
+                    yVal = frm.origin.y+11-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2830") {
+                    xVal = frm.origin.x+92-(CGradius/2)
+                    yVal = frm.origin.y+114-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                
+                else if (router == "arun-2832") {
+                    xVal = frm.origin.x+92-(CGradius/2)
+                    yVal = frm.origin.y+26-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2833") {
+                    xVal = frm.origin.x+92-(CGradius/2)
+                    yVal = frm.origin.y-32-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2834") {
+                    xVal = frm.origin.x+137-(CGradius/2)
+                    yVal = frm.origin.y+114-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2835") {
+                    xVal = frm.origin.x+137-(CGradius/2)
+                    yVal = frm.origin.y+29-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2836") {
+                    xVal = frm.origin.x+137-(CGradius/2)
+                    yVal = frm.origin.y-32-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2837") {
+                    xVal = frm.origin.x+182-(CGradius/2)
+                    yVal = frm.origin.y+114-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2839") {
+                    xVal = frm.origin.x+203-(CGradius/2)
+                    yVal = frm.origin.y+4-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2840") {
+                    xVal = frm.origin.x+182-(CGradius/2)
+                    yVal = frm.origin.y-32-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2841") {
+                    xVal = frm.origin.x+223-(CGradius/2)
+                    yVal = frm.origin.y+74-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2842") {
+                    xVal = frm.origin.x+228-(CGradius/2)
+                    yVal = frm.origin.y-44-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2843") {
+                    xVal = frm.origin.x+267-(CGradius/2)
+                    yVal = frm.origin.y+93-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+                    
+                else if (router == "arun-2844") {
+                    xVal = frm.origin.x+267-(CGradius/2)
+                    yVal = frm.origin.y+19-(CGradius/2)
+                    let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
+                    imageView1.image = image1;
+                    self.floorplan.addSubview(imageView1);
+                }
+
+
+                
+                else if (router == "arun-2845") {
+                    xVal = frm.origin.x+8-(CGradius/2)
+                    yVal = frm.origin.y+94-(CGradius/2)
                     let imageView1 = UIImageView(frame: CGRectMake(xVal*ratio, yVal*ratio, CGradius*ratio, CGradius*ratio)); // set as you want
                     imageView1.image = image1;
                     self.floorplan.addSubview(imageView1);
@@ -459,6 +640,28 @@ class RoomInfo: UIViewController{
                 
             })
         }
+        
+        let favRef = Firebase(url: userURL + "favorites" + "/" + roomNumber)
+        favRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            if (snapshot.exists()) {
+                self.favoriteImage = "favorite"
+            }
+            else {
+                self.favoriteImage = "unfavorite"
+            }
+            let btnName = UIButton()
+            btnName.setImage(UIImage(named: self.favoriteImage), forState: .Normal)
+            btnName.frame = CGRectMake(0, 0, 30, 30)
+            btnName.addTarget(self, action: #selector(RoomInfo.favoritePressed(_:)), forControlEvents: .TouchUpInside)
+            
+            //.... Set Right/Left Bar Button item
+            let rightBarButton = UIBarButtonItem()
+            rightBarButton.customView = btnName
+            self.navigationItem.rightBarButtonItem = rightBarButton
+
+        })
+
+    
 
         
     }
@@ -481,13 +684,23 @@ class RoomInfo: UIViewController{
                 if (sender == timeButton && (Int(timeButton.tag) >= Int(self.currentTime))) {
                     let timeDetails = self.times[String(timeButton.tag)] as! String
                     var setTime = [String:String]()
-                    if (timeDetails == "n/a" && numberOfRoomsBooked < 4) {
-                        setTime = [String(timeButton.tag):uName]
-                        numberOfRoomsBooked = numberOfRoomsBooked + 1
+                    if (timeDetails == "n/a") {
+                        let userRef = Firebase(url: userURL + "reservations/")
+                        userRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+                            self.roomsReserved = Int(snapshot.childrenCount)
+                            print(self.roomsReserved)
+                            if (self.roomsReserved < 4) {
+                                userRef.childByAppendingPath(self.roomNumber + String(timeButton.tag)).setValue("yes")
+                                setTime = [String(timeButton.tag):uName]
+                                let single = self.roomRef.childByAppendingPath("times")
+                                single.updateChildValues(setTime)
+                            }
+                        })
                     }
                     else if (timeDetails == uName){
+                        let userRef = Firebase(url: userURL + "reservations/" + roomNumber + String(timeButton.tag))
+                        userRef.removeValue()
                         setTime = [String(timeButton.tag):"n/a"]
-                        numberOfRoomsBooked = numberOfRoomsBooked - 1
                     }
                     let single = roomRef.childByAppendingPath("times")
                     single.updateChildValues(setTime)
