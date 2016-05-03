@@ -2246,13 +2246,22 @@
                                 <rect key="frame" x="20" y="139" width="560" height="304"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9da-yj-EQj" customClass="CustomCell" customModule="Fristrations" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Customcell3" id="9da-yj-EQj" customClass="FavoritesCustomCell" customModule="Fristrations" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9da-yj-EQj" id="qoK-r2-y8C">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hag-5y-tY9">
+                                                    <rect key="frame" x="243" y="0.0" width="46" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="roomButton" destination="Hag-5y-tY9" id="y02-YX-F94"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -2268,6 +2277,9 @@
                             <constraint firstItem="IRz-Td-gx6" firstAttribute="top" secondItem="aTF-hG-SMp" secondAttribute="bottom" constant="88" id="vh1-wO-LIn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="IRz-Td-gx6" id="zIU-2k-wdy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRq-vF-Tf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
