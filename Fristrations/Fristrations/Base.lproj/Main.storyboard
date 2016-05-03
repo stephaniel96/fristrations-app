@@ -2178,8 +2178,8 @@
                                             <rect key="frame" x="20" y="7" width="185" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
-                                                <segment title=""/>
-                                                <segment title=""/>
+                                                <segment title="Favorites"/>
+                                                <segment title="Reservations"/>
                                             </segments>
                                             <connections>
                                                 <action selector="switchViews:" destination="a2t-S1-FTr" eventType="valueChanged" id="eDF-mk-h5E"/>
