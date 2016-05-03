@@ -23,13 +23,13 @@ class UserViewController: UIViewController {
     @IBAction func switchViews(sender: AnyObject) {
         if sender.selectedSegmentIndex == 0 {
             UIView.animateWithDuration(0.5, animations: {
-                self.reservationsView.alpha = 1
-                self.favoritesView.alpha = 0
+                self.favoritesView.alpha = 1
+                self.reservationsView.alpha = 0
             })
         } else {
             UIView.animateWithDuration(0.5, animations: {
-                self.reservationsView.alpha = 0
-                self.favoritesView.alpha = 1
+                self.favoritesView.alpha = 0
+                self.reservationsView.alpha = 1
             })
         }
     }
