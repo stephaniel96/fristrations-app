@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -2285,11 +2285,12 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="IRz-Td-gx6" id="zIU-2k-wdy"/>
+                        <segue destination="6Qs-yb-i1G" kind="show" identifier="goToRoomData" id="5wr-uG-TEW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRq-vF-Tf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2311" y="1816.5"/>
+            <point key="canvasLocation" x="2667" y="1850.5"/>
         </scene>
         <!--Reservations-->
         <scene sceneID="RVL-X1-hnU">
@@ -2370,7 +2371,7 @@
         <image name="icon_search" width="26" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FTM-Fi-AT0"/>
+        <segue reference="5wr-uG-TEW"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.25098039220000001" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>
