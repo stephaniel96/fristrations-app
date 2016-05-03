@@ -99,6 +99,7 @@ class RoomInfo: UIViewController{
 //    @IBOutlet weak var router208: UIImageView!
     @IBOutlet var buttonPressed: [UIButton]!
   
+    @IBOutlet weak var population_text: UITextField!
     @IBOutlet weak var floorplan: UIImageView!
     @IBOutlet weak var roomText: UILabel!
     
@@ -275,12 +276,15 @@ class RoomInfo: UIViewController{
             floorplan.image = UIImage(named: "floorplan1");
             arrayOfRouters = ["arun-2824", "arun-2825", "arun-2826", "arun-2827", "arun-2828", "arun-2829", "arun-2830", "arun-2832", "arun-2833", "arun-2834", "arun-2835", "arun-2836", "arun-2837", "arun-2839", "arun-2840", "arun-2841", "arun-2842", "arun-2843", "arun-2844"]
             image1 = UIImage(named: "routers_red");
+            self.population_text.textColor = UIColor.redColor()
         }
 
         else if (substring2 == "3") {
             floorplan.image = UIImage(named: "floorplan3");
             arrayOfRouters = ["arun-2871", "arun-2872", "arun-2873", "arun-2874", "arun-2875", "arun-2876", "arun-2877", "arun-2878", "arun-2879", "arun-2880", "arun-2881", "arun-2882", "arun-2883", "arun-2884", "arun-2885", "arun-2886", "arun-2887", "arun-2888", "arun-2889", "arun-2890", "arun-2892", "arun-2893", "arun-2894", "arun-2895", "arun-2896", "arun-2897", "arun-2898", "arun-2899", "arun-2900", "arun-2914"]
             image1 = UIImage(named: "routers_yellow");
+            self.population_text.textColor = UIColor(red: 0.835, green: 0.9294, blue: 0.231, alpha: 1)
+
         }
         var xVal: CGFloat = 0
         var yVal: CGFloat = 0
