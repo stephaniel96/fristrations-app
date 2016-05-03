@@ -126,7 +126,7 @@ class AvailableViewController: UIViewController, UITextFieldDelegate, UITableVie
         self.availableRooms.removeAll()
         for roomNumber in rooms {
             roomRef = Firebase(url:(roomURL + roomNumber))
-            
+            self.availableRooms.removeAll()
             roomRef.observeEventType(.Value, withBlock: {
                 snapshot in
                 
