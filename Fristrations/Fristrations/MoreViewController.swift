@@ -31,17 +31,6 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
     
     
     override func viewWillAppear(animated: Bool) {
-        if (uName == "n/a") {
-            signInStatus.text = "No User Signed In"
-            signInButton.text = "Sign In"
-        }
-        else {
-            if (casV != nil) {
-                casV.removeFromSuperview()
-            }
-            signInStatus.text = "Signed in as: \(uName)"
-            signInButton.text = "Sign Out"
-        }
         
         let dillonGym = Firebase(url:("https://fristrations.firebaseio.com/dillon_gym/num_devices"))
         dillonGym.observeEventType(.Value, withBlock: {
@@ -60,9 +49,27 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
             else {
                 let colored_status = NSMutableAttributedString(string: "High Density - Go later!")
                 colored_status.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSRange(location:0,length:12))
-                self.dillonGymStatus.attributedText = colored_status            }
+                self.dillonGymStatus.attributedText = colored_status
+            }
+            
+            if (uName == "n/a") {
+                self.dillonGymStatus.text = "Log in to view."
+            }
         })
         
+        if (uName == "n/a") {
+            signInStatus.text = "No User Signed In"
+            signInButton.text = "Sign In"
+            dillonGymStatus.text = "Log in to view."
+        }
+        else {
+            if (casV != nil) {
+                casV.removeFromSuperview()
+            }
+            signInStatus.text = "Signed in as: \(uName)"
+            signInButton.text = "Sign Out"
+        }
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -116,6 +123,7 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
                     self.casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://fed.princeton.edu/cas/logout")!))
                     self.casV.delegate = self;
                     self.signInStatus.text = "Not Signed In"
+                    self.dillonGymStatus.text = "Log in to view."
                     uName = "n/a"
                 }))
                 self.presentViewController(alertController, animated: true, completion: nil)
