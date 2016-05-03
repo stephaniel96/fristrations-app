@@ -972,7 +972,7 @@ class RoomInfo: UIViewController{
                             self.roomsReserved = Int(snapshot.childrenCount)
                             print(self.roomsReserved)
                             if (self.roomsReserved < 4) {
-                                userRef.childByAppendingPath(self.roomNumber + String(timeButton.tag)).setValue("yes")
+                                userRef.childByAppendingPath(self.roomNumber + String(timeButton.tag)).setValue(self.roomNumber)
                                 setTime = [String(timeButton.tag):uName]
                                 let single = self.roomRef.childByAppendingPath("times")
                                 single.updateChildValues(setTime)
