@@ -22,7 +22,7 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.title = "Settings"
+        self.title = "More"
         // Fristrations color in RGB percentages
         self.view.backgroundColor = UIColor(red: 0.91, green: 0.913, blue: 0.943, alpha: 1)
     }
@@ -113,7 +113,8 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
         }
         // Contact Us
         else if (indexPath.section == 1 && indexPath.row == 3) {
-            let email = "kjb3@princeton.edu"
+            // mailto only allows one mail recipient so it's just Chris
+            let email = "cjhsu@princeton.edu"
             let url = NSURL(string: "mailto:\(email)")
             UIApplication.sharedApplication().openURL(url!)
         }

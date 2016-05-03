@@ -51,7 +51,8 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
          "Frist 307" : "frist307",
          "Frist 309" : "frist309"]
     
-    var availableRooms = [String]()
+    var personalReservation = [String]()
+    var formattedReservation = [String]()
     
     // Called when the view controller’s content view is created and loaded from a storyboard
     
@@ -77,7 +78,7 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
     }
     
     func getDataSource() {
-        self.availableRooms.removeAll()
+        self.personalReservation.removeAll()
         
         
         var userRef = Firebase(url: (userURL + "/reservations"))
@@ -88,12 +89,11 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
             if (snapshot.exists()) {
                 self.reservations = snapshot.value as! NSDictionary
                 for eachReservation in self.reservations {
-                    self.availableRooms.append((eachReservation.key) as! String)
+                    self.personalReservation.append((eachReservation.key) as! String)
+                    self.formattedReservation.append((eachReservation.value) as! String)
                     self.tableView.reloadData()
                 }
             }
-            
-            
         })
         
     }
@@ -106,24 +106,28 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return availableRooms.count
+        return personalReservation.count
     }
     
     func roomButtonPressed(sender: UIButton) {
-            self.performSegueWithIdentifier("goToRoomData", sender: sender)
+        self.performSegueWithIdentifier("goToRoomData", sender: sender)
         
     }
     
     override func prepareForSegue(segue:UIStoryboardSegue, sender: AnyObject!) {
         let vc = segue.destinationViewController as! RoomInfo
-        vc.roomNumber = revDisplayRoom[availableRooms[sender.tag]]!
+        vc.roomNumber = formattedReservation[sender.tag]
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Customcell2", forIndexPath: indexPath) as! ReservedCustomCell
         cell.backgroundColor = UIColor.clearColor()
         cell.roomButton.tag = indexPath.row
-        cell.roomButton.setTitle(availableRooms[indexPath.row], forState: .Normal)
+        let index = personalReservation[indexPath.row].startIndex.advancedBy(8)
+        let substring = personalReservation[indexPath.row].substringFromIndex(index)
+        print(substring)
+        let displayString = displayRoom[formattedReservation[indexPath.row]]! + " at " + substring
+        cell.roomButton.setTitle(displayString, forState: .Normal)
         cell.roomButton.addTarget(self, action: #selector(AvailableViewController.roomButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         cell.roomButton.backgroundColor = UIColor.clearColor()
         cell.roomButton.layer.cornerRadius = 5
@@ -131,6 +135,7 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
         cell.roomButton.layer.borderColor = UIColor.whiteColor().CGColor
         return cell
     }
+    
     
 
     
