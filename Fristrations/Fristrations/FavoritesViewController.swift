@@ -117,14 +117,14 @@ class FavoritesViewController: UIViewController, UITextFieldDelegate, UITableVie
     
     override func prepareForSegue(segue:UIStoryboardSegue, sender: AnyObject!) {
         let vc = segue.destinationViewController as! RoomInfo
-        vc.roomNumber = revDisplayRoom[favoriteList[sender.tag]]!
+        vc.roomNumber = favoriteList[sender.tag]
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Customcell3", forIndexPath: indexPath) as! FavoritesCustomCell
         cell.backgroundColor = UIColor.clearColor()
         cell.roomButton.tag = indexPath.row
-        cell.roomButton.setTitle(favoriteList[indexPath.row], forState: .Normal)
+        cell.roomButton.setTitle(displayRoom[favoriteList[indexPath.row]], forState: .Normal)
         cell.roomButton.addTarget(self, action: #selector(AvailableViewController.roomButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         cell.roomButton.backgroundColor = UIColor.clearColor()
         cell.roomButton.layer.cornerRadius = 5
