@@ -2295,7 +2295,7 @@
                                 <rect key="frame" x="20" y="65" width="560" height="378"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Customcell2" id="NOD-Tu-h2W" customClass="CustomCell" customModule="Fristrations" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Customcell2" id="NOD-Tu-h2W" customClass="ReservedCustomCell" customModule="Fristrations" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NOD-Tu-h2W" id="e14-Cp-G28">
@@ -2309,7 +2309,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="reservedButton" destination="eDf-aa-kTD" id="Wdn-7L-Wz8"/>
+                                            <outlet property="roomButton" destination="eDf-aa-kTD" id="k0E-47-L8t"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

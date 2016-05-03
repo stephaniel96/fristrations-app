@@ -80,7 +80,7 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
         self.availableRooms.removeAll()
         
         
-        var userRef = Firebase(url: (userURL + uName + "/reservations"))
+        var userRef = Firebase(url: (userURL + "/reservations"))
         
         userRef.observeEventType(.Value, withBlock: {
             snapshot in
@@ -88,7 +88,7 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
             if (snapshot.exists()) {
                 self.reservations = snapshot.value as! NSDictionary
                 for eachReservation in self.reservations {
-                    self.availableRooms.append((eachReservation.value) as! String)
+                    self.availableRooms.append((eachReservation.key) as! String)
                     self.tableView.reloadData()
                 }
             }
@@ -109,28 +109,9 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
         return availableRooms.count
     }
     
-    func loginWarning() {
-        let alertController = UIAlertController(title: "Sign In", message:
-            "You must have an active Princeton University netID to use Fristrations.", preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-        alertController.addAction(UIAlertAction(title: "Sign In Now", style: UIAlertActionStyle.Default,handler: {action in
-            self.casV = UIWebView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
-            self.casV.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.cs.princeton.edu/~cjhsu/fristrations/CASlogin.php")!))
-            self.casV.delegate = self;
-            self.casV.layer.zPosition = 1
-            self.view.addSubview(self.casV)
-        }))
-        self.presentViewController(alertController, animated: true, completion: nil)
-    }
-    
-    
     func roomButtonPressed(sender: UIButton) {
-        if (uName == "n/a") {
-            loginWarning()
-        }
-        else {
             self.performSegueWithIdentifier("goToRoomData", sender: sender)
-        }
+        
     }
     
     override func prepareForSegue(segue:UIStoryboardSegue, sender: AnyObject!) {
@@ -139,7 +120,7 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Customcell2", forIndexPath: indexPath) as! CustomCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Customcell2", forIndexPath: indexPath) as! ReservedCustomCell
         cell.backgroundColor = UIColor.clearColor()
         cell.roomButton.tag = indexPath.row
         cell.roomButton.setTitle(availableRooms[indexPath.row], forState: .Normal)
@@ -151,56 +132,6 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
         return cell
     }
     
-    
-    func deleteAnimationComplete(value: Bool)
-    {
-        if (value && casV != nil)
-        {
-            casV.removeFromSuperview()
-            casV = nil
-        }
-        
-    }
-    
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
-        print("Webview fail with error \(error)");
-    }
-    
-    
-    func webViewDidStartLoad(webView: UIWebView) {
-        print("Webview started Loading")
-    }
-    
-    
-    func webViewDidFinishLoad(webView: UIWebView) {
-        let docPage = webView.stringByEvaluatingJavaScriptFromString("document.documentElement.outerHTML")!
-        
-        if let doc = Kanna.HTML(html: docPage, encoding: NSUTF8StringEncoding) {
-            // Search for nodes by CSS
-            let bods = doc.css("body")
-            let bod = bods[0].text
-            if (bod!.characters.count < 100) {
-                let netID = bod!.stringByTrimmingCharactersInSet(
-                    NSCharacterSet.whitespaceAndNewlineCharacterSet()
-                )
-                print("login successful!")
-                uName = netID
-                UIView.animateWithDuration(0.5, animations: {self.casV!.alpha = 0}, completion: deleteAnimationComplete)
-                NSUserDefaults.standardUserDefaults().setObject(netID, forKey: "netid")
-            }
-        }
-        
-    }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+
     
 }
