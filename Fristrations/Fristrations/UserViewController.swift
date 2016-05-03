@@ -10,6 +10,7 @@ import UIKit
 
 class UserViewController: UIViewController {
 
+    @IBOutlet weak var seg_ctrler: UIToolbar!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var reservationsView: UIView!
     @IBOutlet weak var favoritesView: UIView!
