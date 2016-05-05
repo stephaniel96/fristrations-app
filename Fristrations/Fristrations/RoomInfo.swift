@@ -22,6 +22,7 @@ class RoomInfo: UIViewController{
     var currentTime:String!
     var roomsReserved:Int!
     var favoriteImage:String!
+    var btnName:UIButton!
     let displayTime =
         [800: "8:00 - 8:30AM",
          830: "8:30 - 9:00AM",
@@ -250,14 +251,14 @@ class RoomInfo: UIViewController{
             else {
                 self.favoriteImage = "unfavorite"
             }
-            let btnName = UIButton()
-            btnName.setImage(UIImage(named: self.favoriteImage), forState: .Normal)
-            btnName.frame = CGRectMake(0, 0, 30, 30)
-            btnName.addTarget(self, action: #selector(RoomInfo.favoritePressed(_:)), forControlEvents: .TouchUpInside)
+            self.btnName = UIButton()
+            self.btnName.setImage(UIImage(named: self.favoriteImage), forState: .Normal)
+            self.btnName.frame = CGRectMake(0, 0, 30, 30)
+            self.btnName.addTarget(self, action: #selector(RoomInfo.favoritePressed(_:)), forControlEvents: .TouchUpInside)
             
             //.... Set Right/Left Bar Button item
             let rightBarButton = UIBarButtonItem()
-            rightBarButton.customView = btnName
+            rightBarButton.customView = self.btnName
             self.navigationItem.rightBarButtonItem = rightBarButton
             
         })
@@ -1119,6 +1120,15 @@ class RoomInfo: UIViewController{
             
             
         })
+        
+        if (self.btnName != nil){
+            if (uName == "n/a") {
+                self.btnName.hidden = true
+            }
+            else {
+                self.btnName.hidden = false
+            }
+        }
         
         
 //        let thisRoom = Firebase(url:(roomURL + roomNumber))
