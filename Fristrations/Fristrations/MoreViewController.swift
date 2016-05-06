@@ -152,7 +152,7 @@ class MoreViewController: UITableViewController,  UIWebViewDelegate{
             UIApplication.sharedApplication().openURL(NSURL(string: "https://www.facebook.com/1607764632876387")!)
         }
         // Contact Us
-        else if (indexPath.section == 3 && indexPath.row == 3) {
+        else if (indexPath.section == 3 && indexPath.row == 4) {
             // mailto only allows one mail recipient so it's just Chris
             let email = "cjhsu@princeton.edu"
             let url = NSURL(string: "mailto:\(email)")
