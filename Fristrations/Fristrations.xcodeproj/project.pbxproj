@@ -317,7 +317,7 @@
 				TargetAttributes = {
 					DB324BD31CAF90A800019734 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 4KYMQN88YM;
+						DevelopmentTeam = WL3X773E7Y;
 					};
 					DB324BE91CAF90A800019734 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -723,7 +723,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = Princeton.COS333.Fristrations;
+				PRODUCT_BUNDLE_IDENTIFIER = Princeton.COS333.Fristration1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Fristrations/Fristrations-Bridging-Header.h";
@@ -749,7 +749,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = Princeton.COS333.Fristrations;
+				PRODUCT_BUNDLE_IDENTIFIER = Princeton.COS333.Fristration1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Fristrations/Fristrations-Bridging-Header.h";
