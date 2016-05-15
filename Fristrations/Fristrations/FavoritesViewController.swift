@@ -22,7 +22,7 @@ class FavoritesViewController: UIViewController, UITextFieldDelegate, UITableVie
     var currentTime:String!
     var user: NSDictionary = [String:String]()
     var favorites: NSDictionary = [String:String]()
-    var userURL:String = "https://fristrations.firebaseio.com/user/" + uName
+    var userURL:String = "https://fristrations.firebaseio.com/user/"
     let displayRoom =
         ["frist114" : "114",
          "frist205" : "205",
@@ -59,7 +59,6 @@ class FavoritesViewController: UIViewController, UITextFieldDelegate, UITableVie
             casV.removeFromSuperview()
         }
         
-        
     }
     override func viewDidAppear(animated: Bool) {
         getDataSource()
@@ -69,7 +68,7 @@ class FavoritesViewController: UIViewController, UITextFieldDelegate, UITableVie
         self.favoriteList.removeAll()
         
         
-        var userRef = Firebase(url: (userURL + "/favorites"))
+        var userRef = Firebase(url: (userURL + uName + "/favorites"))
         
         userRef.observeEventType(.Value, withBlock: {
             snapshot in

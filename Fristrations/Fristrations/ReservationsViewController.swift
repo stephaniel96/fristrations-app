@@ -19,7 +19,7 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
     var currentTime:String!
     var user: NSDictionary = [String:String]()
     var reservations: NSDictionary = [String:String]()
-    var userURL:String = "https://fristrations.firebaseio.com/user/" + uName
+    var userURL:String = "https://fristrations.firebaseio.com/user/"
     let displayRoom =
         ["frist114" : "114",
          "frist205" : "205",
@@ -105,7 +105,7 @@ class ReservationsViewController: UIViewController, UITextFieldDelegate, UITable
         self.formattedReservation.removeAll()
         
         
-        var userRef = Firebase(url: (userURL + "/reservations"))
+        var userRef = Firebase(url: (userURL + uName + "/reservations"))
         
         userRef.observeEventType(.Value, withBlock: {
             snapshot in
